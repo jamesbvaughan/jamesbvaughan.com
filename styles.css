@@ -12,7 +12,8 @@
 }
 
 body {
-    padding-top: 100px;   
+    padding-top: 100px;  
+    font-family: sans-serif;
 }
 
 a {
@@ -20,28 +21,45 @@ a {
     color: black;
 }
 
-footer {
-    font-family: bebas_neueregular;
-    width: 140px;
-    height: 16px;
-    font-size: 16px;
-    position: absolute;
-    bottom: 0px;
-    left: 231px;
-}
-
-#musicBox {
+.cornerBox {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     width: 250px;
     height: 74px;
     outline: 1px solid #000000;
 }
 
+
+#topLeft {
+    top: 20px;
+    left: 20px;
+	background-image: url(images/name.png);
+    background-size: 240px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bottomLeft {
+    bottom: 20px;
+    left: 20px;
+    font-family: bebas_neueregular;
+    font-size: 16px;
+    text-align: center;
+}
+
+#bottomRight {
+    bottom: 20px;
+    right: 20px;
+}
+
+#topRight {
+    top: 20px;
+    right: 20px;
+}
+
 #musicTitle {
     font-family: bebas_neueregular;
     font-size: 20px;
+    white-space: nowrap;
     margin-left: 5px;
     margin-top: 3px;
 }
@@ -113,4 +131,8 @@ footer {
 	font-size: 28px;
     float: left;
     margin-right: 27px;
+    display:  none;
+}
+#aboutMe {
+    width: 50px;
 }
