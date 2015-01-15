@@ -18,7 +18,7 @@ $(document).ready(function () {
     var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&api_key=9csd784e60b827a3983491b3e91baf82&format=json';
     
     $.getJSON((url.substring(0, 96) + x.substring(11, 42) + url.substring(127)), function (data) {
-        if (data.recenttracks.track[0]['@attr'].nowplaying) {
+        if (data.recenttracks.track[0]['@attr'].nowplaying === "true") {
             document.getElementById("musicTitle").innerHTML = "James is listening to:";
         } else {
             document.getElementById("musicTitle").innerHTML = "James last listened to:";
