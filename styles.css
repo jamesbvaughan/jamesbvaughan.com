@@ -18,7 +18,61 @@ body {
 a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+}
+
+footer {
+    font-family: bebas_neueregular;
+    width: 140px;
+    height: 16px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+    left: 231px;
+}
+
+#musicBox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: 74px;
+    outline: 1px solid #000000;
+}
+
+#musicTitle {
+    font-family: bebas_neueregular;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+#song {
+    font-family: bebas_neueregular;
+    font-size: 25px;
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+
+#artist {
+    font-family: bebas_neueregular;
+    font-size: 18px;
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+
+#musicInfo {
+    width: 150px;   
+}
+
+#albumArt {
+    float: right;
+    margin-right: 6px;
+    margin-top: 5px;
+    width: 64px;
+    height: 64px;
+    background-color: black;
 }
 
 #content {
@@ -59,14 +113,4 @@ a {
 	font-size: 28px;
     float: left;
     margin-right: 27px;
-}
-
-#footer {
-	font-family: bebas_neueregular;
-	width: 140px;
-	height: 16px;
-	font-size: 16px;
-    position: absolute;
-    bottom: 0px;
-    left: 231px;
 }
