@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#line {
+    background-color: #333333;
+    width: 2px;
+    height: 500px;
+    margin-right: -17px;
+}
+
+.spacer {
+       height: 50px;
+}
+
+a,
+a:hover {
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 1px dotted #333333;
+}
+
+a:hover {
+    border-bottom: 1px solid #333333;
+}
