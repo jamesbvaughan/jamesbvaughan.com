@@ -9,21 +9,21 @@
   font-style: normal;
 }
 
+body {
+		margin-top: 20px;
+}
+
 #line {
   background-color: #333333;
   width: 2px;
   height: 500px;
-  margin-right: -17px;
   animation-name: line-grow;
   animation-duration: 500ms;
+  margin-right: 10px;
+	margin-left: 10px;
 }
 
-.spacer {
- height: 50px;
-}
-
-a,
-a:hover {
+a, a:hover {
   color: #333333;
   text-decoration: none;
   border-bottom: 1px dotted #333333;
