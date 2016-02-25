@@ -18,6 +18,30 @@ $(document).ready(function () {
 	});
 });
 
+	const projectList = [
+		{
+			name: "Music Stats",
+			description: "My attempts to find cool data in my music listening history.",
+			url: "http://music.jamesbvaughan.com",
+			github: "https://github.com/jamesbvaughan/music-stats",
+			tools: [ "node", "react" ]
+		},
+		{
+			name: "Hangout",
+			description: "A tool for making closer friends and strengthening groups.",
+			url: "https://github.com/jamesbvaughan/hangout",
+			github: "https://github.com/jamesbvaughan/hangout",
+			tools: [ "meteor" ]
+		},
+		{
+			name: "Dining Menus",
+			description: "A command-line tool for reading the UCLA dining hall menus.",
+			url: "https://github.com/jamesbvaughan/dining-menus",
+			github: "https://github.com/jamesbvaughan/dining-menus",
+			tools: [ "python" ]
+		}
+	];
+
 var ToolIcon = React.createClass({
 	render: function () {
 		let size = 50;
@@ -28,6 +52,22 @@ var ToolIcon = React.createClass({
 });
 
 var Projects = React.createClass({
+	render: function () {
+		let projects = projectList.map((project, index) => {
+			return <Project key={index} project={project} />;
+		});
+		return (
+			<div>
+				<h1>Projects</h1>
+				<ul>
+					{projects}
+				</ul>
+			</div>
+		);
+	}
+});
+
+var ToolFilter = React.createClass({
 	getInitialState: function () {
 		return {
 			filterOpen: false
@@ -41,34 +81,8 @@ var Projects = React.createClass({
 	render: function () {
 		let toggleClass = `glyphicon glyphicon-menu-${this.state.filterOpen ? "down" : "right"}`;
 		let toolsStyle = { display: this.state.filterOpen ? "block" : "none" };
-		let projectList = [
-			{
-				name: "Music Stats",
-				description: "My attempts to find cool data in my music listening history.",
-				url: "http://music.jamesbvaughan.com",
-				github: "https://github.com/jamesbvaughan/music-stats",
-				tools: [ "node", "react" ]
-			},
-			{
-				name: "Hangout",
-				description: "A tool for making closer friends and strengthening groups.",
-				url: "http://hangout.jamesbvaughan.com",
-				github: "https://github.com/jamesbvaughan/hangout",
-				tools: [ "meteor" ]
-			},
-			{
-				name: "Dining Menus",
-				description: "A command-line tool for reading the UCLA dining hall menus.",
-				github: "https://github.com/jamesbvaughan/dining-menus",
-				tools: [ "python" ]
-			}
-		];
-		let projects = projectList.map((project, index) => {
-			return <Project key={index} project={project} />;
-		});
 		return (
 			<div>
-				<h3>Projects</h3>
 				<div className="filterToggle" onClick={this.toggleFilter}>
 					<span className={toggleClass} aria-hidden="true"></span>
 					<span>Filter</span>
@@ -79,9 +93,6 @@ var Projects = React.createClass({
 					<ToolIcon src="public/images/meteor.png" />
 					<ToolIcon src="public/images/python.svg" />
 				</div>
-				<div>
-					{projects}
-				</div>
 			</div>
 		);
 	}
@@ -90,11 +101,18 @@ var Projects = React.createClass({
 var Project = React.createClass({
 	render: function () {
 		let project = this.props.project;
+		let toolList = project.tools.map((tool, key) => {
+			return <span key={key} className="label label-default tool">{tool}</span>;
+		});
 		return (
-			<div className="project">
-				<h4>{project.name}</h4>
-				<p>{project.description}</p>
-			</div>
+			<li className="project">
+				<h4>
+					<a href={project.url} target="_blank">
+						{project.name}
+					</a>
+				</h4>
+				<p>{project.description} {toolList}</p>
+			</li>
 		);
 	}
 });
