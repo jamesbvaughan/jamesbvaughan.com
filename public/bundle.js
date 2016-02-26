@@ -67,28 +67,39 @@
 
 	var projectList = [{
 		name: "Music Stats",
-		description: "My attempts to find cool data in my music listening history.",
+		description: "My attempts to find cool data in my music listening history",
 		url: "http://music.jamesbvaughan.com",
 		github: "https://github.com/jamesbvaughan/music-stats",
-		tools: ["javascript", "node", "react"]
+		tools: ["javascript", "node", "react"],
+		year: "2016"
 	}, {
 		name: "Hangout",
-		description: "A tool for making closer friends and strengthening groups.",
+		description: "A tool for making closer friends and strengthening groups",
 		url: "https://github.com/jamesbvaughan/hangout",
 		github: "https://github.com/jamesbvaughan/hangout",
-		tools: ["javascript", "meteor"]
+		tools: ["javascript", "meteor"],
+		year: "2015"
 	}, {
 		name: "Dining Menus",
-		description: "A command-line tool for reading the UCLA dining hall menus.",
+		description: "A command-line tool for reading the UCLA dining hall menus",
 		url: "https://github.com/jamesbvaughan/dining-menus",
 		github: "https://github.com/jamesbvaughan/dining-menus",
-		tools: ["python"]
+		tools: ["python"],
+		year: "2015"
+	}, {
+		name: "Surfing Moth",
+		description: "Datalogging project for Red Bull High Performance Technology",
+		url: "https://github.com/jamesbvaughan/moth-project",
+		github: "https://github.com/jamesbvaughan/moth-project",
+		tools: ["C", "microcontrollers"],
+		year: "2015"
 	}, {
 		name: "In-N-Out Challenge Calculator",
-		description: "Find out how long it will take to complete the In-N-Out challenge.",
+		description: "Find out how long it will take to complete the In-N-Out challenge",
 		url: "https://github.com/jamesbvaughan/INO-Calculator",
 		github: "https://github.com/jamesbvaughan/INO-Calculator",
-		tools: ["C++"]
+		tools: ["C++"],
+		year: "2015"
 	}];
 
 	var ToolIcon = React.createClass({
@@ -181,20 +192,30 @@
 				'li',
 				{ className: 'project' },
 				React.createElement(
-					'h4',
+					'div',
 					null,
 					React.createElement(
-						'a',
-						{ href: project.url, target: '_blank' },
-						project.name
+						'h4',
+						null,
+						React.createElement(
+							'a',
+							{ href: project.url, target: '_blank' },
+							project.name
+						)
+					),
+					React.createElement(
+						'p',
+						null,
+						toolList
 					)
 				),
 				React.createElement(
 					'p',
 					null,
 					project.description,
-					' ',
-					toolList
+					' (',
+					project.year,
+					')'
 				)
 			);
 		}
@@ -237,7 +258,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 400;\n}\n.project {\n  box-shadow: 0px 0px 10 1px #ddd;\n}\n.filterToggle {\n  cursor: pointer;\n}\n.project {\n  margin-bottom: 15px;\n}\n.project h4 {\n  display: inline;\n  margin-right: 10px;\n}\n.project p {\n  display: inline;\n}\n.project .tool {\n  margin-right: 5px;\n}\n#line {\n  background-color: #333333;\n  width: 2px;\n  height: 500px;\n  animation-name: line-grow;\n  animation-duration: 500ms;\n  margin-right: 10px;\n  margin-left: 10px;\n}\na,\na:hover {\n  color: #333333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  border-bottom: 1px solid #333333;\n}\n#projects a,\n#projects a:hover {\n  text-decoration: none;\n  color: inherit;\n}\n@keyframes line-grow {\n  from {\n    height: 0px;\n  }\n  to {\n    height: 500px;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 400;\n}\n.filterToggle {\n  cursor: pointer;\n}\n.project {\n  margin-bottom: 15px;\n}\n.project div {\n  margin-top: -20px;\n  display: flex;\n  justify-content: space-between;\n}\n.project h4 {\n  margin-top: 0px;\n  margin-right: 10px;\n}\n.project p {\n  display: inline;\n}\n.project .tool {\n  margin-right: 5px;\n}\n#line {\n  background-color: #333333;\n  width: 2px;\n  height: 500px;\n  animation-name: line-grow;\n  animation-duration: 500ms;\n  margin-right: 10px;\n  margin-left: 10px;\n}\na,\na:hover {\n  color: #333333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  border-bottom: 1px solid #333333;\n}\n#projects a,\n#projects a:hover {\n  text-decoration: none;\n  color: inherit;\n}\n@keyframes line-grow {\n  from {\n    height: 0px;\n  }\n  to {\n    height: 500px;\n  }\n}\n", ""]);
 
 	// exports
 
