@@ -70,19 +70,25 @@
 		description: "My attempts to find cool data in my music listening history.",
 		url: "http://music.jamesbvaughan.com",
 		github: "https://github.com/jamesbvaughan/music-stats",
-		tools: ["node", "react"]
+		tools: ["javascript", "node", "react"]
 	}, {
 		name: "Hangout",
 		description: "A tool for making closer friends and strengthening groups.",
 		url: "https://github.com/jamesbvaughan/hangout",
 		github: "https://github.com/jamesbvaughan/hangout",
-		tools: ["meteor"]
+		tools: ["javascript", "meteor"]
 	}, {
 		name: "Dining Menus",
 		description: "A command-line tool for reading the UCLA dining hall menus.",
 		url: "https://github.com/jamesbvaughan/dining-menus",
 		github: "https://github.com/jamesbvaughan/dining-menus",
 		tools: ["python"]
+	}, {
+		name: "In-N-Out Challenge Calculator",
+		description: "Find out how long it will take to complete the In-N-Out challenge.",
+		url: "https://github.com/jamesbvaughan/INO-Calculator",
+		github: "https://github.com/jamesbvaughan/INO-Calculator",
+		tools: ["C++"]
 	}];
 
 	var ToolIcon = React.createClass({
