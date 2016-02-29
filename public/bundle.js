@@ -71,6 +71,7 @@
 		url: "http://music.jamesbvaughan.com",
 		github: "https://github.com/jamesbvaughan/music-stats",
 		tools: ["javascript", "node", "react"],
+		glyphicon: "headphones",
 		year: "2016"
 	}, {
 		name: "Hangout",
@@ -78,6 +79,7 @@
 		url: "https://github.com/jamesbvaughan/hangout",
 		github: "https://github.com/jamesbvaughan/hangout",
 		tools: ["javascript", "meteor"],
+		glyphicon: "user",
 		year: "2015"
 	}, {
 		name: "Dining Menus",
@@ -85,6 +87,7 @@
 		url: "https://github.com/jamesbvaughan/dining-menus",
 		github: "https://github.com/jamesbvaughan/dining-menus",
 		tools: ["python"],
+		glyphicon: "apple",
 		year: "2015"
 	}, {
 		name: "Surfing Moth",
@@ -92,6 +95,7 @@
 		url: "https://github.com/jamesbvaughan/moth-project",
 		github: "https://github.com/jamesbvaughan/moth-project",
 		tools: ["C", "microcontrollers"],
+		glyphicon: "screenshot",
 		year: "2015"
 	}, {
 		name: "In-N-Out Challenge Calculator",
@@ -99,6 +103,7 @@
 		url: "https://github.com/jamesbvaughan/INO-Calculator",
 		github: "https://github.com/jamesbvaughan/INO-Calculator",
 		tools: ["C++"],
+		glyphicon: "scale",
 		year: "2015"
 	}];
 
@@ -126,11 +131,7 @@
 					null,
 					'Projects'
 				),
-				React.createElement(
-					'ul',
-					null,
-					projects
-				)
+				projects
 			);
 		}
 	});
@@ -183,39 +184,52 @@
 			var project = this.props.project;
 			var toolList = project.tools.map(function (tool, key) {
 				return React.createElement(
-					'span',
-					{ key: key, className: 'label label-default tool' },
-					tool
+					'div',
+					{ key: key },
+					React.createElement(
+						'span',
+						{ className: 'label label-default tool' },
+						tool
+					)
 				);
 			});
 			return React.createElement(
-				'li',
+				'div',
 				{ className: 'project' },
+				React.createElement('div', { className: "glyphicon glyphicon-" + project.glyphicon, 'aria-hidden': 'true' }),
 				React.createElement(
 					'div',
-					null,
+					{ className: 'pDescription' },
 					React.createElement(
-						'h4',
-						null,
+						'div',
+						{ className: 'pTitle' },
 						React.createElement(
-							'a',
-							{ href: project.url, target: '_blank' },
-							project.name
+							'div',
+							{ className: 'pName' },
+							React.createElement(
+								'h4',
+								null,
+								React.createElement(
+									'a',
+									{ href: project.url, target: '_blank' },
+									project.name
+								)
+							)
+						),
+						React.createElement(
+							'div',
+							{ className: 'toolList' },
+							toolList
 						)
 					),
 					React.createElement(
 						'p',
 						null,
-						toolList
+						project.description,
+						' (',
+						project.year,
+						')'
 					)
-				),
-				React.createElement(
-					'p',
-					null,
-					project.description,
-					' (',
-					project.year,
-					')'
 				)
 			);
 		}
@@ -258,7 +272,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 400;\n}\n.filterToggle {\n  cursor: pointer;\n}\n.project {\n  margin-bottom: 15px;\n}\n.project div {\n  margin-top: -20px;\n  display: flex;\n  justify-content: space-between;\n}\n.project h4 {\n  margin-top: 0px;\n  margin-right: 10px;\n}\n.project p {\n  display: inline;\n}\n.project .tool {\n  margin-right: 5px;\n}\n#line {\n  background-color: #333333;\n  width: 2px;\n  height: 500px;\n  animation-name: line-grow;\n  animation-duration: 500ms;\n  margin-right: 10px;\n  margin-left: 10px;\n}\na,\na:hover {\n  color: #333333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  border-bottom: 1px solid #333333;\n}\n#projects a,\n#projects a:hover {\n  text-decoration: none;\n  color: inherit;\n}\n@keyframes line-grow {\n  from {\n    height: 0px;\n  }\n  to {\n    height: 500px;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-family: 'Open Sans', sans-serif;\n}\n.filterToggle {\n  cursor: pointer;\n}\n.project {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: flex-start;\n}\n.project .glyphicon {\n  margin-top: 15px;\n  margin-right: 15px;\n}\n.project .pDescription {\n  flex-grow: 999;\n}\n.project .pTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.project .pName {\n  flex-shrink: none;\n}\n.project .toolList {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n}\n.project .tool {\n  flex-shrink: 2;\n  margin-right: 5px;\n}\n#line {\n  background-color: #333333;\n  width: 2px;\n  height: 500px;\n  animation-name: line-grow;\n  animation-duration: 500ms;\n  margin-right: 10px;\n  margin-left: 10px;\n}\na,\na:hover {\n  color: #333333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  border-bottom: 1px solid #333333;\n}\n#projects a,\n#projects a:hover {\n  text-decoration: none;\n  color: inherit;\n}\n@keyframes line-grow {\n  from {\n    height: 0px;\n  }\n  to {\n    height: 500px;\n  }\n}\n", ""]);
 
 	// exports
 

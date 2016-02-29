@@ -25,6 +25,7 @@ $(document).ready(function () {
 			url: "http://music.jamesbvaughan.com",
 			github: "https://github.com/jamesbvaughan/music-stats",
 			tools: [ "javascript", "node", "react" ],
+			glyphicon: "headphones",
 			year: "2016"
 		},
 		{
@@ -33,6 +34,7 @@ $(document).ready(function () {
 			url: "https://github.com/jamesbvaughan/hangout",
 			github: "https://github.com/jamesbvaughan/hangout",
 			tools: [ "javascript", "meteor" ],
+			glyphicon: "user",
 			year: "2015"
 		},
 		{
@@ -41,6 +43,7 @@ $(document).ready(function () {
 			url: "https://github.com/jamesbvaughan/dining-menus",
 			github: "https://github.com/jamesbvaughan/dining-menus",
 			tools: [ "python" ],
+			glyphicon: "apple",
 			year: "2015"
 		},
 		{
@@ -49,6 +52,7 @@ $(document).ready(function () {
 			url: "https://github.com/jamesbvaughan/moth-project",
 			github: "https://github.com/jamesbvaughan/moth-project",
 			tools: [ "C", "microcontrollers" ],
+			glyphicon: "screenshot",
 			year: "2015"
 		},
 		{
@@ -57,6 +61,7 @@ $(document).ready(function () {
 			url: "https://github.com/jamesbvaughan/INO-Calculator",
 			github: "https://github.com/jamesbvaughan/INO-Calculator",
 			tools: [ "C++" ],
+			glyphicon: "scale",
 			year: "2015"
 		}
 	];
@@ -78,9 +83,7 @@ var Projects = React.createClass({
 		return (
 			<div>
 				<h1>Projects</h1>
-				<ul>
-					{projects}
-				</ul>
+				{projects}
 			</div>
 		);
 	}
@@ -121,20 +124,21 @@ var Project = React.createClass({
 	render: function () {
 		let project = this.props.project;
 		let toolList = project.tools.map((tool, key) => {
-			return <span key={key} className="label label-default tool">{tool}</span>;
+			return <div key={key}><span className="label label-default tool">{tool}</span></div>;
 		});
 		return (
-			<li className="project">
-				<div>
-					<h4>
-						<a href={project.url} target="_blank">
-							{project.name}
-						</a>
-					</h4>
-					<p>{toolList}</p>
+			<div className="project">
+				<div className={"glyphicon glyphicon-" + project.glyphicon} aria-hidden="true"></div>
+				<div className="pDescription">
+					<div className="pTitle">
+						<div className="pName">
+							<h4><a href={project.url} target="_blank">{project.name}</a></h4>
+						</div>
+						<div className="toolList">{toolList}</div>
+					</div>
+					<p>{project.description} ({project.year})</p>
 				</div>
-				<p>{project.description} ({project.year})</p>
-			</li>
+			</div>
 		);
 	}
 });
