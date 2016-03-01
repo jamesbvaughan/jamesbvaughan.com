@@ -1,12 +1,20 @@
+@mainColor: #333;
+
 body {
 		margin-top: 20px;
-		margin-bottom: 20px;
+		padding-bottom: 80px;
 		font-family: 'Open Sans', sans-serif;
-		// font-weight: 400;
+		color: @mainColor;
 }
 
-.filterToggle {
-	cursor: pointer;
+a {
+	color: @mainColor;
+  border-bottom: 1px dotted #333333;
+	&:hover {
+		color: @mainColor;
+		text-decoration: none;
+		border-bottom: 1px solid #333333;
+	}
 }
 
 .project {
@@ -21,14 +29,12 @@ body {
 		flex-grow: 999;
 	}
 	.pTitle {
-		// margin-top: -20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	.pName {
 		flex-shrink: none;
-		// white-space: nowrap;
 	}
 	.toolList {
 		display: flex;
@@ -39,40 +45,4 @@ body {
 		flex-shrink: 2;
 		margin-right: 5px;
 	}
-}
-
-#line {
-  background-color: #333333;
-  width: 2px;
-  height: 500px;
-  animation-name: line-grow;
-  animation-duration: 500ms;
-  margin-right: 10px;
-	margin-left: 10px;
-}
-
-a, a:hover {
-  color: #333333;
-  text-decoration: none;
-  border-bottom: 1px dotted #333333;
-}
-
-a:hover {
-  border-bottom: 1px solid #333333;
-}
-
-#projects {
-	a, a:hover {
-		text-decoration: none;
-		color: inherit;
-	}
-}
-
-@keyframes line-grow {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 500px;
-  }
 }

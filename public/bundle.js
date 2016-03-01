@@ -55,126 +55,16 @@
 	var React = __webpack_require__(5);
 	var ReactDOM = __webpack_require__(162);
 
+	// Project List
+	var projectList = __webpack_require__(163);
+
 	// Script
-	$(document).ready(function () {
-		var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&api_key=9cec0534e60b827aab0ae1b3e91baf82&format=json';
-		$.get(url, function (data) {
-			var track = data.recenttracks.track[0];
-			var text = data.recenttracks.track.length > 1 ? "At the moment I'm listening to" : "The last song I listened to was";
-			$(".nowPlaying").append(text + ' <a href=\'' + track.url + '\'>' + track.name + ' by ' + track.artist['#text'] + '</a>.)');
-		});
-	});
-
-	var projectList = [{
-		name: "Music Stats",
-		description: "My attempts to find cool data in my music listening history",
-		url: "http://music.jamesbvaughan.com",
-		github: "https://github.com/jamesbvaughan/music-stats",
-		tools: ["javascript", "node", "react"],
-		glyphicon: "headphones",
-		year: "2016"
-	}, {
-		name: "Hangout",
-		description: "A tool for making closer friends and strengthening groups",
-		url: "https://github.com/jamesbvaughan/hangout",
-		github: "https://github.com/jamesbvaughan/hangout",
-		tools: ["javascript", "meteor"],
-		glyphicon: "user",
-		year: "2015"
-	}, {
-		name: "Dining Menus",
-		description: "A command-line tool for reading the UCLA dining hall menus",
-		url: "https://github.com/jamesbvaughan/dining-menus",
-		github: "https://github.com/jamesbvaughan/dining-menus",
-		tools: ["python"],
-		glyphicon: "apple",
-		year: "2015"
-	}, {
-		name: "Surfing Moth",
-		description: "Datalogging project for Red Bull High Performance Technology",
-		url: "https://github.com/jamesbvaughan/moth-project",
-		github: "https://github.com/jamesbvaughan/moth-project",
-		tools: ["C", "microcontrollers"],
-		glyphicon: "screenshot",
-		year: "2015"
-	}, {
-		name: "In-N-Out Challenge Calculator",
-		description: "Find out how long it will take to complete the In-N-Out challenge",
-		url: "https://github.com/jamesbvaughan/INO-Calculator",
-		github: "https://github.com/jamesbvaughan/INO-Calculator",
-		tools: ["C++"],
-		glyphicon: "scale",
-		year: "2015"
-	}];
-
-	var ToolIcon = React.createClass({
-		displayName: 'ToolIcon',
-
-		render: function render() {
-			var size = 50;
-			return React.createElement('img', { src: this.props.src, height: size, width: size });
-		}
-	});
-
-	var Projects = React.createClass({
-		displayName: 'Projects',
-
-		render: function render() {
-			var projects = projectList.map(function (project, index) {
-				return React.createElement(Project, { key: index, project: project });
-			});
-			return React.createElement(
-				'div',
-				null,
-				React.createElement(
-					'h1',
-					null,
-					'Projects'
-				),
-				projects
-			);
-		}
-	});
-
-	var ToolFilter = React.createClass({
-		displayName: 'ToolFilter',
-
-		getInitialState: function getInitialState() {
-			return {
-				filterOpen: false
-			};
-		},
-		toggleFilter: function toggleFilter() {
-			this.setState({
-				filterOpen: !this.state.filterOpen
-			});
-		},
-		render: function render() {
-			var toggleClass = 'glyphicon glyphicon-menu-' + (this.state.filterOpen ? "down" : "right");
-			var toolsStyle = { display: this.state.filterOpen ? "block" : "none" };
-			return React.createElement(
-				'div',
-				null,
-				React.createElement(
-					'div',
-					{ className: 'filterToggle', onClick: this.toggleFilter },
-					React.createElement('span', { className: toggleClass, 'aria-hidden': 'true' }),
-					React.createElement(
-						'span',
-						null,
-						'Filter'
-					)
-				),
-				React.createElement(
-					'div',
-					{ style: toolsStyle },
-					React.createElement(ToolIcon, { src: 'public/images/node.svg' }),
-					React.createElement(ToolIcon, { src: 'public/images/react.svg' }),
-					React.createElement(ToolIcon, { src: 'public/images/meteor.png' }),
-					React.createElement(ToolIcon, { src: 'public/images/python.svg' })
-				)
-			);
-		}
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&api_key=9cec0534e60b827aab0ae1b3e91baf82&format=json';
+	$.get(url, function (data) {
+		var track = data.recenttracks.track[0];
+		var element = document.getElementById("nowPlaying");
+		element.innerHTML = data.recenttracks.track.length > 1 ? "(At the moment I'm listening to " : "(The last song I listened to was ";
+		element.innerHTML += '<a href=\'' + track.url + '\'>' + track.name + ' by ' + track.artist['#text'] + '</a>.)';
 	});
 
 	var Project = React.createClass({
@@ -235,6 +125,26 @@
 		}
 	});
 
+	var Projects = React.createClass({
+		displayName: 'Projects',
+
+		render: function render() {
+			var projects = projectList.map(function (project, index) {
+				return React.createElement(Project, { key: index, project: project });
+			});
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h1',
+					null,
+					'Projects'
+				),
+				projects
+			);
+		}
+	});
+
 	ReactDOM.render(React.createElement(Projects, null), document.getElementById('projects'));
 
 /***/ },
@@ -272,7 +182,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-family: 'Open Sans', sans-serif;\n}\n.filterToggle {\n  cursor: pointer;\n}\n.project {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: flex-start;\n}\n.project .glyphicon {\n  margin-top: 15px;\n  margin-right: 15px;\n}\n.project .pDescription {\n  flex-grow: 999;\n}\n.project .pTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.project .pName {\n  flex-shrink: none;\n}\n.project .toolList {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n}\n.project .tool {\n  flex-shrink: 2;\n  margin-right: 5px;\n}\n#line {\n  background-color: #333333;\n  width: 2px;\n  height: 500px;\n  animation-name: line-grow;\n  animation-duration: 500ms;\n  margin-right: 10px;\n  margin-left: 10px;\n}\na,\na:hover {\n  color: #333333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  border-bottom: 1px solid #333333;\n}\n#projects a,\n#projects a:hover {\n  text-decoration: none;\n  color: inherit;\n}\n@keyframes line-grow {\n  from {\n    height: 0px;\n  }\n  to {\n    height: 500px;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin-top: 20px;\n  padding-bottom: 80px;\n  font-family: 'Open Sans', sans-serif;\n  color: #333;\n}\na {\n  color: #333;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px solid #333333;\n}\n.project {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: flex-start;\n}\n.project .glyphicon {\n  margin-top: 15px;\n  margin-right: 15px;\n}\n.project .pDescription {\n  flex-grow: 999;\n}\n.project .pTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.project .pName {\n  flex-shrink: none;\n}\n.project .toolList {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n}\n.project .tool {\n  flex-shrink: 2;\n  margin-right: 5px;\n}\n", ""]);
 
 	// exports
 
@@ -20239,6 +20149,54 @@
 	'use strict';
 
 	module.exports = __webpack_require__(7);
+
+/***/ },
+/* 163 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = [{
+		name: "Music Stats",
+		description: "My attempts to find cool data in my music listening history",
+		url: "http://music.jamesbvaughan.com",
+		github: "https://github.com/jamesbvaughan/music-stats",
+		tools: ["javascript", "node", "react"],
+		glyphicon: "headphones",
+		year: "2016"
+	}, {
+		name: "Hangout",
+		description: "A tool for making closer friends and strengthening groups",
+		url: "https://github.com/jamesbvaughan/hangout",
+		github: "https://github.com/jamesbvaughan/hangout",
+		tools: ["javascript", "meteor"],
+		glyphicon: "user",
+		year: "2015"
+	}, {
+		name: "Dining Menus",
+		description: "A command-line tool for reading the UCLA dining hall menus",
+		url: "https://github.com/jamesbvaughan/dining-menus",
+		github: "https://github.com/jamesbvaughan/dining-menus",
+		tools: ["python"],
+		glyphicon: "apple",
+		year: "2015"
+	}, {
+		name: "Surfing Moth",
+		description: "Datalogging project for Red Bull High Performance Technology",
+		url: "https://github.com/jamesbvaughan/moth-project",
+		github: "https://github.com/jamesbvaughan/moth-project",
+		tools: ["C", "microcontrollers"],
+		glyphicon: "screenshot",
+		year: "2015"
+	}, {
+		name: "In-N-Out Challenge Calculator",
+		description: "Find out how long it will take to complete the In-N-Out challenge",
+		url: "https://github.com/jamesbvaughan/INO-Calculator",
+		github: "https://github.com/jamesbvaughan/INO-Calculator",
+		tools: ["C++"],
+		glyphicon: "scale",
+		year: "2015"
+	}];
 
 /***/ }
 /******/ ]);
