@@ -182,7 +182,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin-top: 20px;\n  padding-bottom: 80px;\n  font-family: 'Open Sans', sans-serif;\n  color: #333;\n}\na {\n  color: #333;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px solid #333333;\n}\n.project {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: flex-start;\n}\n.project .glyphicon {\n  margin-top: 15px;\n  margin-right: 15px;\n}\n.project .pDescription {\n  flex-grow: 999;\n}\n.project .pTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.project .pName {\n  flex-shrink: none;\n}\n.project .toolList {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n}\n.project .tool {\n  flex-shrink: 2;\n  margin-right: 5px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin-top: 20px;\n  padding-bottom: 80px;\n  font-family: 'Open Sans', sans-serif;\n  color: #333;\n}\na:link {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:visited {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\na:hover {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px solid #333333;\n}\na:active {\n  color: #333;\n  text-decoration: none;\n  border-bottom: 1px dotted #333333;\n}\n.project {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: flex-start;\n}\n.project .glyphicon {\n  margin-top: 15px;\n  margin-right: 15px;\n}\n.project .pDescription {\n  flex-grow: 999;\n}\n.project .pTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.project .pName {\n  flex-shrink: none;\n}\n.project .toolList {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n}\n.project .tool {\n  flex-shrink: 2;\n  margin-right: 5px;\n}\n", ""]);
 
 	// exports
 
@@ -20163,6 +20163,14 @@
 		github: "https://github.com/jamesbvaughan/music-stats",
 		tools: ["javascript", "node", "react"],
 		glyphicon: "headphones",
+		year: "2016"
+	}, {
+		name: "Tidder",
+		description: "A reverse link search for Reddit",
+		url: "http://jamesbvaughan.com/tidder",
+		github: "https://github.com/jamesbvaughan/tidder",
+		tools: ["javascript"],
+		glyphicon: "search",
 		year: "2016"
 	}, {
 		name: "Hangout",

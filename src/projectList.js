@@ -9,6 +9,15 @@ module.exports = [
 		year: "2016"
 	},
 	{
+		name: "Tidder",
+		description: "A reverse link search for Reddit",
+		url: "http://jamesbvaughan.com/tidder",
+		github: "https://github.com/jamesbvaughan/tidder",
+		tools: [ "javascript" ],
+		glyphicon: "search",
+		year: "2016"
+	},
+	{
 		name: "Hangout",
 		description: "A tool for making closer friends and strengthening groups",
 		url: "https://github.com/jamesbvaughan/hangout",

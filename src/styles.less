@@ -8,12 +8,25 @@ body {
 }
 
 a {
-	color: @mainColor;
-  border-bottom: 1px dotted #333333;
+	&:link {
+		color: @mainColor;
+		text-decoration: none;
+		border-bottom: 1px dotted #333333;
+	}
+	&:visited {
+		color: @mainColor;
+		text-decoration: none;
+		border-bottom: 1px dotted #333333;
+	}
 	&:hover {
 		color: @mainColor;
 		text-decoration: none;
 		border-bottom: 1px solid #333333;
+	}
+	&:active {
+		color: @mainColor;
+		text-decoration: none;
+		border-bottom: 1px dotted #333333;
 	}
 }
 
