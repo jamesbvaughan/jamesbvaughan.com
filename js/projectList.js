@@ -1,4 +1,4 @@
-module.exports = [
+const projects = [
 	{
 		name: "Music Stats",
 		description: "My attempts to find cool data in my music listening history",
