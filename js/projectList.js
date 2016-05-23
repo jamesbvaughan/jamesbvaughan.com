@@ -18,6 +18,15 @@ const projects = [
 		year: "2016"
 	},
 	{
+		name: "slack-calc",
+		description: "A visual slackline tension calculator",
+		url: "http://jamesbvaughan.com/slack-calc",
+		github: "https://github.com/jamesbvaughan/slack-calc",
+		tools: [ "javascript" ],
+		glyphicon: "italic",
+		year: "2016"
+	},
+	{
 		name: "Hangout",
 		description: "A tool for making closer friends and strengthening groups",
 		url: "https://github.com/jamesbvaughan/hangout",
