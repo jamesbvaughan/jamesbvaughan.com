@@ -9,23 +9,14 @@ fetch(url).then(data => data.json()).then(data =>
       by ${data.recenttracks.track[0].artist['#text']}
     </a>.)`)
 
-document.getElementById("projects").innerHTML =
-  projects.reduce((html, project) => html + `
+document.getElementById("projects").innerHTML +=
+  projects.map(project => `
 		<div class="project">
-			<div class="glyphicon glyphicon-${project.glyphicon}"></div>
-			<div class="description">
-				<div class="title">
-					<div class="name">
-            <h4>
-              <a href=${project.url} target="_blank">${project.name}</a>
-            </h4>
-					</div>
-          <div class="toolList">
-            ${project.tools.map(tool =>
-              `<span class="label label-default tool">${tool}</span>`
-            ).join('')}
-          </div>
-				</div>
-				<p>${project.description} (${project.year})</p>
-			</div>
-		</div>`, "")
+      <div class="title">
+        <h3><a href=${project.url} target="_blank">${project.name}</a></h3>
+        <div class="toolList">
+          ${project.tools.map(tool => '<span>'+tool+'</span>').join('')}
+        </div>
+      </div>
+      <div>${project.description} (${project.year})</div>
+		</div>`).join('')
