@@ -10,21 +10,21 @@ fetch(url)
   .then(json => json.recenttracks.track)
   .then(tracks =>
     document.querySelector("#nowPlaying").innerHTML = `
-      (${tracks.length > 1 ? "At the moment I'm listening to"
-        : "The last song I listened to was"}
+      (${tracks.length > 1 ?
+        "At the moment I'm listening to" : "The last song I listened to was"}
       <a href='${tracks[0].url}'>
         ${tracks[0].name} by ${tracks[0].artist['#text']}
       </a>.)`)
 
 document.querySelector("#projects").innerHTML +=
   projects
-    .map(({url, name, tools, description, year}) => `
+    .map(({url, github, name, tools, description, year}) => `
       <div class="project">
         <div class="title">
           <h3><a href=${url} target="_blank">${name}</a></h3>
-          <div class="toolList">
+          <a href="${github}" class="toolList">
             ${tools.map(tool => '<span>'+tool+'</span>').join('')}
-          </div>
+          </a>
         </div>
         <div>${description} (${year})</div>
       </div>`)
