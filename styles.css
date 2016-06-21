@@ -65,3 +65,7 @@ a:hover {
   border-radius: 3px;
   margin-left: 5px;
 }
+
+a.toolList {
+  border-bottom: none;
+}
