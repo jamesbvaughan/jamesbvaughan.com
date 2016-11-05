@@ -11,6 +11,79 @@
   <link rel='stylesheet'
         href='https://fonts.googleapis.com/css?family=Open+Sans:300,400'>
   <link rel='stylesheet' href='styles.css'>
+  <style>
+    body {
+      margin-top: 20px;
+      padding-bottom: 80px;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-weight: normal;
+      margin: 0px;
+    }
+
+    a, a:link, a:visited, a:hover, a:active {
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px dotted #333333;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #333333;
+    }
+
+    #everything {
+      max-width: 720px;
+    }
+
+    #slacker {
+      text-align: center;
+    }
+
+    #about p {
+      margin-top: 0px;
+      font-size: 21px;
+      text-align: justify;
+    }
+
+    #projects {
+    }
+
+    .project {
+      margin-bottom: 16px;
+    }
+
+    .project .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .toolList span {
+      color: white;
+      font-weight: bold;
+      background: #777;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-size: 11px;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+
+    a.toolList {
+      border-bottom: none;
+}
+  </style>
 </head>
 
 <body>
@@ -41,7 +114,7 @@
       <h1>Projects</h1>
     </div>
   </div>
-
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
   <script>
     const projects = [
       {
@@ -101,8 +174,38 @@
         year: "2015"
       }
     ]
+
+    const url = 'http://ws.audioscrobbler.com/2.0/'
+      + '?method=user.getrecenttracks'
+      + '&limit=1'
+      + '&user=magicjamesv'
+      + '&api_key=9cec0534e60b827aab0ae1b3e91baf82'
+      + '&format=json'
+
+    fetch(url)
+      .then(data => data.json())
+      .then(json => json.recenttracks.track)
+      .then(tracks =>
+        document.querySelector("#nowPlaying").innerHTML = `
+          (${tracks.length > 1
+              ? "At the moment I'm listening to"
+              : "The last song I listened to was"}
+          <a href='${tracks[0].url}'>
+            ${tracks[0].name} by ${tracks[0].artist['#text']}
+          </a>.)`)
+
+    document.querySelector("#projects").innerHTML +=
+      projects.map(({url, github, name, tools, description, year}) => `
+        <div class="project">
+          <div class="title">
+            <h3><a href=${url} target="_blank">${name}</a></h3>
+            <a href="${github}" class="toolList">
+              ${tools.map(tool => '<span>'+tool+'</span>').join('')}
+            </a>
+          </div>
+          <div>${description} (${year})</div>
+        </div>
+      `).join('')
   </script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
