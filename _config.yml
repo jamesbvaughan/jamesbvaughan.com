@@ -1,0 +1,21 @@
+# Site settings
+title: things james does
+author: James Vaughan
+email: james@jamesbvaughan.com
+description: >
+  a blog about computers and some of the things I do with them
+url: "http://jamesbvaughan.com"
+twitter_username: jamesontheline
+instagram_username: jamesontheline
+github_username: jamesbvaughan
+TZ: America/Los_Angeles
+disqus:
+  shortname: jamesbvaughan
+
+# Build settings
+markdown: kramdown
+theme: minima
+highlighter: pygments
+exclude:
+  - Gemfile
+  - Gemfile.lock
