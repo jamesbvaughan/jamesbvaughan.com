@@ -2,7 +2,6 @@
 layout: post
 title: Writing an HTTP server in Prolog
 date: 2016-11-11 23:34:54 -0800
-permalink: /prolog-http-server
 ---
 
 I'm taking a class now on programming languages where I'm learning all about
