@@ -5,14 +5,17 @@ email: james@jamesbvaughan.com
 description: >
   a blog about computers and some of the things I do with them
 url: http://jamesbvaughan.com
-twitter:
-  username: jamesontheline
-github_username: jamesbvaughan
 TZ: America/Los_Angeles
+
+# Theme settings
+twitter_username: jamesontheline
+github_username: jamesbvaughan
 disqus:
   shortname: jamesbvaughan
 
 # SEO settings
+twitter:
+  username: jamesontheline
 social:
   name: James Vaughan
   links:
@@ -24,7 +27,7 @@ social:
 
 # Build settings
 markdown: kramdown
-permalink: /:title/
+permalink: /:title
 theme: minima
 gems:
   - jekyll-feed
