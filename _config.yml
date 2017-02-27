@@ -4,19 +4,33 @@ author: James Vaughan
 email: james@jamesbvaughan.com
 description: >
   a blog about computers and some of the things I do with them
-url: "http://jamesbvaughan.com"
-twitter_username: jamesontheline
-instagram_username: jamesontheline
+url: http://jamesbvaughan.com
+twitter:
+  username: jamesontheline
 github_username: jamesbvaughan
 TZ: America/Los_Angeles
 disqus:
   shortname: jamesbvaughan
 
+# SEO settings
+social:
+  name: James Vaughan
+  links:
+    - http://facebook.com/jamesbvaughan
+    - http://github.com/jamesbvaughan
+    - http://instagram.com/jamesontheline
+    - http://linkedin.com/in/jamesbvaughan
+    - http://twitter.com/jamesontheline
+
 # Build settings
 markdown: kramdown
 permalink: /:title/
 theme: minima
-highlighter: pygments
+gems:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock

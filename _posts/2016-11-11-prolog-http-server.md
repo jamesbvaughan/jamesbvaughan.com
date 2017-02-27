@@ -105,13 +105,7 @@ do the bare minimum amount of work to do what I needed. For the requests, that
 meant doing nothing but extracting the path to the requested file so that we
 know what to send back to the client.
 
-{% highlight prolog %}
-% parses an http request, extracting the requested path
-parse_request(Request, Path) :-
-  atom_concat(RequestPrefix, RequestSuffix, Request),
-  atom_concat('GET /', Path, RequestPrefix),
-  atom_concat(' HTTP/', _, RequestSuffix).
-{% endhighlight %}
+{% gist jamesbvaughan/8dc874ae215be79649d4d9c1c00dcfa5 %}
 
 This code may look strange at first, but what's going on is very simple.
 Basically, it's saying `parse_request(Request, Path)` is true if `Path` is the
@@ -121,16 +115,7 @@ is being used) so `parse_request` is just saying that `Path` is the bit of the
 request that comes after "GET /" and before " HTTP/". Pretty simple, right? Now
 on to the responses.
 
-{% highlight prolog %}
-% constructs a valid http response to be sent to the client
-construct_response(Body, Response) :-
-  atom_length(Body, Length),
-  number_atom(Length, LengthAtom),
-  atom_concat('Content-Length: ', LengthAtom, LengthHeader),
-  atom_concat(LengthHeader, '\r\n\r\n', Headers),
-  atom_concat('HTTP/1.0 200 OK\r\n', Headers, ResponseTop),
-  atom_concat(ResponseTop, Body, Response).
-{% endhighlight %}
+{% gist jamesbvaughan/a1614d08b6a2bc8c5a3e28377737fa45 %}
 
 Here, you can see `construct_response(Body, Response)` putting together an
 HTTP response by concatenating the status line, "HTTP/1.0 200 OK\r\n", one
@@ -153,20 +138,7 @@ programming languages, the concept of a loop just doesn't make sense in Prolog,
 so I knew that there would need to be some recursion involved here and
 eventually arrived at this code for reading the contents of the file:
 
-{% highlight prolog %}
-% read in the contents of the file at the given path
-read_file(Path, Contents) :-
-  open(Path, read, Stream),
-  read_file_helper(Stream, Contents).
-
-read_file_helper(Stream, '') :-
-  at_end_of_stream(Stream).
-
-read_file_helper(Stream, Contents) :-
-  get_char(Stream, Head),
-  read_file_helper(Stream, Tail),
-  atom_concat(Head, Tail, Contents).
-{% endhighlight %}
+{% gist jamesbvaughan/f3ae93449fed11320036240a6ca07ecd %}
 
 After `read_file` opens the file at `Path`, it jumps into the recursive rule
 `read_file_helper`, which continually reads in and concatenates bytes to the
@@ -177,19 +149,7 @@ HTTP requests from the client is almost identical to my rule for reading files,
 except that HTTP requests end in two carriage-return line-feeds, rather than an
 end-of-file.
 
-{% highlight prolog %}
-% reads in a request, character by character, from the client
-read_request(Stream, Request) :-
-  read_request(Stream, '', Request).
-
-read_request(_, SoFar, Request) :-
-  atom_concat(Request, '\r\n\r\n', SoFar).
-
-read_request(Stream, SoFar, Request) :-
-  get_char(Stream, NextChar),
-  atom_concat(SoFar, NextChar, Next),
-  read_request(Stream, Next, Request).
-{% endhighlight %}
+{% gist jamesbvaughan/7e78b2d674e6e6ba9751af4144eb876b %}
 
 I'm using two new ideas here in `read_request`. The first is naming my
 request reading rule and its recursive helper the same thing. I'm allowed to do
@@ -209,22 +169,7 @@ With these helpers defined I was able to start on the
 main rule for running the server. This is where we get to use those standard
 socket interfaces I mentioned earlier.
 
-{% highlight prolog %}
-% main routine for accepting an http request and sending the requested file
-main :-
-  socket('AF_INET', Socket),
-  socket_bind(Socket, 'AF_INET'('localhost', 3000)),
-  socket_listen(Socket, 1),
-  write('server listening on port 3000\n'),
-  flush_output,
-  socket_accept(Socket, StreamIn, StreamOut),
-  read_request(StreamIn, Request),
-  parse_request(Request, Path),
-  read_file(Path, FileContent),
-  construct_response(FileContent, Response),
-  write(StreamOut, Response),
-  socket_close(Socket).
-{% endhighlight %}
+{% gist jamesbvaughan/87c1732213d894def8ad3aa4e972e094 %}
 
 In the first three lines here we're creating a new socket and binding it to
 `localhost:3000`. Then it starts listening at that address and lets the user
