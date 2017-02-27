@@ -32,6 +32,7 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-gist
+  - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 exclude:
