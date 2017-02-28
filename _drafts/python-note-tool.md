@@ -71,7 +71,16 @@ executes that.
 For example, running `run(['ls', '-a'])` would print out all the
 contents of the current directory.
 
-{% gist jamesbvaughan/8e079e6b4f7af8e7c56126e9db4e0c16 open_vim.py %}
+{% highlight python %}
+#!/usr/bin/env python
+from subprocess import run
+
+def main():
+    run(['vim'])
+
+if __name__ == "__main__":
+    main()
+{% endhighlight %}
 
 And it works! This is also the stage where I initialize a git repository
 and start to commit my changes so that I can have a record of the project's
