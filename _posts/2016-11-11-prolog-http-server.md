@@ -1,8 +1,12 @@
 ---
-layout: post
 title: Writing an HTTP server in Prolog
-date: 2016-11-11 23:34:54 -0800
 redirect_from: /writing-an-http-server-in-prolog
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=12940615
+  - site_name: Reddit
+    url: https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/
 ---
 
 I'm taking a class now on programming languages where I'm learning all about
@@ -231,7 +235,3 @@ and you should check them out. You can read
 [the full source code on Github](https://github.com/jamesbvaughan/httppl).
 I'm still very new to both socket programming and to Prolog, so
 feel free to let me know if there's anything I could have done differently!
-
-*Discuss this post in the comments below or on
-[here on hacker news](https://news.ycombinator.com/item?id=12940615)
-or [here on reddit](https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/).*

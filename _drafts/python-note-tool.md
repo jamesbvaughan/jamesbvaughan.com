@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Writing a Note Taking Tool in Python
 ---
 

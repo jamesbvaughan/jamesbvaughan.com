@@ -2,6 +2,8 @@
 title: About Me
 ---
 
+<img style="float: right;" src="/assets/slacker.png">
+
 Hey! My name is James Vaughan and I live in California and study computer
 science at UCLA.
 I'm usually out slacklining and climbing, but sometimes I take pictures,

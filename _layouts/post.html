@@ -23,6 +23,23 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+    {% if page.discussion_links %}
+      <br />
+      <hr />
+      <br />
+      <em>
+        Discuss this post
+        <a href={{ page.discussion_links.first.url }}>
+          here on {{ page.discussion_links.first.site_name }}
+        </a>
+        {% for discussion_link in page.discussion_links offset:1 %}
+          or
+          <a href={{ discussion_link.url }}>
+            here on {{ discussion_link.site_name }}
+          </a>
+        {% endfor %}
+      </em>
+    {% endif %}
   </div>
 
   {% if site.disqus.shortname %}
