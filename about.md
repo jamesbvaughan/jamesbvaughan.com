@@ -1,7 +1,5 @@
 ---
-layout: page
 title: About Me
-permalink: /about
 ---
 
 Hey! My name is James Vaughan and I live in California and study computer
@@ -38,11 +36,11 @@ the world around them.
     .then(data => data.json())
     .then(json => json.recenttracks.track)
     .then(tracks =>
-      document.querySelector("#nowPlaying").innerHTML = `
-        (${tracks.length > 1
-            ? "At the moment I'm listening to"
-            : "The last song I listened to was"}
+      document.getElementById('nowPlaying').innerHTML =
+        `(${tracks.length > 1
+          ? 'At the moment I\'m listening to'
+          : 'The last song I listened to was'
+        }
         <a href='${tracks[0].url}'>
-          ${tracks[0].name} by ${tracks[0].artist['#text']}
-        </a>.)`)
+          ${tracks[0].name} by ${tracks[0].artist['#text']}</a>.)`)
 </script>

@@ -5,16 +5,16 @@ email: james@jamesbvaughan.com
 description: >
   a blog about computers and some of the things I do with them
 url: http://jamesbvaughan.com
-TZ: America/Los_Angeles
 
-# Theme settings
+# minima theme settings
+theme: minima
 twitter_username: jamesontheline
 github_username: jamesbvaughan
 google_analytics: UA-92817561-1
 disqus:
   shortname: jamesbvaughan
 
-# SEO settings
+# jekyll-seo-tag settings
 twitter:
   username: jamesontheline
 social:
@@ -29,7 +29,6 @@ social:
 # Build settings
 markdown: kramdown
 permalink: /:title
-theme: minima
 gems:
   - jekyll-feed
   - jekyll-gist
@@ -39,3 +38,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - CNAME
+  - readme.md
