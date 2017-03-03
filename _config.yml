@@ -28,7 +28,7 @@ social:
 
 # Build settings
 markdown: kramdown
-permalink: /:title
+permalink: /:title/
 sass:
   style: compressed
 gems:
