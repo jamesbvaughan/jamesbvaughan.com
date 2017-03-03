@@ -29,6 +29,8 @@ social:
 # Build settings
 markdown: kramdown
 permalink: /:title
+sass:
+  style: compressed
 gems:
   - jekyll-feed
   - jekyll-gist
