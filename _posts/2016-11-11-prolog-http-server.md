@@ -231,3 +231,7 @@ and you should check them out. You can read
 [the full source code on Github](https://github.com/jamesbvaughan/httppl).
 I'm still very new to both socket programming and to Prolog, so
 feel free to let me know if there's anything I could have done differently!
+
+*Discuss this post in the comments below or on
+[here on hacker news](https://news.ycombinator.com/item?id=12940615)
+or [here on reddit](https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/).*
