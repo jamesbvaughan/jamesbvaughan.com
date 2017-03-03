@@ -11,4 +11,5 @@ If you're interested in a quick introduction to Systemd Timers,
 please take a look at
 [the slides]({{ site.url }}/systemd-timers-presentation)
 or
-[download the PDF]({{ site.url }}/assets/systemd-timers.pdf).
+<a href="{{ site.url }}/assets/systemd-timers.pdf" target="_blank">
+download the PDF</a>.
