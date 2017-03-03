@@ -1,6 +1,8 @@
 ---
 title: Writing an HTTP server in Prolog
-redirect_from: /writing-an-http-server-in-prolog
+redirect_from:
+  - /writing-an-http-server-in-prolog
+  - /writing-an-http-server-in-prolog/
 
 discussion_links:
   - site_name: Hacker News
