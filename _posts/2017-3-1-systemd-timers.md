@@ -4,6 +4,8 @@ title: Systemd Timers as a Cron Alternative
 discussion_links:
   - site_name: Reddit
     url: https://www.reddit.com/r/linux/comments/5xz77x/systemd_timers_as_a_cron_alternative/
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=13810623
 ---
 
 I recently gave a short talk at the UCLA Linux User Group
