@@ -88,7 +88,7 @@ SMS to my phone.
 After brushing up on the Beautiful Soup API, I came up with this:
 
 ```python
-from bs4 import Beautiful Soup
+from bs4 import BeautifulSoup
 import requests
 
 url = 'https://postmates.com/los-angeles'
