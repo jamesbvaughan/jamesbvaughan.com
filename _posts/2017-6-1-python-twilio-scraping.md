@@ -45,7 +45,10 @@ My only requirements were that it be a language that is simple
 for me to use, and has nice libraries for doing the things
 I need to do (web scraping and notifying my phone).
 This helped me narrow it down to Javascript and Python.
-I ended up choosing Python, mostly because I had less experience
+There are plenty of other great choices for something like this,
+but those are the two that I knew I could work efficiently in,
+based on my past experience.
+I ended up choosing Python, mostly because I had slightly less experience
 with it and wanted to learn more.
 
 ### Choosing a Web Scraper
@@ -54,6 +57,8 @@ This was a fairly easy decision as I had used
 for web scraping in Python before and had a good experience with
 it.
 Beautiful Soup isn't the only option here,
+(another good one is
+[Scrapy](https://scrapy.org/)),
 but it's the one I knew how to use and I knew that it would
 make things simple so I went with it.
 
