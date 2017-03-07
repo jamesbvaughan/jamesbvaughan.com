@@ -17,14 +17,16 @@ check out my scrobbling history on
 [last.fm](http://www.last.fm/user/magicjamesv),
 look at my profile on
 [linkedin](https://www.linkedin.com/in/jamesbvaughan),
-or take a peek at some of my personal projects on
+take a peek at some of my personal projects on
 [github](https://github.com/jamesbvaughan),
+or follow me on
+[twitter](https://twitter.com/jamesontheline).
 
 I've been spending most of my time lately playing with Linux,
 learning new programming languages, and building websites.
 The thing that excites me the most about computers is the potential for
 improved educational materials making use of digital interactive visualizations
-and explanations that give students greater understanding and intuition about
+and explanations that give people greater understanding and intuition about
 the world around them.
 
 <script>
