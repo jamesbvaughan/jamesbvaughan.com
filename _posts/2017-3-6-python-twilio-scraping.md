@@ -3,9 +3,9 @@ title: Finding Free Food with Python
 
 discussion_links:
   - site_name: Hacker News
-    url: https://news.ycombinator.com/item?id=12940615
+    url: https://news.ycombinator.com/item?id=13808830
   - site_name: Reddit
-    url: https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/
+    url: https://www.reddit.com/r/programming/comments/5xz2j3/finding_free_food_with_python/
 ---
 
 If you live in a major city, there's a good chance you've used
