@@ -188,3 +188,10 @@ the way I approach creating something like this, and maybe even
 inspired you to make something similar.
 Feel free to comment if you have any questions about it, or if you
 notice anything that I could have done better.
+
+**edit:** Since a few people have asked about this, I should point out that
+this script does end up sending the same text a lot if you have it running
+frequently. This was pretty annoying at first, so I ended up adding a way for
+it to log the current deals. I omitted it from this post for the sake of
+simplicity, but you can see the actual script that I am using
+[here](https://gist.github.com/jamesbvaughan/4c501fc99acb75852756a4d1dfc8ca3d).
