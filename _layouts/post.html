@@ -25,11 +25,11 @@ layout: default
     {{ content }}
   </div>
 
-  {% include share_buttons.html %}
-
   {% if page.discussion_links %}
     {% include discussion_links.html %}
   {% endif %}
+
+  {% include share_buttons.html %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
