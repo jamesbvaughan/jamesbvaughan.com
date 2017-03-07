@@ -1,18 +1,18 @@
 {% if page.share_buttons != false %}
-<div style="display: flex; align-items: flex-end;">
   <!-- Twitter Share Button -->
-  <a rel="me"
-     href="https://twitter.com/jamesontheline"
-     class="twitter-share-button">
-    Tweet
-  </a>
+  <div style="margin-right: 5px;">
+    <a rel="me"
+       href="https://twitter.com/jamesontheline"
+       class="twitter-share-button">
+      Tweet
+    </a>
+  </div>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- Facebook Share Button -->
   <div class="fb-like" 
     data-layout="standard" 
+    data-share="true"
     data-action="like">
   </div>
-  <div class="fb-share-button" data-layout="button_count"></div>
-</div>
 {% endif %}
