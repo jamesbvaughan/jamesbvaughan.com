@@ -1,5 +1,11 @@
 ---
-title: Tracking the Web with Python and Twilio
+title: Finding Free Food with Python
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=12940615
+  - site_name: Reddit
+    url: https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/
 ---
 
 If you live in a major city, there's a good chance you've used
@@ -19,7 +25,7 @@ miss.
 I generally rely on waiting for a friend to catch one of these
 promotions by chance and text me about it.
 I actually have a group message with some friends titled
-"Free Postmates" that we exlusively use for keeping track of
+"Free Postmates" that we exclusively use for keeping track of
 Postmates promotions.
 
 I recently realized that I could make this process much simpler
@@ -30,7 +36,7 @@ It turned out to be a lot simpler than I had expected and has
 made me a lot more confident to create things like this in the
 future.
 If you're new to the tools I use in this post,
-I hope that reading it helps you feel ocmfortable getting started
+I hope that reading it helps you feel comfortable getting started
 with them!
 
 ### Choosing a Language
@@ -60,13 +66,13 @@ for something for a while, so I decided to go with that.
 In case you haven't heard of Twilio, it's a service that provides
 a way to integrate different kinds of messaging into your
 program.
-One of it's most popular features allows you to send and recieve
+One of it's most popular features allows you to send and receive
 SMS messages.
 This seemed like a nice method since it wouldn't require anything
 special on my phone.
 
 ## First Steps
-When I"m working on something new like this,
+When I'm working on something new like this,
 I like to start with the most basic steps and work my way up
 from there.
 For this project, that meant writing two separate super simple
@@ -86,14 +92,14 @@ soup = BeautifulSoup(webpage.text, 'html.parser')
 print(soup)
 ```
 
-Not too imporessive yet, but it's always good to see something
+Not too impressive yet, but it's always good to see something
 working before things get too complicated.
 
 Now that I had the webpage,
 I wanted to get up and running with a basic "Hello World" through
 Twilio.
 They have a great Getting Started guide in their docs and
-it didn't take long before I had recieved my first text from my
+it didn't take long before I had received my first text from my
 free Twilio phone number.
 
 ```python
@@ -117,13 +123,14 @@ After signing up for a free Twilio account and finding my
 account token, auth token, and registering a Twilio phone number,
 this worked like a charm!
 
+## Putting it all Together
 Now that I had the basic pieces working, I just had to find a
 way to extract the promotions from the web page and connect it all
 up!
 
 Fortunately for me, this turned out to be fairly simple as well.
 After browsing the source for the front page of Postmates in my
-developer console, I found out that whenver there is a free
+developer console, I found out that whenever there is a free
 promotion, the `<div>` containing the restaurant's title
 also contained the word "Free".[^1]
 This meant that all I needed to do was find the elements
@@ -133,7 +140,7 @@ This is what I ended up with:
 [^1]: *This has been the case with every free promotion I've seen so far, but it's very possible that I've missed some if they follow a different format.*
 
 ```python
-from bs4 import Beautiful Soup
+from bs4 import BeautifulSoup
 import requests
 from twilio.rest import TwilioRestClient
 import re
@@ -144,7 +151,6 @@ auth_token = 'XXX'
 twilio_phone_number = '+15558675309'
 my_phone_number = '+15551234567'
 
-client = TwilioRestClient(account_sid, auth_token)
 webpage = requests.get(url)
 soup = BeautifulSoup(webpage.text, 'html.parser')
 
@@ -154,6 +160,7 @@ free_food = [s for s in all_strings if free_regex.match(s.lower())]
 
 if free_food:
     body = 'Free Postmates!\n\n' + '\n'.join(free_food)
+    client = TwilioRestClient(account_sid, auth_token)
     client.messages.create(
         body=body,
         to=my_phone_number,
@@ -169,6 +176,10 @@ can be used as an alternative to Cron jobs, so I chose to go
 with those.
 I won't go into the details of setting up a Systemd Timer in this
 post, but I have some slides on it that provide a quick introduction
-in [this post]({{ site.url }}{% post_url 2016-11-11-prolog-http-server %}).
+in [this post]({{ site.url }}{% post_url 2017-3-1-systemd-timers %}).
 
-
+Thanks for reading this! I hope it helped provide insight into
+the way I approach creating something like this, and maybe even
+inspired you to make something similar.
+Feel free to comment if you have any questions about it, or if you
+notice anything that I could have done better.
