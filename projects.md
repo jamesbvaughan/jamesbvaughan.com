@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Projects
-permalink: /projects
 ---
 
 Here are a few projects that I've worked on over the past few years.
