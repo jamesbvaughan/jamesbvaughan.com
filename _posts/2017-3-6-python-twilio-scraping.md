@@ -120,7 +120,7 @@ client = TwilioRestClient(account_sid, auth_token)
 client.messages.create(
     body="Hello World!",
     to=my_phone_number,
-    from=twilio_phone_number
+    from_=twilio_phone_number
 )
 ```
 
@@ -169,7 +169,7 @@ if free_food:
     client.messages.create(
         body=body,
         to=my_phone_number,
-        from=twilio_phone_number
+        from_=twilio_phone_number
     )
 ```
 
