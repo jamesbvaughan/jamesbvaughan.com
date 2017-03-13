@@ -148,7 +148,6 @@ This is what I ended up with:
 from bs4 import BeautifulSoup
 import requests
 from twilio.rest import TwilioRestClient
-import re
 
 url = 'https://postmates.com/los-angeles'
 account_sid = 'XXX'
@@ -159,9 +158,7 @@ my_phone_number = '+15551234567'
 webpage = requests.get(url)
 soup = BeautifulSoup(webpage.text, 'html.parser')
 
-free_regex = re.compile('free')
-all_strings = list(soup.stripped_strings)
-free_food = [s for s in all_strings if free_regex.match(s.lower())]
+free_food = [s for s in soup.body.stripped_strings if 'free' in s.lower()]
 
 if free_food:
     body = 'Free Postmates!\n\n' + '\n'.join(free_food)
