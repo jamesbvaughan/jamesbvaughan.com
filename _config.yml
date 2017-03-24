@@ -11,6 +11,7 @@ theme: minima
 twitter_username: jamesontheline
 github_username: jamesbvaughan
 google_analytics: UA-92817561-1
+piwik_analytics: analytics.jamesbvaughan.com
 facebook_analytics: 1813887352205493
 disqus:
   shortname: jamesbvaughan
@@ -32,14 +33,26 @@ markdown: kramdown
 permalink: /:title/
 sass:
   style: compressed
-gems:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
   - CNAME
   - readme.md
+
+# Deploy settings
+deploy:
+  - rm --recursive --force /var/www/jamesbvaughan.com/*
+  - cp --recursive ./* /var/www/jamesbvaughan.com
+
+# Front matter defaults
+defaults:
+  -
+    scope:
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      type: posts
+    values:
+      layout: post

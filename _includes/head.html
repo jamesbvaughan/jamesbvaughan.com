@@ -22,7 +22,12 @@
     {% if site.facebook_analytics %}
       {% include facebook-analytics.html %}
     {% endif %}
-    {% include piwik-analytics.html %}
+    {% if site.piwik_analytics %}
+      {% include piwik-analytics.html %}
+    {% endif %}
+    {% if site.open_web_analytics %}
+      {% include open-web-analytics.html %}
+    {% endif %}
   {% endif %}
 
   {% seo %}
