@@ -1,8 +1,0 @@
-jamesbvaughan.com {
- root /var/www/jamesbvaughan.com/
- log /var/log/caddy/jamesbvaughan.com.access.log
- errors {
-   log /var/log/caddy/jamesbvaughan.com.error.log
-   404 404.html
- }
-}
