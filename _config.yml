@@ -39,11 +39,6 @@ exclude:
   - CNAME
   - readme.md
 
-# Deploy settings
-deploy:
-  - rm --recursive --force /var/www/jamesbvaughan.com/*
-  - cp --recursive ./* /var/www/jamesbvaughan.com
-
 # Front matter defaults
 defaults:
   -
@@ -56,3 +51,9 @@ defaults:
       type: posts
     values:
       layout: post
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
