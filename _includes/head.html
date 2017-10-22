@@ -15,20 +15,19 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <link rel="icon" href="/assets/favicon.png">
 
-  {% if jekyll.environment == 'production' %}
-    {% if site.google_analytics %}
-      {% include google-analytics.html %}
-    {% endif %}
-    {% if site.facebook_analytics %}
-      {% include facebook-analytics.html %}
-    {% endif %}
-    {% if site.piwik_analytics %}
-      {% include piwik-analytics.html %}
-    {% endif %}
-    {% if site.open_web_analytics %}
-      {% include open-web-analytics.html %}
-    {% endif %}
+  {% if site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+  {% if site.facebook_analytics %}
+    {% include facebook-analytics.html %}
+  {% endif %}
+  {% if site.piwik_analytics %}
+    {% include piwik-analytics.html %}
+  {% endif %}
+  {% if site.open_web_analytics %}
+    {% include open-web-analytics.html %}
   {% endif %}
 
   {% seo %}
+
 </head>
