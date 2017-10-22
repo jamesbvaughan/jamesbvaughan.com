@@ -11,10 +11,10 @@ theme: minima
 twitter_username: jamesontheline
 github_username: jamesbvaughan
 google_analytics: UA-92817561-1
-piwik_analytics: analytics.jamesbvaughan.com
-facebook_analytics: 1813887352205493
-disqus:
-  shortname: jamesbvaughan
+# piwik_analytics: analytics.jamesbvaughan.com
+# facebook_analytics: 1813887352205493
+# disqus:
+#   shortname: jamesbvaughan
 
 # jekyll-seo-tag settings
 twitter:
