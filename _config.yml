@@ -51,9 +51,3 @@ defaults:
       type: posts
     values:
       layout: post
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-sitemap
