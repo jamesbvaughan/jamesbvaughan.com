@@ -203,7 +203,7 @@ I believe that this is being actively worked on,
 and [it should be solved soon](https://github.com/qutebrowser/qutebrowser/issues/2330),
 but for the time being it is a bit of an inconvenience.
 For now, I've ben going back and forth between using PDF.js in Qutebrowser,
-and using [zathura]().
+and using [zathura](https://pwmt.org/projects/zathura/).
 
 #### Cloud Sync
 In Chromium, I have the option to give Google all of my settings, my theme,
