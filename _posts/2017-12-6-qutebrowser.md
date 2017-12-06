@@ -1,5 +1,11 @@
 ---
 title: Thoughts on Qutebrowser
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=15865787
+  - site_name: Reddit
+    url: https://www.reddit.com/r/linux/comments/7i1u7d/ive_been_using_qutebrowser_for_a_few_months_now/
 ---
 
 I recently began using a web browser called
