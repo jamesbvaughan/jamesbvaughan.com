@@ -2,9 +2,10 @@
 title: Thoughts on Qutebrowser
 ---
 
-About a month ago, I began using a web browser called
+I recently began using a web browser called
 [Qutebrowser](https://qutebrowser.org/index.html).
-I heard about it online and it caught my attention because it encouraged a
+I heard about it on Hacker News a while ago
+and it caught my attention because it encouraged a
 completely keyboard-based workflow.
 I've been surprised at how much I've enjoyed using it and it may very well
 become my primary web browser.
@@ -23,20 +24,25 @@ anti-IE bandwagon, although at the time, I didn't really understand _why_
 everyone hated IE.
 In 8th grade, I heard about Google Chrome and became instantly infatuated with
 it's sleek look and claims of performance gains.
+I continued using it throughout high school until I started running Linux and
+switched to Chromium since it seemed to be more trendy in the open-source
+community.
 
-Since then, I've tried about a half dozen other browsers, but never for more
-than a few days.
+Since first using Chrome/Chromium,
+I've tried about a half dozen other browsers,
+but never for more than a few days.
 I'm always excited to try out new things, and with how central my web browser is
 to my daily life, I'm interested in finding the most optimal one for my
 personal workflow, but I never found one that could match Chromium in speed,
 extensibility, reliability, and features.
 
-An feature that is important to me is support powerful and flexible custom
+A feature that is important to me is support powerful and flexible custom
 keybindings.
-Almost all of my time on my computer is spent either in a terminal or in a web
-browser and with Chromium + Vimium/cVim, I was able to get pretty close to
-being fully keyboard based.
-Unfortunately, while Vimium and cVim are great extensions,
+I've tried to move as much of my work from my mouse to my keyboard as possible,
+and almost all of my time on my computer is spent either in a terminal or in a
+web browser.
+With Chromium + Vimium/cVim, I was able to get pretty close to
+being fully keyboard based, but while Vimium and cVim are great extensions,
 they are still just _extensions_, extending a tool that was designed to be used with
 a mouse.
 There are a lot of essential (for me) features that they are not capable of
@@ -51,12 +57,13 @@ It has vi-inspired modes and keybindings for interacting with both the browser
 itself and the webpages that you are browsing.
 It's possible to do just about everything you ever need to do in a web browser
 without touching the mouse/trackpad in Qutebrowser.
-This immediately caught my attention when I discovered Qutebrowser a few months
-ago because I am a huge fan of keyboard-based workflows.
+Like I mentioned, I am a huge fan of keyboard-based workflows,
+so this immediately caught my attention when I first discovered Qutebrowser a
+few months ago.
 
 Since trying it out for the first time, I've been using it almost exclusively.
-There are a lot of things that I like about Qutebrowser and I will cover the
-ones that are most important to me in the following sections
+There are a lot of things that I really love about Qutebrowser and
+I will cover the ones that are most important to me in the following sections.
 
 #### The Keybindings
 A primary focus of Qutebrowser is a completely keyboard-focused workflow.
@@ -87,9 +94,9 @@ and it is not nearly as flexible as the commands and completion in Qutebrowser.
 
 #### It's A Great Open Source Project
 This isn't often something that I put a lot of weight on when I am evaluating
-software for personal use, but the aspects of the project that go beyond the
-browser itself and the community around it have made an
-impression on me that I think is worth mentioning.
+software for personal use, but the aspects of Qutebrowser as an open-source
+project that go beyond the browser itself and the community around it have made
+an impression on me that I think is worth mentioning.
 
 The maintainer and open-source contributors have done an excellent job of
 managing the project, compared to other open-source projects that I use.
@@ -103,21 +110,21 @@ A few things that have stood out to me:
 
 Some of these are more common than others when it comes to open-source projects,
 but for me they all really add to the amount of happiness I experience when I
-use something.
+use Qutebrowser.
 
 #### It Is Great At Rendering Websites
 This is one of the main things that a web browser is all about, isn't it?
 Qutebrowser does an excellent job of displaying websites, just as excellent
 as Chromium.
 In fact, it's _exactly_ as excellent as Chromium because both Qutebrowser
-and Chromium use
+and Chrome/Chromium use
 [Google's Blink rendering engine](https://www.chromium.org/blink),
 so websites should look identical in the two browsers.
 This also means that you'll have access to the webinspector and some of the
 `chrome://` pages that you may be used to using in Chromium.
 
 #### Quickmarks Are Awesome
-When using Chromium, a common sequence of keypresses was:
+When using Chromium, a common sequence of keypresses for me was:
 ```
 <Ctrl-t>f<Enter>
 ```
@@ -132,18 +139,17 @@ it when I enter it (which is an interesting/frightening phenomenon that deserves
 a separate post someday).
 There is a small handful of websites for which these quick sequences reliably
 get me to the sites I want to get to in Chromium,
-but the algorithm that it uses is a mystery to me and sometimes results in very
+but the algorithm that it uses is a mystery to me and often results in very
 different sites than what I'm looking for.
 
-Qutebrowser captures similar functionality through quickmarks.
+Qutebrowser captures similar (and in my opinion, superior)
+functionality through quickmarks.
 Quickmarks are URLs that take priority over all other URLs in your history
 when completing URLs with the `open` command.
 They are identified by strings that you as a user set explicitly.
 For example, I have the string `fb` to identify `https://facebook.com`.
-This means that I can type
-```
-Ofb<Enter>
-```
+This means that I can type `ohn<Enter>`
+to open up Hacker News, or `Ofb<Enter>`
 to open Facebook in a new tab.
 After using quickmarks for over a month now, I find them even more convenient
 than Chromium's omnibox completions, because I like using `o` and `O` more than
@@ -162,7 +168,8 @@ One feature of Chromium that I took for granted while I was using it is
 autocompletion in forms.
 In Chromium, I rarely had to manually type my whole address, email address,
 phone number, name, or even my credit card number,
-because the browser would autocomplete the form I was editing.
+because I have given Google all of that information
+and the browser would autocomplete the form I was editing with it.
 Qutebrowser currently does not autocomplete forms.
 This hasn't been a big issue, but it would be a nice convenience to have.
 
@@ -176,7 +183,7 @@ This is a commonly requested feature and you can find discussion of it
 #### Notifications
 Web notifications seem to be a bit of a controversial topic among some people,
 but I really like them.
-Qutebrowser (with QtWebEngine) does not support notifications.
+Qutebrowser (with QtWebEngine) does not support notifications yet.
 
 #### PDF Reader
 Ever since I started using Chromium,
@@ -184,15 +191,18 @@ I had been using it as a PDF reader as well as a web browser.
 It was super convenient to be able to click a link to a PDF and have it open up
 in a new tab, just like a website.
 Qutebrowser doesn't have a built in PDF reader.
-PDF.js works well in it, but with QtWebEngine, downloaded PDFs can't be opened
-automatically.
+[PDF.js](https://mozilla.github.io/pdf.js/) works well in it,
+but with QtWebEngine, downloaded PDFs can't be opened automatically.
 I believe that this is being actively worked on,
 and [it should be solved soon](https://github.com/qutebrowser/qutebrowser/issues/2330),
 but for the time being it is a bit of an inconvenience.
+For now, I've ben going back and forth between using PDF.js in Qutebrowser,
+and using [zathura]().
 
 #### Cloud Sync
-In Chromium, I had my settings, my theme, my bookmarks, and my saved passwords
-synchronized across all my devices.
+In Chromium, I have the option to give Google all of my settings, my theme,
+my bookmarks, and my saved passwords and have them all synchronized
+across all my devices.
 Qutebrowser doesn't have a cloud sync feature like that, but it does use a
 configuration file that I now include in my dotfiles git repository.
 This gets the job done (and is actually preferable for me) when it comes to
@@ -211,13 +221,13 @@ anything else.
 The fact that I genuinely prefer Qutebrowser to Chromium is a huge surprise for
 me and has sparked a transition away from other Google products as well.
 (Drive/Photos -> Nextcloud, Google Search -> DuckDuckGo, etc.)
-So far I haven't committed to the others as fully as I have with Qutebrowser,
+So far I haven't committed to those others as fully as I have with Qutebrowser,
 but it has been fun exploring some of the other options that are out there.
 
 I know that I focused my comparisons on Chromium throughout this post, and that
 is because it is what I am most familiar with, but I don't expect that my
-opinions would change much if I were comparing Firefox/Safari/Edge/etc to
-Qutebrowser.
+opinions would change too much if I were comparing Firefox/Safari/Edge/etc to
+Qutebrowser instead of Chromium.
 (The [FAQ](https://qutebrowser.org/doc/faq.html) has nice explanations of some
 reasons to choose Qutebrowser over others.)
 
