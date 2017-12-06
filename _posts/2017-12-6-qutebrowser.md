@@ -215,8 +215,11 @@ This gets the job done (and is actually preferable for me) when it comes to
 keeping configuration in sync between machines, but version controlling my
 quickmarks and bookmarks and trying to keep them in sync between machines is
 a bit less convenient.
-This isn't a feature that I think Qutebrowser needs to add, but it is something
-that I miss sometimes from Chromium.
+I'd like to point out and emphasize that this isn't a feature that I think
+Qutebrowser needs to add, especially since a feature like this would directly
+counter the philosophy of many of its users,
+but it is certainly something that new users who are coming from browsers
+that automatically kept configurations synchronized might miss.
 
 
 ## Final Thoughts
