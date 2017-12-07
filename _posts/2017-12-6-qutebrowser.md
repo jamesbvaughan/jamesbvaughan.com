@@ -186,6 +186,15 @@ I have to log in to frequently.
 This is a commonly requested feature and you can find discussion of it
 [here](https://github.com/qutebrowser/qutebrowser/issues/180).
 
+_edit: There are [some userscripts](https://github.com/qutebrowser/qutebrowser/tree/master/misc/userscripts)
+included with the Qutebrowser source code that
+add integration with [pass](https://www.passwordstore.org/).
+When I first wrote this post,
+I was under the impression that these were not recommended for actual use,
+but a reader pointed out that they are safe as long as you don't have debug
+logging enabled and accidentally share your logs (which will include your
+entered passwords in plain text.)_
+
 #### Notifications
 Web notifications seem to be a bit of a controversial topic among some people,
 but I really like them.
