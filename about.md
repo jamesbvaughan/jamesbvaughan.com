@@ -7,7 +7,7 @@ title: About Me
 Hey! My name is James Vaughan and I live in California and study computer
 science at UCLA.
 I'm usually out slacklining and climbing, but sometimes I take pictures,
-go to class, and write code, and I'm always listening to music.
+go to class, and write code, and I'm almost always listening to music.
 <span id="nowPlaying"></span>
 
 If you don't believe me or you just want to learn more,
@@ -24,9 +24,9 @@ or follow me on
 
 I've been spending most of my time lately playing with Linux,
 learning new programming languages, and building websites.
-The thing that excites me the most about computers is the potential for
-improved educational materials making use of digital interactive visualizations
-and explanations that give people greater understanding and intuition about
+One of the thing that excites me the most about computers is the potential for
+improved educational materials that make use of interactive visualizations
+and explanations that can help learners understand and develop intuition about
 the world around them.
 
 <script>
