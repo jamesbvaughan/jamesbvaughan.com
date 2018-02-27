@@ -1,5 +1,9 @@
 ---
 title: Saving $167,000 on Groceries
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=16479046
 ---
 
 ## Introduction
