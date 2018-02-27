@@ -9,10 +9,10 @@ podcasts on software development, tech, and other industry news.
 Over the past few months, I've been spending a growing portion of that time
 learning about personal finance.
 At the time of this writing,
-I have just a few months left in college and the reality that I'm going to be
-working full time soon has been starting to sink in.
-At the same time, I began to realize how uneducated I was about personal
-finance and the benefits of understanding it.
+I have just a few months left in college and at the beginning of this quarter
+the reality that I am soon going to be working full time started to sink in.
+At the same time, I began to realize how little I really knew about personal
+finance, so I decided to change that.
 
 After getting some recommendations from a couple friends who are further along
 in life than I am,
@@ -22,22 +22,22 @@ After a couple of weeks, it became a bit of an obsession and I was determined
 to learn everything I could about the subject before I start working and having
 a real income to manage and budget.
 Now, 3 books, over 100 hours of podcasts, and countless blog posts later,
-I've slowed down a bit and started to share some of what I've learned with my
-friends and family.
+I've slowed down a bit and started to solidify the things that I am learning by
+putting them into practice and by sharing them with my friends and family.
 
 If consuming all that personal finance literature has done one thing,
 it's made me hyper-aware of the cashflows in my life.
-I've found that, like most people, the three largest line items in my spending
+I've found that, like most people, the three largest categories in my spending
 are food, housing, and transportation.
 I plan to write posts about each of those categories,
-with this first one focusing on food.
+and in this first one I will be focusing on food.
 More specifically, I'll be talking about choice of grocery store.
 
 ### Where To Get Food
 It's often preached in the personal finance community that one of the fastest
 ways that most people can start saving extreme amounts of money very quickly is
 by choosing not to eat out and to cook at home.
-That shift is the topic of a separate post,
+That shift away from eating out is the topic of a separate post,
 but chances are you're like most people and you already cook at home and eat
 food from grocery stores for something between 40% and 90% of your meals,
 so you can certainly benefit from reduced grocery costs.
@@ -77,7 +77,8 @@ apartment compared to Ralphs, I thought.
 
 ### Collecting Data
 I put together a shopping list for a specific recipe that I was going to make.
-(Specifically, Joel Fuhrman's Two Bean Chili from his Eat to Live cookbook.)
+(Specifically, Joel Fuhrman's Two Bean Chili from his Eat to Live cookbook,
+plus a few other things I needed to get.)
 I then went to both Ralphs and Whole Foods and recorded the prices of everything
 on my shopping list.
 
@@ -91,8 +92,8 @@ The total cost at Ralphs was $16.79.
 The total cost at Whole Food was $22.09,
 which can be reduced to $20.99 after the 5% cash back from Amazon.
 This was certainly significant,
-but that $4.20 difference might be worth the free samples
-and the shorter walk home, right?
+but that $4.20 difference between Ralphs and Whole Foods might be worth the free
+samples and the shorter walk home, right?
 
 ### Analysis
 If we assume that the price ratios in this shopping list are representative of
@@ -116,7 +117,7 @@ Whole Foods (like pursuing Financial Independence and [retiring a few years
 earlier](http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/)).
 
 ## Conclusion
-These calculations were pretty surprising,
+These calculations were pretty surprising for me,
 and it's suffice to say that I'll be cutting out those infrequent trips to
 Whole Foods now.
 My methods and analysis were by no means exhaustive,
