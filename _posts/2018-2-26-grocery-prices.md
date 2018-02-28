@@ -108,8 +108,8 @@ saving in the long term.
 If I spend $300 per month on groceries at Ralphs,
 then that's $3,600 per year.
 This would increase to $4,736 if I were to shop at Whole Foods instead.
-Put this way, that $1,136 difference doesn't sound nearly as the per-visit
-difference did.
+Put this way, that $1,136 difference doesn't sound nearly as innocent as the
+$4.20 difference per-visit did!
 
 That alone is more than enough reason for me to stick with Ralphs,
 but we can take this even further.
