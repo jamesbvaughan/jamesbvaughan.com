@@ -7,7 +7,8 @@ title: About Me
 Hey! My name is James Vaughan and I live in California and study computer
 science at UCLA.
 I'm usually out slacklining and climbing, but sometimes I take pictures,
-go to class, and write code, and I'm almost always listening to music.
+go to class, and write code.
+I also watch a lot of movies and I'm almost always listening to music.
 <span id="nowPlaying"></span>
 
 If you don't believe me or you just want to learn more,
@@ -30,14 +31,8 @@ and explanations that can help learners understand and develop intuition about
 the world around them.
 
 <script>
-  const url = 'https://ws.audioscrobbler.com/2.0/'
-    + '?method=user.getrecenttracks'
-    + '&limit=1'
-    + '&user=magicjamesv'
-    + '&api_key=9cec0534e60b827aab0ae1b3e91baf82'
-    + '&format=json'
-  fetch(url)
-    .then(data => data.json())
+  fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&api_key=9cec0534e60b827aab0ae1b3e91baf82&format=json')
+    .then(r => r.json())
     .then(json => json.recenttracks.track)
     .then(tracks =>
       document.getElementById('nowPlaying').innerHTML =
@@ -46,5 +41,6 @@ the world around them.
           : 'The last song I listened to was'
         }
         <a href='${tracks[0].url}'>
-          ${tracks[0].name} by ${tracks[0].artist['#text']}</a>.)`)
+          ${tracks[0].name} by ${tracks[0].artist['#text']}</a>.)`
+    )
 </script>
