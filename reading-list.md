@@ -32,6 +32,7 @@ use this page as a log of the books that I read.
 
 # 2015
  - [Zero to One: Notes on Startups, or How to Build the Future](http://amzn.to/2FkF9nU) by Peter Thiel
+ - [Hidden Cities](http://amzn.to/2Fk6Ih2) by Moses Gates
 
 # 2014
  - [Harry Potter and the Goblet of Fire](http://amzn.to/2F9rDUS) by J. K. Rowling
