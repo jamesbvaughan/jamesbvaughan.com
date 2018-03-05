@@ -16,6 +16,8 @@ you can see some photos and read about my slacklining adventures on
 [instagram](https://www.instagram.com/jamesontheline/),
 check out my scrobbling history on
 [last.fm](http://www.last.fm/user/magicjamesv),
+find out what movies I've watched recently on
+[letterboxd](https://letterboxd.com/jamesbvaughan/),
 look at my profile on
 [linkedin](https://www.linkedin.com/in/jamesbvaughan),
 take a peek at some of my personal projects on
