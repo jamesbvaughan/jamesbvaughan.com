@@ -10,10 +10,11 @@ Recently, I have been reading for myself a lot more frequently and I am going to
 use this page as a log of the books that I read.
 
 # In Progress
- - [The 4-Hour Workweek](http://amzn.to/2F8QhRv) by Tim Ferriss
  - [Harry Potter and the Half-Blood Prince](http://amzn.to/2GXvgJY) by J. K. Rowling
+ - [Narrative of the Life of Frederick Douglass](http://amzn.to/2D0lJPJ) by Frederick Douglass
 
 # 2018
+ - [The 4-Hour Workweek](http://amzn.to/2F8QhRv) by Tim Ferriss
  - [The Catcher in the Rye](http://amzn.to/2CRRdYh) by J. D. Salinger
  - [Harry Potter and the Order of the Phoenix](http://amzn.to/2tdp9iv) by J. K. Rowling
  - [Finding God in the Waves](http://amzn.to/2CXHMXC) by Mike McHargue
