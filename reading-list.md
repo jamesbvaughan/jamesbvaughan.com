@@ -11,9 +11,10 @@ use this page as a log of the books that I read.
 
 # In Progress
  - [Harry Potter and the Half-Blood Prince](http://amzn.to/2GXvgJY) by J. K. Rowling
- - [Narrative of the Life of Frederick Douglass](http://amzn.to/2D0lJPJ) by Frederick Douglass
+ - [The New Analog](http://amzn.to/2HdHZbp) by Damon Krukowski
 
 # 2018
+ - [Narrative of the Life of Frederick Douglass](http://amzn.to/2D0lJPJ) by Frederick Douglass
  - [The 4-Hour Workweek](http://amzn.to/2F8QhRv) by Tim Ferriss
  - [The Catcher in the Rye](http://amzn.to/2CRRdYh) by J. D. Salinger
  - [Harry Potter and the Order of the Phoenix](http://amzn.to/2tdp9iv) by J. K. Rowling
