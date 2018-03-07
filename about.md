@@ -8,8 +8,10 @@ Hey! My name is James Vaughan and I live in California and study computer
 science at UCLA.
 I'm usually out slacklining and climbing, but sometimes I take pictures,
 go to class, and write code.
-I also watch a lot of movies and I'm almost always listening to music.
-<span id="nowPlaying"></span>
+I also watch a lot of movies
+<span id="recentMovie"></span>
+and I'm almost always listening to music.
+<span id="recentSong"></span>
 
 If you don't believe me or you just want to learn more,
 you can see some photos and read about my slacklining adventures on
@@ -37,12 +39,22 @@ the world around them.
     .then(r => r.json())
     .then(json => json.recenttracks.track)
     .then(tracks =>
-      document.getElementById('nowPlaying').innerHTML =
+      document.getElementById('recentSong').innerHTML =
         `(${tracks.length > 1
           ? 'At the moment I\'m listening to'
           : 'The last song I listened to was'
         }
         <a href='${tracks[0].url}'>
           ${tracks[0].name} by ${tracks[0].artist['#text']}</a>.)`
+    )
+
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fletterboxd.com%2Fjamesbvaughan%2Frss%2F&api_key=0qa1aqzmjlfqjk5xpiswz33pkg3jiotvgz7tvjpb')
+    .then(r => r.json())
+    .then(json => json.items[0])
+    .then(movie =>
+      document.getElementById('recentMovie').innerHTML =
+        `(The last movie I watched was <a href="${movie.link}">${
+          movie.title.split(',')[0]
+        }</a>)`
     )
 </script>
