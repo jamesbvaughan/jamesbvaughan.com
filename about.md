@@ -10,8 +10,7 @@ I'm usually out slacklining and climbing, but sometimes I take pictures,
 go to class, and write code.
 I also read books and watch a lot of movies
 <span id="movie"></span>
-and I'm almost always listening to music
-<span id="song"></span>.
+and I'm almost always listening to music<span id="song"></span>.
 
 If you don't believe me or you just want to learn more,
 you can see some photos and read about my slacklining adventures on
@@ -39,7 +38,7 @@ the world around them.
 <script>
   fetch('https://api.jamesbvaughan.com/song')
     .then(r => r.text())
-    .then(text => document.getElementById('song').innerHTML = `(${text})`)
+    .then(text => document.getElementById('song').innerHTML = ` (${text})`)
 
   fetch('https://api.jamesbvaughan.com/movie')
     .then(r => r.text())
