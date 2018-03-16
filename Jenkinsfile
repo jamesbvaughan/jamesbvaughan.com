@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        echo 'Testing...'
+        sh 'grep -qs "things james does" _site/index.html'
       }
     }
     stage('Deploy') {
