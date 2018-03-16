@@ -2,12 +2,12 @@ pipeline {
   agent {
     docker {
       image 'jekyll/jekyll:3.4.3'
-      args '--user james:james'
     }
   }
   stages {
     stage('Build') {
       steps {
+        sh 'cat /etc/passwd'
         sh 'jekyll build'
       }
     }
