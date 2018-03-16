@@ -4,8 +4,6 @@ pipeline {
       image 'jekyll/jekyll:3.4.3'
     }
   }
-  environment {
-  }
   stages {
     stage('Build') {
       steps {
