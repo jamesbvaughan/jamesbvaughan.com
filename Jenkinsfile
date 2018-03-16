@@ -1,13 +1,9 @@
 pipeline {
-  agent {
-    dockerfile true
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
-        sh 'echo PWD=$PWD'
-        sh 'bundle install'
-        sh 'bundle exec jekyll build'
+        sh 'docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:3.4.3 jekyll build'
       }
     }
     stage('Test') {
