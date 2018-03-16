@@ -5,7 +5,7 @@ pipeline {
     }
   }
   environment {
-    TEST_VAR=test
+    TEST_VAR = 'test'
   }
   stages {
     stage('Build') {
