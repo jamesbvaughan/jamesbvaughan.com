@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+               echo 'Building..'
+               sh 'bundle exec jekyll build'
             }
         }
         stage('Test') {

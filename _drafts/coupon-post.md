@@ -48,4 +48,7 @@ throwaway web app idea to build my skills with _and_ making my gift idea more
 personalized than the standard coupon book idea.
 
 ## The Idea
-
+In order to make the coupon book gift more interesting,
+I decided to build an accompanying website that could be used both to read more
+information about the coupons in the book and to redeem the coupons.
+I 
