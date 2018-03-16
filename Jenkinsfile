@@ -4,6 +4,9 @@ pipeline {
       image 'jekyll/jekyll:3.4.3'
     }
   }
+  environment {
+    JEKYLL_UID = '0'
+  }
   stages {
     stage('Build') {
       steps {
