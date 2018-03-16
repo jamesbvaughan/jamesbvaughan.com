@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'cp -r _site/* /var/www/jamesbvaughan.com
+        sh 'cp -r _site/* /var/www/jamesbvaughan.com'
       }
     }
   }
