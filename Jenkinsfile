@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'jekyll/jekyll:3.4.3'
-      args '-e JEKYLL_UID=114'
+      args '-e JEKYLL_UID=0'
     }
   }
   stages {
