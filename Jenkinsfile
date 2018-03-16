@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'jekyll/jekyll:3.4.3'
-      args '--user="1000:1000" --volume="$PWD:/srv/jekyll"'
+      image 'jekyll/builder:3.4'
+      args '--rm --volume="$PWD:/srv/jekyll" -it'
     }
   }
   stages {
