@@ -1,17 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Install Dependencies') {
-      steps {
-        echo 'Installing Build Dependencies..'
-        sh 'gem install bundler'
-        sh 'bundle install'
-      }
+  agent {
+    docker {
+      image 'jekyll/jekyll'
     }
+  }
+  stages {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh 'bundle exec jekyll build'
+        sh 'jekyll build'
       }
     }
     stage('Test') {
