@@ -5,7 +5,8 @@ pipeline {
     }
   }
   environment {
-    JEKYLL_UID = '0'
+    JEKYLL_UID = '114'
+    JEKYLL_GID = '119'
   }
   stages {
     stage('Build') {
