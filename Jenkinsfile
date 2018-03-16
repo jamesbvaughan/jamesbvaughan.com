@@ -6,7 +6,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo PWD=$PWD'
-        sh 'jekyll build'
+        sh 'bundle exec jekyll build'
       }
     }
     stage('Test') {
