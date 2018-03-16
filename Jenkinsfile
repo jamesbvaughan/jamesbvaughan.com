@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'jekyll/jekyll'
+      image 'jekyll/jekyll:3.4.3'
     }
   }
   stages {
