@@ -6,6 +6,8 @@ pipeline {
   }
   environment {
     TEST_VAR = 'test'
+    JEKYLL_UID = '1000'
+    JEKYLL_GID = '1000'
   }
   stages {
     stage('Build') {
