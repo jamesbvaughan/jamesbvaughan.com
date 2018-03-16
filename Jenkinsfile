@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    docker {
-      image 'jekyll/jekyll:3.4'
-    }
+    dockerfile true
   }
   stages {
     stage('Build') {
