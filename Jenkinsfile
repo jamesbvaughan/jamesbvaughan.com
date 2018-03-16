@@ -2,12 +2,8 @@ pipeline {
   agent {
     docker {
       image 'jekyll/jekyll:3.4.3'
+      args '-e JEKYLL_UID=1000 -e JEKYLL_GID=1000'
     }
-  }
-  environment {
-    TEST_VAR = 'test'
-    JEKYLL_UID = '1000'
-    JEKYLL_GID = '1000'
   }
   stages {
     stage('Build') {
