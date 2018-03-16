@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'jekyll/jekyll:3.4.3'
-      args '--user jekyll'
+      args '--volume="$PWD:/srv/jekyll"'
     }
   }
   stages {
