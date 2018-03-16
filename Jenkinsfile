@@ -2,12 +2,12 @@ pipeline {
   agent {
     docker {
       image 'jekyll/jekyll:3.4.3'
+      args '--volume="$PWD:/srv/jekyll"'
     }
   }
   stages {
     stage('Build') {
       steps {
-        echo 'Building..'
         sh 'jekyll build'
       }
     }
