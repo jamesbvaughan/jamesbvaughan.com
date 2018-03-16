@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'echo PWD=$PWD'
         sh 'jekyll build'
       }
     }
