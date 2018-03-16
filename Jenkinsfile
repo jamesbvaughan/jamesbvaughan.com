@@ -13,7 +13,6 @@ pipeline {
         sh 'echo JEKYLL_UID=$JEKYLL_UID'
         sh 'echo JEKYLL_GID=$JEKYLL_GID'
         sh 'id'
-        sh 'whoami'
         sh 'jekyll build'
       }
     }
