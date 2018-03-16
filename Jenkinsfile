@@ -4,15 +4,11 @@ pipeline {
       image 'jekyll/jekyll:3.4.3'
     }
   }
-  environment {
-    JEKYLL_UID = '114'
-    JEKYLL_GID = '119'
-    VERBOSE = 'true'
-  }
   stages {
     stage('Build') {
       steps {
         echo 'Building..'
+        sh 'id'
         sh 'jekyll build'
       }
     }
