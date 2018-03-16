@@ -6,6 +6,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo PWD=$PWD'
+        sh 'bundle install'
         sh 'bundle exec jekyll build'
       }
     }
