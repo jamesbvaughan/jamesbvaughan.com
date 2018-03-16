@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'jekyll/jekyll'
+      image 'jekyll/jekyll:3'
       args '--volume="$PWD:/srv/jekyll"'
     }
   }
