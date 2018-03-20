@@ -36,11 +36,15 @@ and explanations that can help learners understand and develop intuition about
 the world around them.
 
 <script>
-  fetch('https://api.jamesbvaughan.com/song')
-    .then(r => r.text())
-    .then(text => document.getElementById('song').innerHTML = ` (${text})`)
+  const getItem = (url, id) =>
+    fetch(url)
+      .then(r => r.json())
+      .then(json => {
+        if (json.status === 'ok') {
+          document.getElementById(id).innerHTML = ` (${json.body})`
+        }
+      })
 
-  fetch('https://api.jamesbvaughan.com/movie')
-    .then(r => r.text())
-    .then(text => document.getElementById('movie').innerHTML = `(${text})`)
+  getItem('https://api.jamesbvaughan.com/song', 'song')
+  getItem('https://api.jamesbvaughan.com/movie', 'movie')
 </script>
