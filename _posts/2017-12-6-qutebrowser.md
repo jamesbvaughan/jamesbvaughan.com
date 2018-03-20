@@ -177,6 +177,12 @@ phone number, name, or even my credit card number,
 because I have given Google all of that information
 and the browser would autocomplete the form I was editing with it.
 Qutebrowser currently does not autocomplete forms.
+
+To be clear,
+I don't think that Qutebrowser should make use of a centralized place in the
+cloud that contains all of my private info,
+but it would be cool if it implemented a way to store all of that info locally
+on my machine for form autocompletion.
 This hasn't been a big issue, but it would be a nice convenience to have.
 
 #### Built-in Password Manager With Autofill
@@ -214,6 +220,12 @@ but for the time being it is a bit of an inconvenience.
 For now, I've ben going back and forth between using PDF.js in Qutebrowser,
 and using [zathura](https://pwmt.org/projects/zathura/).
 
+_edit: Since posting this, I've settled on a PDF viewing workflow that I
+actually much prefer to having a reader built into my web browser.
+I made a rofi script that lets me quickly search through all the PDFs in my
+home directory and sub-directories and open one in zathura.
+You can check it out [here](https://github.com/jamesbvaughan/dotfiles/blob/master/scripts/pdf-opener.sh)._
+
 #### Cloud Sync
 In Chromium, I have the option to give Google all of my settings, my theme,
 my bookmarks, and my saved passwords and have them all synchronized
@@ -226,8 +238,9 @@ quickmarks and bookmarks and trying to keep them in sync between machines is
 a bit less convenient.
 I'd like to point out and emphasize that this isn't a feature that I think
 Qutebrowser needs to add, especially since a feature like this would directly
-counter the philosophy of many of its users,
-but it is certainly something that new users who are coming from browsers
+counter the philosophy of many of its users.
+I only mention it here to inform newcomers who aren't familiar with Qutebrowser,
+since it is certainly something that new users who are coming from browsers
 that automatically kept configurations synchronized might miss.
 
 
