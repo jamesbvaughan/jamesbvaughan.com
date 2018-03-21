@@ -10,10 +10,12 @@ Recently, I have been reading for myself a lot more frequently and I am going to
 use this page as a log of the books that I read.
 
 # In Progress
- - [The Giver](http://amzn.to/2FvH7m2) by Lois Lowry
  - [Nothing to Envy](http://amzn.to/2FuEAc7) by Barbara Demick
+ - [Animal Farm](http://amzn.to/2HOtzPe) by George Orwell
 
 # 2018
+ - [The Pearl](http://amzn.to/2u7KLNH) by John Steinbeck
+ - [The Giver](http://amzn.to/2FvH7m2) by Lois Lowry
  - [The New Analog](http://amzn.to/2HdHZbp) by Damon Krukowski
  - [Harry Potter and the Half-Blood Prince](http://amzn.to/2GXvgJY) by J. K. Rowling
  - [Narrative of the Life of Frederick Douglass](http://amzn.to/2D0lJPJ) by Frederick Douglass
