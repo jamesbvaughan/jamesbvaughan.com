@@ -11,9 +11,11 @@ use this page as a log of the books that I read.
 
 # In Progress
  - [Nothing to Envy](http://amzn.to/2FuEAc7) by Barbara Demick
- - [Animal Farm](http://amzn.to/2HOtzPe) by George Orwell
+ - [Ship of Theseus](https://amzn.to/2H5H26j) by J.J. Abrams and Doug Dorst
+ - [Code Complete](https://amzn.to/2JfYKVp) by Steve McConnell
 
 # 2018
+ - [Animal Farm](http://amzn.to/2HOtzPe) by George Orwell
  - [The Pearl](http://amzn.to/2u7KLNH) by John Steinbeck
  - [The Giver](http://amzn.to/2FvH7m2) by Lois Lowry
  - [The New Analog](http://amzn.to/2HdHZbp) by Damon Krukowski
