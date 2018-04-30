@@ -25,14 +25,26 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.series == 'oss' %}
+    <hr />
+    <br />
+    {% include oss_footer.html %}
+    <br />
+    <br />
+  {% endif %}
+
   {% if page.discussion_links %}
     {% include discussion_links.html %}
   {% endif %}
 
-  {% include share_buttons.html %}
+  {% if page.sharing != false %}
+    {% include share_buttons.html %}
+  {% endif %}
 
   {% include adsense.html %}
 
-  <h2>Comments</h2>
-  {% include commento.html %}
+  {% if page.comments != false %}
+    <h2>Comments</h2>
+    {% include commento.html %}
+  {% endif %}
 </article>
