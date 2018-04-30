@@ -1,6 +1,6 @@
 ---
 title: "Open Source Students: Introduction"
-comments: false
+comments: true
 sharing: false
 ---
 # About This Series
