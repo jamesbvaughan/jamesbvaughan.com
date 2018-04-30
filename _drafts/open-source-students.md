@@ -3,7 +3,6 @@ title: "Open Source Students: Introduction"
 comments: false
 sharing: false
 ---
-
 # About This Series
 
 I've been interested in the open source world for about as long as I've been
@@ -22,6 +21,7 @@ I plan to feature students will range from people who are just getting started
 and have only one or two pull requests to people who are core maintainers for
 very large software projects.
 
-# The Students
+## The Students
 
 - [Timothy Gu](/timothy-gu)
+- Jay Kamat (coming soon!)
