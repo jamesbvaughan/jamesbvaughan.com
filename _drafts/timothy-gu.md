@@ -2,11 +2,13 @@
 title: "Open Source Students: Timothy Gu"
 series: oss
 ---
-
 # Introduction
 
 In this first post in my series interviewing students in open source,
 I chose to interview fellow UCLA student Timothy Gu.
+(Check out the
+[series introduction](/open-source-students)
+if you haven't already.)
 Timothy is a first year Computer Science student here at UCLA and he has been
 active in open source since he was in High School.
 He is currently a maintainer of
@@ -112,11 +114,8 @@ but it was a really good learning experience.
 One of the other projects that I invested a lot of time in was Pug,
 which used to be called Jade.
 My first contribution to that project was also a documentation fix.
-I think it was just fixing a link in the docs,
+I think it was just fixing a broken link,
 something really small like that, and then it led to something more.
-That's kind of how everything is for me;
-I just see something that's really simple and because I like to fix things,
-I fix them.
 
 
 **It's been a while since your last blog post.
