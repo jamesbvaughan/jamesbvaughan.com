@@ -5,8 +5,8 @@ series: oss
 
 # Introduction
 
-For the first post in my series interviewing students in open source,
-I chose to go with a fellow UCLA student, Timothy Gu.
+In this first post in my series interviewing students in open source,
+I chose to interview fellow UCLA student Timothy Gu.
 Timothy is a first year Computer Science student here at UCLA and he has been
 active in open source since he was in High School.
 He is currently a maintainer of
@@ -19,7 +19,7 @@ and the
 
 # Interview
 
-_I spoke with Timothy on Sunday, April 15, 2018._
+_Sunday, April 15, 2018._
 
 **James: You have an impressive contribution history,
 especially as a freshman in college.
