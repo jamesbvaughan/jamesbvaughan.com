@@ -30,5 +30,5 @@ doing.
 
 ## The Students
 
-- [Timothy Gu](/timothy-gu)
+- Timothy Gu (coming soon!)
 - Jay Kamat (coming soon!)
