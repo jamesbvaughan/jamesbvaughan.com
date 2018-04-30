@@ -15,11 +15,18 @@ perceived as a long and complex process required to contribute to them.
 
 I've seen this same feeling in friends of mine that are interested in but
 intimidated by open source projects,
-and my goal with this series is to extinguish that intimidation by showcasing
-students who are active in open source projects that they care about.
+and one of my goals with this series is to extinguish that intimidation by
+showcasing students who are active in open source projects that they care about.
 I plan to feature students will range from people who are just getting started
 and have only one or two pull requests to people who are core maintainers for
 very large software projects.
+
+Another goal of the series is simply to highlight
+the work done by these students.
+Despite it's open nature,
+work on open source software often goes unappreciated,
+and I want to help shed some light on the awesome work that these people are
+doing.
 
 ## The Students
 
