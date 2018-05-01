@@ -292,3 +292,12 @@ I don't think that these are necessarily the right tips for everybody,
 nor do I think that waking up as early as I do will necessarily make all
 other people more productive.
 Every person is different, but these are the things that work for me.
+
+---
+
+Thanks for reading!
+I hope that you found some of this advice useful and applicaple.
+
+Do you agree or disagree with any of these pieces of advice?
+Do you have any advice that you would give _your_ freshman self?
+Let me know in the comments below!
