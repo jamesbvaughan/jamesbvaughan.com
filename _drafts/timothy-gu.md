@@ -2,7 +2,7 @@
 title: "Open Source Students: Timothy Gu"
 series: oss
 ---
-# Introduction
+## Introduction
 
 In this first post in my series interviewing students in open source,
 I chose to interview fellow UCLA student Timothy Gu.
@@ -11,7 +11,7 @@ I chose to interview fellow UCLA student Timothy Gu.
 if you haven't already.)
 Timothy is a first year Computer Science student here at UCLA and he has been
 active in open source since he was in High School.
-He is currently a maintainer of
+He is a maintainer of
 [Node.js](https://github.com/nodejs/node)
 and a contributer to
 [pug](https://github.com/pugjs/pug),
@@ -19,7 +19,7 @@ and a contributer to
 and the
 [whatwg html standard](https://github.com/whatwg/html).
 
-# Interview
+## Interview
 
 _Sunday, April 15, 2018._
 
@@ -117,7 +117,6 @@ My first contribution to that project was also a documentation fix.
 I think it was just fixing a broken link,
 something really small like that, and then it led to something more."
 
-
 **It's been a while since your last blog post.
 Do you have plans to keep writing more on there?**
 
@@ -175,7 +174,7 @@ set of circumstances for the bug to occur.
 If you discover a bug on your own, you are often the most knowledgeable
 person about that bug."
 
-# Recommended Readings
+## Recommended Readings
 
 _I like to end each interview by asking the subject to recommend a couple
 articles, books, videos, podcasts, etc. that made an impact on them recently.
