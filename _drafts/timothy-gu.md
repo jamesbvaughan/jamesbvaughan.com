@@ -89,29 +89,29 @@ Javascript was a pretty easy language compared to C,
 so I found that I could start to create my own things
 rather than just reading other people's code.
 
-I got the idea to make a better version of the continuous integration
+"I got the idea to make a better version of the continuous integration
 tool that ffmpeg had, so I got started writing that with Node.js,
 and it worked pretty well,
 but I didn't really know much about javascript,
 or especially about asynchronous programming back then.
 It was a foreign concept to me.
 
-For the longest time, I was kind of rolling in the mud because I had no idea
+"For the longest time, I was kind of rolling in the mud because I had no idea
 what was going on,
 but because of that experience I did learn a lot about
 the quirks of the platform and how things were supposed to work.
 
-There was a lot of trial and error,
+"There was a lot of trial and error,
 but in hindsight I think that was the best way to learn,
 because you basically see all the errors that you can possibly see and then
 when you see them again you'll be able to fix them because you've seen them
 before.
 
-If I were to look back at the code I wrote back then,
+"If I were to look back at the code I wrote back then,
 it would probably be really weird and not the way I would do things now,
 but it was a really good learning experience.
 
-One of the other projects that I invested a lot of time in was Pug,
+"One of the other projects that I invested a lot of time in was Pug,
 which used to be called Jade.
 My first contribution to that project was also a documentation fix.
 I think it was just fixing a broken link,
@@ -129,7 +129,7 @@ over this winter I wrote
 I personally think that more people should get started with reading the spec
 because it's such a useful resource.
 
-I'm part of ACM Hack at UCLA and we have a few internal projects that
+"I'm part of ACM Hack at UCLA and we have a few internal projects that
 we work on.
 I wrote a document recently trying to encourage people in ACM Hack to
 read through other people's code.
@@ -152,23 +152,23 @@ Some have more experience and some have less experience
 (like me when I was starting out with ffmpeg),
 and honestly everyone is willing to help.
 
-The javascript community tends to have a lot of new people and people are
+"The javascript community tends to have a lot of new people and people are
 always happy to help them out.
 
-For people that are interested but don't really know where to start,
+"For people that are interested but don't really know where to start,
 the best thing is to help out on a project that you actually use yourself.
 That makes it easier to contribute because you have an idea of how the
 software works and you can reason through things better than staring
 with a completely new project to you.
 
-If you spot a bug in a project you use, you can file an issue,
+"If you spot a bug in a project you use, you can file an issue,
 but you can also go further than that and try to look through the source code
 to find out where the bug is coming from.
 I think that this is the most effective way of getting involved in a project.
 If you don't understand something, ask questions.
 People are often a lot more friendly than you would expect.
 
-There's a big difference between trying to fix a bug you found yourself and
+"There's a big difference between trying to fix a bug you found yourself and
 trying to fix someone else's bug.
 In large software projects, bugs are very hidden and require a very specific
 set of circumstances for the bug to occur.
