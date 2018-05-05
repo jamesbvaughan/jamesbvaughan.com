@@ -6,6 +6,8 @@ script:
 
 deploy:
   provider: pages
+  repo: jamesbvaughan.github.io
+  target-branch: master
   skip_cleanup: true
   local_dir: public
   github_token: $GITHUB_TOKEN
