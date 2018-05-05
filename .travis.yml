@@ -6,7 +6,7 @@ script:
 
 deploy:
   provider: pages
-  repo: jamesbvaughan.github.io
+  repo: jamesbvaughan/jamesbvaughan.github.io
   target-branch: master
   skip_cleanup: true
   local_dir: public
