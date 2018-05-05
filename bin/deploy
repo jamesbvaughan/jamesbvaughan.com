@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -r --delete public/* jamesbvaughan.com:/var/www/jamesbvaughan.com
