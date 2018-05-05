@@ -1,0 +1,32 @@
+<meta name="author" content="James Vaughan" />
+<meta name="description" content="{{ .Render "summary" }}" />
+<meta property="og:title" content="{{ if isset .Params "title" }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content="{{ .Render "summary" }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="things james does" />
+{{ if eq .Section "posts" }}
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02"}}" />
+  <meta property="og:article:modified_time" content="{{ .Lastmod.Format "2006-01-02"}}" />
+{{ end }}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitterHandle }}" />
+<meta name="twitter:creator" content="@{{ .Site.Params.twitterHandle }}" />
+<link rel="canonical" href="{{ .Site.BaseURL }}" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "{{ if isset .Params "title" }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}",
+    "dateCreated": "{{ .Date.Format "2006-01-02" }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Site.Author.name }}"
+    },
+    "description": "{{ .Render "summary" }}",
+    "url": "{{ .Permalink }}"
+  }
+</script>

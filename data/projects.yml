@@ -1,0 +1,9 @@
+- name: bark
+  url: https://github.com/jamesbvaughan/bark
+  description: a command-line bookmarking tool
+- name: groupme-tui
+  url: https://github.com/jamesbvaughan/groupme
+  description: a text-based groupme client
+- name: go-recutils
+  url: https://github.com/jamesbvaughan/go-recutils
+  description: a go package for working with recutils databases

@@ -1,0 +1,48 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  {{ range .Data.Pages }}
+    <div class="card mt-2">
+      <div class="card-body">
+        <a href="{{ .RelPermalink }}">
+          <h5 class="card-title">
+            {{ .Title }}
+          </h5>
+        </a>
+        <p class="card-subtitle text-muted mb-0">
+          {{ .Date.Format "January 2, 2006" }}
+          -
+          {{ .ReadingTime }} min read
+        </p>   
+        <p class="card-text">
+          {{ .Render "summary" }}
+        </p>
+      </div>
+    </div>
+  {{ end }}
+  <h5 class="mt-4">
+    <a href="{{ .Site.RSSLink }}" class="d-flex align-items-baseline">
+      {{ partial "rss-icon.html" . }}&nbsp;RSS Feed
+    </a>
+  </h5>
+  <p>
+    RSS is awesome.
+    It's a protocol that lets you subscribe to sites like this
+    that publish content that can be represented as a feed.
+    In order to use RSS, you'll need an
+    <a href="https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators">RSS reader</a>.
+    I like to follow things with RSS reader because it lets
+    me see all of the feeds I subscribe to in one place,
+    in a consistent format,
+    with fewer distractions,
+    and without an algorithm telling me which articles and blog
+    posts I should like.
+    RSS isn't perfect,
+    but I think it's the best widely-available solution
+    for keeping up with content creators that I like.
+  </p>
+{{ end }}
+

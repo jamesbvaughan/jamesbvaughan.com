@@ -1,0 +1,36 @@
+baseURL: https://jamesbvaughan.com/
+
+languageCode: en-us
+
+title: things james does
+
+googleAnalytics: UA-92817561-1
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+pygmentsCodefences: true
+
+pygmentsUseClasses: true
+
+pygmentsStyle: friendly
+
+author:
+  name: James Vaughan
+  email: james@jamesbvaughan.com
+
+params:
+  description: >
+    a blog about computers and some of
+    the things I do with them
+  gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
+  githubUsername: jamesbvaughan
+  twitterHandle: jamesontheline
+
+permalinks:
+  posts: /:filename
+
+outputFormats:
+  RSS:
+    baseName: feed

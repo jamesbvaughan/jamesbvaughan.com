@@ -1,0 +1,26 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "subheader" }}
+  {{ .Date.Format "January 2, 2006" }} - {{ .ReadingTime }} min read
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  {{ if isset .Params "footer" }}
+    {{ partial .Params.footer . }}
+  {{ end }}
+  {{ if default true .Params.sharing }}
+    {{ partial "share-links.html" . }}
+  {{ end }}
+  {{ if isset .Params "discussion_links" }}
+    {{ partial "discussion-links.html" }}
+  {{ end }}
+  {{ if default true .Params.comments }}
+    <section>
+      <h4 class="mt-4">Comments</h4>
+      {{ partial "commento.html" . }}
+    </section>
+  {{ end }}
+{{ end }}

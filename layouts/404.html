@@ -1,0 +1,22 @@
+{{ define "header" }}
+  <h1 class="display-4">uh oh</h1>
+  <p class="lead">
+    This is my 404 page,
+    which probably isn't what you were looking for.
+    You ended up at a URL where I haven't posted anything.
+    If you were looking for one of my blog posts,
+    you can probably find it
+    <a href="/blog">here</a>.
+  </p>
+  <p class="lead">
+    If you think something is wrong and there should be a real page here,
+    please let me know by
+    <a href="mailto:{{ .Site.Author.email }}">emailing me</a>
+    or
+    <a target="_blank" href="http://twitter.com/intent/tweet?text=@{{ .Site.Params.twitterHandle }} Hey this link is broken. Can you fix it?&url=" id="tweet">tweeting at me</a>
+    and I will fix it as soon as possible.
+  </p>
+  <script>
+    document.getElementById('tweet').href += window.location.href
+  </script>
+{{ end }}

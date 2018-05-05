@@ -1,0 +1,122 @@
+- year: in progress
+  books:
+    - name: Nothing to Envy
+      url: http://amzn.to/2FuEAc7
+      author: Barbara Demick
+    - name: Ship of Theseus
+      url: https://amzn.to/2H5H26j
+      author: J.J. Abrams and Doug Dorst
+    - name: Code Complete
+      url: https://amzn.to/2JfYKVp
+      author: Steve McConnell
+
+- year: 2018
+  books:
+    - name: Animal Farm
+      url: http://amzn.to/2HOtzPe
+      author: George Orwell
+    - name: The Pearl
+      url: http://amzn.to/2u7KLNH
+      author: John Steinbeck
+    - name: The Giver
+      url: http://amzn.to/2FvH7m2
+      author: Lois Lowry
+    - name: The New Analog
+      url: http://amzn.to/2HdHZbp
+      author: Damon Krukowski
+    - name: Harry Potter and the Half-Blood Prince
+      url: http://amzn.to/2GXvgJY
+      author: J. K. Rowling
+    - name: Narrative of the Life of Frederick Douglass
+      url: http://amzn.to/2D0lJPJ
+      author: Frederick Douglass
+    - name: The 4-Hour Workweek
+      url: http://amzn.to/2F8QhRv
+      author: Tim Ferriss
+    - name: The Catcher in the Rye
+      url: http://amzn.to/2CRRdYh
+      author: J. D. Salinger
+    - name: Harry Potter and the Order of the Phoenix
+      url: http://amzn.to/2tdp9iv
+      author: J. K. Rowling
+    - name: Finding God in the Waves
+      url: http://amzn.to/2CXHMXC
+      author: Mike McHargue
+    - name: Here We Are Now
+      url: http://amzn.to/2GXzHEt
+      author: Charles R. Cross
+    - name: The Richest Man in Babylon
+      url: http://amzn.to/2FM1CYG
+      author: George S. Clason
+    - name: The Tao of Pooh
+      url: http://amzn.to/2H03uMV
+      author: Benjamin Hoff
+    - name: Rich Dad Poor Dad
+      url: http://amzn.to/2FaoWyc
+      author: Robert T. Kiyosaki
+
+- year: 2017
+  books:
+    - name: Things a Computer Scientist Rarely Talks About
+      url: http://amzn.to/2FNPYg7
+      author: Donald Knuth
+    - name: The Terror of History
+      url: http://amzn.to/2H0PFxP
+      author: Teofilo F. Ruiz
+       
+- year: 2016
+  books:
+    - name: Without Their Permission
+      url: http://amzn.to/2GXuTPs
+      author: Alexis Ohanian
+    - name: Modern Romance
+      url: http://amzn.to/2GVqNaH
+      author: Aziz Ansari
+
+- year: 2015
+  books:
+    - name: Zero to One
+      url: http://amzn.to/2FkF9nU
+      author: Peter Thiel
+    - name: Hidden Cities
+      url: http://amzn.to/2Fk6Ih2
+      author: Moses Gates
+
+- year: 2014
+  books:
+    - name: Harry Potter and the Goblet of Fire
+      url: http://amzn.to/2F9rDUS
+      author: J. K. Rowling
+    - name: Harry Potter and the Prisoner of Azkaban
+      url: http://amzn.to/2CUcaSE
+      author: J. K. Rowling
+    - name: Harry Potter and the Chamber of Secrets
+      url: http://amzn.to/2oEp2bj
+      author: J. K. Rowling
+    - name: Harry Potter and the Sorcerer's Stone
+      url: http://amzn.to/2oCudrU
+      author: J. K. Rowling
+    - name: The Importance of Being Earnest
+      url: http://amzn.to/2FQMwkV
+      author: Oscar Wilde
+    - name: Into Thin Air
+      url: http://amzn.to/2oEp8iT
+      author: Jon Krakauer
+    - name: Brave New World
+      url: http://amzn.to/2t7dhys
+      author: Aldous Huxley
+    - name: 1984
+      url: http://amzn.to/2oESPAx
+      author: George Orwell
+
+- year: 2013
+  books:
+    - name: A Clockwork Orange
+      url: http://amzn.to/2FOL1ni
+      author: Anthony Burgess
+    - name: Moonwalking with Einstein
+      url: http://amzn.to/2CTNHNa
+      author: Joshua Foer
+    - name: The Hardball Handbook
+      url: http://amzn.to/2CUFSXB
+      author: Chris Matthews

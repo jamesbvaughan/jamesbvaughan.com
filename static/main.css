@@ -1,0 +1,20 @@
+.container {
+  max-width: 720px;
+}
+
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+  border: none;
+  outline: none;
+}
+
+pre {
+  padding: 10px;
+}
+
+.commento .card {
+  padding: 0 !important;
+}
+
+#commento-coms {
+  margin-top: 15px !important;
+}
