@@ -15,7 +15,7 @@
     {{ partial "share-links.html" . }}
   {{ end }}
   {{ if isset .Params "discussion_links" }}
-    {{ partial "discussion-links.html" }}
+    {{ partial "discussion-links.html" . }}
   {{ end }}
   {{ if default true .Params.comments }}
     <section>

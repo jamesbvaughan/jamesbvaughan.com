@@ -1,6 +1,12 @@
 ---
 title: Counting Usernames from Malicious Login Attempts
 date: "2018-05-07"
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=17017307
+  - site_name: Reddit
+    url: https://www.reddit.com/r/linux/comments/8hrz9s/counting_usernames_from_malicious_login_attempts/
 ---
 
 A while back, when I was relatively new to running a VPS

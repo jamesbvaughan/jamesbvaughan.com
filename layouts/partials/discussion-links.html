@@ -1,10 +1,12 @@
-<em>
-  Discuss this post
-  {{ range .Params.discussion_links }}
-    <a href={{ .url }}>
-      here on {{ .site_name }}
-    </a>
-    or
-  {{ end }}
-  in the comments below.
-</em>
+<div>
+  <em>
+    Discuss this post
+    {{ range .Params.discussion_links }}
+      <a href={{ .url }}>
+        here on {{ .site_name }}
+      </a>
+      or
+    {{ end }}
+    in the comments below.
+  </em>
+</div>
