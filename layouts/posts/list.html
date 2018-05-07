@@ -5,19 +5,17 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range .Data.Pages }}
-    <div class="card mt-2">
-      <div class="card-body">
-        <a href="{{ .RelPermalink }}">
-          <h5 class="card-title">
+    <div class="row">
+      <div class="col-2 text-right font-weight-light px-0">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </div>
+      <div class="col">
+        <h5 class="mb-0">
+          <a href="{{ .RelPermalink }}">
             {{ .Title }}
-          </h5>
-        </a>
-        <p class="card-subtitle text-muted mb-0">
-          {{ .Date.Format "January 2, 2006" }}
-          -
-          {{ .ReadingTime }} min read
-        </p>   
-        <p class="card-text">
+          </a>
+        </h5>
+        <p>
           {{ .Render "summary" }}
         </p>
       </div>
