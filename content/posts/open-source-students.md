@@ -27,7 +27,7 @@ work on open source software often goes unappreciated,
 and I want to help shed some light on the awesome work that these people are
 doing.
 
-## The Students
+### The Interviews
 
 - [Timothy Gu](/timothy-gu)
 - [Jay Kamat](/jay-kamat)

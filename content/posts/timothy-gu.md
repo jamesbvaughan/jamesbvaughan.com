@@ -1,7 +1,8 @@
 ---
-title: "Open Source Students: Timothy Gu"
-date: "2018-05-01"
-footer: "oss-footer.html"
+title: Timothy Gu
+series: Open Source Students
+date: 2018-05-01
+footer: oss-footer.html
 ---
 
 In this first post in my series interviewing students in open source,

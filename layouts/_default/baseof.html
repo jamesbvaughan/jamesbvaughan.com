@@ -20,7 +20,9 @@
       <main class="mt-2">
         <article class="text-justify">
           {{ block "header" . }}<header>
-            <h1 class="display-4 text-left">{{ .Title }}</h1>
+            <h1 class="display-4 text-left">
+              {{ block "articleTitle" . }}{{ .Title }}{{ end }}
+            </h1>
             <p class="text-muted m-0">{{ block "subheader" . }}{{ end }}</p>
           </header>{{ end }}
           <p class="lead">{{ block "description" . }}

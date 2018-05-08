@@ -1,5 +1,9 @@
 {{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
+  {{ .Render "title" | htmlUnescape | plainify }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "articleTitle" }}
+  {{ .Render "title" }}
 {{ end }}
 
 {{ define "subheader" }}
