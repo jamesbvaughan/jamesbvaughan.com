@@ -22,7 +22,7 @@ very large software projects.
 
 Another goal of the series is simply to highlight
 the work done by these students.
-Despite it's open nature,
+Despite its open nature,
 work on open source software often goes unappreciated,
 and I want to help shed some light on the awesome work that these people are
 doing.
