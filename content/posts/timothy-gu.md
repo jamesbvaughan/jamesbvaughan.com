@@ -15,7 +15,7 @@ He is a maintainer of
 [Node.js](https://github.com/nodejs/node)
 and a contributer to
 [pug](https://github.com/pugjs/pug),
-[ffmpeg](https://github.com/FFmpeg/FFmpeg),
+[FFmpeg](https://github.com/FFmpeg/FFmpeg),
 and the
 [whatwg html standard](https://github.com/whatwg/html).
 
@@ -34,23 +34,23 @@ Back in middle school, I was probably the techiest person in my family.
 My mom had this DVD that she wanted to convert to a format that could be
 shared to my grandparents, so she asked me to take a look at it.
 
-"I found this open source tool called ffmpeg which seemed like the perfect
+"I found this open source tool called FFmpeg which seemed like the perfect
 tool for this,
-but the problem was that ffmpeg was really badly documented and very complex.
+but the problem was that FFmpeg was really badly documented and very complex.
 I knew that it was the right tool for the task, but didn't know how to use it.
 After a lot of work, I finally figured it out, but I didn't want other
 people to have to go through that.
 
 "That kind of began my journey into open source:
-I wrote up the documentation for what I had done on the ffmpeg wiki and
+I wrote up the documentation for what I had done on the FFmpeg wiki and
 then started trying to contribute to the official documentation.
 
 "It wasn't really _coding_ because it was just fixing documentation and
 typos, but around that same time, I decided to start trying to learn to
-read the code for ffmpeg in order to actually understand how it works.
-This got me started learning C, which ffmpeg is written in.
+read the code for FFmpeg in order to actually understand how it works.
+This got me started learning C, which FFmpeg is written in.
 I got stuck when I came to pointers because I had no idea how they worked,
-so I started reading more of ffmpeg's code which exposed me to how they
+so I started reading more of FFmpeg's code which exposed me to how they
 actually used C and used pointers and stuff like that.
 
 "For a few months, I didn't really write any code myself,
@@ -60,15 +60,15 @@ the coding industry works.
 Even though I wasn't writing my own code,
 I learned a lot about programming practices and paradigms."
 
-**How did you know about ffmpeg in the first place?**
+**How did you know about FFmpeg in the first place?**
 
 "Well, I didn't.
 I just looked up tutorials online on how to convert things from one format to
-another and that led me to ffmpeg.
+another and that led me to FFmpeg.
 
 "I'm naturally curious and like to know how things work,
-so I looked up the ffmpeg commands that I was running,
-and that led me deeper into ffmpeg."
+so I looked up the FFmpeg commands that I was running,
+and that led me deeper into FFmpeg."
 
 **How did you get started reading the code,
 having never been exposed to programming before?**
@@ -80,19 +80,19 @@ Computers are more or less logical and having some experience with them made me
 think that these small issues I was finding would not be too difficult to
 understand in the code."
 
-**After your involvement with ffmpeg,
+**After your involvement with FFmpeg,
 what other projects did you get involved with?**
 
-"After starting with ffmpeg, I learned a lot more about C,
+"After starting with FFmpeg, I learned a lot more about C,
 but then in high school, I learned Node.js.
-Javascript was a pretty easy language compared to C,
+JavaScript was a pretty easy language compared to C,
 so I found that I could start to create my own things
 rather than just reading other people's code.
 
 "I got the idea to make a better version of the continuous integration
-tool that ffmpeg had, so I got started writing that with Node.js,
+tool that FFmpeg had, so I got started writing that with Node.js,
 and it worked pretty well,
-but I didn't really know much about javascript,
+but I didn't really know much about JavaScript,
 or especially about asynchronous programming back then.
 It was a foreign concept to me.
 
@@ -124,7 +124,7 @@ Do you have plans to keep writing more on there?**
 but I don't really have a solid plan for updating my blog.
 The blog isn't my only medium for writing though;
 over this winter I wrote
-[a document on how to read and understand the Javascript spec](https://timothygu.me/es-howto/).
+[a document on how to read and understand the JavaScript spec](https://timothygu.me/es-howto/).
 I personally think that more people should get started with reading the spec
 because it's such a useful resource.
 
@@ -148,10 +148,10 @@ so it's difficult for me to be able to apply my experience to other people.
 The best thing I can say is that open source developers and maintainers are
 just people.
 Some have more experience and some have less experience
-(like me when I was starting out with ffmpeg),
+(like me when I was starting out with FFmpeg),
 and honestly everyone is willing to help.
 
-"The javascript community tends to have a lot of new people and people are
+"The JavaScript community tends to have a lot of new people and people are
 always happy to help them out.
 
 "For people that are interested but don't really know where to start,
@@ -188,7 +188,7 @@ Not just your own code, but most importantly, _other people's code_.
 Reading through other people's issues, code, and pull requests was the most
 effective way he learned and he recommends it for everyone.
 
-He also recommends reading through the official javascript spec
+He also recommends reading through the official JavaScript spec
 and has written up
 [an extensive guide on how to read it](https://timothygu.me/es-howto/).
 
