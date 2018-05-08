@@ -5,10 +5,8 @@ footer: "oss-footer.html"
 ---
 
 In this first post in my series interviewing students in open source,
-I chose to interview fellow UCLA student Timothy Gu.
-(Check out the
-[series introduction](/open-source-students)
-if you haven't already.)
+I chose to interview fellow UCLA student Timothy Gu
+([TimothyGu](https://github.com/TimothyGu)).
 Timothy is a first year Computer Science student here at UCLA and he has been
 active in open source since he was in High School.
 He is a maintainer of
