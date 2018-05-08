@@ -160,7 +160,7 @@ attempts like these.
 (I'm embarrassed to say this now, but
 one of the first things I did after making this list the first time was
 grep for my actual username.
-I felt a but of relief to know that no one had tried my actual username
+I felt a bit of relief to know that no one had tried my actual username
 when it didn't come up,
 until I realized that I would have already filtered out my username earlier
 with `grep 'Invalid user'` ...*facepalm*.)
