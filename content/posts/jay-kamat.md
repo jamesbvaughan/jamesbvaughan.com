@@ -2,7 +2,6 @@
 title: "Open Source Students: Jay Kamat"
 date: "2018-05-08"
 footer: "oss-footer.html"
-draft: true
 ---
 
 This week's interview features Jay Kamat

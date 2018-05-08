@@ -30,4 +30,4 @@ doing.
 ## The Students
 
 - [Timothy Gu](/timothy-gu)
-- Jay Kamat (coming soon!)
+- [Jay Kamat](/jay-kamat)
