@@ -1,6 +1,12 @@
 ---
 title: How I Take Notes With Vim, Markdown, and Pandoc
 date: "2018-05-15"
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=17078059
+  - site_name: Reddit
+    url: https://www.reddit.com/r/vim/comments/8jpew3/how_i_take_notes_with_vim_markdown_and_pandoc/
 ---
 
 I've gone through quite a few revisions of my note-taking process
