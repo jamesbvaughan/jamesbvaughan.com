@@ -1,7 +1,6 @@
 ---
 title: How I Take Notes With Vim, Markdown, and Pandoc
-date: "2018-05-11"
-draft: true
+date: "2018-05-15"
 ---
 
 I've gone through quite a few revisions of my note-taking process
@@ -60,13 +59,6 @@ It has an
 extensive and elegant system of composable keybindings that enable users to
 perform complex editing tasks with minimal hand movement.)_
 
-I am familiar enough with Vim at this point to be able to perform many editing
-and formatting tasks from muscle memory while barely looking at my screen.
-This makes it easy to focus my eyes on the thing I'm taking notes on,
-whether it's a lecturer, a video, or an article,
-while taking nicely-formatted notes.
-Because of this, I knew that I wanted to compose and edit my notes in it.
-
 Vim is not a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG)
 editor, but I like using nice formatting features,
 like
@@ -78,20 +70,12 @@ so I needed to pick a markup language.
 At first I thought I might use
 [LaTeX](https://www.latex-project.org//)
 because I was familiar with it and
-because it has nice default styles,
+it has nice default styles,
 but ended up going with Markdown after discovering
 [pandoc](http://pandoc.org/),
 and learning that I could write documents in simple Markdown and
 then use it to convert them
 to LaTeX-formatted PDFs, HTML pages, and a bunch of other formats.
-
-I found
-[Vimwiki](http://vimwiki.github.io/)
-around the same time I found pandoc,
-and it felt like the perfect addition to this system.
-Vimwiki has a bunch of cool features that I don't use (yet)
-but the main one that I find useful is the ability to easily navigate to
-files linked to from an open Markdown within Vim.
 
 ## Organization
 
@@ -101,7 +85,8 @@ For example, the notes for my computer security class are in
 `~/Documents/notes/school/cs136`.
 Within individual notes, I link to others with standard Markdown link syntax,
 and can quickly navigate to them by placing my cursor over the link I want
-to navigate to and pressing Enter, thanks to Vimwiki.
+to navigate to and pressing Enter, thanks to the
+[Vimwiki](http://vimwiki.github.io/) plugin.
 
 ## Viewing
 
@@ -112,8 +97,7 @@ I have a few different methods set up.
 
 #### In Vim
 
-The Vimwiki plugin makes it really easy to navigate through a bunch of
-Markdown notes.
+Vimwiki makes it really easy to navigate through a bunch of Markdown notes.
 I have an `index.md` that looks something like this:
 
 ```markdown
@@ -206,14 +190,14 @@ to keep my notes directory in sync between my machines and my phone.
 I also use the
 [Markor](https://github.com/gsantner/markor)
 app to manage and edit the notes on my phone.
-This app is nice because it makes it easy to navigate through my notes
+This app is nice because it makes it easy to navigate my notes
 directory and the built in editor formats Markdown files nicely.
 
 ### In Print
 
 When I have a big exam coming up,
 it sometimes helps to make a PDF of all my notes to study off of.
-For this, I've created Makefiles for specific courses that produce a nice
+For this, I've created Makefiles for specific classes that produce a nice
 looking PDF of all my notes for the class.
 For example, this is my Makefile for a software engineering class I'm taking
 right now:
@@ -238,9 +222,9 @@ build/%.pdf: %.md
         pandoc -V geometry:margin=1in -o $@ $?
 ```
 
-This Makefile converts each Markdown file to a PDF and then uses
+This converts each file to a PDF and then uses
 [Ghostscript](https://www.ghostscript.com/)
-to combine all the PDFs into one.
+to combine them all into one.
 It also lets me include any other PDFs I have, like the sample midterm in
 my example.
 This has been super handy for open-note tests.
@@ -255,7 +239,8 @@ I put "optimizing" in quotes because this often ends up taking more of my
 time than the "optimizations" actually save,
 and I'll commonly miss chunks of lectures because I got distracted trying
 to fix the syntax highlighting for misspelled words in my Vim colorscheme
-(or something of that nature).
+or trying to decide on a better font size for the headers in my generated
+PDFs.
 
 Another area with room for improvement is in my use of the Vimwiki plugin.
 It's a powerful plugin with a bunch of cool features, but
