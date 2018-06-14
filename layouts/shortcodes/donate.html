@@ -1,0 +1,65 @@
+<div id="donation">
+  <form id="donateForm" novalidate>
+    <div class="form-group">
+      <div class="input-group mr-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">$</div>
+        </div>
+        <input
+          class="form-control"
+          id="donationAmount"
+          placeholder="Amount (USD)"
+          pattern="\$?[1-9]+(,[0-9]{3})*(\.[0-9][0-9]?)?"
+          required
+        />
+        <div class="invalid-feedback">
+          You have to donate a valid dollar amount ($1 minimum)
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" id="donateButton">Donate</a>
+  </form>
+</div>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script>
+const handler = StripeCheckout.configure({
+  key: 'pk_live_K1ngFeTtNKvqAuiRcU28Rdpr',
+  name: 'James Vaughan',
+  description: 'One-time donation',
+  image: 'https://blog.tildes.net/theme/images/favicon-144x144.png',
+  panelLabel: 'Donate',
+  allowRememberMe: false,
+  locale: 'auto',
+  token: function (token) {
+    document.getElementById('donation').innerHTML =
+      '<b>Thank you for your support!</b>'
+  }
+})
+
+const form = document.getElementById("donateForm")
+form.addEventListener('submit', function(event) {
+  event.preventDefault()
+
+  if (form.checkValidity()) {
+    let amount = document.getElementById('donationAmount').value
+    amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+    amount = parseFloat(amount)
+
+    if (isNaN(amount)) {
+      alert('Invalid donation amount.')
+    } else if (amount < 1.00) {
+      alert('Donation amount must be at least $1.')
+    } else {
+      handler.open({
+        amount: Math.round(amount * 100)
+      })
+    }
+  }
+  form.classList.add('was-validated')
+})
+
+window.addEventListener('popstate', function() {
+  handler.close()
+})
+</script>

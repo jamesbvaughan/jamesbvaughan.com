@@ -4,8 +4,6 @@ languageCode: en-us
 
 title: things james does
 
-googleAnalytics: UA-92817561-1
-
 disableKinds:
   - taxonomy
   - taxonomyTerm

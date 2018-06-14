@@ -18,3 +18,12 @@ pre {
 #commento-coms {
   margin-top: 15px !important;
 }
+
+a {
+  color: #d33682;
+}
+
+::selection {
+  color: white;
+  background: #6c71c4;
+}
