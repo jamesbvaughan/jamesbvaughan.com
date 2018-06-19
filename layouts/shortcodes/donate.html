@@ -1,7 +1,16 @@
 <div id="donation">
-  <form id="donateForm" novalidate>
-    <div class="form-group">
-      <div class="input-group mr-2">
+  <form
+    id="donateForm"
+    action="https://donate.jamesbvaughan.com/makeDonation"
+    method="POST"
+    novalidate
+  >
+    <input type="hidden" name="id" id="id" value="" />
+    <input type="hidden" name="email" id="email" value="" />
+    <input type="hidden" name="amount" id="amount" value="" />
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="donationAmount">Amount</label>
+      <div class="input-group col-sm-10">
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
@@ -17,7 +26,18 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" id="donateButton">Donate</a>
+    <div class="form-group row">
+      <label for="note" class="col-sm-2 col-form-label">Message</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          id="note"
+          name="note"
+          placeholder="add a message (optional)"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary" id="donateButton">Donate</a>
   </form>
 </div>
 
@@ -32,12 +52,14 @@ const handler = StripeCheckout.configure({
   allowRememberMe: false,
   locale: 'auto',
   token: function (token) {
-    document.getElementById('donation').innerHTML =
-      '<b>Thank you for your support!</b>'
+    document.getElementById('id').value = token.id
+    document.getElementById('email').value = token.email
+    document.getElementById('donateForm').submit()
   }
 })
 
 const form = document.getElementById("donateForm")
+
 form.addEventListener('submit', function(event) {
   event.preventDefault()
 
@@ -51,9 +73,9 @@ form.addEventListener('submit', function(event) {
     } else if (amount < 1.00) {
       alert('Donation amount must be at least $1.')
     } else {
-      handler.open({
-        amount: Math.round(amount * 100)
-      })
+      amount = Math.round(amount * 100)
+      document.getElementById('amount').value = amount
+      handler.open({ amount })
     }
   }
   form.classList.add('was-validated')
