@@ -8,7 +8,7 @@ footer: oss-footer.html
 This week's interview features Jay Kamat
 ([jgkamat](https://github.com/jgkamat)),
 a Computer Science student at Georgia Tech.
-I first found Jay through his work on [qutebrowser](qutebrowser)
+I first found Jay through his work on [qutebrowser](/qutebrowser)
 and was impressed with how much work he had done on the browser and
 with how welcoming and helpful he was in the Github issues and on IRC.
 When I found out that he is the same age as me,
