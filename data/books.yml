@@ -1,17 +1,23 @@
 - year: in progress
   books:
-    - name: Harry Potter and the Deathly Hallows
-      url: https://amzn.to/2kPopJC
-      author: J. K. Rowling
-    - name: The Cathedral and the Bazaar
-      url: https://amzn.to/2sxOPDP
-      author: Eric S. Raymond
+    - name: Let's Explore Diabetes with Owls
+      url: https://amzn.to/2Jkj6eL
+      author: David Sedaris
+    - name: Code
+      url: https://amzn.to/2LcMjdq
+      author: Charles Petzold
     - name: "tmux 2: Productive Mouse-Free Development"
       url: https://amzn.to/2kOPcpt
       author: Brian P. Hogan
 
 - year: 2018
   books:
+    - name: Harry Potter and the Deathly Hallows
+      url: https://amzn.to/2kPopJC
+      author: J. K. Rowling
+    - name: The Cathedral and the Bazaar
+      url: https://amzn.to/2sxOPDP
+      author: Eric S. Raymond
     - name: Nothing to Envy
       url: http://amzn.to/2FuEAc7
       author: Barbara Demick
