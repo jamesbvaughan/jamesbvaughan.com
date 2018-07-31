@@ -4,6 +4,6 @@
 - name: groupme-tui
   url: https://github.com/jamesbvaughan/groupme
   description: a text-based groupme client
-- name: go-recutils
-  url: https://github.com/jamesbvaughan/go-recutils
-  description: a go package for working with recutils databases
+- name: shair
+  url: https://gitlab.com/jamesbvaughan/shair
+  description: a place to share links with friends without losing them
