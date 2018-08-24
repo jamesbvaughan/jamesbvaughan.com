@@ -7,7 +7,7 @@
     "build:css": "uglifycss assets/css/* > static/css/styles.css",
     "build": "npm run build:css && hugo",
     "clean": "rm -rf public static/css/*",
-    "deploy": "rsync -r --delete --info=progress2 public/* larry:/var/www/jamesbvaughan.com"
+    "deploy": "rsync -r --del --info=progress2 public/* larry:/var/www/jamesbvaughan.com"
   },
   "repository": {
     "type": "git",
