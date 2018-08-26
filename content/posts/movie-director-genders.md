@@ -1,6 +1,12 @@
 ---
 title: Movie Director Genders
 date: "2018-08-22"
+
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=17838047
+  - site_name: Reddit
+    url: https://www.reddit.com/r/ruby/comments/9a1h11/using_letterboxd_tmdb_and_ruby_to_look_at_movie/
 ---
 
 I've always loved watching movies.
