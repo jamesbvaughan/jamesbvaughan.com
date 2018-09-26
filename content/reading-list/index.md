@@ -7,10 +7,6 @@ description: >
   for classes started to pile up.
   Recently, I have been making reading a higher priority in my life.
   This page is a log of all the books that I read.
-menu:
-  main:
-    title: reading
-    weight: 1
 ---
 
 {{< books >}}

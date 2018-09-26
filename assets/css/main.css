@@ -19,7 +19,12 @@ pre {
   margin-top: 15px !important;
 }
 
-a {
+article a, footer a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+article a:hover, footer a:hover {
   color: #d33682;
 }
 

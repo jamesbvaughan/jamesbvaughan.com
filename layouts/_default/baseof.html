@@ -17,7 +17,7 @@
     <div class="container mt-3">
       {{ partial "nav.html" . }}
       <main class="mt-2">
-        <article class="text-justify">
+        <article>
           {{ block "header" . }}<header>
             <h1 class="display-4 text-left">
               {{ block "articleTitle" . }}{{ .Title }}{{ end }}

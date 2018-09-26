@@ -1,3 +1,6 @@
+- name: comments
+  url: https://gitlab.com/jamesbvaughan/comments
+  description: a self-hosted commenting platform
 - name: bark
   url: https://github.com/jamesbvaughan/bark
   description: a command-line bookmarking tool

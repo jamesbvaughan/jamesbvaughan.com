@@ -8,6 +8,6 @@ description: >
   and I'd love to talk more about it!
 menu:
   main:
-    title: writing
+    title: blog
     weight: 2
 ---

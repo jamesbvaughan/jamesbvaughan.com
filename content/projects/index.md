@@ -7,8 +7,8 @@ description: >
   working on.
 menu:
   main:
-    title: making
-    weight: 3
+    title: projects
+    weight: 4
 ---
 
 {{< projects >}}
