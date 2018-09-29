@@ -1,0 +1,16 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  <ul>
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

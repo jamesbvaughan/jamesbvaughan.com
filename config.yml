@@ -4,9 +4,8 @@ languageCode: en-us
 
 title: things james does
 
-disableKinds:
-  - taxonomy
-  - taxonomyTerm
+taxonomies:
+  tag: tags
 
 pygmentsCodefences: true
 
@@ -19,9 +18,6 @@ author:
   email: james@jamesbvaughan.com
 
 params:
-  description: >
-    a blog about computers and some of
-    the things I do with them
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline

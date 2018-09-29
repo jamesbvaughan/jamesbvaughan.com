@@ -1,0 +1,46 @@
+- name: The Bike Shed
+  link: xxx
+  description: >
+    The Bike Shed is produced by Thoughtbot and covers all things related to
+    software engineering, often with a focus on Ruby on Rails, but definitely
+    not exclusively Ruby on Rails.
+
+- name: Command Line Heroes
+  link: xxx
+  description: >
+    some description
+
+- name: IRL
+  link: xxx
+  description: >
+    some description
+
+- name: Song Exploder
+  link: xxx
+  description: >
+    some description
+
+- name: The Yak Shave
+  link: xxx
+  description: >
+    some description
+
+- name: Conversations with Tyler
+  link: xxx
+  description: >
+    some description
+
+- name: The Changelog
+  link: xxx
+  description: >
+    some description
+
+- name: The Knowledge Project
+  link: xxx
+  description: >
+    some description
+
+- name: Planet Money
+  link: xxx
+  description: >
+    some description

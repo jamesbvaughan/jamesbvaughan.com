@@ -28,6 +28,21 @@ article a:hover, footer a:hover {
   color: #d33682;
 }
 
+.popup {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.popup img {
+  display: none;
+  position: absolute;
+}
+
+.popup:hover img {
+  display: block;
+}
+
 ::selection {
   color: white;
   background: #6c71c4;
