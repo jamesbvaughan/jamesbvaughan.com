@@ -180,6 +180,10 @@ build/assets/%: assets/%
         @mkdir -p $$(dirname $@)
         cp $? $@
 
+build/%.html: %.md template.html
+	@mkdir -p $$(dirname $@)
+	pandoc -o $@ --template=template.html $<
+
 deploy:
         rsync --recursive --human-readable --delete --info=progress2 \
                build/* my_server
