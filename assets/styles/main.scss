@@ -3,18 +3,9 @@
 a {
   @extend .link;
   @extend .green;
-  @extend .dim;
 }
 
 pre {
   @extend .pa2;
   @extend .f6;
-}
-
-hr {
-  height: 5em;
-}
-
-.popup:hover img {
-  display: relative !important;
 }

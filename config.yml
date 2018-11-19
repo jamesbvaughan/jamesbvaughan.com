@@ -4,15 +4,6 @@ languageCode: en-us
 
 title: things james does
 
-taxonomies:
-  tag: tags
-
-pygmentsCodefences: true
-
-pygmentsUseClasses: true
-
-pygmentsStyle: friendly
-
 author:
   name: James Vaughan
   email: james@jamesbvaughan.com
@@ -21,11 +12,17 @@ params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline
-  linkClasses: link green dim
 
-permalinks:
-  posts: /:filename
+taxonomies:
+  tag: tags
 
 outputFormats:
   RSS:
     baseName: feed
+
+permalinks:
+  posts: /:filename
+
+pygmentsCodefences: true
+pygmentsUseClasses: true
+pygmentsStyle: friendly

@@ -17,6 +17,7 @@
   </div>
   {{ if isset .Params "footer" }}
     {{ partial .Params.footer . }}
+    <br />
   {{ end }}
   {{ if default true .Params.sharing }}
     {{ partial "share-links.html" . }}

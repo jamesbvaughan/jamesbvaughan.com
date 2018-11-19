@@ -3,29 +3,25 @@
 {{ end }}
 
 {{ define "main" }}
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
+  <ul class="list pl0">
   {{ range .Data.Pages }}
-    <div class="row">
-      <div class="col-2 text-right font-weight-light px-0">
-        {{ .Date.Format "Jan 2, 2006" }}
-      </div>
-      <div class="col">
-        <h5 class="text-left mb-0">
-          <a href="{{ .RelPermalink }}">
-            {{ .Render "title" }}
-          </a>
-        </h5>
-        <p>
-          {{ .Render "summary" }}
-        </p>
-      </div>
-    </div>
+  <li class="mb4">
+    <h2 class="mb0">
+      <a class="dark-gray underline-hover" href="{{ .RelPermalink }}">
+        {{ .Render "title" }}
+      </a>
+    </h2>
+    <time class="f6">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <p class="mt1 lh-copy">{{ .Render "summary" }}</p>
+  </li>
   {{ end }}
-  <h5 class="mt-4">
-    <a href="{{ .Site.RSSLink }}" class="d-flex align-items-baseline">
+  <h3>
+    <a href="{{ .Site.RSSLink }}">
       {{ partial "rss-icon.html" . }}&nbsp;RSS Feed
     </a>
-  </h5>
+  </h3>
   <p>
     RSS is awesome.
     It's a protocol that lets you subscribe to sites like this
@@ -43,4 +39,3 @@
     for keeping up with content creators that I like.
   </p>
 {{ end }}
-

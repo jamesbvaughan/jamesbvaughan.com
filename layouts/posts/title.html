@@ -1,5 +1,2 @@
-{{ if isset .Page.Params "series" }}<span class="d-inline-block">
-  {{ .Page.Params.series }}:&nbsp;
-</span>{{ end }}<span class="d-inline-block">
-  {{ .Title }}
-</span>
+{{ if isset .Page.Params "series" }}<span class="dib">
+{{ .Page.Params.series }}:&nbsp;</span>{{ end }}<span class="dib">{{ .Title }}</span>

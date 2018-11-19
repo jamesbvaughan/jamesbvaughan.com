@@ -1,4 +1,2 @@
-public
-node_modules
-static/js/*.js
-static/css/*.css
+/public
+/resources
