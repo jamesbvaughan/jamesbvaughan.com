@@ -1,18 +1,12 @@
-<nav class="navbar navbar-expand-md navbar-light p-0">
-  <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-        <li class="nav-item">
-          <a class="nav-link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
-            {{ .Title | lower }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
+<nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">{{ .Site.Title }}</a>
+  </div>
+  <div>
+    {{ range .Site.Menus.main }}
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="{{ .URL }}">
+        {{ .Title | lower }}
+      </a>
+    {{ end }}
   </div>
 </nav>

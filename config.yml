@@ -21,6 +21,7 @@ params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline
+  linkClasses: link green dim
 
 permalinks:
   posts: /:filename

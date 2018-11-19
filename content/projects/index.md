@@ -5,10 +5,6 @@ description: >
   and tend to spend a lot of my free time doing that.
   These are some of the projects that I have worked on or am currently
   working on.
-menu:
-  main:
-    title: projects
-    weight: 4
 ---
 
 {{< projects >}}

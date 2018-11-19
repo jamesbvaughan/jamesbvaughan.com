@@ -2,16 +2,19 @@
   {{ .Render "title" | htmlUnescape | plainify }} - {{ .Site.Title }}
 {{ end }}
 
-{{ define "articleTitle" }}
-  {{ .Render "title" }}
-{{ end }}
-
-{{ define "subheader" }}
-  {{ .Date.Format "January 2, 2006" }} - {{ .ReadingTime }} min read
-{{ end }}
-
 {{ define "main" }}
-  {{ .Content }}
+<article class="">
+  <header class="mb4">
+    <h1 class="f1 mb2 lh-title">
+      {{ .Render "title" }}
+    </h1>
+    <time class="tracked gray">
+      {{ .Date.Format "January 2, 2006" }}
+    </time>
+  </header>
+  <div class="lh-copy">
+    {{ .Content }}
+  </div>
   {{ if isset .Params "footer" }}
     {{ partial .Params.footer . }}
   {{ end }}
@@ -21,10 +24,5 @@
   {{ if isset .Params "discussion_links" }}
     {{ partial "discussion-links.html" . }}
   {{ end }}
-  {{ if default true .Params.comments }}
-    <section>
-      <h4 class="mt-4">Comments</h4>
-      {{ partial "commento.html" . }}
-    </section>
-  {{ end }}
+</article>
 {{ end }}

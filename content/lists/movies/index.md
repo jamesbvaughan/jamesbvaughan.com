@@ -8,8 +8,6 @@ you can do that on
 [my Letterboxd profile](https://letterboxd.com/jamesbvaughan/films/).
 If you are just interested in knowing what my favorite movies are,
 then you're in the right place.
-If you don't care about what movies I watch,
-then you should probably go [somewhere else](/lists).
 
 ### My favorite movies
 

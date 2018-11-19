@@ -1,9 +1,8 @@
 <div>
-  {{ range .Site.Data.movies }}
-    <a href="">
-      <h5>{{ .name }} ({{ .year }})</h5>
+  {{ range .Site.Data.podcasts }}
+    <a href="{{ .link }}">
+      <h5>{{ .name }}</h5>
     </a>
-    <p>{{ .description }}</p>
+    <p>{{ .description | markdownify }}</p>
   {{ end }}
 </div>
-

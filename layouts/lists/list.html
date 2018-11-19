@@ -3,10 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
-  <ul>
+  <ul class="list">
     {{ range .Data.Pages }}
-      <li>
+      <li class="f3 pv2 b">
         <a href="{{ .RelPermalink }}">
           {{ .Title }}
         </a>

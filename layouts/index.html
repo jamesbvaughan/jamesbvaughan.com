@@ -1,34 +1,10 @@
 {{ define "main" }}
-  <div class="mt-4 row">
-    <div class="col order-md-last d-flex justify-content-around align-items-start">
+  <div class="flex flex-row-reverse justify-between mt4">
+    <div class="">
       <img src="slacker.png">
     </div>
-    <div class="lead col-md-9">
-      <p>hey i'm james</p>
-      <p>welcome to my website</p>
-      <p>it's a pretty good website</p>
-      <p>
-        it's where i post
-        <a href="/blog">things that i write</a>
-      </p>
-      <p>
-        i also use it to share
-        <a href="/lists">lists of things that i like</a>
-      </p>
-      <p>
-        i hope you enjoy your time here
-      </p>
-      <p>
-        thanks for coming
-      </p>
+    <div class="f3">
+      {{ .Content }}
     </div>
   </div>
-  <script>
-    ['song', 'movie'].forEach(item =>
-      fetch('https://api.jamesbvaughan.com/' + item)
-        .then(r => r.json())
-        .then(({ status, body }) =>
-          status === 'ok' &&
-            (document.getElementById(item).innerHTML = ` (${body})`)))
-  </script>
 {{ end }}
