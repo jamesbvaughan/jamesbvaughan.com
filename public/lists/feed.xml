@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lists on things james does</title>
+    <link>https://jamesbvaughan.com/lists/</link>
+    <description>Recent content in lists on things james does</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james@jamesbvaughan.com (James Vaughan)</managingEditor>
+    <webMaster>james@jamesbvaughan.com (James Vaughan)</webMaster>
+    
+	<atom:link href="https://jamesbvaughan.com/lists/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>albums</title>
+      <link>https://jamesbvaughan.com/lists/albums/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/lists/albums/</guid>
+      <description>I&amp;rsquo;m still working on this page, so check back soon!</description>
+    </item>
+    
+    <item>
+      <title>blog posts</title>
+      <link>https://jamesbvaughan.com/lists/blog-posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/lists/blog-posts/</guid>
+      <description>I read a lot of blog posts and articles online, and it&amp;rsquo;s one of my favorite mediums for reading and writing. I generally discover new blogs through Reddit or Hacker News, and when I read something that I like, I&amp;rsquo;ll usually add it to my RSS reader so that I can keep up with new posts.
+I often see people romanticizing the blogging culture of the late-90s/early-2000s internet, and I don&amp;rsquo;t doubt that we could be missing some things from that time, but I think that today&amp;rsquo;s blogging culture is alive and well.</description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>https://jamesbvaughan.com/lists/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/lists/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movies</title>
+      <link>https://jamesbvaughan.com/lists/movies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/lists/movies/</guid>
+      <description>I watch a lot of movies. If you want to track every single movie I watch, you can do that on my Letterboxd profile. If you are just interested in knowing what my favorite movies are, then you&amp;rsquo;re in the right place.
+My favorite movies I&amp;rsquo;d like to preface this section by saying that I make a distinction between what I believe to be the &amp;ldquo;best&amp;rdquo; movies and what are my &amp;ldquo;favorite&amp;rdquo; movies.</description>
+    </item>
+    
+    <item>
+      <title>podcasts</title>
+      <link>https://jamesbvaughan.com/lists/podcasts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/lists/podcasts/</guid>
+      <description>I think podcasts are really cool. You can listen to them and learn or be entertained or both in a lot of situations where you can&amp;rsquo;t easily read a book or do real work. I spend a lot of time walking, which makes for a lot of time to listen to podcasts.
+My favorite podcasts I try to maintain a balance of podcasts that teach me new and interesting things and podcasts that are mostly entertainment.</description>
+    </item>
+    
+  </channel>
+</rss>

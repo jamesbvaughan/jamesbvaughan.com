@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+  Finding Free Food with Python  - things james does
+</title>
+
+    <meta name="author" content="James Vaughan" />
+<meta name="description" content=" If you live in a major city, there&rsquo;s a good chance you&rsquo;ve used (or at least heard of) food delivery services like Postmates, GrubHub, or...
+" />
+<meta property="og:title" content="Finding Free Food with Python" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content=" If you live in a major city, there&rsquo;s a good chance you&rsquo;ve used (or at least heard of) food delivery services like Postmates, GrubHub, or...
+" />
+<meta property="og:url" content="https://jamesbvaughan.com/python-twilio-scraping/" />
+<meta property="og:site_name" content="things james does" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2017-03-06" />
+  <meta property="og:article:modified_time" content="2017-03-06" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jamesontheline" />
+<meta name="twitter:creator" content="@jamesontheline" />
+<link rel="canonical" href="https://jamesbvaughan.com/python-twilio-scraping/" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "Finding Free Food with Python",
+    "dateCreated": "2017-03-06",
+    "dateModified": "2017-03-06",
+    "author": {
+      "@type": "Person",
+      "name": "James Vaughan"
+    },
+    "description": " If you live in a major city, there&rsquo;s a good chance you&rsquo;ve used (or at least heard of) food delivery services like Postmates, GrubHub, or...
+",
+    "url": "https://jamesbvaughan.com/python-twilio-scraping/"
+  }
+</script>
+
+
+    <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/syntax.css"/>
+  </head>
+  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+    <nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">things james does</a>
+  </div>
+  <div>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/about/">
+        about
+      </a>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/blog/">
+        blog
+      </a>
+    
+  </div>
+</nav>
+
+    <main>
+      
+<article class="">
+  <header class="mb4">
+    <h1 class="f1 mb2 lh-title">
+      <span class="dib">Finding Free Food with Python</span>
+
+    </h1>
+    <time class="tracked gray">
+      March 6, 2017
+    </time>
+  </header>
+  <div class="lh-copy">
+    
+
+<p>If you live in a major city, there&rsquo;s a good chance you&rsquo;ve used
+(or at least heard of) food delivery services like Postmates,
+GrubHub, or DoorDash.
+These services are great for times when I&rsquo;m behind on groceries
+or when I&rsquo;m getting some late night studying in before a big
+midterm or final.
+The only problem with these is that they&rsquo;re not cheap.
+For a single order, the delivery fee and service fee can
+sometimes double the cost of the order.</p>
+
+<p>Fortunately for me, Postmates regularly does promotions where
+they offer free food and waive the delivery fee for certain restaurants.
+The only problem with these promotions is that they&rsquo;re easy to
+miss.
+I generally rely on waiting for a friend to catch one of these
+promotions by chance and text me about it.
+I actually have a group message with some friends titled
+&ldquo;Free Postmates&rdquo; that we exclusively use for keeping track of
+Postmates promotions.</p>
+
+<p>I recently realized that I could make this process much simpler
+by creating something that would track the Postmates website
+and notify me of deals.
+In this post, I&rsquo;ll describe how I built a tool to do this.
+It turned out to be a lot simpler than I had expected and has
+made me a lot more confident to create things like this in the
+future.
+If you&rsquo;re new to the tools I use in this post,
+I hope that reading it helps you feel comfortable getting started
+with them!</p>
+
+<h3 id="choosing-a-language">Choosing a Language</h3>
+
+<p>For something like this, the language choice isn&rsquo;t super critical.
+My only requirements were that it be a language that is simple
+for me to use, and has nice libraries for doing the things
+I need to do (web scraping and notifying my phone).
+This helped me narrow it down to Javascript and Python.
+There are plenty of other great choices for something like this,
+but those are the two that I knew I could work efficiently in,
+based on my past experience.
+I ended up choosing Python, mostly because I had slightly less experience
+with it and wanted to learn more.</p>
+
+<h3 id="choosing-a-web-scraper">Choosing a Web Scraper</h3>
+
+<p>This was a fairly easy decision as I had used
+<a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>
+for web scraping in Python before and had a good experience with
+it.
+Beautiful Soup isn&rsquo;t the only option here,
+(another good one is
+<a href="https://scrapy.org/">Scrapy</a>),
+but it&rsquo;s the one I knew how to use and I knew that it would
+make things simple so I went with it.</p>
+
+<h3 id="choosing-a-notifier">Choosing a Notifier</h3>
+
+<p>The final thing I needed to decide on for this project was some
+way to notify myself when a promotion was found.
+I had been wanting to use
+<a href="https://twilio.com">Twilio</a>
+for something for a while, so I decided to go with that.
+In case you haven&rsquo;t heard of Twilio, it&rsquo;s a service that provides
+a way to integrate different kinds of messaging into your
+program.
+One of it&rsquo;s most popular features allows you to send and receive
+SMS messages.
+This seemed like a nice method since it wouldn&rsquo;t require anything
+special on my phone.</p>
+
+<h2 id="first-steps">First Steps</h2>
+
+<p>When I&rsquo;m working on something new like this,
+I like to start with the most basic steps and work my way up
+from there.
+For this project, that meant writing two separate super simple
+scripts: one that fetches the web page to scrape and just
+prints the whole thing, and one that sends a &ldquo;Hello World&rdquo;
+SMS to my phone.</p>
+
+<p>After brushing up on the Beautiful Soup API, I came up with this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://postmates.com/los-angeles&#39;</span>
+<span class="n">webpage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">webpage</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span></code></pre></div>
+<p>Not too impressive yet, but it&rsquo;s always good to see something
+working before things get too complicated.</p>
+
+<p>Now that I had the webpage,
+I wanted to get up and running with a basic &ldquo;Hello World&rdquo; through
+Twilio.
+They have a great Getting Started guide in their docs and
+it didn&rsquo;t take long before I had received my first text from my
+free Twilio phone number.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
+
+<span class="n">account_sid</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
+<span class="n">auth_token</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
+<span class="n">twilio_phone_number</span> <span class="o">=</span> <span class="s1">&#39;+15558675309&#39;</span>
+<span class="n">my_phone_number</span> <span class="o">=</span> <span class="s1">&#39;+15551234567&#39;</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="n">account_sid</span><span class="p">,</span> <span class="n">auth_token</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">,</span>
+    <span class="n">to</span><span class="o">=</span><span class="n">my_phone_number</span><span class="p">,</span>
+    <span class="n">from_</span><span class="o">=</span><span class="n">twilio_phone_number</span>
+<span class="p">)</span></code></pre></div>
+<p>After signing up for a free Twilio account and finding my
+account token, auth token, and registering a Twilio phone number,
+this worked like a charm!</p>
+
+<h2 id="putting-it-all-together">Putting it all Together</h2>
+
+<p>Now that I had the basic pieces working, I just had to find a
+way to extract the promotions from the web page and connect it all
+up!</p>
+
+<p>Fortunately for me, this turned out to be fairly simple as well.
+After browsing the source for the front page of Postmates in my
+developer console, I found out that whenever there is a free
+promotion, the <code>&lt;div&gt;</code> containing the restaurant&rsquo;s title
+also contained the word &ldquo;Free&rdquo;.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>
+This meant that all I needed to do was find the elements
+containing the string &ldquo;Free&rdquo; and send their inner text to my phone!
+This is what I ended up with:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://postmates.com/los-angeles&#39;</span>
+<span class="n">account_sid</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
+<span class="n">auth_token</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
+<span class="n">twilio_phone_number</span> <span class="o">=</span> <span class="s1">&#39;+15558675309&#39;</span>
+<span class="n">my_phone_number</span> <span class="o">=</span> <span class="s1">&#39;+15551234567&#39;</span>
+
+<span class="n">webpage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">webpage</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="n">free_food</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">stripped_strings</span> <span class="k">if</span> <span class="s1">&#39;free&#39;</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+
+<span class="k">if</span> <span class="n">free_food</span><span class="p">:</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="s1">&#39;Free Postmates!</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">free_food</span><span class="p">)</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="n">account_sid</span><span class="p">,</span> <span class="n">auth_token</span><span class="p">)</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+        <span class="n">to</span><span class="o">=</span><span class="n">my_phone_number</span><span class="p">,</span>
+        <span class="n">from_</span><span class="o">=</span><span class="n">twilio_phone_number</span>
+    <span class="p">)</span></code></pre></div>
+<p>And that&rsquo;s it! The only thing left to do was to make this script
+run regularly enough to catch all the deals.
+This is the kind of thing that Cron is perfect for,
+but I had been reading a bit about Systemd Timers and how they
+can be used as an alternative to Cron jobs, so I chose to go
+with those.
+I won&rsquo;t go into the details of setting up a Systemd Timer in this
+post, but I have some slides on it that provide a quick introduction
+in <a href="/systemd-timers">this post</a>.</p>
+
+<p>Thanks for reading this! I hope it helped provide insight into
+the way I approach creating something like this, and maybe even
+inspired you to make something similar.
+Feel free to comment if you have any questions about it, or if you
+notice anything that I could have done better.</p>
+
+<p><strong>edit:</strong> Since a few people have asked about this, I should point out that
+this script does end up sending the same text a lot if you have it running
+frequently. This was pretty annoying at first, so I ended up adding a way for
+it to log the current deals. I omitted it from this post for the sake of
+simplicity, but you can see the actual script that I am using
+<a href="https://gist.github.com/jamesbvaughan/4c501fc99acb75852756a4d1dfc8ca3d">here</a>.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><em>This has been the case with every free promotion I&rsquo;ve seen so far, but it&rsquo;s very possible that I&rsquo;ve missed some if they follow a different format.</em>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+  </div>
+  
+  
+    <em>
+  If you enjoyed this post, feel free to
+  <a target="_blank" href="http://twitter.com/intent/tweet?url=https%3a%2f%2fjamesbvaughan.com%2fpython-twilio-scraping%2f&text=Finding%20Free%20Food%20with%20Python&via=jamesontheline">tweet about it</a>
+  or
+  <a target="_blank" href="http://facebook.com/sharer.php?u=https%3a%2f%2fjamesbvaughan.com%2fpython-twilio-scraping%2f">share it on Facebook</a>.
+</em>
+
+  
+  
+    <div>
+  <em>
+    Discuss this post
+    
+      <a href=https://news.ycombinator.com/item?id&#61;13808830>
+        here on Hacker News
+      </a>
+      or
+    
+      <a href=https://www.reddit.com/r/programming/comments/5xz2j3/finding_free_food_with_python/>
+        here on Reddit
+      </a>
+      or
+    
+    in the comments below.
+  </em>
+</div>
+
+  
+</article>
+
+    </main>
+    <footer class="flex flex-column flex-row-l justify-between w-100 mw7 mb5 mt4 gray">
+  <div class="">
+    <div class="black mb2">things james does</div>
+    <div>James Vaughan</div>
+    <div>
+      <a href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">follow me</div>
+    <div class="">
+      <span class=""><svg id="i-github" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</span>
+      <a href="https://github.com/jamesbvaughan">
+        jamesbvaughan
+      </a>
+    </div>
+    <div class="">
+      <span class=""><svg id="i-twitter" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+</svg>
+</span>
+      <a href="https://twitter.com/jamesontheline">
+        jamesontheline
+      </a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">license</div>
+    <div>
+      the content on this site is
+      <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+    </div>
+    <div>
+      the <a href="https://github.com/jamesbvaughan/jamesbvaughan.com">code</a> for this site is
+      <a href="https://github.com/jamesbvaughan/jamesbvaughan.com/blob/master/LICENSE">MIT</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
+fathom('trackPageview');
+</script>
+
+  </body>
+</html>

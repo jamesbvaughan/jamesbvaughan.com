@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+  Thoughts on Qutebrowser  - things james does
+</title>
+
+    <meta name="author" content="James Vaughan" />
+<meta name="description" content=" I recently began using a web browser called Qutebrowser. I heard about it on Hacker News a while ago and it caught my attention because it encouraged...
+" />
+<meta property="og:title" content="Thoughts on Qutebrowser" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content=" I recently began using a web browser called Qutebrowser. I heard about it on Hacker News a while ago and it caught my attention because it encouraged...
+" />
+<meta property="og:url" content="https://jamesbvaughan.com/qutebrowser/" />
+<meta property="og:site_name" content="things james does" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2017-12-06" />
+  <meta property="og:article:modified_time" content="2017-12-06" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jamesontheline" />
+<meta name="twitter:creator" content="@jamesontheline" />
+<link rel="canonical" href="https://jamesbvaughan.com/qutebrowser/" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "Thoughts on Qutebrowser",
+    "dateCreated": "2017-12-06",
+    "dateModified": "2017-12-06",
+    "author": {
+      "@type": "Person",
+      "name": "James Vaughan"
+    },
+    "description": " I recently began using a web browser called Qutebrowser. I heard about it on Hacker News a while ago and it caught my attention because it encouraged...
+",
+    "url": "https://jamesbvaughan.com/qutebrowser/"
+  }
+</script>
+
+
+    <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/syntax.css"/>
+  </head>
+  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+    <nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">things james does</a>
+  </div>
+  <div>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/about/">
+        about
+      </a>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/blog/">
+        blog
+      </a>
+    
+  </div>
+</nav>
+
+    <main>
+      
+<article class="">
+  <header class="mb4">
+    <h1 class="f1 mb2 lh-title">
+      <span class="dib">Thoughts on Qutebrowser</span>
+
+    </h1>
+    <time class="tracked gray">
+      December 6, 2017
+    </time>
+  </header>
+  <div class="lh-copy">
+    
+
+<p>I recently began using a web browser called
+<a href="https://qutebrowser.org/index.html">Qutebrowser</a>.
+I heard about it on Hacker News a while ago
+and it caught my attention because it encouraged a
+completely keyboard-based workflow.
+I&rsquo;ve been surprised at how much I&rsquo;ve enjoyed using it and it may very well
+become my primary web browser.
+In this post, I will talk about how I got started with Qutebrowser,
+what makes it unique, which of its features I love the most,
+and what future features I&rsquo;m most excited for.</p>
+
+<h2 id="my-browser-history">My Browser History</h2>
+
+<p>I&rsquo;ve been using Google Chrome or Chromium for almost as long as I can remember.
+My first introduction to the web was through Microsoft&rsquo;s Internet Explorer on
+my family&rsquo;s shared home computer running Windows 95.
+When I was in Junior High, I discovered Firefox and quickly jumped on the
+anti-IE bandwagon, although at the time, I didn&rsquo;t really understand <em>why</em>
+everyone hated IE.
+In 8th grade, I heard about Google Chrome and became instantly infatuated with
+it&rsquo;s sleek look and claims of performance gains.
+I continued using it throughout high school until I started running Linux and
+switched to Chromium since it seemed to be more trendy in the open-source
+community.</p>
+
+<p>Since first using Chrome/Chromium,
+I&rsquo;ve tried about a half dozen other browsers,
+but never for more than a few days.
+I&rsquo;m always excited to try out new things, and with how central my web browser is
+to my daily life, I&rsquo;m interested in finding the most optimal one for my
+personal workflow, but I never found one that could match Chromium in speed,
+extensibility, reliability, and features.</p>
+
+<p>A feature that is important to me is support powerful and flexible custom
+keybindings.
+I&rsquo;ve tried to move as much of my work from my mouse to my keyboard as possible,
+and almost all of my time on my computer is spent either in a terminal or in a
+web browser.
+With Chromium + Vimium/cVim, I was able to get pretty close to
+being fully keyboard based, but while Vimium and cVim are great extensions,
+they are still just <em>extensions</em>, extending a tool that was designed to be used with
+a mouse.
+There are a lot of essential (for me) features that they are not capable of
+implementing because of Chromium&rsquo;s limitations on what extensions are allowed
+to do.</p>
+
+<h2 id="enter-qutebrowser">Enter Qutebrowser</h2>
+
+<p>Qutebrowser describes itself as &ldquo;a keyboard-focused browser with a minimal GUI&rdquo;.
+It has vi-inspired modes and keybindings for interacting with both the browser
+itself and the webpages that you are browsing.
+It&rsquo;s possible to do just about everything you ever need to do in a web browser
+without touching the mouse/trackpad in Qutebrowser.
+Like I mentioned, I am a huge fan of keyboard-based workflows,
+so this immediately caught my attention when I first discovered Qutebrowser a
+few months ago.</p>
+
+<p>Since trying it out for the first time, I&rsquo;ve been using it almost exclusively.
+There are a lot of things that I really love about Qutebrowser and
+I will cover the ones that are most important to me in the following sections.</p>
+
+<h4 id="the-keybindings">The Keybindings</h4>
+
+<p>A primary focus of Qutebrowser is a completely keyboard-focused workflow.
+The default keybindings are quite nice, in my opinion.
+There is <a href="https://qutebrowser.org/img/cheatsheet-big.png">a helpful cheatsheet</a>
+that came in handy when I was getting started, but the most common bindings
+got baked in to my muscle memory surprisingly quickly.
+The defaults, many of which are taken from
+<a href="https://github.com/yzzyx/dwb">dwb</a>, start to feel natural very quickly if you
+have prior experience with vi-style navigation.</p>
+
+<h4 id="the-command-completion-is-indispensable">The Command Completion Is Indispensable</h4>
+
+<p>Most interactions with Qutebrowser are done through commands entered in the
+status bar.
+From the status bar, you can change settings, open, close, and navigate tabs,
+store and load bookmarks, spawn programs, and more.
+Almost all commands have a completion feature that will feel very familiar if
+you have ever used tools like dmenu or rofi.
+It&rsquo;s difficult to convey just how useful the completion is and how efficient it
+feels to use.
+With just a few keystrokes, I can open any page in my history,
+list my bookmarks and open one, or look up the description of a configuration
+option and change its value.</p>
+
+<p>Chromium has a similar feature built into it&rsquo;s omnibox for opening pages,
+but it can be difficult to open a specific page that you have in mind with it
+and it is not nearly as flexible as the commands and completion in Qutebrowser.</p>
+
+<h4 id="it-s-a-great-open-source-project">It&rsquo;s A Great Open Source Project</h4>
+
+<p>This isn&rsquo;t often something that I put a lot of weight on when I am evaluating
+software for personal use, but the aspects of Qutebrowser as an open-source
+project that go beyond the browser itself and the community around it have made
+an impression on me that I think is worth mentioning.</p>
+
+<p>The maintainer and open-source contributors have done an excellent job of
+managing the project, compared to other open-source projects that I use.
+A few things that have stood out to me:</p>
+
+<ul>
+<li><a href="https://github.com/qutebrowser/qutebrowser/releases">Actually maintaining a thorough changelog on the GitHub releases page</a></li>
+<li>Responding quickly and positively to questions from users on GitHub and IRC</li>
+<li><a href="https://qutebrowser.org/index.html">Including screenshots on the project website</a></li>
+<li><a href="https://qutebrowser.org/doc/faq.html">Listing in the FAQ the project&rsquo;s advantages and disadvantages compared to alternatives</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser">Covering all the basics in the project README</a></li>
+<li>Keeping up-to-date documentation of <a href="https://qutebrowser.org/doc/help/commands.html">commands</a> and <a href="https://qutebrowser.org/doc/help/settings.html">configuration settings</a></li>
+</ul>
+
+<p>Some of these are more common than others when it comes to open-source projects,
+but for me they all really add to the amount of happiness I experience when I
+use Qutebrowser.</p>
+
+<h4 id="it-is-great-at-rendering-websites">It Is Great At Rendering Websites</h4>
+
+<p>This is one of the main things that a web browser is all about, isn&rsquo;t it?
+Qutebrowser does an excellent job of displaying websites, just as excellent
+as Chromium.
+In fact, it&rsquo;s <em>exactly</em> as excellent as Chromium because both Qutebrowser
+and Chrome/Chromium use
+<a href="https://www.chromium.org/blink">Google&rsquo;s Blink rendering engine</a>,
+so websites should look identical in the two browsers.
+This also means that you&rsquo;ll have access to the webinspector and some of the
+<code>chrome://</code> pages that you may be used to using in Chromium.</p>
+
+<h4 id="quickmarks-are-awesome">Quickmarks Are Awesome</h4>
+
+<p>When using Chromium, a common sequence of keypresses for me was:</p>
+
+<pre><code>&lt;Ctrl-t&gt;f&lt;Enter&gt;
+</code></pre>
+
+<p>I would bet that many of you are familiar with that sequence and know exactly
+what happens when I enter it.
+It opens a new tab and places keyboard focus in the omnibox,
+then it highlights a URL from my history based on some algorithm that seems to
+take into account the frequency and recency of my visits to that site,
+and then it navigates to that site (in my case, Facebook).
+This sequence has become muscle memory for me and I often don&rsquo;t even think about
+it when I enter it (which is an interesting/frightening phenomenon that deserves
+a separate post someday).
+There is a small handful of websites for which these quick sequences reliably
+get me to the sites I want to get to in Chromium,
+but the algorithm that it uses is a mystery to me and often results in very
+different sites than what I&rsquo;m looking for.</p>
+
+<p>Qutebrowser captures similar (and in my opinion, superior)
+functionality through quickmarks.
+Quickmarks are URLs that take priority over all other URLs in your history
+when completing URLs with the <code>open</code> command.
+They are identified by strings that you as a user set explicitly.
+For example, I have the string <code>fb</code> to identify <code>https://facebook.com</code>.
+This means that I can type <code>ohn&lt;Enter&gt;</code>
+to open up Hacker News, or <code>Ofb&lt;Enter&gt;</code>
+to open Facebook in a new tab.
+After using quickmarks for over a month now, I find them even more convenient
+than Chromium&rsquo;s omnibox completions, because I like using <code>o</code> and <code>O</code> more than
+<code>&lt;Ctrl-l&gt;</code> and <code>&lt;Ctrl-t&gt;</code> and also because I have full control over the
+quickmarks that are set.</p>
+
+<h2 id="potential-improvements">Potential Improvements</h2>
+
+<p>I am using Qutebrowser as my primary web browser now,
+and I really do like it a lot more than Chromium,
+but it&rsquo;s not quite perfect yet
+and there are a few specific things that I miss from Chromium.</p>
+
+<h4 id="form-autocomplete">Form Autocomplete</h4>
+
+<p>One feature of Chromium that I took for granted while I was using it is
+autocompletion in forms.
+In Chromium, I rarely had to manually type my whole address, email address,
+phone number, name, or even my credit card number,
+because I have given Google all of that information
+and the browser would autocomplete the form I was editing with it.
+Qutebrowser currently does not autocomplete forms.</p>
+
+<p>To be clear,
+I don&rsquo;t think that Qutebrowser should make use of a centralized place in the
+cloud that contains all of my private info,
+but it would be cool if it implemented a way to store all of that info locally
+on my machine for form autocompletion.
+This hasn&rsquo;t been a big issue, but it would be a nice convenience to have.</p>
+
+<h4 id="built-in-password-manager-with-autofill">Built-in Password Manager With Autofill</h4>
+
+<p>This is related to the autocomplete issue,
+but I really miss having my passwords saved and autofilled on websites that
+I have to log in to frequently.
+This is a commonly requested feature and you can find discussion of it
+<a href="https://github.com/qutebrowser/qutebrowser/issues/180">here</a>.</p>
+
+<p><em>edit: There are <a href="https://github.com/qutebrowser/qutebrowser/tree/master/misc/userscripts">some userscripts</a>
+included with the Qutebrowser source code that
+add integration with <a href="https://www.passwordstore.org/">pass</a>.
+When I first wrote this post,
+I was under the impression that these were not recommended for actual use,
+but a reader pointed out that they are safe as long as you don&rsquo;t have debug
+logging enabled and accidentally share your logs (which will include your
+entered passwords in plain text.)</em></p>
+
+<h4 id="notifications">Notifications</h4>
+
+<p>Web notifications seem to be a bit of a controversial topic among some people,
+but I really like them.
+Qutebrowser (with QtWebEngine) does not support notifications yet.</p>
+
+<h4 id="pdf-reader">PDF Reader</h4>
+
+<p>Ever since I started using Chromium,
+I had been using it as a PDF reader as well as a web browser.
+It was super convenient to be able to click a link to a PDF and have it open up
+in a new tab, just like a website.
+Qutebrowser doesn&rsquo;t have a built in PDF reader.
+<a href="https://mozilla.github.io/pdf.js/">PDF.js</a> works well in it,
+but with QtWebEngine, downloaded PDFs can&rsquo;t be opened automatically.
+I believe that this is being actively worked on,
+and <a href="https://github.com/qutebrowser/qutebrowser/issues/2330">it should be solved soon</a>,
+but for the time being it is a bit of an inconvenience.
+For now, I&rsquo;ve ben going back and forth between using PDF.js in Qutebrowser,
+and using <a href="https://pwmt.org/projects/zathura/">zathura</a>.</p>
+
+<p><em>edit: Since posting this, I&rsquo;ve settled on a PDF viewing workflow that I
+actually much prefer to having a reader built into my web browser.
+I made a rofi script that lets me quickly search through all the PDFs in my
+home directory and sub-directories and open one in zathura.
+You can check it out <a href="https://github.com/jamesbvaughan/dotfiles/blob/master/scripts/pdf-opener.sh">here</a>.</em></p>
+
+<h4 id="cloud-sync">Cloud Sync</h4>
+
+<p>In Chromium, I have the option to give Google all of my settings, my theme,
+my bookmarks, and my saved passwords and have them all synchronized
+across all my devices.
+Qutebrowser doesn&rsquo;t have a cloud sync feature like that, but it does use a
+configuration file that I now include in my dotfiles git repository.
+This gets the job done (and is actually preferable for me) when it comes to
+keeping configuration in sync between machines, but version controlling my
+quickmarks and bookmarks and trying to keep them in sync between machines is
+a bit less convenient.
+I&rsquo;d like to point out and emphasize that this isn&rsquo;t a feature that I think
+Qutebrowser needs to add, especially since a feature like this would directly
+counter the philosophy of many of its users.
+I only mention it here to inform newcomers who aren&rsquo;t familiar with Qutebrowser,
+since it is certainly something that new users who are coming from browsers
+that automatically kept configurations synchronized might miss.</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>I had been feeling a desire to detach myself from dependence on the Google
+ecosystem for a while, but didn&rsquo;t think I could actually ever do it because
+the convenience of Google products had always been too great for me to switch to
+anything else.
+The fact that I genuinely prefer Qutebrowser to Chromium is a huge surprise for
+me and has sparked a transition away from other Google products as well.
+(Drive/Photos -&gt; Nextcloud, Google Search -&gt; DuckDuckGo, etc.)
+So far I haven&rsquo;t committed to those others as fully as I have with Qutebrowser,
+but it has been fun exploring some of the other options that are out there.</p>
+
+<p>I know that I focused my comparisons on Chromium throughout this post, and that
+is because it is what I am most familiar with, but I don&rsquo;t expect that my
+opinions would change too much if I were comparing Firefox/Safari/Edge/etc to
+Qutebrowser instead of Chromium.
+(The <a href="https://qutebrowser.org/doc/faq.html">FAQ</a> has nice explanations of some
+reasons to choose Qutebrowser over others.)</p>
+
+<p>I hope that this post was helpful for anyone looking to learn more about
+Qutebrowser.
+If you found any of this intriguing, you should install it and give it a try!</p>
+
+  </div>
+  
+  
+    <em>
+  If you enjoyed this post, feel free to
+  <a target="_blank" href="http://twitter.com/intent/tweet?url=https%3a%2f%2fjamesbvaughan.com%2fqutebrowser%2f&text=Thoughts%20on%20Qutebrowser&via=jamesontheline">tweet about it</a>
+  or
+  <a target="_blank" href="http://facebook.com/sharer.php?u=https%3a%2f%2fjamesbvaughan.com%2fqutebrowser%2f">share it on Facebook</a>.
+</em>
+
+  
+  
+    <div>
+  <em>
+    Discuss this post
+    
+      <a href=https://news.ycombinator.com/item?id&#61;15865787>
+        here on Hacker News
+      </a>
+      or
+    
+      <a href=https://www.reddit.com/r/linux/comments/7i1u7d/ive_been_using_qutebrowser_for_a_few_months_now/>
+        here on Reddit
+      </a>
+      or
+    
+    in the comments below.
+  </em>
+</div>
+
+  
+</article>
+
+    </main>
+    <footer class="flex flex-column flex-row-l justify-between w-100 mw7 mb5 mt4 gray">
+  <div class="">
+    <div class="black mb2">things james does</div>
+    <div>James Vaughan</div>
+    <div>
+      <a href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">follow me</div>
+    <div class="">
+      <span class=""><svg id="i-github" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</span>
+      <a href="https://github.com/jamesbvaughan">
+        jamesbvaughan
+      </a>
+    </div>
+    <div class="">
+      <span class=""><svg id="i-twitter" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+</svg>
+</span>
+      <a href="https://twitter.com/jamesontheline">
+        jamesontheline
+      </a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">license</div>
+    <div>
+      the content on this site is
+      <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+    </div>
+    <div>
+      the <a href="https://github.com/jamesbvaughan/jamesbvaughan.com">code</a> for this site is
+      <a href="https://github.com/jamesbvaughan/jamesbvaughan.com/blob/master/LICENSE">MIT</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
+fathom('trackPageview');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guides on things james does</title>
+    <link>https://jamesbvaughan.com/guides/</link>
+    <description>Recent content in guides on things james does</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james@jamesbvaughan.com (James Vaughan)</managingEditor>
+    <webMaster>james@jamesbvaughan.com (James Vaughan)</webMaster>
+    
+	<atom:link href="https://jamesbvaughan.com/guides/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://jamesbvaughan.com/guides/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/guides/http/</guid>
+      <description>HTTP, or &amp;ldquo;Hypertext Transfer Protocol&amp;rdquo;, is one of the most common protocols that computers use to talk to each other.
+Types of HTTP Requests These requests come in a variety of forms:
+ GET POST PUT DELETE etc.  These are all different kinds of &amp;ldquo;HTTP Requests&amp;rdquo; and each one is used for a different purpose, but we&amp;rsquo;re just focus on GET for now.
+GET Requests You use GET requests all the time and probably don&amp;rsquo;t even realize it.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on things james does</title>
+    <link>https://jamesbvaughan.com/blog/</link>
+    <description>Recent content in blog on things james does</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james@jamesbvaughan.com (James Vaughan)</managingEditor>
+    <webMaster>james@jamesbvaughan.com (James Vaughan)</webMaster>
+    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jamesbvaughan.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Movie Director Genders</title>
+      <link>https://jamesbvaughan.com/movie-director-genders/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/movie-director-genders/</guid>
+      <description>I&amp;rsquo;ve always loved watching movies. This started way back when I was in elementary school and my dad designated the largest room in our house as the movie watching room, to be used strictly for watching movies. Since then, movie watching has remained my favorite form of passive entertainment.
+I signed up for MoviePass a while back, which has led to me watching movies way more frequently than I used to.</description>
+    </item>
+    
+    <item>
+      <title>How I Take Notes With Vim, Markdown, and Pandoc</title>
+      <link>https://jamesbvaughan.com/markdown-pandoc-notes/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/markdown-pandoc-notes/</guid>
+      <description>I&amp;rsquo;ve gone through quite a few revisions of my note-taking process and now that I&amp;rsquo;m in my final year of school, I think I&amp;rsquo;ve finally found a system that I&amp;rsquo;m going to stick with. In this post, I will describe this system and explain why I like it so much.
+tl;dr: I write notes in Markdown with Vim and Vimwiki on my computer and with Markor on my phone, keep them in sync with Syncthing, and view them as web pages and PDFs that I generate with pandoc.</description>
+    </item>
+    
+    <item>
+      <title>Jay Kamat</title>
+      <link>https://jamesbvaughan.com/jay-kamat/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/jay-kamat/</guid>
+      <description>This week&amp;rsquo;s interview features Jay Kamat (jgkamat), a Computer Science student at Georgia Tech. I first found Jay through his work on qutebrowser and was impressed with how much work he had done on the browser and with how welcoming and helpful he was in the Github issues and on IRC. When I found out that he is the same age as me, I thought he would be a perfect person to feature in this series.</description>
+    </item>
+    
+    <item>
+      <title>Counting Usernames from Malicious Login Attempts</title>
+      <link>https://jamesbvaughan.com/counting-malicious-usernames/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/counting-malicious-usernames/</guid>
+      <description>A while back, when I was relatively new to running a VPS (I&amp;rsquo;m still new, but I&amp;rsquo;m less new than I was then), I was looking through my sshd logs and noticed that I was getting a ton of malicious login attempts. This initially freaked me out a bit and I wasn&amp;rsquo;t sure what to make of it.
+Eventually I learned more about how to properly secure my server and in the process, I ended up having some fun with the logs.</description>
+    </item>
+    
+    <item>
+      <title>Timothy Gu</title>
+      <link>https://jamesbvaughan.com/timothy-gu/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/timothy-gu/</guid>
+      <description>In this first post in my series interviewing students in open source, I chose to interview fellow UCLA student Timothy Gu (TimothyGu). Timothy is a first year Computer Science student here at UCLA and he has been active in open source since he was in High School. He is a maintainer of Node.js and a contributer to pug, FFmpeg, and the whatwg html standard.
+Interview Sunday, April 15, 2018.</description>
+    </item>
+    
+    <item>
+      <title>College Advice I Would Give My Freshman Self</title>
+      <link>https://jamesbvaughan.com/college-advice/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/college-advice/</guid>
+      <description>As I approach the end of my undergraduate years at UCLA, I&amp;rsquo;ve been spending some time reflecting what I&amp;rsquo;ve learned and the improvements that I have made to my workflows for classes, coding, and general college life.
+There are a handful of skills that I have learned and processes I have optimized for myself that I would love to have learned or optimized earlier on in college.
+In this post, I will catalog some of these tips in the hope that they will help out students getting started on their journey through college.</description>
+    </item>
+    
+    <item>
+      <title>Open Source Students: Introduction</title>
+      <link>https://jamesbvaughan.com/open-source-students/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/open-source-students/</guid>
+      <description>I&amp;rsquo;ve been interested in the open source world for about as long as I&amp;rsquo;ve been interested in programming, and despite wanting to ever since then, I didn&amp;rsquo;t start contributing to any projects that I use until relatively recently. I think that the main reason for this is that I was intimidated by the scale of the projects around the open source software that I used and by what I perceived as a long and complex process required to contribute to them.</description>
+    </item>
+    
+    <item>
+      <title>Saving $167,000 on Groceries</title>
+      <link>https://jamesbvaughan.com/grocery-prices/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/grocery-prices/</guid>
+      <description>I usually spend a good chunk of my free time reading articles and listening to podcasts on software development, tech, and other industry news. Over the past few months, I&amp;rsquo;ve been spending a growing portion of that time learning about personal finance. At the time of this writing, I have just a few months left in college and at the beginning of this quarter the reality that I am soon going to be working full time started to sink in.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Qutebrowser</title>
+      <link>https://jamesbvaughan.com/qutebrowser/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/qutebrowser/</guid>
+      <description>I recently began using a web browser called Qutebrowser. I heard about it on Hacker News a while ago and it caught my attention because it encouraged a completely keyboard-based workflow. I&amp;rsquo;ve been surprised at how much I&amp;rsquo;ve enjoyed using it and it may very well become my primary web browser. In this post, I will talk about how I got started with Qutebrowser, what makes it unique, which of its features I love the most, and what future features I&amp;rsquo;m most excited for.</description>
+    </item>
+    
+    <item>
+      <title>Finding Free Food with Python</title>
+      <link>https://jamesbvaughan.com/python-twilio-scraping/</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/python-twilio-scraping/</guid>
+      <description>If you live in a major city, there&amp;rsquo;s a good chance you&amp;rsquo;ve used (or at least heard of) food delivery services like Postmates, GrubHub, or DoorDash. These services are great for times when I&amp;rsquo;m behind on groceries or when I&amp;rsquo;m getting some late night studying in before a big midterm or final. The only problem with these is that they&amp;rsquo;re not cheap. For a single order, the delivery fee and service fee can sometimes double the cost of the order.</description>
+    </item>
+    
+    <item>
+      <title>Systemd Timers as a Cron Alternative</title>
+      <link>https://jamesbvaughan.com/systemd-timers/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/systemd-timers/</guid>
+      <description>I recently gave a short talk at the UCLA Linux User Group about Systemd Timers and how they can be used as an alternative to Cron jobs.
+If you&amp;rsquo;re interested in a quick introduction to Systemd Timers, please take a look at the slides or download the PDF.</description>
+    </item>
+    
+    <item>
+      <title>Writing an HTTP server in Prolog</title>
+      <link>https://jamesbvaughan.com/prolog-http-server/</link>
+      <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
+      <author>james@jamesbvaughan.com (James Vaughan)</author>
+      <guid>https://jamesbvaughan.com/prolog-http-server/</guid>
+      <description>I&amp;rsquo;m taking a class now on programming languages where I&amp;rsquo;m learning all about the different styles of languages and how they can all be useful, as well as a class on computer networks where I&amp;rsquo;m learning all about how the internet works and how computers communicate with each other across networks. I had the idea last week to try to combine what I&amp;rsquo;m learning in the two classes and implement one of my networking assignments with the new languages I&amp;rsquo;m learning in my programming languages class, Prolog.</description>
+    </item>
+    
+  </channel>
+</rss>

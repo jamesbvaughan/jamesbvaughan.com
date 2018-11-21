@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+  Writing an HTTP server in Prolog  - things james does
+</title>
+
+    <meta name="author" content="James Vaughan" />
+<meta name="description" content=" I&rsquo;m taking a class now on programming languages where I&rsquo;m learning all about the different styles of languages and how they can all be...
+" />
+<meta property="og:title" content="Writing an HTTP server in Prolog" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content=" I&rsquo;m taking a class now on programming languages where I&rsquo;m learning all about the different styles of languages and how they can all be...
+" />
+<meta property="og:url" content="https://jamesbvaughan.com/prolog-http-server/" />
+<meta property="og:site_name" content="things james does" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2016-11-11" />
+  <meta property="og:article:modified_time" content="2016-11-11" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jamesontheline" />
+<meta name="twitter:creator" content="@jamesontheline" />
+<link rel="canonical" href="https://jamesbvaughan.com/prolog-http-server/" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "Writing an HTTP server in Prolog",
+    "dateCreated": "2016-11-11",
+    "dateModified": "2016-11-11",
+    "author": {
+      "@type": "Person",
+      "name": "James Vaughan"
+    },
+    "description": " I&rsquo;m taking a class now on programming languages where I&rsquo;m learning all about the different styles of languages and how they can all be...
+",
+    "url": "https://jamesbvaughan.com/prolog-http-server/"
+  }
+</script>
+
+
+    <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/syntax.css"/>
+  </head>
+  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+    <nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">things james does</a>
+  </div>
+  <div>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/about/">
+        about
+      </a>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/blog/">
+        blog
+      </a>
+    
+  </div>
+</nav>
+
+    <main>
+      
+<article class="">
+  <header class="mb4">
+    <h1 class="f1 mb2 lh-title">
+      <span class="dib">Writing an HTTP server in Prolog</span>
+
+    </h1>
+    <time class="tracked gray">
+      November 11, 2016
+    </time>
+  </header>
+  <div class="lh-copy">
+    
+
+<p>I&rsquo;m taking a class now on programming languages where I&rsquo;m learning all about
+the different styles of languages and how they can all be useful, as well as a
+class on computer networks where I&rsquo;m learning all about how the internet works
+and how computers communicate with each other across networks. I had the idea
+last week to try to combine what I&rsquo;m learning in the two classes and implement
+one of my networking assignments with the new languages I&rsquo;m learning in my
+programming languages class, Prolog. In this post I&rsquo;ll talk about why I chose
+to do this, how I did it, some of the problems I ran into along the way, and
+what I learned through the process.</p>
+
+<p>For the past couple weeks in the
+programming languages class we&rsquo;ve been focusing on logic programming and
+Prolog. In case you haven&rsquo;t heard of logic programming (I hadn&rsquo;t), it&rsquo;s a kind
+of programming that encourages a totally different way to think about writing
+programs and solving problems than what most programmers today are used to. The
+language we are using to learn about logic programming, Prolog, is built on two
+pretty basic kinds of statements: facts and rules. A fact is something that&rsquo;s
+always true, and a rule is something that is true if a set of conditions (which
+are just more facts and rules) are all true. The basic way you use Prolog is by
+giving it some facts and rules and then asking it questions. This seemed so
+strange and different to me at first that I couldn&rsquo;t imagine Prolog ever being
+a practical choice for a project.</p>
+
+<p>I&rsquo;m not going to go too far into how Prolog works, partly because that&rsquo;s not
+what this post is about, and partly because Bernardo Pires has
+<a href="https://bernardopires.com/2013/10/try-logic-programming-a-gentle-introduction-to-prolog/">a great blog post</a>
+that gives a nice introduction to the language.</p>
+
+<p>In my networking class
+I&rsquo;ve studied all kinds of networks and protocols in it and it&rsquo;s been really
+cool to actually start understanding how all of our devices communicate
+efficiently with each other. My last assignment was to write a simple HTTP
+server in C++, something that would have sounded crazy to me a year ago, but
+it&rsquo;s actually not nearly as complicated as I thought it would be!</p>
+
+<h2 id="meet-sockets">Meet Sockets</h2>
+
+<p>The bulk of the server centered around just a few functions
+that are part of the Berkeley sockets API: <code>socket()</code>, <code>bind()</code>, <code>listen()</code>,
+and <code>accept()</code>. (There are more but these are the main four that were relevant
+to this simple server.) Julia Evans has
+<a href="https://twitter.com/b0rk/status/797235796399058944">some pretty cool illustrations</a>
+on this kind of stuff that you should check out. What&rsquo;s awesome is that these
+functions are actually fairly simple to understand:</p>
+
+<ul>
+<li><code>socket()</code> creates and gives you a new socket, which is a thing that your OS
+uses to communicate with other computers.</li>
+<li><code>bind()</code> gives your socket an address that&rsquo;s somewhat analogous to a street
+address; it gives other computers a place to connect to.</li>
+<li><code>listen()</code> tells your OS to start listening for things that want to connect
+to your socket.</li>
+<li><code>accept()</code> accepts a connection on your socket and gives you a new socket
+that you can use to communicate with whatever connected to your original
+socket. This is often a web browser like Chrome/Firefox/Safari, some other HTTP
+client, or really any kind of program that needs to communicate with other
+programs over a network.</li>
+</ul>
+
+<p>See, there&rsquo;s not that much to it! Once you&rsquo;ve
+got a connection established to another computer through a socket, you can
+pretty much treat that socket just like a file and use the <code>read()</code> and
+<code>write()</code> system calls to communicate.  Pretty cool, right? What&rsquo;s even cooler
+is that these functions exist and work pretty much the same way in a bunch of
+different languages, even Prolog!</p>
+
+<p>At the same time that I was working on
+the HTTP server for my networking class, I was working on a Prolog project for
+my programming languages class and stumbled across these same socket
+programming functions (well, predicates in Prolog, not functions) in the GNU
+Prolog documentation.  This got me pretty excited because I actually knew what
+they were! By this time, I was actually starting to warm up to Prolog, so after
+I finished the two assignments, I decided that it would be fun to try to
+combine them and write my own simple HTTP server in Prolog.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>The first step was to decide how much functionality I wanted
+this server to have.  Should it thoroughly implement HTTP/1.1?  Should it do
+nothing but send a few bytes to every client that connects to it?</p>
+
+<p>Because I didn&rsquo;t want to spend more than a couple of days on this project,
+but still wanted it to make it somewhat complete, I decided on something in
+between: It would be able to accept a connection from a client, read in and
+parse an HTTP request, find the requested file, construct a valid HTTP
+response, send it back to the client, and close the connection.</p>
+
+<h3 id="requests-and-responses">Requests and Responses</h3>
+
+<p>The first thing I chose to implement was
+a set of rules for parsing HTTP requests and constructing HTTP responses, which
+are both essentially just strings with information about what&rsquo;s being sent from
+one program to another. I tried to make these rules as simple as possible and
+do the bare minimum amount of work to do what I needed. For the requests, that
+meant doing nothing but extracting the path to the requested file so that we
+know what to send back to the client.</p>
+
+<script type="application/javascript" src="//gist.github.com/jamesbvaughan/8dc874ae215be79649d4d9c1c00dcfa5.js"></script>
+
+<p>This code may look strange at first, but what&rsquo;s going on is very simple.
+Basically, it&rsquo;s saying <code>parse_request(Request, Path)</code> is true if <code>Path</code> is the
+path requested in <code>Request</code>. The first line of an HTTP request is in the format
+&ldquo;GET /path/to/some/file.html HTTP/1.1&rdquo;, (where &ldquo;1.1&rdquo; is whatever HTTP version
+is being used) so <code>parse_request</code> is just saying that <code>Path</code> is the bit of the
+request that comes after &ldquo;GET /&rdquo; and before &ldquo; HTTP/&rdquo;. Pretty simple, right? Now
+on to the responses.</p>
+
+<script type="application/javascript" src="//gist.github.com/jamesbvaughan/a1614d08b6a2bc8c5a3e28377737fa45.js"></script>
+
+<p>Here, you can see <code>construct_response(Body, Response)</code> putting together an
+HTTP response by concatenating the status line, &ldquo;HTTP/1.0 200 OK\r\n&rdquo;, one
+header, and the given body of the response into <code>Response</code>. For this simple
+server, we&rsquo;re only implementing one response status code, 200, but there are
+tons of other ones for indicating all kinds of things. If I were to add support
+for more status codes, this is where I&rsquo;d do it.</p>
+
+<h3 id="reading-files-and-requests-in-prolog">Reading Files (and Requests) in Prolog</h3>
+
+<p>The next thing I needed to learn about was
+reading files in Prolog. I&rsquo;ve done this in other languages before, so I had a
+basic idea of what needed to happen, but wasn&rsquo;t sure if it would work the same
+way in Prolog. To find out, I went to the list of built-in predicates in GNU
+Prolog and Ctrl-F&rsquo;d for &ldquo;open&rdquo;. I was happy to find a built-in <code>open()</code>
+predicate that works just like the Unix system call by the same name. The
+tricky part was reading in the contents of the file. Like in functional
+programming languages, the concept of a loop just doesn&rsquo;t make sense in Prolog,
+so I knew that there would need to be some recursion involved here and
+eventually arrived at this code for reading the contents of the file:</p>
+
+<script type="application/javascript" src="//gist.github.com/jamesbvaughan/f3ae93449fed11320036240a6ca07ecd.js"></script>
+
+<p>After <code>read_file</code> opens the file at <code>Path</code>, it jumps into the recursive rule
+<code>read_file_helper</code>, which continually reads in and concatenates bytes to the
+file contents until it reaches the end of the file. I recalled from my
+networking class that socket I/O is very similar to file I/O in most languages,
+and was happy to learn that Prolog is no exception.  My rule for reading in
+HTTP requests from the client is almost identical to my rule for reading files,
+except that HTTP requests end in two carriage-return line-feeds, rather than an
+end-of-file.</p>
+
+<script type="application/javascript" src="//gist.github.com/jamesbvaughan/7e78b2d674e6e6ba9751af4144eb876b.js"></script>
+
+<p>I&rsquo;m using two new ideas here in <code>read_request</code>. The first is naming my
+request reading rule and its recursive helper the same thing. I&rsquo;m allowed to do
+this here because the two have different arity. They are conventionally
+referred to as &ldquo;read_request/2&rdquo; and &ldquo;read_request/3&rdquo;, respectively. The second
+thing is the underscore in place the <code>Stream</code> variable and the request prefix
+in the second definition.  The underscore here says that I don&rsquo;t care what is
+in those places. I don&rsquo;t need to use the socket stream here and I don&rsquo;t care
+what comes before the carriage-return line-feeds in the request, so they&rsquo;re
+replaced with underscores.  Note that the underscore has a special meaning in
+Prolog because it doesn&rsquo;t require that they are equivalent.</p>
+
+<h3 id="putting-it-all-together">Putting it all together</h3>
+
+<p>With these helpers defined I was able to start on the
+main rule for running the server. This is where we get to use those standard
+socket interfaces I mentioned earlier.</p>
+
+<script type="application/javascript" src="//gist.github.com/jamesbvaughan/87c1732213d894def8ad3aa4e972e094.js"></script>
+
+<p>In the first three lines here we&rsquo;re creating a new socket and binding it to
+<code>localhost:3000</code>. Then it starts listening at that address and lets the user
+know. I added the <code>flush_output</code> line because I was having some problems with
+the message not being written right away. Next, <code>socket_accept</code> waits for a
+client to connect and creates input and output streams that let us read from
+and write to the client connected at that socket. After that my helper rules
+read and parse the request and then get the requested file and construct an
+HTTP response to be sent to the client. Once all of that is finished, the
+socket is closed.</p>
+
+<h2 id="problems">Problems</h2>
+
+<p>For the most part, this was a
+generally frustration-free project, but there were a few challenging points
+that slowed me down along the way.</p>
+
+<p>The main problem I ran into was that
+while testing the server, I would often get an error when I tried to run it,
+saying that the address was already in use. This confused me for a while
+because I wasn&rsquo;t getting it consistently, and I knew I wasn&rsquo;t running any other
+servers on my machine on that port. After a bit of digging, I found an option
+that&rsquo;s available in most implementations of socket interfaces that tells the OS
+to let other processes re-use the requested address. This option wasn&rsquo;t being
+set when I called <code>socket_bind</code>, and the GNU Prolog documentation didn&rsquo;t seem
+to indicate a way to do so.</p>
+
+<p>To the source code! The next logical step,
+after Googling the problem without much success, was to go to the GNU Prolog
+source code and see how <code>socket_bind</code> was implemented and maybe find an
+undocumented way to set that address reuse flag. To my surprise, I found that
+it <em>was</em> being set, right there in the source code where I could see it.
+But if it was being set, then where was my problem coming from? I quickly
+learned that the address reuse flag was a relatively recent addition to the GNU
+Prolog source and hasn&rsquo;t yet been included in a stable release. This was a
+bummer for me, but I was happy to have gotten to the root of the problem.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>That&rsquo;s it! A super basic HTTP server in Prolog. It
+doesn&rsquo;t fully implement HTTP 1.0 or even support multiple connections, and It&rsquo;s
+certainly not going to replace any of the servers that I use for my projects
+any time soon, but it was a lot of fun to write and I feel like I have a better
+understanding of socket programming and Prolog after writing it.</p>
+
+<p>This
+address reuse flag problem was a bummer, but it felt really cool to figure out
+the reason for the issue by digging into the language&rsquo;s source. If I were to
+redo this project, I would use SWI Prolog, which seems to be more actively
+maintained and has a socket interface that gives users that option to set that
+address reuse flag.</p>
+
+<p>This post was partly inspired by a lot of
+<a href="https://jvns.ca/">Julia Evans</a>&lsquo;
+recent posts, which are all super cool
+and you should check them out. You can read
+<a href="https://github.com/jamesbvaughan/httppl">the full source code on Github</a>.
+I&rsquo;m still very new to both socket programming and to Prolog, so
+feel free to let me know if there&rsquo;s anything I could have done differently!</p>
+
+  </div>
+  
+  
+    <em>
+  If you enjoyed this post, feel free to
+  <a target="_blank" href="http://twitter.com/intent/tweet?url=https%3a%2f%2fjamesbvaughan.com%2fprolog-http-server%2f&text=Writing%20an%20HTTP%20server%20in%20Prolog&via=jamesontheline">tweet about it</a>
+  or
+  <a target="_blank" href="http://facebook.com/sharer.php?u=https%3a%2f%2fjamesbvaughan.com%2fprolog-http-server%2f">share it on Facebook</a>.
+</em>
+
+  
+  
+    <div>
+  <em>
+    Discuss this post
+    
+      <a href=https://news.ycombinator.com/item?id&#61;12940615>
+        here on Hacker News
+      </a>
+      or
+    
+      <a href=https://www.reddit.com/r/programming/comments/5cmwke/writing_an_http_server_in_prolog/>
+        here on Reddit
+      </a>
+      or
+    
+    in the comments below.
+  </em>
+</div>
+
+  
+</article>
+
+    </main>
+    <footer class="flex flex-column flex-row-l justify-between w-100 mw7 mb5 mt4 gray">
+  <div class="">
+    <div class="black mb2">things james does</div>
+    <div>James Vaughan</div>
+    <div>
+      <a href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">follow me</div>
+    <div class="">
+      <span class=""><svg id="i-github" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</span>
+      <a href="https://github.com/jamesbvaughan">
+        jamesbvaughan
+      </a>
+    </div>
+    <div class="">
+      <span class=""><svg id="i-twitter" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+</svg>
+</span>
+      <a href="https://twitter.com/jamesontheline">
+        jamesontheline
+      </a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">license</div>
+    <div>
+      the content on this site is
+      <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+    </div>
+    <div>
+      the <a href="https://github.com/jamesbvaughan/jamesbvaughan.com">code</a> for this site is
+      <a href="https://github.com/jamesbvaughan/jamesbvaughan.com/blob/master/LICENSE">MIT</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
+fathom('trackPageview');
+</script>
+
+  </body>
+</html>

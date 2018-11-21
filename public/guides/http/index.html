@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+  HTTP - things james does
+</title>
+
+    <meta name="author" content="James Vaughan" />
+<meta name="description" content="
+" />
+<meta property="og:title" content="HTTP" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content="
+" />
+<meta property="og:url" content="https://jamesbvaughan.com/guides/http/" />
+<meta property="og:site_name" content="things james does" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jamesontheline" />
+<meta name="twitter:creator" content="@jamesontheline" />
+<link rel="canonical" href="https://jamesbvaughan.com/guides/http/" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "HTTP",
+    "dateCreated": "0001-01-01",
+    "dateModified": "0001-01-01",
+    "author": {
+      "@type": "Person",
+      "name": "James Vaughan"
+    },
+    "description": "
+",
+    "url": "https://jamesbvaughan.com/guides/http/"
+  }
+</script>
+
+
+    <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/syntax.css"/>
+  </head>
+  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+    <nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">things james does</a>
+  </div>
+  <div>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/about/">
+        about
+      </a>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/blog/">
+        blog
+      </a>
+    
+  </div>
+</nav>
+
+    <main>
+      
+        <h1>HTTP</h1>
+        
+
+<p>HTTP, or &ldquo;Hypertext Transfer Protocol&rdquo;, is one of the most common protocols
+that computers use to talk to each other.</p>
+
+<h2 id="types-of-http-requests">Types of HTTP Requests</h2>
+
+<p>These requests come in a variety of forms:</p>
+
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>etc.</li>
+</ul>
+
+<p>These are all different kinds of &ldquo;HTTP Requests&rdquo; and each one is used for a
+different purpose,
+but we&rsquo;re just focus on GET for now.</p>
+
+<h3 id="get-requests">GET Requests</h3>
+
+<p>You use GET requests all the time and probably don&rsquo;t even realize it.
+Almost every time you load a web page on your phone or computer,
+your web browser sends an HTTP GET request to the server that serves the page
+you want to see. This is what a simple GET request might look like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="nf">GET</span> <span class="nn">/index.html</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="n">Host</span><span class="o">:</span> <span class="l">jamesbvaughan.com</span></code></pre></div>
+<p>Let&rsquo;s break this down.
+The first line, <code>GET /index.html HTTP/1.1</code>,
+contains the meat of the GET request.
+The first word is the request type, in this case <code>GET</code>.
+The next word is the path of the object that we want to get,
+in this case it&rsquo;s my homepage, which is located at <code>/index.html</code>.
+Finally, we have to specify the version of the HTTP specification that
+we are using, in this case it&rsquo;s version <code>1.1</code>.</p>
+
+<p>If you send that bit of text to my server at <code>jamesbvaughan.com</code>,
+it will send back my website.
+(To do this, you can use a tool like
+<a href="https://en.wikipedia.org/wiki/Netcat">netcat</a>.)</p>
+
+<p>Fortunately, web broswers are smart enough to put together the content of the
+request for us when we type an address into the URL bar and hit enter.</p>
+
+<p>Here&rsquo;s a typical response:</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+<span class="n">Date</span><span class="o">:</span> <span class="l">Fri, 10 Aug 2018 22:59:32 GMT</span>
+<span class="n">Content-Length</span><span class="o">:</span> <span class="l">4116</span>
+<span class="n">Connection</span><span class="o">:</span> <span class="l">Close</span>
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>James&#39; website<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>Now let&rsquo;s break down the response.
+The first line contains the HTTP version, and a status code,
+in this case <code>200 OK</code> which indicates that the page was found and sent
+successfully.
+(Another common response code you&rsquo;ve probably heard of is <code>404</code>,
+which indicates that the requested object was not found on the server.)</p>
+
+<p>After the response headers is a blank line and then the <em>response body</em>,
+in this case a bunch of HTML that our web browsers render as a
+(hopefully) beautiful web page.</p>
+
+<p>The response body doesn&rsquo;t have to be HTML though;
+it can be JSON, XML, or even just plain text.
+When interacting with APIs, a JSON response body is common,
+since most programming languages and frameworks have standardized ways to
+deserialize JSON data.</p>
+
+<h3 id="post-requests">POST Requests</h3>
+
+<p>The next common type of request that you deal with when using the web is POST.
+POST requests, by convention, are used for submitting data to some kind of
+server. When you submit a form online, the data you entered into that form
+is sent to the server in a POST request.</p>
+
+<p>Here&rsquo;s an example of a typical POST request:</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="nf">POST</span> <span class="nn">/signup</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="n">Host</span><span class="o">:</span> <span class="l">facebook.com</span>
+<span class="n">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+
+username=james_is_cool&amp;password=super_secret</code></pre></div>
+<p>As you can see, this request is pretty similar to a GET request,
+but it has an extra part at the bottom.
+This is called the <em>body</em> of the request and must be separated from the
+request <em>headers</em> by a blank line.
+The header <code>Content-Type: application/x-www-form-urlencoded</code>
+tells the server how the POST request body is encoded.
+Another common way to encode data in a POST request is JSON.
+In this example the body contains a username and password.</p>
+
+<h2 id="how-to-programs-use-http">How to programs use HTTP?</h2>
+
+<p>Two of the most common types of computer programs to use HTTP are web browsers
+and web servers.</p>
+
+<p>I&rsquo;m going to assume that you&rsquo;re fairly familiar with web browsers.</p>
+
+<p>A web server can be anything from a tiny 10 line program that does one thing
+to a giant program with millions of lines of code that make up the back end of
+a big app.</p>
+
+<p>A web server listens on a certain port (usually port 80 for HTTP) until it gets
+a request from a client.
+When it gets a request, it begins reading it character by character in order
+to determine what it needs to do.
+This is why the request type (GET, POST, etc.) and path (&ldquo;/&rdquo;, &ldquo;/blog.html&rdquo;,
+&ldquo;login&rdquo;, etc.) come first;
+they are usually the most important bits of data for deciding what needs to be
+done with the request.</p>
+
+<p>Fortunately for us, people have written frameworks and libraries in most
+popular programming languages for dealing with these requests so that we don&rsquo;t
+<strong>really</strong> need to know all the low-level details.</p>
+
+<p>For example, this is all the code you&rsquo;d need to write to have a working
+Node.js webserver that can handle a simple request using the
+<a href="http://expressjs.com/">express</a> library:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)()</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/example-path&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;example response&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+</code></pre></div>
+<p>As you may have guessed,
+this server waits for a GET request to the path <code>/example-path</code>
+and then sends back the text <code>example response</code>.</p>
+
+<p>Handling a POST request is a bit more complex, but similar:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">)</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// for parsing application/json
+</span><span class="c1"></span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/add-book&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">title</span>
+  <span class="k">const</span> <span class="nx">author</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">author</span>
+  
+  <span class="c1">// this is where you would do something interesting with the data
+</span><span class="c1"></span>  <span class="nx">addBook</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">author</span><span class="p">)</span>
+  
+  <span class="nx">response</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;submitted book successfully&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>In this example, we have to add two lines of code that tell express
+how to parse the body of a POST request containing JSON data.</p>
+
+<p>In the body of the request handler, we can access the POST request data inside
+the <code>request.body</code> variable.
+Next, we call the <code>addBook</code> function which presumably adds a new book to some
+database.
+Finally, we redirect the user to another path (<code>/success</code>) which contains a
+message indicating that the book was submitted successfully.</p>
+
+<p>Here is a similar example in Python using the
+<a href="https://github.com/pallets/flask/">Flask</a> library:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/add-book&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">addBookHandler</span><span class="p">():</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span>
+    
+    <span class="n">addBook</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">success</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;submitted book successfully&#39;</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
+<h1 id="other-helpful-resources">Other helpful resources</h1>
+
+<ul>
+<li><a href="http://flask.pocoo.org/docs/1.0/quickstart/#redirects-and-errors">Flask documentation</a></li>
+<li><a href="http://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/">How to use cURL to test APIs</a>: cURL is a wonderful command line tool for working with HTTP requests and it comes in very handy when testing things.</li>
+<li><a href="https://www.getpostman.com/">Postman</a>: This is (in some ways) a graphical and pretty alternative to cURL for testing HTTP requests.</li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP on Wikipedia</a></li>
+</ul>
+
+<hr />
+
+<p>I hope that helps!</p>
+
+      
+    </main>
+    <footer class="flex flex-column flex-row-l justify-between w-100 mw7 mb5 mt4 gray">
+  <div class="">
+    <div class="black mb2">things james does</div>
+    <div>James Vaughan</div>
+    <div>
+      <a href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">follow me</div>
+    <div class="">
+      <span class=""><svg id="i-github" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</span>
+      <a href="https://github.com/jamesbvaughan">
+        jamesbvaughan
+      </a>
+    </div>
+    <div class="">
+      <span class=""><svg id="i-twitter" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+</svg>
+</span>
+      <a href="https://twitter.com/jamesontheline">
+        jamesontheline
+      </a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">license</div>
+    <div>
+      the content on this site is
+      <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+    </div>
+    <div>
+      the <a href="https://github.com/jamesbvaughan/jamesbvaughan.com">code</a> for this site is
+      <a href="https://github.com/jamesbvaughan/jamesbvaughan.com/blob/master/LICENSE">MIT</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
+fathom('trackPageview');
+</script>
+
+  </body>
+</html>

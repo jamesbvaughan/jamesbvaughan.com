@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+  How I Take Notes With Vim, Markdown, and Pandoc  - things james does
+</title>
+
+    <meta name="author" content="James Vaughan" />
+<meta name="description" content=" I&rsquo;ve gone through quite a few revisions of my note-taking process and now that I&rsquo;m in my final year of school, I think I&rsquo;ve finally...
+" />
+<meta property="og:title" content="How I Take Notes With Vim, Markdown, and Pandoc" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:description" content=" I&rsquo;ve gone through quite a few revisions of my note-taking process and now that I&rsquo;m in my final year of school, I think I&rsquo;ve finally...
+" />
+<meta property="og:url" content="https://jamesbvaughan.com/markdown-pandoc-notes/" />
+<meta property="og:site_name" content="things james does" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content="2018-05-15" />
+  <meta property="og:article:modified_time" content="2018-05-15" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jamesontheline" />
+<meta name="twitter:creator" content="@jamesontheline" />
+<link rel="canonical" href="https://jamesbvaughan.com/markdown-pandoc-notes/" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "James Vaughan",
+    "headline": "How I Take Notes With Vim, Markdown, and Pandoc",
+    "dateCreated": "2018-05-15",
+    "dateModified": "2018-05-15",
+    "author": {
+      "@type": "Person",
+      "name": "James Vaughan"
+    },
+    "description": " I&rsquo;ve gone through quite a few revisions of my note-taking process and now that I&rsquo;m in my final year of school, I think I&rsquo;ve finally...
+",
+    "url": "https://jamesbvaughan.com/markdown-pandoc-notes/"
+  }
+</script>
+
+
+    <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/syntax.css"/>
+  </head>
+  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+    <nav class="mt3 mt4-ns flex justify-between w-100">
+  <div>
+    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">things james does</a>
+  </div>
+  <div>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/about/">
+        about
+      </a>
+    
+      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="/blog/">
+        blog
+      </a>
+    
+  </div>
+</nav>
+
+    <main>
+      
+<article class="">
+  <header class="mb4">
+    <h1 class="f1 mb2 lh-title">
+      <span class="dib">How I Take Notes With Vim, Markdown, and Pandoc</span>
+
+    </h1>
+    <time class="tracked gray">
+      May 15, 2018
+    </time>
+  </header>
+  <div class="lh-copy">
+    
+
+<p>I&rsquo;ve gone through quite a few revisions of my note-taking process
+and now that I&rsquo;m in my final year of school,
+I think I&rsquo;ve finally found a system that I&rsquo;m going to stick with.
+In this post, I will describe this system and explain why I like it so much.</p>
+
+<p><em><strong>tl;dr</strong>: I write notes in Markdown with Vim and Vimwiki on my computer
+and with Markor on my phone,
+keep them in sync with Syncthing,
+and view them as web pages and PDFs that I generate with pandoc.</em></p>
+
+<p>You might be wondering what things I&rsquo;m taking notes on that are important
+enough to warrant a whole post on how I take them.
+Right now, the main thing is lectures for classes,
+but I also take notes on:</p>
+
+<ul>
+<li>books that I read</li>
+<li>movies that I watch</li>
+<li>important conversations</li>
+<li>interesting things that I learn about people</li>
+<li>projects that I am work on</li>
+<li>recipes</li>
+<li>ideas for future blog posts</li>
+</ul>
+
+<h2 id="my-note-taking-history">My Note-Taking History</h2>
+
+<p>For some context,
+in addition to taking notes with the method I describe in this post,
+I have tried taking notes
+with pen and paper,
+with Google Docs,
+with <a href="https://evernote.com/">Evernote</a>,
+and
+with <a href="https://simplenote.com/">Simplenote</a>.</p>
+
+<p>Of these methods, I stuck with pen and paper the longest.
+I still like taking handwritten notes, but for most use cases
+I value the ability to search through and format my notes
+on my computer over the extra expressiveness of handwritten notes.</p>
+
+<p>Evernote and Simplenote are great tools and I would recommend them for most
+people, but I personally prefer to keep my notes in simple files
+on my filesystem that I can organize, modify, and parse however I want to.</p>
+
+<h2 id="how-i-settled-on-this-system">How I Settled On This System</h2>
+
+<p>One problem that I&rsquo;ve had with digital note-taking tools and apps is that
+they&rsquo;re not Vim.
+This might sound like a joke, but once you start using
+Vim regularly, you can begin to feel handicapped without it.</p>
+
+<p><em>(For those who don&rsquo;t know what Vim is,
+it&rsquo;s a text editor that encourages a completely mouse-free workflow.
+It has an
+extensive and elegant system of composable keybindings that enable users to
+perform complex editing tasks with minimal hand movement.)</em></p>
+
+<p>Vim is not a <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>
+editor, but I like using nice formatting features,
+like
+headings,
+lists,
+tables,
+and pretty math,
+so I needed to pick a markup language.
+At first I thought I might use
+<a href="https://www.latex-project.org//">LaTeX</a>
+because I was familiar with it and
+it has nice default styles,
+but ended up going with Markdown after discovering
+<a href="http://pandoc.org/">pandoc</a>,
+and learning that I could write documents in simple Markdown and
+then use it to convert them
+to LaTeX-formatted PDFs, HTML pages, and a bunch of other formats.</p>
+
+<h2 id="organization">Organization</h2>
+
+<p>I keep most of my notes in <code>~/Documents/notes</code>,
+under subdirectories for different topics or types of notes.
+For example, the notes for my computer security class are in
+<code>~/Documents/notes/school/cs136</code>.
+Within individual notes, I link to others with standard Markdown link syntax,
+and can quickly navigate to them by placing my cursor over the link I want
+to navigate to and pressing Enter, thanks to the
+<a href="http://vimwiki.github.io/">Vimwiki</a> plugin.</p>
+
+<h2 id="viewing">Viewing</h2>
+
+<p>When I need to read my notes,
+whether it&rsquo;s just for a quick reference
+or to study for a big exam,
+I have a few different methods set up.</p>
+
+<h4 id="in-vim">In Vim</h4>
+
+<p>Vimwiki makes it really easy to navigate through a bunch of Markdown notes.
+I have an <code>index.md</code> that looks something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---<span class="err">
+</span><span class="err"></span>title: My Knowledge Base<span class="err">
+</span><span class="err"></span>subtitle:<span class="k"> &gt;
+</span><span class="k"></span><span class="ge">  This is a collection of things that I know,
+</span><span class="ge"></span>  things that I learn,<span class="err">
+</span><span class="err"></span>  and things that I want to remember.<span class="err">
+</span><span class="err"></span>---<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">##</span> School
+
+<span class="k">-</span> [<span class="nt">Computer Science</span>](<span class="na">school/computer-science</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Math</span>](<span class="na">school/math</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Physics</span>](<span class="na">school/physics</span>)<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">##</span> Technologies
+<span class="err">
+</span><span class="err"></span>Tips and tricks on different applications and technologies that<span class="err">
+</span><span class="err"></span>I&#39;ve found myself needing to look up more than once.<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">####</span> Languages
+
+<span class="k">-</span> [<span class="nt">Go</span>](<span class="na">technologies/go</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Python</span>](<span class="na">technologies/python</span>)<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">####</span> Tools
+
+<span class="k">-</span> [<span class="nt">Postgres</span>](<span class="na">technologies/postgres</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">MySQL</span>](<span class="na">technologies/mysql</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">SSH</span>](<span class="na">technologies/open-ssh</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Git</span>](<span class="na">technologies/git</span>)<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">####</span> Other
+
+<span class="k">-</span> [<span class="nt">Linux Audio</span>](<span class="na">technologies/linux-audio</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Progressive Web Apps</span>](<span class="na">technologies/pwas</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Machine Learning</span>](<span class="na">technologies/machine-learning</span>)<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="gu">##</span> Misc
+
+<span class="k">-</span> [<span class="nt">Favorite Film Moments</span>](<span class="na">film-moments</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Recipes</span>](<span class="na">recipes/index</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Project Ideas</span>](<span class="na">projects/ideas</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Blog Post Ideas</span>](<span class="na">blog-post-ideas</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Music to Listen To</span>](<span class="na">music-to-listen-to</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">Book Notes</span>](<span class="na">books/index</span>)<span class="err">
+</span><span class="err"></span><span class="k">-</span> [<span class="nt">People</span>](<span class="na">people/index</span>)<span class="err">
+</span><span class="err"></span>- [<span class="nt">Quotes I Like</span>](<span class="na">quotes</span>)</code></pre></div>
+<p>This file links to all my different categories of notes and
+is a nice &ldquo;home base&rdquo; for them.
+It also makes for a nice homepage when I convert the notes to a static
+website.</p>
+
+<h4 id="on-the-web">On The Web</h4>
+
+<p>For quick things, the most common way I look at notes is actually with a web
+browser.
+I have a Makefile that converts all of my Markdown notes to HTML using
+pandoc and deploys them to my server where they&rsquo;re served behind HTTP auth.
+The Makefile looks something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="nv">MD_FILES</span><span class="o">=</span><span class="k">$(</span>shell find . -name <span class="se">\*</span>.md<span class="k">)</span>
+<span class="nv">HTML_FILES</span><span class="o">=</span><span class="k">$(</span>MD_FILES:.md<span class="o">=</span>.html<span class="k">)</span>
+<span class="nv">BUILD_HTML_FILES</span><span class="o">=</span><span class="k">$(</span>HTML_FILES:%<span class="o">=</span>build/%<span class="k">)</span>
+
+<span class="nf">all</span><span class="o">:</span> <span class="k">$(</span><span class="nv">BUILD_HTML_FILES</span><span class="k">)</span>
+
+<span class="nf">build/assets/%</span><span class="o">:</span> <span class="n">assets</span>/%
+        @mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
+        cp <span class="nv">$?</span> <span class="nv">$@</span>
+
+<span class="nf">build/%.html</span><span class="o">:</span> %.<span class="n">md</span> <span class="n">template</span>.<span class="n">html</span>
+	@mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
+	pandoc -o <span class="nv">$@</span> --template<span class="o">=</span>template.html $&lt;
+
+<span class="nf">deploy</span><span class="o">:</span>
+        rsync --recursive --human-readable --delete --info<span class="o">=</span>progress2 <span class="se">\
+</span><span class="se"></span>               build/* my_server
+</code></pre></div>
+<p>Right now I&rsquo;m running this manually after I make changes to my notes that I
+want to deploy but I might automate it in the future.</p>
+
+<h4 id="on-my-phone">On My Phone</h4>
+
+<p>I use
+<a href="https://syncthing.net/">Syncthing</a>
+to keep my notes directory in sync between my machines and my phone.
+I also use the
+<a href="https://github.com/gsantner/markor">Markor</a>
+app to manage and edit the notes on my phone.
+This app is nice because it makes it easy to navigate my notes
+directory and the built in editor formats Markdown files nicely.</p>
+
+<h3 id="in-print">In Print</h3>
+
+<p>When I have a big exam coming up,
+it sometimes helps to make a PDF of all my notes to study off of.
+For this, I&rsquo;ve created Makefiles for specific classes that produce a nice
+looking PDF of all my notes for the class.
+For example, this is my Makefile for a software engineering class I&rsquo;m taking
+right now:</p>
+<div class="highlight"><pre class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="nv">MD_FILES</span><span class="o">=</span>about.md <span class="m">130</span>-final-notes.md general-advice.md requirements.md <span class="se">\
+</span><span class="se"></span>         software-processes.md modeling.md architectural-design.md <span class="se">\
+</span><span class="se"></span>         design-of-components.md software-quality.md <span class="se">\
+</span><span class="se"></span>         configuration-management.md testing.md week-2-discussion.md <span class="se">\
+</span><span class="se"></span>         week-3-discussion.md week-4-discussion.md
+<span class="nv">PDF_FILES</span><span class="o">=</span><span class="k">$(</span>MD_FILES:.md<span class="o">=</span>.pdf<span class="k">)</span>
+<span class="nv">BUILD_PDF_FILES</span><span class="o">=</span><span class="k">$(</span>PDF_FILES:%<span class="o">=</span>build/%<span class="k">)</span>
+<span class="nv">EXTRA_PDFS</span><span class="o">=</span>sample-midterm-solutions.pdf
+
+<span class="nf">130.pdf</span><span class="o">:</span> <span class="k">$(</span><span class="nv">BUILD_PDF_FILES</span><span class="k">)</span>
+        gs -sDEVICE<span class="o">=</span>pdfwrite -dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.4 -dPDFSETTINGS<span class="o">=</span>/default <span class="se">\
+</span><span class="se"></span>                -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages
+                -dCompressFonts<span class="o">=</span><span class="nb">true</span> -r150 -sOutputFile<span class="o">=</span><span class="nv">$@</span> $^ <span class="k">$(</span>EXTRA_PDFS<span class="k">)</span>
+
+<span class="nf">build/%.pdf</span><span class="o">:</span> %.<span class="n">md</span>
+        @mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
+        pandoc -V geometry:margin<span class="o">=</span>1in -o <span class="nv">$@</span> <span class="nv">$?</span>
+</code></pre></div>
+<p>This converts each file to a PDF and then uses
+<a href="https://www.ghostscript.com/">Ghostscript</a>
+to combine them all into one.
+It also lets me include any other PDFs I have, like the sample midterm in
+my example.
+This has been super handy for open-note tests.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>I like this system a lot but it&rsquo;s not perfect.</p>
+
+<p>One issue with it is that I have a lot of fun tweaking and &ldquo;optimizing&rdquo;
+my Vim configuration and note taking process.
+I put &ldquo;optimizing&rdquo; in quotes because this often ends up taking more of my
+time than the &ldquo;optimizations&rdquo; actually save,
+and I&rsquo;ll commonly miss chunks of lectures because I got distracted trying
+to fix the syntax highlighting for misspelled words in my Vim colorscheme
+or trying to decide on a better font size for the headers in my generated
+PDFs.</p>
+
+<p>Another area with room for improvement is in my use of the Vimwiki plugin.
+It&rsquo;s a powerful plugin with a bunch of cool features, but
+the only one I&rsquo;m really using right now is the ability to navigate to linked
+documents.
+I think that my process could be improved by either using a more minimal
+plugin that includes only that feature or by starting to take advantage of
+more of Vimwiki&rsquo;s features.</p>
+
+  </div>
+  
+  
+    <em>
+  If you enjoyed this post, feel free to
+  <a target="_blank" href="http://twitter.com/intent/tweet?url=https%3a%2f%2fjamesbvaughan.com%2fmarkdown-pandoc-notes%2f&text=How%20I%20Take%20Notes%20With%20Vim%2c%20Markdown%2c%20and%20Pandoc&via=jamesontheline">tweet about it</a>
+  or
+  <a target="_blank" href="http://facebook.com/sharer.php?u=https%3a%2f%2fjamesbvaughan.com%2fmarkdown-pandoc-notes%2f">share it on Facebook</a>.
+</em>
+
+  
+  
+    <div>
+  <em>
+    Discuss this post
+    
+      <a href=https://news.ycombinator.com/item?id&#61;17078059>
+        here on Hacker News
+      </a>
+      or
+    
+      <a href=https://www.reddit.com/r/vim/comments/8jpew3/how_i_take_notes_with_vim_markdown_and_pandoc/>
+        here on Reddit
+      </a>
+      or
+    
+    in the comments below.
+  </em>
+</div>
+
+  
+</article>
+
+    </main>
+    <footer class="flex flex-column flex-row-l justify-between w-100 mw7 mb5 mt4 gray">
+  <div class="">
+    <div class="black mb2">things james does</div>
+    <div>James Vaughan</div>
+    <div>
+      <a href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">follow me</div>
+    <div class="">
+      <span class=""><svg id="i-github" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</span>
+      <a href="https://github.com/jamesbvaughan">
+        jamesbvaughan
+      </a>
+    </div>
+    <div class="">
+      <span class=""><svg id="i-twitter" viewBox="0 0 64 64" width="16" height="16">
+    <path stroke-width="0" fill="currentColor" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+</svg>
+</span>
+      <a href="https://twitter.com/jamesontheline">
+        jamesontheline
+      </a>
+    </div>
+  </div>
+  <div class="mt3 mt0-l">
+    <div class="black mb2">license</div>
+    <div>
+      the content on this site is
+      <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+    </div>
+    <div>
+      the <a href="https://github.com/jamesbvaughan/jamesbvaughan.com">code</a> for this site is
+      <a href="https://github.com/jamesbvaughan/jamesbvaughan.com/blob/master/LICENSE">MIT</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
+fathom('trackPageview');
+</script>
+
+  </body>
+</html>
