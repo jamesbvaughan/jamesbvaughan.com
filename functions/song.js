@@ -4,7 +4,7 @@ const qs = require('querystring')
 const lastfmURL = 'https://ws.audioscrobbler.com/2.0/?' + qs.stringify({
   method: 'user.getrecenttracks',
   limit: 1,
-  user: process.env.LAST_FM_USERNAME,
+  user: 'magicjamesv',
   format: 'json',
   api_key: process.env.LAST_FM_API_KEY,
 })

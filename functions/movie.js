@@ -2,7 +2,7 @@ const https = require('https')
 const qs = require('querystring')
 
 const letterboxdURL = 'https://api.rss2json.com/v1/api.json?' + qs.stringify({
-  rss_url: `https://letterboxd.com/${process.env.LETTERBOXD_USERNAME}/rss/`,
+  rss_url: `https://letterboxd.com/jamesbvaughan/rss/`,
   api_key: process.env.RSS_2_JSON_API_KEY,
 })
 
