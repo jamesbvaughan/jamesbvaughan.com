@@ -43,9 +43,8 @@
 
     <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
     <link rel="icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    
-    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/tachyons.min.css"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
     <link rel="stylesheet" href="/styles/syntax.css"/>
   </head>
   <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
@@ -96,8 +95,8 @@ but we&rsquo;re just focus on GET for now.</p>
 Almost every time you load a web page on your phone or computer,
 your web browser sends an HTTP GET request to the server that serves the page
 you want to see. This is what a simple GET request might look like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="nf">GET</span> <span class="nn">/index.html</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="n">Host</span><span class="o">:</span> <span class="l">jamesbvaughan.com</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTTP" data-lang="HTTP"><span style="color:#50fa7b">GET</span> /index.html <span style="color:#ff79c6">HTTP</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">1.1</span>
+Host<span style="color:#ff79c6">:</span> jamesbvaughan.com</code></pre></div>
 <p>Let&rsquo;s break this down.
 The first line, <code>GET /index.html HTTP/1.1</code>,
 contains the meat of the GET request.
@@ -116,21 +115,21 @@ it will send back my website.
 request for us when we type an address into the URL bar and hit enter.</p>
 
 <p>Here&rsquo;s a typical response:</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="n">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
-<span class="n">Date</span><span class="o">:</span> <span class="l">Fri, 10 Aug 2018 22:59:32 GMT</span>
-<span class="n">Content-Length</span><span class="o">:</span> <span class="l">4116</span>
-<span class="n">Connection</span><span class="o">:</span> <span class="l">Close</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTTP" data-lang="HTTP"><span style="color:#ff79c6">HTTP</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">1.1</span> <span style="color:#bd93f9">200</span> OK
+Content-Type<span style="color:#ff79c6">:</span> text/html
+Date<span style="color:#ff79c6">:</span> Fri, 10 Aug 2018 22:59:32 GMT
+Content-Length<span style="color:#ff79c6">:</span> 4116
+Connection<span style="color:#ff79c6">:</span> Close
 
-<span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>James&#39; website<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#ff79c6">html</span>&gt;
+  &lt;<span style="color:#ff79c6">head</span>&gt;
+    &lt;<span style="color:#ff79c6">title</span>&gt;James&#39; website&lt;/<span style="color:#ff79c6">title</span>&gt;
+  &lt;/<span style="color:#ff79c6">head</span>&gt;
+  &lt;<span style="color:#ff79c6">body</span>&gt;
     ...
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+  &lt;/<span style="color:#ff79c6">body</span>&gt;
+&lt;/<span style="color:#ff79c6">html</span>&gt;</code></pre></div>
 <p>Now let&rsquo;s break down the response.
 The first line contains the HTTP version, and a status code,
 in this case <code>200 OK</code> which indicates that the page was found and sent
@@ -156,9 +155,9 @@ server. When you submit a form online, the data you entered into that form
 is sent to the server in a POST request.</p>
 
 <p>Here&rsquo;s an example of a typical POST request:</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTTP" data-lang="HTTP"><span class="nf">POST</span> <span class="nn">/signup</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="n">Host</span><span class="o">:</span> <span class="l">facebook.com</span>
-<span class="n">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTTP" data-lang="HTTP"><span style="color:#50fa7b">POST</span> /signup <span style="color:#ff79c6">HTTP</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">1.1</span>
+Host<span style="color:#ff79c6">:</span> facebook.com
+Content-Type<span style="color:#ff79c6">:</span> application/x-www-form-urlencoded
 
 username=james_is_cool&amp;password=super_secret</code></pre></div>
 <p>As you can see, this request is pretty similar to a GET request,
@@ -197,36 +196,36 @@ popular programming languages for dealing with these requests so that we don&rsq
 <p>For example, this is all the code you&rsquo;d need to write to have a working
 Node.js webserver that can handle a simple request using the
 <a href="http://expressjs.com/">express</a> library:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)()</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> app <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;express&#39;</span>)()
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/example-path&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;example response&#39;</span><span class="p">)</span>
-<span class="p">})</span>
+app.get(<span style="color:#f1fa8c">&#39;/example-path&#39;</span>, (request, response) =&gt; {
+  response.send(<span style="color:#f1fa8c">&#39;example response&#39;</span>)
+})
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+app.listen(<span style="color:#bd93f9">80</span>)
 </code></pre></div>
 <p>As you may have guessed,
 this server waits for a GET request to the path <code>/example-path</code>
 and then sends back the text <code>example response</code>.</p>
 
 <p>Handling a POST request is a bit more complex, but similar:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> bodyParser <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;body-parser&#39;</span>)
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// for parsing application/json
-</span><span class="c1"></span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/add-book&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">title</span>
-  <span class="k">const</span> <span class="nx">author</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">author</span>
+app.use(bodyParser.json()); <span style="color:#6272a4">// for parsing application/json
+</span><span style="color:#6272a4"></span>
+app.post(<span style="color:#f1fa8c">&#39;/add-book&#39;</span>, (request, response) =&gt; {
+  <span style="color:#ff79c6">const</span> title <span style="color:#ff79c6">=</span> request.body.title
+  <span style="color:#ff79c6">const</span> author <span style="color:#ff79c6">=</span> request.body.author
   
-  <span class="c1">// this is where you would do something interesting with the data
-</span><span class="c1"></span>  <span class="nx">addBook</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">author</span><span class="p">)</span>
+  <span style="color:#6272a4">// this is where you would do something interesting with the data
+</span><span style="color:#6272a4"></span>  addBook(title, author)
   
-  <span class="nx">response</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
-<span class="p">})</span>
+  response.redirect(<span style="color:#f1fa8c">&#39;/success&#39;</span>)
+})
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;submitted book successfully&#39;</span><span class="p">)</span>
-<span class="p">})</span>
+app.get(<span style="color:#f1fa8c">&#39;/success&#39;</span>, (request, response) =&gt; {
+  response.send(<span style="color:#f1fa8c">&#39;submitted book successfully&#39;</span>)
+})
 </code></pre></div>
 <p>In this example, we have to add two lines of code that tell express
 how to parse the body of a POST request containing JSON data.</p>
@@ -240,24 +239,24 @@ message indicating that the book was submitted successfully.</p>
 
 <p>Here is a similar example in Python using the
 <a href="https://github.com/pallets/flask/">Flask</a> library:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> flask <span style="color:#ff79c6">import</span> (Flask, request, redirect)
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+app <span style="color:#ff79c6">=</span> Flask(__name__)
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/add-book&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">addBookHandler</span><span class="p">():</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
-    <span class="n">author</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span>
+@app.route(<span style="color:#f1fa8c">&#39;/add-book&#39;</span>, methods<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;POST&#39;</span>])
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">addBookHandler</span>():
+    title <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>form[<span style="color:#f1fa8c">&#39;title&#39;</span>]
+    author <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>form[<span style="color:#f1fa8c">&#39;author&#39;</span>]
     
-    <span class="n">addBook</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">)</span>
+    addBook(title, author)
     
-    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
+    <span style="color:#ff79c6">return</span> redirect(<span style="color:#f1fa8c">&#39;/success&#39;</span>)
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/success&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">success</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;submitted book successfully&#39;</span>
+@app.route(<span style="color:#f1fa8c">&#39;/success&#39;</span>)
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">success</span>():
+    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;submitted book successfully&#39;</span>
 
-<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
+app<span style="color:#ff79c6">.</span>run()</code></pre></div>
 <h1 id="other-helpful-resources">Other helpful resources</h1>
 
 <ul>

@@ -5,7 +5,7 @@
     <link>https://jamesbvaughan.com/</link>
     <atom:link rel="self" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" />
     <description>James Vaughan's recent blog posts</description>
-    <language>en-us</language>
+    <language>en-usx</language>
     <managingEditor>
       james@jamesbvaughan.com (James Vaughan)
     </managingEditor>
@@ -74,14 +74,14 @@ but they do let you download all of your personal data as CSVs.
 One of these CSVs is a file called &lt;code&gt;watched.csv&lt;/code&gt; that includes a row for every
 movie that I have ever marked watched.
 After getting that file, I used Ruby&amp;rsquo;s CSV class to parse it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;men&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;women&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;men &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
+women &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
 
-&lt;span class=&#34;no&#34;&gt;CSV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;watched.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;movie&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+CSV&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;foreach(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;watched.csv&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;movie&lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
 
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;women&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; women, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;men&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; men&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;women&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; women, &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;men&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; men&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now to find out what to do with it&amp;hellip;&lt;/p&gt;
 
 &lt;h2 id=&#34;finding-metadata-for-each-movie&#34;&gt;Finding Metadata for each Movie&lt;/h2&gt;
@@ -100,19 +100,19 @@ a community built movie database.&lt;/p&gt;
 &lt;p&gt;Fortunately, the Letterboxd devs use
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Semantic_Web&#34;&gt;semantic web&lt;/a&gt; techniques in their
 markup, so finding each movie&amp;rsquo;s TMDB ID was not difficult.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;letterboxd_movie_doc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Nokogiri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;HTML&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;letterboxd_movie_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;letterboxd_movie_doc &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Nokogiri&lt;span style=&#34;color:#ff79c6&#34;&gt;::&lt;/span&gt;HTML(HTTP&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(letterboxd_movie_url)&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;to_s)
 
-&lt;span class=&#34;n&#34;&gt;tmdb_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;letterboxd_movie_doc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;at_xpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/html/body/@data-tmdb-id&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+tmdb_id &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; letterboxd_movie_doc&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;at_xpath(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;/html/body/@data-tmdb-id&amp;#39;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;determining-the-genders&#34;&gt;Determining the Genders&lt;/h2&gt;
 
 &lt;p&gt;Once I had the TMDB IDs,
 I used the TMDB API to get the credits for each movie,
 which consist of a bit of data about each person in the movie&amp;rsquo;s cast and crew,
 including their gender, as listed on TMDB.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;tmdb_movie_credits_url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.themoviedb.org/3/movie/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_id&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;
-                         &lt;span class=&#34;s2&#34;&gt;&amp;#34;/credits?api_key=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ENV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;TMDB_API_KEY&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;tmdb_movie_credits_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://api.themoviedb.org/3/movie/&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;tmdb_id&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;\
+                         &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/credits?api_key=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;ENV&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;TMDB_API_KEY&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;movie_credits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_movie_credits_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+movie_credits &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; JSON&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;parse HTTP&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(tmdb_movie_credits_url)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Woohoo we have the director info that we need!
 &lt;code&gt;movie_credits[&#39;crew&#39;]&lt;/code&gt; is an array with an object for each crew member
 that contains basic info about them.&lt;/p&gt;
@@ -129,19 +129,19 @@ What did 0 mean? Was TMDB being progressive and providing more than two gender
 options?
 No, it was just that their data is all crowdsourced and a 0 simply means that
 no one has added a gender for that person yet.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;movie_credits&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;crew&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;unless&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;job&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Director&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;movie_credits&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;crew&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;].&lt;/span&gt;each &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;next&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;unless&lt;/span&gt; credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;job&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Director&amp;#39;&lt;/span&gt;
 
-  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;gender&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;women&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;men&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;tmdb_person_url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://www.themoviedb.org/person/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Unknown gender: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, edit here: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_person_url&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;case&lt;/span&gt; credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;gender&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+    women &lt;span style=&#34;color:#ff79c6&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
+    men &lt;span style=&#34;color:#ff79c6&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;
+    tmdb_person_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://www.themoviedb.org/person/&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Unknown gender: &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;, edit here: &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;tmdb_person_url&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;At first I thought I&amp;rsquo;d just manually look up all the unknown directors and add
 up the numbers myself, but then it hit me that that would be a bit wasteful
 given that TMDB is crowdsourced and I could just update the data there
@@ -160,40 +160,40 @@ TMDB users as well.&lt;/p&gt;
 
 &lt;p&gt;The final step was to add up the numbers and check the results.
 Here is the full code (minus a bit of error handling):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dotenv/load&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;csv&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;nokogiri&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;dotenv/load&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;csv&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;nokogiri&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;men&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;women&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+men &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
+women &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
 
-&lt;span class=&#34;no&#34;&gt;CSV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;watched.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;movie&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;letterboxd_movie_doc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Nokogiri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;HTML&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;movie&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+CSV&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;foreach(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;watched.csv&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;movie&lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;
+  letterboxd_movie_doc &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Nokogiri&lt;span style=&#34;color:#ff79c6&#34;&gt;::&lt;/span&gt;HTML(HTTP&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(movie&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;)&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;to_s)
 
-  &lt;span class=&#34;n&#34;&gt;tmdb_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;letterboxd_movie_doc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;at_xpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/html/body/@data-tmdb-id&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  tmdb_id &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; letterboxd_movie_doc&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;at_xpath(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;/html/body/@data-tmdb-id&amp;#39;&lt;/span&gt;)
 
-  &lt;span class=&#34;n&#34;&gt;tmdb_movie_credits_url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.themoviedb.org/3/movie/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_id&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;
-                           &lt;span class=&#34;s2&#34;&gt;&amp;#34;/credits?api_key=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ENV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;TMDB_API_KEY&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+  tmdb_movie_credits_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://api.themoviedb.org/3/movie/&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;tmdb_id&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;\
+                           &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/credits?api_key=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;ENV&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;TMDB_API_KEY&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
 
-  &lt;span class=&#34;n&#34;&gt;movie_credits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_movie_credits_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  movie_credits &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; JSON&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;parse HTTP&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(tmdb_movie_credits_url)
 
-  &lt;span class=&#34;n&#34;&gt;movie_credits&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;crew&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;unless&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;job&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Director&amp;#39;&lt;/span&gt;
+  movie_credits&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;crew&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;].&lt;/span&gt;each &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;|&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;next&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;unless&lt;/span&gt; credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;job&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Director&amp;#39;&lt;/span&gt;
 
-    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;gender&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;women&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;men&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;tmdb_person_url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://www.themoviedb.org/person/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-      &lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Unknown gender: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;credit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, edit here: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmdb_person_url&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;case&lt;/span&gt; credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;gender&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+      women &lt;span style=&#34;color:#ff79c6&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
+      men &lt;span style=&#34;color:#ff79c6&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;
+      tmdb_person_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://www.themoviedb.org/person/&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Unknown gender: &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;credit&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;, edit here: &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;tmdb_person_url&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
 
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;women&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; women, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;men&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; men&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;women&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; women, &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;#{&lt;/span&gt;men&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; men&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;results&#34;&gt;Results&lt;/h1&gt;
 
 &lt;p&gt;It turned out that as of this writing,
@@ -365,53 +365,53 @@ I have a few different methods set up.&lt;/p&gt;
 
 &lt;p&gt;Vimwiki makes it really easy to navigate through a bunch of Markdown notes.
 I have an &lt;code&gt;index.md&lt;/code&gt; that looks something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;---&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;title: My Knowledge Base&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;subtitle:&lt;span class=&#34;k&#34;&gt; &amp;gt;
-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;  This is a collection of things that I know,
-&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;  things that I learn,&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  and things that I want to remember.&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;##&lt;/span&gt; School
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;---
+title: My Knowledge Base
+subtitle:&lt;span style=&#34;color:#ff79c6&#34;&gt; &amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline&#34;&gt;  This is a collection of things that I know,
+&lt;/span&gt;&lt;span style=&#34;text-decoration:underline&#34;&gt;&lt;/span&gt;  things that I learn,
+  and things that I want to remember.
+---
 
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Computer Science&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;school/computer-science&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Math&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;school/math&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Physics&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;school/physics&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;##&lt;/span&gt; Technologies
-&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;Tips and tricks on different applications and technologies that&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;I&amp;#39;ve found myself needing to look up more than once.&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;####&lt;/span&gt; Languages
+&lt;span style=&#34;font-weight:bold&#34;&gt;##&lt;/span&gt; School
 
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Go&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/go&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Python&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/python&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;####&lt;/span&gt; Tools
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Computer Science&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;school/computer-science&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Math&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;school/math&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Physics&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;school/physics&lt;/span&gt;)
 
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Postgres&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/postgres&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;MySQL&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/mysql&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;SSH&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/open-ssh&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Git&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/git&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;####&lt;/span&gt; Other
+&lt;span style=&#34;font-weight:bold&#34;&gt;##&lt;/span&gt; Technologies
 
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Linux Audio&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/linux-audio&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Progressive Web Apps&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/pwas&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Machine Learning&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;technologies/machine-learning&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;##&lt;/span&gt; Misc
+Tips and tricks on different applications and technologies that
+I&amp;#39;ve found myself needing to look up more than once.
 
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Favorite Film Moments&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;film-moments&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Recipes&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;recipes/index&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Project Ideas&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;projects/ideas&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Blog Post Ideas&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;blog-post-ideas&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Music to Listen To&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;music-to-listen-to&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Book Notes&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;books/index&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;People&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;people/index&lt;/span&gt;)&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;- [&lt;span class=&#34;nt&#34;&gt;Quotes I Like&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;quotes&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;font-weight:bold&#34;&gt;####&lt;/span&gt; Languages
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Go&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/go&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Python&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/python&lt;/span&gt;)
+
+&lt;span style=&#34;font-weight:bold&#34;&gt;####&lt;/span&gt; Tools
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Postgres&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/postgres&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;MySQL&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/mysql&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;SSH&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/open-ssh&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Git&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/git&lt;/span&gt;)
+
+&lt;span style=&#34;font-weight:bold&#34;&gt;####&lt;/span&gt; Other
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Linux Audio&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/linux-audio&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Progressive Web Apps&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/pwas&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Machine Learning&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;technologies/machine-learning&lt;/span&gt;)
+
+&lt;span style=&#34;font-weight:bold&#34;&gt;##&lt;/span&gt; Misc
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Favorite Film Moments&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;film-moments&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Recipes&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;recipes/index&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Project Ideas&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;projects/ideas&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Blog Post Ideas&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;blog-post-ideas&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Music to Listen To&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;music-to-listen-to&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;Book Notes&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;books/index&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; [&lt;span style=&#34;color:#ff79c6&#34;&gt;People&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;people/index&lt;/span&gt;)
+- [&lt;span style=&#34;color:#ff79c6&#34;&gt;Quotes I Like&lt;/span&gt;](&lt;span style=&#34;color:#50fa7b&#34;&gt;quotes&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This file links to all my different categories of notes and
 is a nice &amp;ldquo;home base&amp;rdquo; for them.
 It also makes for a nice homepage when I convert the notes to a static
@@ -424,23 +424,23 @@ browser.
 I have a Makefile that converts all of my Markdown notes to HTML using
 pandoc and deploys them to my server where they&amp;rsquo;re served behind HTTP auth.
 The Makefile looks something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MD_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shell find . -name &lt;span class=&#34;se&#34;&gt;\*&lt;/span&gt;.md&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;HTML_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;MD_FILES:.md&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.html&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;BUILD_HTML_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;HTML_FILES:%&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;build/%&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;MD_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;shell find . -name &lt;span style=&#34;color:#f1fa8c&#34;&gt;\*&lt;/span&gt;.md&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;HTML_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;MD_FILES:.md&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;.html&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;BUILD_HTML_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;HTML_FILES:%&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;build/%&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
 
-&lt;span class=&#34;nf&#34;&gt;all&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUILD_HTML_FILES&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#50fa7b&#34;&gt;all&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;BUILD_HTML_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
 
-&lt;span class=&#34;nf&#34;&gt;build/assets/%&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;/%
-        @mkdir -p &lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;dirname &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-        cp &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;
+&lt;span style=&#34;color:#50fa7b&#34;&gt;build/assets/%&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; assets/%
+        @mkdir -p &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$$&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;dirname &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+        cp &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$?&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt;
 
-&lt;span class=&#34;nf&#34;&gt;build/%.html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; %.&lt;span class=&#34;n&#34;&gt;md&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;template&lt;/span&gt;.&lt;span class=&#34;n&#34;&gt;html&lt;/span&gt;
-	@mkdir -p &lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;dirname &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-	pandoc -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; --template&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;template.html $&amp;lt;
+&lt;span style=&#34;color:#50fa7b&#34;&gt;build/%.html&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; %.md template.html
+	@mkdir -p &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$$&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;dirname &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+	pandoc -o &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt; --template&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;template.html $&amp;lt;
 
-&lt;span class=&#34;nf&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-        rsync --recursive --human-readable --delete --info&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;progress2 &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;               build/* my_server
+&lt;span style=&#34;color:#50fa7b&#34;&gt;deploy&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt;
+        rsync --recursive --human-readable --delete --info&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;progress2 &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;               build/* my_server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Right now I&amp;rsquo;m running this manually after I make changes to my notes that I
 want to deploy but I might automate it in the future.&lt;/p&gt;
@@ -464,23 +464,23 @@ For this, I&amp;rsquo;ve created Makefiles for specific classes that produce a n
 looking PDF of all my notes for the class.
 For example, this is my Makefile for a software engineering class I&amp;rsquo;m taking
 right now:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MD_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;about.md &lt;span class=&#34;m&#34;&gt;130&lt;/span&gt;-final-notes.md general-advice.md requirements.md &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;         software-processes.md modeling.md architectural-design.md &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;         design-of-components.md software-quality.md &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;         configuration-management.md testing.md week-2-discussion.md &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;         week-3-discussion.md week-4-discussion.md
-&lt;span class=&#34;nv&#34;&gt;PDF_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;MD_FILES:.md&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.pdf&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;BUILD_PDF_FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;PDF_FILES:%&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;build/%&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;EXTRA_PDFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sample-midterm-solutions.pdf
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;MD_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;about.md &lt;span style=&#34;color:#bd93f9&#34;&gt;130&lt;/span&gt;-final-notes.md general-advice.md requirements.md &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;         software-processes.md modeling.md architectural-design.md &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;         design-of-components.md software-quality.md &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;         configuration-management.md testing.md week-2-discussion.md &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;         week-3-discussion.md week-4-discussion.md
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;PDF_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;MD_FILES:.md&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;.pdf&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;BUILD_PDF_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;PDF_FILES:%&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;build/%&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;EXTRA_PDFS&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;sample-midterm-solutions.pdf
 
-&lt;span class=&#34;nf&#34;&gt;130.pdf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUILD_PDF_FILES&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-        gs -sDEVICE&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.4 -dPDFSETTINGS&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/default &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;                -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages
-                -dCompressFonts&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -r150 -sOutputFile&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; $^ &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;EXTRA_PDFS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#50fa7b&#34;&gt;130.pdf&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;BUILD_PDF_FILES&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+        gs -sDEVICE&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;.4 -dPDFSETTINGS&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;/default &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;                -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages
+                -dCompressFonts&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;true&lt;/span&gt; -r150 -sOutputFile&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt; $^ &lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;EXTRA_PDFS&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
 
-&lt;span class=&#34;nf&#34;&gt;build/%.pdf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; %.&lt;span class=&#34;n&#34;&gt;md&lt;/span&gt;
-        @mkdir -p &lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;dirname &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-        pandoc -V geometry:margin&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1in -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt;
+&lt;span style=&#34;color:#50fa7b&#34;&gt;build/%.pdf&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; %.md
+        @mkdir -p &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$$&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;dirname &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+        pandoc -V geometry:margin&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;1in -o &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$?&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This converts each file to a PDF and then uses
 &lt;a href=&#34;https://www.ghostscript.com/&#34;&gt;Ghostscript&lt;/a&gt;
@@ -760,22 +760,22 @@ and if you run a recent version of a major Linux distribution on your server,
 you probably do too.
 You can view logs from services running under systemd using &lt;code&gt;journalctl&lt;/code&gt;,
 so we can view the ssh logs with&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;which will show you way more than you need for this exercise.&lt;/p&gt;
 
 &lt;p&gt;We can filter the &lt;code&gt;journalctl&lt;/code&gt; output to just the lines we
 care about (those containing the string &lt;em&gt;&amp;ldquo;Invalid user&amp;rdquo;&lt;/em&gt;),
 using &lt;code&gt;grep&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt;
-Apr &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;:51:33 sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;28910&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Invalid user danny from &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt;.20.58.3 port &lt;span class=&#34;m&#34;&gt;58067&lt;/span&gt;
-Apr &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;:22:48 sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;29393&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Invalid user t7inst from &lt;span class=&#34;m&#34;&gt;195&lt;/span&gt;.133.234.67 port &lt;span class=&#34;m&#34;&gt;48641&lt;/span&gt;
-Apr &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;:42:45 sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;29720&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Invalid user zimbra from &lt;span class=&#34;m&#34;&gt;139&lt;/span&gt;.99.122.129 port &lt;span class=&#34;m&#34;&gt;49362&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh | grep &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt;
+Apr &lt;span style=&#34;color:#bd93f9&#34;&gt;17&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;:51:33 sshd&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;28910&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: Invalid user danny from &lt;span style=&#34;color:#bd93f9&#34;&gt;52&lt;/span&gt;.20.58.3 port &lt;span style=&#34;color:#bd93f9&#34;&gt;58067&lt;/span&gt;
+Apr &lt;span style=&#34;color:#bd93f9&#34;&gt;17&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;16&lt;/span&gt;:22:48 sshd&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;29393&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: Invalid user t7inst from &lt;span style=&#34;color:#bd93f9&#34;&gt;195&lt;/span&gt;.133.234.67 port &lt;span style=&#34;color:#bd93f9&#34;&gt;48641&lt;/span&gt;
+Apr &lt;span style=&#34;color:#bd93f9&#34;&gt;17&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;16&lt;/span&gt;:42:45 sshd&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;29720&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: Invalid user zimbra from &lt;span style=&#34;color:#bd93f9&#34;&gt;139&lt;/span&gt;.99.122.129 port &lt;span style=&#34;color:#bd93f9&#34;&gt;49362&lt;/span&gt;
 ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now we&amp;rsquo;re just looking at logs of login attempts with invalid usernames.&lt;/p&gt;
 
 &lt;p&gt;All we care about are the usernames,
 so let&amp;rsquo;s cut those out using &lt;code&gt;cut&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; cut -d &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh | grep &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt; | cut -d &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f &lt;span style=&#34;color:#bd93f9&#34;&gt;8&lt;/span&gt;
 danny
 t7inst
 zimbra
@@ -799,11 +799,11 @@ this time numerically rather than alphabetically (&lt;code&gt;-n&lt;/code&gt;),
 and in reverse so that the highest numbers are at the top (&lt;code&gt;-r&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;Finally, we take just the top 25 names (&lt;code&gt;head -n 25&lt;/code&gt;).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; cut -d &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -nr &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -n &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;
-  &lt;span class=&#34;m&#34;&gt;2563&lt;/span&gt; admin
-   &lt;span class=&#34;m&#34;&gt;745&lt;/span&gt; user
-   &lt;span class=&#34;m&#34;&gt;658&lt;/span&gt; support
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ journalctl -u ssh | grep &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Invalid user&amp;#39;&lt;/span&gt; | cut -d &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f &lt;span style=&#34;color:#bd93f9&#34;&gt;8&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;      | sort | uniq -c | sort -nr | head -n &lt;span style=&#34;color:#bd93f9&#34;&gt;25&lt;/span&gt;
+  &lt;span style=&#34;color:#bd93f9&#34;&gt;2563&lt;/span&gt; admin
+   &lt;span style=&#34;color:#bd93f9&#34;&gt;745&lt;/span&gt; user
+   &lt;span style=&#34;color:#bd93f9&#34;&gt;658&lt;/span&gt; support
 ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And that&amp;rsquo;s it! Just pipe the logs through a few different tools and
 you&amp;rsquo;ve got the list.&lt;/p&gt;
@@ -811,33 +811,33 @@ you&amp;rsquo;ve got the list.&lt;/p&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 
 &lt;p&gt;These were the top results when I ran this on my server:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;   &lt;span class=&#34;m&#34;&gt;2563&lt;/span&gt; admin
-    &lt;span class=&#34;m&#34;&gt;745&lt;/span&gt; user
-    &lt;span class=&#34;m&#34;&gt;658&lt;/span&gt; support
-    &lt;span class=&#34;m&#34;&gt;483&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-    &lt;span class=&#34;m&#34;&gt;323&lt;/span&gt; ubnt
-    &lt;span class=&#34;m&#34;&gt;213&lt;/span&gt; guest
-    &lt;span class=&#34;m&#34;&gt;207&lt;/span&gt; tech
-    &lt;span class=&#34;m&#34;&gt;202&lt;/span&gt; oracle
-    &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; operator
-    &lt;span class=&#34;m&#34;&gt;196&lt;/span&gt; manager
-    &lt;span class=&#34;m&#34;&gt;158&lt;/span&gt; webadmin
-    &lt;span class=&#34;m&#34;&gt;151&lt;/span&gt; ftpuser
-    &lt;span class=&#34;m&#34;&gt;148&lt;/span&gt; pi
-    &lt;span class=&#34;m&#34;&gt;105&lt;/span&gt; vnc
-    &lt;span class=&#34;m&#34;&gt;105&lt;/span&gt; naigos
-    &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; ubuntu
-     &lt;span class=&#34;m&#34;&gt;97&lt;/span&gt; student
-     &lt;span class=&#34;m&#34;&gt;94&lt;/span&gt; user1
-     &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt; debian
-     &lt;span class=&#34;m&#34;&gt;78&lt;/span&gt; administrator
-     &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; PlcmSpIp
-     &lt;span class=&#34;m&#34;&gt;74&lt;/span&gt; backup
-     &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt; demo
-     &lt;span class=&#34;m&#34;&gt;58&lt;/span&gt; test1
-     &lt;span class=&#34;m&#34;&gt;58&lt;/span&gt; mysql
-     &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; testuser
-     &lt;span class=&#34;m&#34;&gt;51&lt;/span&gt; shoutcast&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;   &lt;span style=&#34;color:#bd93f9&#34;&gt;2563&lt;/span&gt; admin
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;745&lt;/span&gt; user
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;658&lt;/span&gt; support
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;483&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;test&lt;/span&gt;
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;323&lt;/span&gt; ubnt
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;213&lt;/span&gt; guest
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;207&lt;/span&gt; tech
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;202&lt;/span&gt; oracle
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; operator
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;196&lt;/span&gt; manager
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;158&lt;/span&gt; webadmin
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;151&lt;/span&gt; ftpuser
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;148&lt;/span&gt; pi
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;105&lt;/span&gt; vnc
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;105&lt;/span&gt; naigos
+    &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt; ubuntu
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;97&lt;/span&gt; student
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;94&lt;/span&gt; user1
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;93&lt;/span&gt; debian
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;78&lt;/span&gt; administrator
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;74&lt;/span&gt; PlcmSpIp
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;74&lt;/span&gt; backup
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;72&lt;/span&gt; demo
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;58&lt;/span&gt; test1
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;58&lt;/span&gt; mysql
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;53&lt;/span&gt; testuser
+     &lt;span style=&#34;color:#bd93f9&#34;&gt;51&lt;/span&gt; shoutcast&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Based on that list,
 my guess is that those are all default usernames for different systems
 that attackers have found the most success with.
@@ -1961,13 +1961,13 @@ prints the whole thing, and one that sends a &amp;ldquo;Hello World&amp;rdquo;
 SMS to my phone.&lt;/p&gt;
 
 &lt;p&gt;After brushing up on the Beautiful Soup API, I came up with this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;bs4&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; bs4 &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; BeautifulSoup
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; requests
 
-&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://postmates.com/los-angeles&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;webpage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;webpage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://postmates.com/los-angeles&amp;#39;&lt;/span&gt;
+webpage &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(url)
+soup &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BeautifulSoup(webpage&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;text, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt;(soup)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Not too impressive yet, but it&amp;rsquo;s always good to see something
 working before things get too complicated.&lt;/p&gt;
 
@@ -1977,20 +1977,20 @@ Twilio.
 They have a great Getting Started guide in their docs and
 it didn&amp;rsquo;t take long before I had received my first text from my
 free Twilio phone number.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;twilio.rest&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TwilioRestClient&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; twilio.rest &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; TwilioRestClient
 
-&lt;span class=&#34;n&#34;&gt;account_sid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;auth_token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;twilio_phone_number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;+15558675309&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;my_phone_number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;+15551234567&amp;#39;&lt;/span&gt;
+account_sid &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
+auth_token &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
+twilio_phone_number &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;+15558675309&amp;#39;&lt;/span&gt;
+my_phone_number &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;+15551234567&amp;#39;&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TwilioRestClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;account_sid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+client &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; TwilioRestClient(account_sid, auth_token)
 
-&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my_phone_number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;from_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;twilio_phone_number&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+client&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;messages&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;create(
+    body&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;,
+    to&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;my_phone_number,
+    from_&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;twilio_phone_number
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After signing up for a free Twilio account and finding my
 account token, auth token, and registering a Twilio phone number,
 this worked like a charm!&lt;/p&gt;
@@ -2009,29 +2009,29 @@ also contained the word &amp;ldquo;Free&amp;rdquo;.&lt;sup class=&#34;footnote-r
 This meant that all I needed to do was find the elements
 containing the string &amp;ldquo;Free&amp;rdquo; and send their inner text to my phone!
 This is what I ended up with:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;bs4&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;twilio.rest&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TwilioRestClient&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; bs4 &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; BeautifulSoup
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; requests
+&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; twilio.rest &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; TwilioRestClient
 
-&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://postmates.com/los-angeles&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;account_sid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;auth_token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;twilio_phone_number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;+15558675309&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;my_phone_number&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;+15551234567&amp;#39;&lt;/span&gt;
+url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://postmates.com/los-angeles&amp;#39;&lt;/span&gt;
+account_sid &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
+auth_token &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;XXX&amp;#39;&lt;/span&gt;
+twilio_phone_number &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;+15558675309&amp;#39;&lt;/span&gt;
+my_phone_number &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;+15551234567&amp;#39;&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;webpage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;webpage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+webpage &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get(url)
+soup &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BeautifulSoup(webpage&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;text, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;)
 
-&lt;span class=&#34;n&#34;&gt;free_food&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stripped_strings&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;free&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()]&lt;/span&gt;
+free_food &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [s &lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; s &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt; soup&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;body&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;stripped_strings &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;free&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt; s&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;lower()]
 
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;free_food&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;body&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Free Postmates!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n\n&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;free_food&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TwilioRestClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;account_sid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my_phone_number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;from_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;twilio_phone_number&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; free_food:
+    body &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Free Postmates!&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;join(free_food)
+    client &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; TwilioRestClient(account_sid, auth_token)
+    client&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;messages&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;create(
+        body&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;body,
+        to&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;my_phone_number,
+        from_&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;twilio_phone_number
+    )&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And that&amp;rsquo;s it! The only thing left to do was to make this script
 run regularly enough to catch all the deals.
 This is the kind of thing that Cron is perfect for,

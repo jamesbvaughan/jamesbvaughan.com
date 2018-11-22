@@ -13,9 +13,6 @@ params:
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline
 
-taxonomies:
-  tag: tags
-
 outputFormats:
   RSS:
     baseName: feed
@@ -24,5 +21,4 @@ permalinks:
   posts: /:filename
 
 pygmentsCodefences: true
-pygmentsUseClasses: true
-pygmentsStyle: friendly
+pygmentsStyle: dracula

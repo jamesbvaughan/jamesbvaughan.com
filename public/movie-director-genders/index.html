@@ -47,9 +47,8 @@
 
     <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
     <link rel="icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    
-    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/tachyons.min.css"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
     <link rel="stylesheet" href="/styles/syntax.css"/>
   </head>
   <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
@@ -133,14 +132,14 @@ but they do let you download all of your personal data as CSVs.
 One of these CSVs is a file called <code>watched.csv</code> that includes a row for every
 movie that I have ever marked watched.
 After getting that file, I used Ruby&rsquo;s CSV class to parse it:</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">men</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">women</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">men <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+women <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
 
-<span class="no">CSV</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="s1">&#39;watched.csv&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">movie</span><span class="o">|</span>
-  <span class="o">...</span>
-<span class="k">end</span>
+CSV<span style="color:#ff79c6">.</span>foreach(<span style="color:#f1fa8c">&#39;watched.csv&#39;</span>) <span style="color:#ff79c6">do</span> <span style="color:#ff79c6">|</span>movie<span style="color:#ff79c6">|</span>
+  <span style="color:#ff79c6">...</span>
+<span style="color:#ff79c6">end</span>
 
-<span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">women</span><span class="si">}</span><span class="s2"> women, </span><span class="si">#{</span><span class="n">men</span><span class="si">}</span><span class="s2"> men&#34;</span></code></pre></div>
+<span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">#{</span>women<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> women, </span><span style="color:#f1fa8c">#{</span>men<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> men&#34;</span></code></pre></div>
 <p>Now to find out what to do with it&hellip;</p>
 
 <h2 id="finding-metadata-for-each-movie">Finding Metadata for each Movie</h2>
@@ -159,19 +158,19 @@ a community built movie database.</p>
 <p>Fortunately, the Letterboxd devs use
 <a href="https://en.wikipedia.org/wiki/Semantic_Web">semantic web</a> techniques in their
 markup, so finding each movie&rsquo;s TMDB ID was not difficult.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">letterboxd_movie_doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">letterboxd_movie_url</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">letterboxd_movie_doc <span style="color:#ff79c6">=</span> Nokogiri<span style="color:#ff79c6">::</span>HTML(HTTP<span style="color:#ff79c6">.</span>get(letterboxd_movie_url)<span style="color:#ff79c6">.</span>to_s)
 
-<span class="n">tmdb_id</span> <span class="o">=</span> <span class="n">letterboxd_movie_doc</span><span class="o">.</span><span class="n">at_xpath</span><span class="p">(</span><span class="s1">&#39;/html/body/@data-tmdb-id&#39;</span><span class="p">)</span></code></pre></div>
+tmdb_id <span style="color:#ff79c6">=</span> letterboxd_movie_doc<span style="color:#ff79c6">.</span>at_xpath(<span style="color:#f1fa8c">&#39;/html/body/@data-tmdb-id&#39;</span>)</code></pre></div>
 <h2 id="determining-the-genders">Determining the Genders</h2>
 
 <p>Once I had the TMDB IDs,
 I used the TMDB API to get the credits for each movie,
 which consist of a bit of data about each person in the movie&rsquo;s cast and crew,
 including their gender, as listed on TMDB.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">tmdb_movie_credits_url</span> <span class="o">=</span> <span class="s2">&#34;https://api.themoviedb.org/3/movie/</span><span class="si">#{</span><span class="n">tmdb_id</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">\</span>
-                         <span class="s2">&#34;/credits?api_key=</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;TMDB_API_KEY&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">tmdb_movie_credits_url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://api.themoviedb.org/3/movie/</span><span style="color:#f1fa8c">#{</span>tmdb_id<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>\
+                         <span style="color:#f1fa8c">&#34;/credits?api_key=</span><span style="color:#f1fa8c">#{</span>ENV<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;TMDB_API_KEY&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
 
-<span class="n">movie_credits</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span> <span class="no">HTTP</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tmdb_movie_credits_url</span><span class="p">)</span></code></pre></div>
+movie_credits <span style="color:#ff79c6">=</span> JSON<span style="color:#ff79c6">.</span>parse HTTP<span style="color:#ff79c6">.</span>get(tmdb_movie_credits_url)</code></pre></div>
 <p>Woohoo we have the director info that we need!
 <code>movie_credits['crew']</code> is an array with an object for each crew member
 that contains basic info about them.</p>
@@ -188,19 +187,19 @@ What did 0 mean? Was TMDB being progressive and providing more than two gender
 options?
 No, it was just that their data is all crowdsourced and a 0 simply means that
 no one has added a gender for that person yet.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">movie_credits</span><span class="o">[</span><span class="s1">&#39;crew&#39;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">credit</span><span class="o">|</span>
-  <span class="k">next</span> <span class="k">unless</span> <span class="n">credit</span><span class="o">[</span><span class="s1">&#39;job&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;Director&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">movie_credits<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;crew&#39;</span><span style="color:#ff79c6">].</span>each <span style="color:#ff79c6">do</span> <span style="color:#ff79c6">|</span>credit<span style="color:#ff79c6">|</span>
+  <span style="color:#ff79c6">next</span> <span style="color:#ff79c6">unless</span> credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;job&#39;</span><span style="color:#ff79c6">]</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;Director&#39;</span>
 
-  <span class="k">case</span> <span class="n">credit</span><span class="o">[</span><span class="s1">&#39;gender&#39;</span><span class="o">]</span>
-  <span class="k">when</span> <span class="mi">1</span>
-    <span class="n">women</span> <span class="o">+=</span> <span class="mi">1</span>
-  <span class="k">when</span> <span class="mi">2</span>
-    <span class="n">men</span> <span class="o">+=</span> <span class="mi">1</span>
-  <span class="k">else</span>
-    <span class="n">tmdb_person_url</span> <span class="o">=</span> <span class="s2">&#34;https://www.themoviedb.org/person/</span><span class="si">#{</span><span class="n">credit</span><span class="o">[</span><span class="s1">&#39;id&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&#34;</span>
-    <span class="nb">puts</span> <span class="s2">&#34;Unknown gender: </span><span class="si">#{</span><span class="n">credit</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">, edit here: </span><span class="si">#{</span><span class="n">tmdb_person_url</span><span class="si">}</span><span class="s2">&#34;</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+  <span style="color:#ff79c6">case</span> credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;gender&#39;</span><span style="color:#ff79c6">]</span>
+  <span style="color:#ff79c6">when</span> <span style="color:#bd93f9">1</span>
+    women <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+  <span style="color:#ff79c6">when</span> <span style="color:#bd93f9">2</span>
+    men <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+  <span style="color:#ff79c6">else</span>
+    tmdb_person_url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://www.themoviedb.org/person/</span><span style="color:#f1fa8c">#{</span>credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;id&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;Unknown gender: </span><span style="color:#f1fa8c">#{</span>credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;name&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">, edit here: </span><span style="color:#f1fa8c">#{</span>tmdb_person_url<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+  <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span></code></pre></div>
 <p>At first I thought I&rsquo;d just manually look up all the unknown directors and add
 up the numbers myself, but then it hit me that that would be a bit wasteful
 given that TMDB is crowdsourced and I could just update the data there
@@ -219,40 +218,40 @@ TMDB users as well.</p>
 
 <p>The final step was to add up the numbers and check the results.
 Here is the full code (minus a bit of error handling):</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;dotenv/load&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;nokogiri&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;http&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#8be9fd;font-style:italic">require</span> <span style="color:#f1fa8c">&#39;dotenv/load&#39;</span>
+<span style="color:#8be9fd;font-style:italic">require</span> <span style="color:#f1fa8c">&#39;csv&#39;</span>
+<span style="color:#8be9fd;font-style:italic">require</span> <span style="color:#f1fa8c">&#39;nokogiri&#39;</span>
+<span style="color:#8be9fd;font-style:italic">require</span> <span style="color:#f1fa8c">&#39;http&#39;</span>
 
-<span class="n">men</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">women</span> <span class="o">=</span> <span class="mi">0</span>
+men <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+women <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
 
-<span class="no">CSV</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="s1">&#39;watched.csv&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">movie</span><span class="o">|</span>
-  <span class="n">letterboxd_movie_doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">movie</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+CSV<span style="color:#ff79c6">.</span>foreach(<span style="color:#f1fa8c">&#39;watched.csv&#39;</span>) <span style="color:#ff79c6">do</span> <span style="color:#ff79c6">|</span>movie<span style="color:#ff79c6">|</span>
+  letterboxd_movie_doc <span style="color:#ff79c6">=</span> Nokogiri<span style="color:#ff79c6">::</span>HTML(HTTP<span style="color:#ff79c6">.</span>get(movie<span style="color:#ff79c6">[</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">]</span>)<span style="color:#ff79c6">.</span>to_s)
 
-  <span class="n">tmdb_id</span> <span class="o">=</span> <span class="n">letterboxd_movie_doc</span><span class="o">.</span><span class="n">at_xpath</span><span class="p">(</span><span class="s1">&#39;/html/body/@data-tmdb-id&#39;</span><span class="p">)</span>
+  tmdb_id <span style="color:#ff79c6">=</span> letterboxd_movie_doc<span style="color:#ff79c6">.</span>at_xpath(<span style="color:#f1fa8c">&#39;/html/body/@data-tmdb-id&#39;</span>)
 
-  <span class="n">tmdb_movie_credits_url</span> <span class="o">=</span> <span class="s2">&#34;https://api.themoviedb.org/3/movie/</span><span class="si">#{</span><span class="n">tmdb_id</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">\</span>
-                           <span class="s2">&#34;/credits?api_key=</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;TMDB_API_KEY&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&#34;</span>
+  tmdb_movie_credits_url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://api.themoviedb.org/3/movie/</span><span style="color:#f1fa8c">#{</span>tmdb_id<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>\
+                           <span style="color:#f1fa8c">&#34;/credits?api_key=</span><span style="color:#f1fa8c">#{</span>ENV<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;TMDB_API_KEY&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
 
-  <span class="n">movie_credits</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span> <span class="no">HTTP</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tmdb_movie_credits_url</span><span class="p">)</span>
+  movie_credits <span style="color:#ff79c6">=</span> JSON<span style="color:#ff79c6">.</span>parse HTTP<span style="color:#ff79c6">.</span>get(tmdb_movie_credits_url)
 
-  <span class="n">movie_credits</span><span class="o">[</span><span class="s1">&#39;crew&#39;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">credit</span><span class="o">|</span>
-    <span class="k">next</span> <span class="k">unless</span> <span class="n">credit</span><span class="o">[</span><span class="s1">&#39;job&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;Director&#39;</span>
+  movie_credits<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;crew&#39;</span><span style="color:#ff79c6">].</span>each <span style="color:#ff79c6">do</span> <span style="color:#ff79c6">|</span>credit<span style="color:#ff79c6">|</span>
+    <span style="color:#ff79c6">next</span> <span style="color:#ff79c6">unless</span> credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;job&#39;</span><span style="color:#ff79c6">]</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;Director&#39;</span>
 
-    <span class="k">case</span> <span class="n">credit</span><span class="o">[</span><span class="s1">&#39;gender&#39;</span><span class="o">]</span>
-    <span class="k">when</span> <span class="mi">1</span>
-      <span class="n">women</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">when</span> <span class="mi">2</span>
-      <span class="n">men</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span>
-      <span class="n">tmdb_person_url</span> <span class="o">=</span> <span class="s2">&#34;https://www.themoviedb.org/person/</span><span class="si">#{</span><span class="n">credit</span><span class="o">[</span><span class="s1">&#39;id&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&#34;</span>
-      <span class="nb">puts</span> <span class="s2">&#34;Unknown gender: </span><span class="si">#{</span><span class="n">credit</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">, edit here: </span><span class="si">#{</span><span class="n">tmdb_person_url</span><span class="si">}</span><span class="s2">&#34;</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+    <span style="color:#ff79c6">case</span> credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;gender&#39;</span><span style="color:#ff79c6">]</span>
+    <span style="color:#ff79c6">when</span> <span style="color:#bd93f9">1</span>
+      women <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">when</span> <span style="color:#bd93f9">2</span>
+      men <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">else</span>
+      tmdb_person_url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://www.themoviedb.org/person/</span><span style="color:#f1fa8c">#{</span>credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;id&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+      <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;Unknown gender: </span><span style="color:#f1fa8c">#{</span>credit<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;name&#39;</span><span style="color:#ff79c6">]</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">, edit here: </span><span style="color:#f1fa8c">#{</span>tmdb_person_url<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#ff79c6">end</span>
+  <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span>
 
-<span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">women</span><span class="si">}</span><span class="s2"> women, </span><span class="si">#{</span><span class="n">men</span><span class="si">}</span><span class="s2"> men&#34;</span></code></pre></div>
+<span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">#{</span>women<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> women, </span><span style="color:#f1fa8c">#{</span>men<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> men&#34;</span></code></pre></div>
 <h1 id="results">Results</h1>
 
 <p>It turned out that as of this writing,

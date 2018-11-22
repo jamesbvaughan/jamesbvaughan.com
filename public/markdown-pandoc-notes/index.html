@@ -47,9 +47,8 @@
 
     <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
     <link rel="icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    
-    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/tachyons.min.css"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
     <link rel="stylesheet" href="/styles/syntax.css"/>
   </head>
   <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
@@ -183,53 +182,53 @@ I have a few different methods set up.</p>
 
 <p>Vimwiki makes it really easy to navigate through a bunch of Markdown notes.
 I have an <code>index.md</code> that looks something like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---<span class="err">
-</span><span class="err"></span>title: My Knowledge Base<span class="err">
-</span><span class="err"></span>subtitle:<span class="k"> &gt;
-</span><span class="k"></span><span class="ge">  This is a collection of things that I know,
-</span><span class="ge"></span>  things that I learn,<span class="err">
-</span><span class="err"></span>  and things that I want to remember.<span class="err">
-</span><span class="err"></span>---<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">##</span> School
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: My Knowledge Base
+subtitle:<span style="color:#ff79c6"> &gt;
+</span><span style="color:#ff79c6"></span><span style="text-decoration:underline">  This is a collection of things that I know,
+</span><span style="text-decoration:underline"></span>  things that I learn,
+  and things that I want to remember.
+---
 
-<span class="k">-</span> [<span class="nt">Computer Science</span>](<span class="na">school/computer-science</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Math</span>](<span class="na">school/math</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Physics</span>](<span class="na">school/physics</span>)<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">##</span> Technologies
-<span class="err">
-</span><span class="err"></span>Tips and tricks on different applications and technologies that<span class="err">
-</span><span class="err"></span>I&#39;ve found myself needing to look up more than once.<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">####</span> Languages
+<span style="font-weight:bold">##</span> School
 
-<span class="k">-</span> [<span class="nt">Go</span>](<span class="na">technologies/go</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Python</span>](<span class="na">technologies/python</span>)<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">####</span> Tools
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Computer Science</span>](<span style="color:#50fa7b">school/computer-science</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Math</span>](<span style="color:#50fa7b">school/math</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Physics</span>](<span style="color:#50fa7b">school/physics</span>)
 
-<span class="k">-</span> [<span class="nt">Postgres</span>](<span class="na">technologies/postgres</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">MySQL</span>](<span class="na">technologies/mysql</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">SSH</span>](<span class="na">technologies/open-ssh</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Git</span>](<span class="na">technologies/git</span>)<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">####</span> Other
+<span style="font-weight:bold">##</span> Technologies
 
-<span class="k">-</span> [<span class="nt">Linux Audio</span>](<span class="na">technologies/linux-audio</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Progressive Web Apps</span>](<span class="na">technologies/pwas</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Machine Learning</span>](<span class="na">technologies/machine-learning</span>)<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="gu">##</span> Misc
+Tips and tricks on different applications and technologies that
+I&#39;ve found myself needing to look up more than once.
 
-<span class="k">-</span> [<span class="nt">Favorite Film Moments</span>](<span class="na">film-moments</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Recipes</span>](<span class="na">recipes/index</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Project Ideas</span>](<span class="na">projects/ideas</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Blog Post Ideas</span>](<span class="na">blog-post-ideas</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Music to Listen To</span>](<span class="na">music-to-listen-to</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">Book Notes</span>](<span class="na">books/index</span>)<span class="err">
-</span><span class="err"></span><span class="k">-</span> [<span class="nt">People</span>](<span class="na">people/index</span>)<span class="err">
-</span><span class="err"></span>- [<span class="nt">Quotes I Like</span>](<span class="na">quotes</span>)</code></pre></div>
+<span style="font-weight:bold">####</span> Languages
+
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Go</span>](<span style="color:#50fa7b">technologies/go</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Python</span>](<span style="color:#50fa7b">technologies/python</span>)
+
+<span style="font-weight:bold">####</span> Tools
+
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Postgres</span>](<span style="color:#50fa7b">technologies/postgres</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">MySQL</span>](<span style="color:#50fa7b">technologies/mysql</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">SSH</span>](<span style="color:#50fa7b">technologies/open-ssh</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Git</span>](<span style="color:#50fa7b">technologies/git</span>)
+
+<span style="font-weight:bold">####</span> Other
+
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Linux Audio</span>](<span style="color:#50fa7b">technologies/linux-audio</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Progressive Web Apps</span>](<span style="color:#50fa7b">technologies/pwas</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Machine Learning</span>](<span style="color:#50fa7b">technologies/machine-learning</span>)
+
+<span style="font-weight:bold">##</span> Misc
+
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Favorite Film Moments</span>](<span style="color:#50fa7b">film-moments</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Recipes</span>](<span style="color:#50fa7b">recipes/index</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Project Ideas</span>](<span style="color:#50fa7b">projects/ideas</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Blog Post Ideas</span>](<span style="color:#50fa7b">blog-post-ideas</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Music to Listen To</span>](<span style="color:#50fa7b">music-to-listen-to</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">Book Notes</span>](<span style="color:#50fa7b">books/index</span>)
+<span style="color:#ff79c6">-</span> [<span style="color:#ff79c6">People</span>](<span style="color:#50fa7b">people/index</span>)
+- [<span style="color:#ff79c6">Quotes I Like</span>](<span style="color:#50fa7b">quotes</span>)</code></pre></div>
 <p>This file links to all my different categories of notes and
 is a nice &ldquo;home base&rdquo; for them.
 It also makes for a nice homepage when I convert the notes to a static
@@ -242,23 +241,23 @@ browser.
 I have a Makefile that converts all of my Markdown notes to HTML using
 pandoc and deploys them to my server where they&rsquo;re served behind HTTP auth.
 The Makefile looks something like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="nv">MD_FILES</span><span class="o">=</span><span class="k">$(</span>shell find . -name <span class="se">\*</span>.md<span class="k">)</span>
-<span class="nv">HTML_FILES</span><span class="o">=</span><span class="k">$(</span>MD_FILES:.md<span class="o">=</span>.html<span class="k">)</span>
-<span class="nv">BUILD_HTML_FILES</span><span class="o">=</span><span class="k">$(</span>HTML_FILES:%<span class="o">=</span>build/%<span class="k">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#8be9fd;font-style:italic">MD_FILES</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>shell find . -name <span style="color:#f1fa8c">\*</span>.md<span style="color:#ff79c6">)</span>
+<span style="color:#8be9fd;font-style:italic">HTML_FILES</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>MD_FILES:.md<span style="color:#ff79c6">=</span>.html<span style="color:#ff79c6">)</span>
+<span style="color:#8be9fd;font-style:italic">BUILD_HTML_FILES</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>HTML_FILES:%<span style="color:#ff79c6">=</span>build/%<span style="color:#ff79c6">)</span>
 
-<span class="nf">all</span><span class="o">:</span> <span class="k">$(</span><span class="nv">BUILD_HTML_FILES</span><span class="k">)</span>
+<span style="color:#50fa7b">all</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">BUILD_HTML_FILES</span><span style="color:#ff79c6">)</span>
 
-<span class="nf">build/assets/%</span><span class="o">:</span> <span class="n">assets</span>/%
-        @mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
-        cp <span class="nv">$?</span> <span class="nv">$@</span>
+<span style="color:#50fa7b">build/assets/%</span><span style="color:#ff79c6">:</span> assets/%
+        @mkdir -p <span style="color:#8be9fd;font-style:italic">$$</span><span style="color:#ff79c6">(</span>dirname <span style="color:#8be9fd;font-style:italic">$@</span><span style="color:#ff79c6">)</span>
+        cp <span style="color:#8be9fd;font-style:italic">$?</span> <span style="color:#8be9fd;font-style:italic">$@</span>
 
-<span class="nf">build/%.html</span><span class="o">:</span> %.<span class="n">md</span> <span class="n">template</span>.<span class="n">html</span>
-	@mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
-	pandoc -o <span class="nv">$@</span> --template<span class="o">=</span>template.html $&lt;
+<span style="color:#50fa7b">build/%.html</span><span style="color:#ff79c6">:</span> %.md template.html
+	@mkdir -p <span style="color:#8be9fd;font-style:italic">$$</span><span style="color:#ff79c6">(</span>dirname <span style="color:#8be9fd;font-style:italic">$@</span><span style="color:#ff79c6">)</span>
+	pandoc -o <span style="color:#8be9fd;font-style:italic">$@</span> --template<span style="color:#ff79c6">=</span>template.html $&lt;
 
-<span class="nf">deploy</span><span class="o">:</span>
-        rsync --recursive --human-readable --delete --info<span class="o">=</span>progress2 <span class="se">\
-</span><span class="se"></span>               build/* my_server
+<span style="color:#50fa7b">deploy</span><span style="color:#ff79c6">:</span>
+        rsync --recursive --human-readable --delete --info<span style="color:#ff79c6">=</span>progress2 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>               build/* my_server
 </code></pre></div>
 <p>Right now I&rsquo;m running this manually after I make changes to my notes that I
 want to deploy but I might automate it in the future.</p>
@@ -282,23 +281,23 @@ For this, I&rsquo;ve created Makefiles for specific classes that produce a nice
 looking PDF of all my notes for the class.
 For example, this is my Makefile for a software engineering class I&rsquo;m taking
 right now:</p>
-<div class="highlight"><pre class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="nv">MD_FILES</span><span class="o">=</span>about.md <span class="m">130</span>-final-notes.md general-advice.md requirements.md <span class="se">\
-</span><span class="se"></span>         software-processes.md modeling.md architectural-design.md <span class="se">\
-</span><span class="se"></span>         design-of-components.md software-quality.md <span class="se">\
-</span><span class="se"></span>         configuration-management.md testing.md week-2-discussion.md <span class="se">\
-</span><span class="se"></span>         week-3-discussion.md week-4-discussion.md
-<span class="nv">PDF_FILES</span><span class="o">=</span><span class="k">$(</span>MD_FILES:.md<span class="o">=</span>.pdf<span class="k">)</span>
-<span class="nv">BUILD_PDF_FILES</span><span class="o">=</span><span class="k">$(</span>PDF_FILES:%<span class="o">=</span>build/%<span class="k">)</span>
-<span class="nv">EXTRA_PDFS</span><span class="o">=</span>sample-midterm-solutions.pdf
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#8be9fd;font-style:italic">MD_FILES</span><span style="color:#ff79c6">=</span>about.md <span style="color:#bd93f9">130</span>-final-notes.md general-advice.md requirements.md <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>         software-processes.md modeling.md architectural-design.md <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>         design-of-components.md software-quality.md <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>         configuration-management.md testing.md week-2-discussion.md <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>         week-3-discussion.md week-4-discussion.md
+<span style="color:#8be9fd;font-style:italic">PDF_FILES</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>MD_FILES:.md<span style="color:#ff79c6">=</span>.pdf<span style="color:#ff79c6">)</span>
+<span style="color:#8be9fd;font-style:italic">BUILD_PDF_FILES</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>PDF_FILES:%<span style="color:#ff79c6">=</span>build/%<span style="color:#ff79c6">)</span>
+<span style="color:#8be9fd;font-style:italic">EXTRA_PDFS</span><span style="color:#ff79c6">=</span>sample-midterm-solutions.pdf
 
-<span class="nf">130.pdf</span><span class="o">:</span> <span class="k">$(</span><span class="nv">BUILD_PDF_FILES</span><span class="k">)</span>
-        gs -sDEVICE<span class="o">=</span>pdfwrite -dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.4 -dPDFSETTINGS<span class="o">=</span>/default <span class="se">\
-</span><span class="se"></span>                -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages
-                -dCompressFonts<span class="o">=</span><span class="nb">true</span> -r150 -sOutputFile<span class="o">=</span><span class="nv">$@</span> $^ <span class="k">$(</span>EXTRA_PDFS<span class="k">)</span>
+<span style="color:#50fa7b">130.pdf</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">BUILD_PDF_FILES</span><span style="color:#ff79c6">)</span>
+        gs -sDEVICE<span style="color:#ff79c6">=</span>pdfwrite -dCompatibilityLevel<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>.4 -dPDFSETTINGS<span style="color:#ff79c6">=</span>/default <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>                -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages
+                -dCompressFonts<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">true</span> -r150 -sOutputFile<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$@</span> $^ <span style="color:#ff79c6">$(</span>EXTRA_PDFS<span style="color:#ff79c6">)</span>
 
-<span class="nf">build/%.pdf</span><span class="o">:</span> %.<span class="n">md</span>
-        @mkdir -p <span class="nv">$$</span><span class="o">(</span>dirname <span class="nv">$@</span><span class="o">)</span>
-        pandoc -V geometry:margin<span class="o">=</span>1in -o <span class="nv">$@</span> <span class="nv">$?</span>
+<span style="color:#50fa7b">build/%.pdf</span><span style="color:#ff79c6">:</span> %.md
+        @mkdir -p <span style="color:#8be9fd;font-style:italic">$$</span><span style="color:#ff79c6">(</span>dirname <span style="color:#8be9fd;font-style:italic">$@</span><span style="color:#ff79c6">)</span>
+        pandoc -V geometry:margin<span style="color:#ff79c6">=</span>1in -o <span style="color:#8be9fd;font-style:italic">$@</span> <span style="color:#8be9fd;font-style:italic">$?</span>
 </code></pre></div>
 <p>This converts each file to a PDF and then uses
 <a href="https://www.ghostscript.com/">Ghostscript</a>

@@ -47,9 +47,8 @@
 
     <link rel="alternate" type="application/rss+xml" href="https://jamesbvaughan.com/feed.xml" title="things james does" />
     <link rel="icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    
-    <link rel="stylesheet" href="/styles/main.min.css"/>
+    <link rel="stylesheet" href="/styles/tachyons.min.css"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
     <link rel="stylesheet" href="/styles/syntax.css"/>
   </head>
   <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
@@ -120,22 +119,22 @@ and if you run a recent version of a major Linux distribution on your server,
 you probably do too.
 You can view logs from services running under systemd using <code>journalctl</code>,
 so we can view the ssh logs with</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ journalctl -u ssh</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ journalctl -u ssh</code></pre></div>
 <p>which will show you way more than you need for this exercise.</p>
 
 <p>We can filter the <code>journalctl</code> output to just the lines we
 care about (those containing the string <em>&ldquo;Invalid user&rdquo;</em>),
 using <code>grep</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ journalctl -u ssh <span class="p">|</span> grep <span class="s1">&#39;Invalid user&#39;</span>
-Apr <span class="m">17</span> <span class="m">15</span>:51:33 sshd<span class="o">[</span><span class="m">28910</span><span class="o">]</span>: Invalid user danny from <span class="m">52</span>.20.58.3 port <span class="m">58067</span>
-Apr <span class="m">17</span> <span class="m">16</span>:22:48 sshd<span class="o">[</span><span class="m">29393</span><span class="o">]</span>: Invalid user t7inst from <span class="m">195</span>.133.234.67 port <span class="m">48641</span>
-Apr <span class="m">17</span> <span class="m">16</span>:42:45 sshd<span class="o">[</span><span class="m">29720</span><span class="o">]</span>: Invalid user zimbra from <span class="m">139</span>.99.122.129 port <span class="m">49362</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ journalctl -u ssh | grep <span style="color:#f1fa8c">&#39;Invalid user&#39;</span>
+Apr <span style="color:#bd93f9">17</span> <span style="color:#bd93f9">15</span>:51:33 sshd<span style="color:#ff79c6">[</span><span style="color:#bd93f9">28910</span><span style="color:#ff79c6">]</span>: Invalid user danny from <span style="color:#bd93f9">52</span>.20.58.3 port <span style="color:#bd93f9">58067</span>
+Apr <span style="color:#bd93f9">17</span> <span style="color:#bd93f9">16</span>:22:48 sshd<span style="color:#ff79c6">[</span><span style="color:#bd93f9">29393</span><span style="color:#ff79c6">]</span>: Invalid user t7inst from <span style="color:#bd93f9">195</span>.133.234.67 port <span style="color:#bd93f9">48641</span>
+Apr <span style="color:#bd93f9">17</span> <span style="color:#bd93f9">16</span>:42:45 sshd<span style="color:#ff79c6">[</span><span style="color:#bd93f9">29720</span><span style="color:#ff79c6">]</span>: Invalid user zimbra from <span style="color:#bd93f9">139</span>.99.122.129 port <span style="color:#bd93f9">49362</span>
 ...</code></pre></div>
 <p>Now we&rsquo;re just looking at logs of login attempts with invalid usernames.</p>
 
 <p>All we care about are the usernames,
 so let&rsquo;s cut those out using <code>cut</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ journalctl -u ssh <span class="p">|</span> grep <span class="s1">&#39;Invalid user&#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">8</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ journalctl -u ssh | grep <span style="color:#f1fa8c">&#39;Invalid user&#39;</span> | cut -d <span style="color:#f1fa8c">&#39; &#39;</span> -f <span style="color:#bd93f9">8</span>
 danny
 t7inst
 zimbra
@@ -159,11 +158,11 @@ this time numerically rather than alphabetically (<code>-n</code>),
 and in reverse so that the highest numbers are at the top (<code>-r</code>).</li>
 <li>Finally, we take just the top 25 names (<code>head -n 25</code>).</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ journalctl -u ssh <span class="p">|</span> grep <span class="s1">&#39;Invalid user&#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">8</span> <span class="se">\
-</span><span class="se"></span>      <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nr <span class="p">|</span> head -n <span class="m">25</span>
-  <span class="m">2563</span> admin
-   <span class="m">745</span> user
-   <span class="m">658</span> support
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ journalctl -u ssh | grep <span style="color:#f1fa8c">&#39;Invalid user&#39;</span> | cut -d <span style="color:#f1fa8c">&#39; &#39;</span> -f <span style="color:#bd93f9">8</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>      | sort | uniq -c | sort -nr | head -n <span style="color:#bd93f9">25</span>
+  <span style="color:#bd93f9">2563</span> admin
+   <span style="color:#bd93f9">745</span> user
+   <span style="color:#bd93f9">658</span> support
 ...</code></pre></div>
 <p>And that&rsquo;s it! Just pipe the logs through a few different tools and
 you&rsquo;ve got the list.</p>
@@ -171,33 +170,33 @@ you&rsquo;ve got the list.</p>
 <h2 id="results">Results</h2>
 
 <p>These were the top results when I ran this on my server:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">   <span class="m">2563</span> admin
-    <span class="m">745</span> user
-    <span class="m">658</span> support
-    <span class="m">483</span> <span class="nb">test</span>
-    <span class="m">323</span> ubnt
-    <span class="m">213</span> guest
-    <span class="m">207</span> tech
-    <span class="m">202</span> oracle
-    <span class="m">200</span> operator
-    <span class="m">196</span> manager
-    <span class="m">158</span> webadmin
-    <span class="m">151</span> ftpuser
-    <span class="m">148</span> pi
-    <span class="m">105</span> vnc
-    <span class="m">105</span> naigos
-    <span class="m">100</span> ubuntu
-     <span class="m">97</span> student
-     <span class="m">94</span> user1
-     <span class="m">93</span> debian
-     <span class="m">78</span> administrator
-     <span class="m">74</span> PlcmSpIp
-     <span class="m">74</span> backup
-     <span class="m">72</span> demo
-     <span class="m">58</span> test1
-     <span class="m">58</span> mysql
-     <span class="m">53</span> testuser
-     <span class="m">51</span> shoutcast</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   <span style="color:#bd93f9">2563</span> admin
+    <span style="color:#bd93f9">745</span> user
+    <span style="color:#bd93f9">658</span> support
+    <span style="color:#bd93f9">483</span> <span style="color:#8be9fd;font-style:italic">test</span>
+    <span style="color:#bd93f9">323</span> ubnt
+    <span style="color:#bd93f9">213</span> guest
+    <span style="color:#bd93f9">207</span> tech
+    <span style="color:#bd93f9">202</span> oracle
+    <span style="color:#bd93f9">200</span> operator
+    <span style="color:#bd93f9">196</span> manager
+    <span style="color:#bd93f9">158</span> webadmin
+    <span style="color:#bd93f9">151</span> ftpuser
+    <span style="color:#bd93f9">148</span> pi
+    <span style="color:#bd93f9">105</span> vnc
+    <span style="color:#bd93f9">105</span> naigos
+    <span style="color:#bd93f9">100</span> ubuntu
+     <span style="color:#bd93f9">97</span> student
+     <span style="color:#bd93f9">94</span> user1
+     <span style="color:#bd93f9">93</span> debian
+     <span style="color:#bd93f9">78</span> administrator
+     <span style="color:#bd93f9">74</span> PlcmSpIp
+     <span style="color:#bd93f9">74</span> backup
+     <span style="color:#bd93f9">72</span> demo
+     <span style="color:#bd93f9">58</span> test1
+     <span style="color:#bd93f9">58</span> mysql
+     <span style="color:#bd93f9">53</span> testuser
+     <span style="color:#bd93f9">51</span> shoutcast</code></pre></div>
 <p>Based on that list,
 my guess is that those are all default usernames for different systems
 that attackers have found the most success with.

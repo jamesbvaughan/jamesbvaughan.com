@@ -68,6 +68,11 @@
   </url>
   
   <url>
+    <loc>https://jamesbvaughan.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jamesbvaughan.com/guides/http/</loc>
   </url>
   
@@ -98,10 +103,6 @@
   </url>
   
   <url>
-    <loc>https://jamesbvaughan.com/donate/</loc>
-  </url>
-  
-  <url>
     <loc>https://jamesbvaughan.com/favorites/</loc>
   </url>
   
@@ -119,18 +120,6 @@
   
   <url>
     <loc>https://jamesbvaughan.com/lists/podcasts/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jamesbvaughan.com/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jamesbvaughan.com/reading-list/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jamesbvaughan.com/thank-you/</loc>
   </url>
   
 </urlset>
