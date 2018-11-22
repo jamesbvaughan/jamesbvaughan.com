@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "netlify-lambda": "^1.0.3",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.3.0"
   }
 }
