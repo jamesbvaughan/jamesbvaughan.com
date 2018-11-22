@@ -1,5 +1,6 @@
 {
-  "name": "jamesbvaughan.com-functions",
+  "name": "jamesbvaughan.com",
+  "repository": "https://github.com/jamesbvaughan/jamesbvaughan.com",
   "version": "1.0.0",
   "description": "funtions for my website",
   "scripts": {
