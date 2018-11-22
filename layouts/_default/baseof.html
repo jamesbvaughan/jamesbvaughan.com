@@ -12,11 +12,10 @@
     <link rel="icon" href="/images/favicon.png">
     <link rel="stylesheet" href="/styles/tachyons.min.css"/>
     <link rel="stylesheet" href="/styles/main.css"/>
-    <link rel="stylesheet" href="/styles/syntax.css"/>
   </head>
-  <body class="bg-near-white dark-gray helvetica ph3 ph4-ns mw7 center">
+  <body class="bg-near-white dark-gray helvetica mv3 mv4-ns ph3 ph4-ns mw7 center">
     {{ partial "nav.html" . }}
-    <main>
+    <main class="mb4">
       {{ block "main" . }}
         <h1>{{ .Title }}</h1>
         {{ .Content }}

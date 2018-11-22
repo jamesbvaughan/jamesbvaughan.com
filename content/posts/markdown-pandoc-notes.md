@@ -24,7 +24,7 @@ enough to warrant a whole post on how I take them.
 Right now, the main thing is lectures for classes,
 but I also take notes on:
 
-- books that I read 
+- books that I read
 - movies that I watch
 - important conversations
 - interesting things that I learn about people
@@ -181,8 +181,8 @@ build/assets/%: assets/%
         cp $? $@
 
 build/%.html: %.md template.html
-	@mkdir -p $$(dirname $@)
-	pandoc -o $@ --template=template.html $<
+  @mkdir -p $$(dirname $@)
+  pandoc -o $@ --template=template.html $<
 
 deploy:
         rsync --recursive --human-readable --delete --info=progress2 \
