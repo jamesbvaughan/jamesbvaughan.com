@@ -32,7 +32,7 @@ You can find out more about me on all the usual platforms:
   
 <script>
   ['song', 'movie'].forEach(item =>
-    fetch('https://api.jamesbvaughan.com/' + item)
+    fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
       .then(r => r.json())
       .then(({ status, body }) =>
         status === 'ok' &&
