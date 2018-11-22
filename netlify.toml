@@ -1,4 +1,4 @@
 [build]
-  command = "echo building"
+  command = "cp node_modules functions/node_modules"
   publish = "public"
   functions = "functions"
