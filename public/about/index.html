@@ -92,13 +92,12 @@ and watching movies<span id="movie"></span>.</p>
 <li><a href="http://www.last.fm/user/magicjamesv">last.fm</a></li>
 <li><a href="https://letterboxd.com/jamesbvaughan/">letterboxd</a></li>
 <li><a href="https://linkedin.com/in/jamesbvaughan">linkedin</a></li>
-<li><a href="https://twitter.com/jamesontheline">twitter</a>
-<br /></li>
+<li><a href="https://twitter.com/jamesontheline">twitter</a></li>
 </ul>
 
 <script>
   ['song', 'movie'].forEach(item =>
-    fetch('https://api.jamesbvaughan.com/' + item)
+    fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
       .then(r => r.json())
       .then(({ status, body }) =>
         status === 'ok' &&
@@ -148,19 +147,6 @@ and watching movies<span id="movie"></span>.</p>
     </div>
   </div>
 </div>
-
-    <script>
-(function(f, a, t, h, o, m){
-	a[h]=a[h]||function(){
-		(a[h].q=a[h].q||[]).push(arguments)
-	};
-	o=f.createElement('script'),
-	m=f.getElementsByTagName('script')[0];
-	o.async=1; o.src=t; o.id='fathom-script';
-	m.parentNode.insertBefore(o,m)
-})(document, window, '//fathom.jamesbvaughan.com/tracker.js', 'fathom');
-fathom('trackPageview');
-</script>
 
   </body>
 </html>

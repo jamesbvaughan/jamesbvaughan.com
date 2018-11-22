@@ -29,7 +29,7 @@ You can find out more about me on all the usual platforms:
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
 - [linkedin](https://linkedin.com/in/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
-  
+
 <script>
   ['song', 'movie'].forEach(item =>
     fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
