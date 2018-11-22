@@ -98,10 +98,8 @@ and watching movies<span id="movie"></span>.</p>
 <script>
   ['song', 'movie'].forEach(item =>
     fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
-      .then(r => r.json())
-      .then(({ status, body }) =>
-        status === 'ok' &&
-          (document.getElementById(item).innerHTML = ` (${body})`)))
+      .then(r => r.text())
+      .then(body => document.getElementById(item).innerHTML = ` (${body})`))
 </script>
 
       

@@ -33,8 +33,6 @@ You can find out more about me on all the usual platforms:
 <script>
   ['song', 'movie'].forEach(item =>
     fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
-      .then(r => r.json())
-      .then(({ status, body }) =>
-        status === 'ok' &&
-          (document.getElementById(item).innerHTML = ` (${body})`)))
+      .then(r => r.text())
+      .then(body => document.getElementById(item).innerHTML = ` (${body})`))
 </script>
