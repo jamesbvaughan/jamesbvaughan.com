@@ -1,4 +1,3 @@
 [build]
-  command = "cp -r node_modules functions/node_modules"
   publish = "public"
   functions = "functions"
