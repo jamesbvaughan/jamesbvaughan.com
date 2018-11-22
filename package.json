@@ -1,0 +1,14 @@
+{
+  "name": "jamesbvaughan.com-functions",
+  "version": "1.0.0",
+  "description": "funtions for my website",
+  "scripts": {
+    "functions": "netlify-lambda serve -s functions"
+  },
+  "author": "James Vaughan",
+  "license": "MIT",
+  "dependencies": {
+    "netlify-lambda": "^1.0.3",
+    "node-fetch": "^2.2.0"
+  }
+}
