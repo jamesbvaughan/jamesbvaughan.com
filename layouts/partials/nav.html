@@ -1,10 +1,10 @@
 <nav class="flex justify-between">
   <div>
-    <a class="link dim color-inherit f6 f5-ns b dib mr3" href="/">{{ .Site.Title }}</a>
+    <a class="link dim color-inherit b dib mr3" href="/">{{ .Site.Title }}</a>
   </div>
   <div>
     {{ range .Site.Menus.main }}
-      <a class="link hover-green color-inherit f6 f5-ns dib ml3" href="{{ .URL }}">
+      <a class="link hover-green color-inherit dib ml3" href="{{ .URL }}">
         {{ .Title | lower }}
       </a>
     {{ end }}
