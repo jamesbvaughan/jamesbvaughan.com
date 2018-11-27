@@ -89,7 +89,7 @@ view : Model -> Html Msg
 view model =
     case model of
         Failure ->
-            p [] [ text "hey it failed" ]
+            p [] [ text "failed to load albums :(" ]
 
         Loading ->
             p [] [ text "loading..." ]
