@@ -14,7 +14,8 @@
     "start:functions": "netlify-lambda serve functions/src"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "elm": "^0.19.0-bugfix2",
