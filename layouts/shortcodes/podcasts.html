@@ -1,8 +1,0 @@
-<div>
-  {{ range .Site.Data.podcasts }}
-    <a href="{{ .link }}">
-      <h5>{{ .name }}</h5>
-    </a>
-    <p>{{ .description | markdownify }}</p>
-  {{ end }}
-</div>

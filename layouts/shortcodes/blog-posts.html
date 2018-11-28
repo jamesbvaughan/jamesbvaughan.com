@@ -1,8 +1,0 @@
-<div>
-  {{ range .Site.Data.blogPosts }}
-    <a href="{{ .link }}">
-      <h5>{{ .title }}</h5>
-    </a>
-    <p>{{ .description | markdownify }}</p>
-  {{ end }}
-</div>
