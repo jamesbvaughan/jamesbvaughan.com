@@ -7,8 +7,9 @@
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run build:albums && yarn run build:site",
+    "build": "yarn run build:albums && yarn run build:functions && yarn run build:site",
     "build:albums": "cd content/albums && elm make src/Main.elm --output albums.js",
+    "build:functions": "netlify-lambda build functions/src",
     "build:site": "hugo",
     "start:functions": "netlify-lambda serve functions/src"
   },
