@@ -3,3 +3,6 @@
 
 /public
 /resources
+
+/functions/*.js
+/node_modules

@@ -1,5 +1,5 @@
-const https = require('https')
-const qs = require('querystring')
+import fetch from 'node-fetch'
+import qs from 'querystring'
 
 const lastfmURL = 'https://ws.audioscrobbler.com/2.0/?' + qs.stringify({
   method: 'user.getrecenttracks',
@@ -10,11 +10,9 @@ const lastfmURL = 'https://ws.audioscrobbler.com/2.0/?' + qs.stringify({
 })
 
 exports.handler = (_event, _context, callback) =>
-  https.get(lastfmURL, res => {
-    let data = ''
-    res.on('data', d => data += d)
-    res.on('end', () => {
-      const { recenttracks: { track } } = JSON.parse(data)
+  fetch(lastfmURL)
+    .then(res => res.json())
+    .then(({ recenttracks: { track } }) => {
       const linkBody = `${track[0].name} by ${track[0].artist['#text']}`
       const link = `<a href='${track[0].url}'>${linkBody}</a>`
       const text = track.length > 1
@@ -24,4 +22,4 @@ exports.handler = (_event, _context, callback) =>
 
       callback(null, { statusCode: 200, body })
     })
-  }).on('error', err => callback(err))
+    .catch(err => callback(err))

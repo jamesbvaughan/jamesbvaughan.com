@@ -59,14 +59,14 @@ update msg model =
 fetchAlbums : Cmd Msg
 fetchAlbums =
     Http.get
-        { url = "https://api.discogs.com/lists/447073?token=PsodRNmqSCATJYchOwiGuaNrxArwuUJxFOyHwsDG"
+        { url = "/.netlify/functions/albums"
         , expect = Http.expectJson GotAlbums responseDecoder
         }
 
 
 responseDecoder : Decoder (List Album)
 responseDecoder =
-    field "items" (list albumDecoder)
+    list albumDecoder
 
 
 albumDecoder : Decoder Album

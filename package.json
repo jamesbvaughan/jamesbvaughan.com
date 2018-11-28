@@ -1,0 +1,18 @@
+{
+  "name": "jamesbvaughan.com",
+  "version": "1.0.0",
+  "description": "james' blog",
+  "main": "index.js",
+  "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
+  "author": "James Vaughan <james@jamesbvaughan.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve-functions": "netlify-lambda serve functions/src"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.0.3"
+  }
+}
