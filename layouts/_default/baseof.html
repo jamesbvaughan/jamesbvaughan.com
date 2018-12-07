@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="James Vaughan" />
+    <meta name="description" content="{{ .Render "summary" }}" />
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    {{ partial "seo.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/schema.html" . }}
 
+    <link rel="canonical" href="{{ .Page.Permalink }}" />
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ .Site.Title }}" />
     <link rel="icon" href="/images/favicon.png">
     <link rel="stylesheet" href="/styles/tachyons.min.css"/>

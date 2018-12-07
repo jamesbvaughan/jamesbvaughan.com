@@ -1,6 +1,7 @@
 ---
 title: Jay Kamat
-series: Open Source Students
+series:
+  - Open Source Students
 date: 2018-05-08
 footer: oss-footer.html
 ---

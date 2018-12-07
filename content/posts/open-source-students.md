@@ -1,6 +1,8 @@
 ---
-title: "Open Source Students: Introduction"
+title: Introduction
 date: "2018-04-29"
+series:
+  - Open Source Students
 sharing: false
 ---
 

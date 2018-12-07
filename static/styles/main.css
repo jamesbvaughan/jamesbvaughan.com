@@ -8,3 +8,19 @@ pre {
   font-size: 0.875rem;
   overflow: auto;
 }
+
+figcaption h4, figcaption p {
+  text-align: center;
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+  max-height: 35rem;
+  max-width: 35rem;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0;
+}
