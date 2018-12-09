@@ -79,9 +79,13 @@ albumDecoder =
 
 albumView : Album -> Html Msg
 albumView album =
-    li [ class "w-third-ns w-50" ]
-        [ a [ href album.uri ]
-            [ img [ src album.imageUrl, class "mw-100" ] [] ]
+    a [ href album.uri, class "fl w-50 w-third-ns link overflow-hidden" ]
+        [ div
+            [ class "grow aspect-ratio--1x1"
+            , style "background" ("url(" ++ album.imageUrl ++ ") no repeat center center")
+            , style "background-size" "cover"
+            ]
+            []
         ]
 
 
@@ -95,9 +99,9 @@ view model =
             p [] [ text "loading..." ]
 
         Success albums ->
-            ul
+            div
                 [ id "album-list"
-                , class "list flex flex-wrap justify-around pa0"
+                , class ""
                 , style "font-size" "0px"
                 ]
                 (List.map albumView albums)

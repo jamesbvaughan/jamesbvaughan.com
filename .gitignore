@@ -1,5 +1,6 @@
 /.netlify
 /.tern-port
+/yarn-error.log
 
 /public
 /resources
