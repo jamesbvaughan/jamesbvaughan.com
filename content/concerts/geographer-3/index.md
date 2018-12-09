@@ -1,6 +1,6 @@
 ---
 title: Geographer
-date: "2017-01-17"
+date: "2015-01-17"
 venue: The El Rey in Los Angeles
 images:
   - geographer.jpg
