@@ -2,15 +2,13 @@
 title: my favorite albums
 ---
 
-<div>
+<p>
   These are some of my favorite albums in a randomized order.
+</p>
 
-  <br />
-  <br />
+<div id="albums"></div>
 
-  <div id="albums"></div>
-  <script src="albums.min.js"></script>
-  <script>
+<script src="albums.min.js"></script>
+<script>
   Elm.Main.init({node: document.getElementById('albums')})
-  </script>
-<div>
+</script>

@@ -99,9 +99,4 @@ view model =
             p [] [ text "loading..." ]
 
         Success albums ->
-            div
-                [ id "album-list"
-                , class ""
-                , style "font-size" "0px"
-                ]
-                (List.map albumView albums)
+            div [ class "cf" ] (List.map albumView albums)
