@@ -39,17 +39,21 @@ Unfortunately, things like rad lights, music that sounds almost __exactly__
 like it does on the record, and looking cool on stage seemed to be higher
 priorities at this show than showing musical talent.
 
-Don't get me wrong: I value all of those things too, and think they are
-important, but they aren't what I go see live music for.
+Don't get me wrong: I value those things too, and think they are
+important, and I love shows that can do those things well,
+but they aren't the primary things I go to live music for.
 I'm also not saying that Lemaitre doesn't have musical talent; they
-clearly do, but they didn't show it on stage as much as I was hoping.
+most definitely do!
+I just felt like they didn't show it on stage as much as I was hoping
+they would.
 
 They had half a dozen keyboards and synths on stage, so I was getting
 pretty excited while they were setting up,
 but despite all the hardware, there was very little actual keyboard playing.
 Most of the music was coming from prerecorded tracks and there were only a few
-small portions of the show where I could connect sounds that I was hearing with
-what I saw one of them playing on a keyboard.
+small portions of the show where they played some of the synths when
+I could connect sounds that I was hearing with my ears with the instrument
+playing that I could see with my eyes.
 
 {{< figure src="synths.jpg" caption="Lemaitre's **six** synthesizers" >}}
 
