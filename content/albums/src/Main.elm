@@ -82,7 +82,7 @@ albumView album =
     a [ href album.uri, class "fl w-50 w-third-ns link overflow-hidden" ]
         [ div
             [ class "grow aspect-ratio--1x1"
-            , style "background" ("url(" ++ album.imageUrl ++ ") no repeat center center")
+            , style "background" ("url(" ++ album.imageUrl ++ ") no-repeat center center")
             , style "background-size" "cover"
             ]
             []
