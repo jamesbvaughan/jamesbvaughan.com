@@ -8,7 +8,18 @@ images:
 
 ![Darwin Deez](darwin-deez.jpg)
 
-(_I added this page long after this show happened, so I don't remember it with
-enough clarity to write extensively about it._)
+I loved this show.
+I had been listening to Darwin Deez since high school, but only
+occasionally, and I wasn't very familiar with his newer music,
+but it was still a lot of fun.
+
+<video width="100%" controls>
+  <source src="darwin-dance.mp4" type="video/mp4">
+</video>
+
+Darwin is an incredibly entertaining performer, and a great
+musician and songwriter.
+He's definitely an artist that I'll try to see anytime he's in
+town now.
 
 [event page](https://www.rickshawstop.com/event/1698738-darwin-deez-san-francisco/)

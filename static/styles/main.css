@@ -18,7 +18,7 @@ figure img {
   display: block;
   margin: auto;
   max-height: 35rem;
-  max-width: 35rem;
+  max-width: 90%;
 }
 
 .flex-shrink-0 {
