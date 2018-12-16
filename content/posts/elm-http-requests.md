@@ -1,6 +1,9 @@
 ---
 title: How To Make HTTP Requests In Elm
 date: "2018-12-12"
+discussion_links:
+  - site_name: Reddit
+    url: https://www.reddit.com/r/elm/comments/a6kgs7/getting_started_with_http_requests_in_elm/
 ---
 
 Elm is a language designed for building reliable and robust frontend

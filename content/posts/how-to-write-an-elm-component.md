@@ -71,6 +71,7 @@ Now we're ready to start writing some code!
 $ elm install elm/json
 $ elm install elm/http
 ```
+
 to add `elm/json` as a direct dependency
 
 ## Writing The Component
