@@ -24,3 +24,7 @@ figure img {
 .flex-shrink-0 {
 	flex-shrink: 0;
 }
+
+dt {
+  font-weight: bold;
+}
