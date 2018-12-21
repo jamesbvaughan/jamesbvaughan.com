@@ -1,4 +1,0 @@
-This is a Brave Payments publisher verification file.
-
-Domain: jamesbvaughan.com
-Token: 10fae46f02e3989a664c89dc499fff09926c21633821819c9ae84be0f3643142 
