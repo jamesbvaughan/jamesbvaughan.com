@@ -131,10 +131,15 @@ and have pulled out a `String` from the response.
 It may seem tedious to explicitly define every possible state of the
 application, but the fact that Elm forces us to do this comes with some cool
 benefits.
-Notably, we cannot ignore any possible states and must define the desired
+Notably, we _cannot_ ignore any possible states and _must_ define the desired
 behavior for each state.
+
 This is one of the biggest advantages of using Elm over plain JavaScript:
-you can virtually eliminate all runtime errors!
+when your compiler forces you to handle all possible states of the application,
+it's impossible to encounter a state at runtime that you haven't handled and
+you can virtually eliminate all runtime exceptions!
+(To be clear, you can certainly still have bugs in your code,
+but just business logic bugs.)
 
 ## The View Function
 
@@ -191,7 +196,7 @@ After making the request, send the command `GotResult` with the result."_
 ## The Init Function
 
 The `init` function in an Elm application defines the initial state of the
-application, and an action to be taken when it first loads. 
+application, and an action to be taken when it first loads.
 
 ```elm
 init : () -> ( Model, Cmd Msg )
