@@ -24,6 +24,7 @@ You can find out more about me on all the usual platforms:
 - [discogs](https://www.discogs.com/user/jamesbvaughan/collection)
 - [facebook](https://fb.com/jamesbvaughan)
 - [github](https://github.com/jamesbvaughan)
+- [goodreads](https://www.goodreads.com/jamesbvaughan)
 - [instagram](https://www.instagram.com/jamesontheline/)
 - [last.fm](http://www.last.fm/user/magicjamesv)
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
