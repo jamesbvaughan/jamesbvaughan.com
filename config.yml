@@ -7,10 +7,11 @@ title: things james does
 author:
   name: James Vaughan
   email: james@jamesbvaughan.com
-  twitter: jamesontheline
 
 social:
   twitter: jamesontheline
+
+disqusShortname: jamesbvaughan
 
 params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com

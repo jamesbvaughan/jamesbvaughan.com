@@ -25,5 +25,6 @@
   {{ if isset .Params "discussion_links" }}
     {{ partial "discussion-links.html" . }}
   {{ end }}
+  {{ template "_internal/disqus.html" . }}
 </article>
 {{ end }}
