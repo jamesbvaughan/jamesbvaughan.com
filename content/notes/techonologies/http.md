@@ -1,5 +1,7 @@
 ---
 title: HTTP
+aliases:
+  - /guides/http
 ---
 
 HTTP, or "Hypertext Transfer Protocol", is one of the most common protocols

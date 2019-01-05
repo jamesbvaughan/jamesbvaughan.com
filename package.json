@@ -12,7 +12,7 @@
     "build:functions": "netlify-lambda build functions/src",
     "build:site": "hugo",
     "start:functions": "netlify-lambda serve functions/src",
-    "start": "hugo server"
+    "start": "hugo server -D"
   },
   "dependencies": {
     "node-fetch": "^2.3.0",
