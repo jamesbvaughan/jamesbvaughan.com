@@ -1,5 +1,11 @@
 ---
 title: Tour of My System
+
+categories:
+  - tech
+tags:
+  - productivity
+
 draft: true
 ---
 

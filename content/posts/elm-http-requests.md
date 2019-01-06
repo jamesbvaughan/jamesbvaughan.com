@@ -1,6 +1,13 @@
 ---
 title: How To Make HTTP Requests In Elm
 date: "2018-12-12"
+
+categories:
+  - tech
+tags:
+  - elm
+  - guide
+
 discussion_links:
   - site_name: Reddit
     url: https://www.reddit.com/r/elm/comments/a6kgs7/getting_started_with_http_requests_in_elm/

@@ -1,5 +1,11 @@
 ---
 title: The State of my Productivity Tools in 2019
+
+categories:
+  - tech
+tags:
+  - productivity
+
 draft: true
 ---
 

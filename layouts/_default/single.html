@@ -1,13 +1,4 @@
 {{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
-{{ end }}
-
-{{ define "main" }}
   {{ partial "breadcrumb.html" . }}
-  <h1 class="f2 f1-ns mt0-ns mt0 mb1 lh-title">
-    {{ .Title }}
-  </h1>
-  <div class="lh-copy">
-    {{ .Content }}
-  </div>
+  {{ .Title }}
 {{ end }}

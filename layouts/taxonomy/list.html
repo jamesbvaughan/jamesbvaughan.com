@@ -1,0 +1,22 @@
+{{ define "browser-title" }}
+  {{ .Type }}: {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "title" }}
+  <div class="f3">
+    <a class="gray hover-black" href="/{{ .Type }}">
+      {{ .Type }}
+    </a>
+    /
+    <h1 class="f2 f1-ns mb1 mt0 lh-title dib">
+      {{ .Title }}
+    </h1>
+  </div>
+{{ end }}
+
+{{ define "main" }}
+  <div class="lh-copy">
+    {{ .Content }}
+    {{ partial "post-list.html" .Pages }}
+  </div>
+{{ end }}

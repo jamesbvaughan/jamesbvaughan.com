@@ -1,21 +1,16 @@
-{{ define "title" }}
+{{ define "browser-title" }}
   {{ .Title }} - {{ .Params.venue }} - {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
-<article class="concert">
-  <header class="mb3">
-    <h1 class="f2 f1-ns mt4-ns mt3 mb1 lh-title">
-      {{ .Title }}
-    </h1>
+  <article class="concert">
     <div class="gray">
       {{ .Params.venue }} on
       <time>{{ .Date.Format "January 2, 2006" }}</time>
     </div>
-  </header>
-  <div class="lh-copy">
-    {{ .Content }}
-  </div>
-</article>
+    <div class="lh-copy">
+      {{ .Content }}
+    </div>
+  </article>
 {{ end }}
 

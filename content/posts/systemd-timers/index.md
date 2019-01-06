@@ -2,6 +2,13 @@
 title: Systemd Timers as a Cron Alternative
 date: "2017-03-01"
 
+categories:
+  - tech
+tags:
+  - systemd
+  - linux
+  - presentation
+
 discussion_links:
   - site_name: Reddit
     url: https://www.reddit.com/r/linux/comments/5xz77x/systemd_timers_as_a_cron_alternative/

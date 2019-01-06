@@ -1,5 +1,13 @@
 ---
 title: Intuitive Mnemonics for Vim Motions
+
+categories:
+  - tech
+tags:
+  - vim
+  - productivity
+  - guide
+
 draft: true
 ---
 

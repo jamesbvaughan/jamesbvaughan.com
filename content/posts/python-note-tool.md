@@ -1,5 +1,12 @@
 ---
 title: Writing a Note Taking Tool in Python
+
+categories:
+  - tech
+tags:
+  - python
+  - guide
+
 draft: true
 ---
 

@@ -1,19 +1,17 @@
-<ol class="pa0 mb0 gray">
-  {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-</ol>
+{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 
 {{ define "breadcrumbnav" }}
-  {{ if .p1.Parent }}
-    {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 ) }}
-  {{ end }}
-  {{ if not .p1.IsHome }}
-    {{ if not (eq .p1 .p2) }}
-    <li class="{{ if eq .p1 .p2 }}red{{ end }} di">
+  <span class="f3 gray">
+    {{ if .p1.Parent }}
+      {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 ) }}
+    {{ end }}
+    {{ if not .p1.IsHome }}
+      {{ if not (eq .p1 .p2) }}
       <a class="color-inherit hover-black" href="{{ .p1.Permalink }}">
         {{ .p1.Title }}
       </a>
-    </li>
-    /
+      /
+      {{ end }}
     {{ end }}
-  {{ end }}
+  </span>
 {{ end }}

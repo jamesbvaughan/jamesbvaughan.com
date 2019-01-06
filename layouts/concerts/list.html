@@ -1,11 +1,7 @@
-{{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
-{{ end }}
-
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <p>{{ .Description }}</p>
-  {{ .Content }}
+  <p class="lh-copy">
+    {{ .Content }}
+  </p>
   <div>
     {{ range .Data.Pages }}
       <a href="{{ .RelPermalink }}" class="no-underline black">

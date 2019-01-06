@@ -26,6 +26,8 @@ permalinks:
 
 taxonomies:
   series: series
+  tag: tags
+  category: categories
 
 pygmentsCodefences: true
 pygmentsStyle: dracula

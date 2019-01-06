@@ -1,5 +1,11 @@
 ---
 title: Coupon Post
+
+categories:
+  - tech
+tags:
+  - project
+
 draft: true
 ---
 

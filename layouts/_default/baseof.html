@@ -6,7 +6,7 @@
     <meta name="author" content="James Vaughan" />
     <meta name="description" content="{{ .Render "summary" }}" />
 
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "browser-title" . }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
@@ -21,9 +21,15 @@
   <body class="bg-near-white dark-gray helvetica mv3 mv4-ns ph3 ph4-ns mw7 center">
     {{ partial "nav.html" . }}
     <main class="mb4">
+      <h1 class="f2 f1-ns mt4-ns mt3 mb1 lh-title">
+        {{ block "title" . }}
+          {{ .Title }}
+        {{ end }}
+      </h1>
       {{ block "main" . }}
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
+        <div class="lh-copy">
+          {{ .Content }}
+        </div>
       {{ end }}
     </main>
     {{ partial "footer.html" . }}

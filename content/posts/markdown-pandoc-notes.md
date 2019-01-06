@@ -2,6 +2,14 @@
 title: How I Take Notes With Vim, Markdown, and Pandoc
 date: "2018-05-15"
 
+categories:
+  - tech
+tags:
+  - vim
+  - markdown
+  - pandoc
+  - productivity
+
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=17078059

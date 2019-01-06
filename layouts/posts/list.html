@@ -1,22 +1,6 @@
-{{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
-{{ end }}
-
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
   {{ .Content }}
-  <ul class="list pl0">
-  {{ range .Data.Pages }}
-  <li class="mb4">
-    <h2 class="mb0">
-      <a class="dark-gray underline-hover" href="{{ .RelPermalink }}">
-        {{ .Render "title" }}
-      </a>
-    </h2>
-    <time class="f6">{{ .Date.Format "Jan 2, 2006" }}</time>
-    <p class="mt1 lh-copy">{{ .Render "summary" }}</p>
-  </li>
-  {{ end }}
+  {{ partial "post-list.html" .Data.Pages }}
   <h3>
     <a href="{{ .Site.RSSLink }}">
       {{ partial "rss-icon.html" . }}&nbsp;RSS Feed

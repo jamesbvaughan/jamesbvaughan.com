@@ -1,6 +1,13 @@
 ---
 title: How to Create a Simple Component with Elm
 date: "2018-12-12"
+
+categories:
+  - tech
+tags:
+  - elm
+  - guide
+
 draft: true
 ---
 
