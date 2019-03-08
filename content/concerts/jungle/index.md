@@ -1,6 +1,6 @@
 ---
 title: Jungle
-date: "2019-02-05"
+date: "2019-03-05"
 venue: Fox Theater in Oakland
 images:
   - jungle.jpg
@@ -17,5 +17,3 @@ what I heard.
 
 Other than that, it was great! The audience was very hyped for the whole show,
 and it was clear that everyone was having a great time.
-
-{{< figure src="lights.jpg" caption="I really liked the lights they had." >}}
