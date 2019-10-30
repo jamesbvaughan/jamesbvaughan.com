@@ -29,6 +29,7 @@ You can find out more about me on all the usual platforms:
 - [last.fm](http://www.last.fm/user/magicjamesv)
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
 - [linkedin](https://linkedin.com/in/jamesbvaughan)
+- [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
 
 <script>
