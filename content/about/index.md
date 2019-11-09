@@ -35,8 +35,8 @@ You can find out more about me on all the usual platforms:
 
 <script>
   ['song', 'movie'].forEach(item =>
-    fetch(`.netlify/functions/${item}`)
-      .then(r => r.text())
-      .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
-      .catch(err => console.log(err))
+    fetch(`/.netlify/functions/${item}`)
+        .then(r => r.text())
+        .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
+        .catch(err => console.log(err))
 </script>
