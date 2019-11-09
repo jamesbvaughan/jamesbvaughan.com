@@ -1,16 +1,9 @@
 import fetch from 'node-fetch'
-import qs from 'querystring'
 
-const discogsURL = 'https://api.discogs.com/lists/447073?' + qs.stringify({
-  token: process.env.DISCOGS_TOKEN,
-})
+const discogsURL = `https://api.discogs.com/lists/447073?token=${process.env.DISCOGS_TOKEN}`
 
-exports.handler = (event, context, callback) => {
+exports.handler = (_, _, callback) =>
   fetch(discogsURL)
     .then(res => res.json())
-    .then(({ items }) => {
-      const body = JSON.stringify(items)
-      callback(null, { statusCode: 200, body })
-    })
+    .then(({ items }) => callback(null, { statusCode: 200, body: JSON.stringify(items) }))
     .catch(err => callback(err))
-}
