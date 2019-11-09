@@ -26,6 +26,7 @@ You can find out more about me on all the usual platforms:
 - [github](https://github.com/jamesbvaughan)
 - [goodreads](https://www.goodreads.com/jamesbvaughan)
 - [instagram](https://www.instagram.com/jamesontheline/)
+- [instagram (music)](https://www.instagram.com/jamesmakessounds/)
 - [last.fm](http://www.last.fm/user/magicjamesv)
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
 - [linkedin](https://linkedin.com/in/jamesbvaughan)
@@ -34,7 +35,8 @@ You can find out more about me on all the usual platforms:
 
 <script>
   ['song', 'movie'].forEach(item =>
-    fetch('https://jamesbvaughan.com/.netlify/functions/' + item)
+    fetch(`.netlify/functions/${item}`)
       .then(r => r.text())
-      .then(body => document.getElementById(item).innerHTML = ` (${body})`))
+      .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
+      .catch(err => console.log(err))
 </script>
