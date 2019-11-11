@@ -3,13 +3,6 @@ title: Timothy Gu
 date: 2018-05-01
 
 footer: oss-footer.html
-series:
-  - Open Source Students
-categories:
-  - tech
-tags:
-  - open source
-  - interview
 ---
 
 In this first post in my series interviewing students in open source,

@@ -2,13 +2,6 @@
 title: Counting Usernames from Malicious Login Attempts
 date: "2018-05-07"
 
-categories:
-  - tech
-tags:
-  - experiment
-  - linux
-  - security
-
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=17017307

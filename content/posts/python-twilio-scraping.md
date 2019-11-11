@@ -2,13 +2,6 @@
 title: Finding Free Food with Python
 date: "2017-03-06"
 
-categories:
-  - tech
-tags:
-  - python
-  - twilio
-  - guide
-
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=13808830

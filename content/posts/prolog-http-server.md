@@ -4,11 +4,6 @@ date: "2016-11-11"
 
 aliases:
   - /writing-an-http-server-in-prolog/
-categories:
-  - tech
-tags:
-  - prolog
-  - guide
 
 discussion_links:
   - site_name: Hacker News

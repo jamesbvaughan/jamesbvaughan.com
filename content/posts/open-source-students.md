@@ -3,12 +3,6 @@ title: Introduction
 date: "2018-04-29"
 
 sharing: false
-series:
-  - Open Source Students
-categories:
-  - tech
-tags:
-  - open source
 ---
 
 I've been interested in the open source world for about as long as I've been

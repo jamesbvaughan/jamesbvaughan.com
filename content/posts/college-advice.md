@@ -1,11 +1,6 @@
 ---
 title: College Advice I Would Give My Freshman Self
 date: "2018-04-30"
-
-categories:
-  - personal
-tags:
-  - college
 ---
 
 As I approach the end of my undergraduate years at UCLA,

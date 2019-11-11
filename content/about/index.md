@@ -12,7 +12,7 @@ and pretty much everything that I'm into today.
 
 After high school, I moved to Los Angeles to attend UCLA.
 I graduated in 2018 and moved up to San Francisco where I now work on
-infrastructure at Stripe.
+infrastructure at [Stripe](https://stripe.com).
 
 I try to spend most of my free time slacklining, climbing,
 listening to music<span id="song"></span>,

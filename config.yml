@@ -8,14 +8,12 @@ author:
   name: James Vaughan
   email: james@jamesbvaughan.com
 
-social:
-  twitter: jamesontheline
-
 disqusShortname: jamesbvaughan
 
 params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
+  twitterHandle: jamesontheline
 
 outputFormats:
   RSS:
@@ -24,10 +22,11 @@ outputFormats:
 permalinks:
   posts: /:filename
 
-taxonomies:
-  series: series
-  tag: tags
-  category: categories
-
 pygmentsCodefences: true
 pygmentsStyle: dracula
+
+enableRobotsTXT: true
+
+disableKinds:
+- taxonomy
+- taxonomyTerm

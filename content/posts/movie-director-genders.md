@@ -2,13 +2,6 @@
 title: Movie Director Genders
 date: "2018-08-22"
 
-categories:
-  - personal
-tags:
-  - movies
-  - experiment
-  - letterboxd
-
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=17838047

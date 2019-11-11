@@ -3,13 +3,6 @@ title: Jay Kamat
 date: 2018-05-08
 
 footer: oss-footer.html
-series:
-  - Open Source Students
-categories:
-  - tech
-tags:
-  - open source
-  - interview
 ---
 
 This week's interview features Jay Kamat

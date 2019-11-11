@@ -2,12 +2,6 @@
 title: Saving $167,000 on Groceries
 date: "2018-02-26"
 
-categories:
-  - personal
-tags:
-  - experiment
-  - money
-
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=16479046

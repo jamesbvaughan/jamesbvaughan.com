@@ -2,12 +2,6 @@
 title: Thoughts on Qutebrowser
 date: "2017-12-06"
 
-categories:
-  - tech
-tags:
-  - qutebrowser
-  - productivity
-
 discussion_links:
   - site_name: Hacker News
     url: https://news.ycombinator.com/item?id=15865787
