@@ -7,7 +7,7 @@ I'm james. Thanks for coming to my website.
 
 I'm glad you found it and i hope you enjoy your time here.
 
-# a little bit about me
+# about me
 
 I grew up in Auburn, California
 where I was introduced to rock climbing, slacklining, computers, music,
@@ -36,11 +36,15 @@ You can find out more about me on all the usual platforms:
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
 
-# a little bit about this website
+# about this website
 
 This is mostly a place for me to share [things that I write](/blog),
 but it's also home to some little projects of mine,
-like [this page that lists my favorite albums](/albums).
+like [this page that lists my favorite albums](/albums)
+or [this list of links that I think are cool](/links).
+
+You can read about how I build and manage this site
+[here](/how-i-make-this-site).
 
 <script>
   ['song', 'movie'].forEach(item =>
