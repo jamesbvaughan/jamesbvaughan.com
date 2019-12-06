@@ -20,9 +20,13 @@ infrastructure at [Stripe](https://stripe.com).
 I try to spend most of my free time slacklining, climbing,
 listening to music<span id="song"></span>,
 making music, reading, writing,
-and watching movies<span id="movie"></span>.
+watching movies<span id="movie"></span>,
+and [practicing new things](/skills-in-progress).
 
-You can find out more about me on all the usual platforms:
+# follow me
+
+You can find out more about me on all the usual sites
+(and some of the less usual ones):
 
 - [discogs](https://www.discogs.com/user/jamesbvaughan/collection)
 - [facebook](https://fb.com/jamesbvaughan)
@@ -50,6 +54,10 @@ You can read about how I build and manage this site
   ['song', 'movie'].forEach(item =>
     fetch(`/.netlify/functions/${item}`)
       .then(r => r.text())
+      .then(r => {
+        if (r.status !== 200) throw
+        return r
+      })
       .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
       .catch(err => console.log(err))
 </script>
