@@ -23,7 +23,7 @@ but haven't been prioritizing over my other interests yet:
 - Drums
 - Singing
 - Drawing
-- More Advanced Juggling
+- More advanced juggling
 - Unicycling
 - Cooking
 - Handstands
@@ -35,6 +35,7 @@ if I had an infinite amount of free time:
 
 - Animation
 - CAD
-- Trad Climbing
-- Live Sound
-- Any Brass/Wind Instrument
+- Trad climbing
+- Live sound
+- Any brass/wind instrument
+- A new spoken language
