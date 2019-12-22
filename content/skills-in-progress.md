@@ -26,6 +26,7 @@ but haven't been prioritizing over my other interests yet:
 - More advanced juggling
 - Unicycling
 - Cooking
+- Spanish
 - Handstands
 
 ## back-backlog
@@ -33,8 +34,7 @@ but haven't been prioritizing over my other interests yet:
 These are things that I have zero experience with but would love to learn about
 if I had an infinite amount of free time:
 
-- Animation
-- CAD
+- 3D Modeling and Animation
 - Trad climbing
 - Live sound
 - Any brass/wind instrument

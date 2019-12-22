@@ -80,6 +80,57 @@ that I've found interesting or valuable.
   by checking up on people's social media profiles before offering to host them,
   and reading through their reviews from previous hosts.
 
+# People
+
+These are some personal websites that I think are cool or inspiring.
+Some belong to friends of mine and some belong to people that I don't know
+personally but admire.
+
+- [Corbin Muraro](https://corbinmuraro.com) - I like how simple Corbin's site
+  is while still having the information that most people will be looking for.
+
+- [Devon Zuegel](https://devonzuegel.com/) - I like the quality of Devon's
+  posts and also the idea of publishing
+  [_half-baked_](https://devonzuegel.com/tag/half-baked) ideas and posts.
+
+- [Jenn Schiffer](http://jennmoney.biz/) - I just love Jenn's style and think
+  she works on really rad stuff (like [Glitch](https://glitch.com/)!)
+
+- [Seena Burns](http://seenaburns.com/) - I like Seena's colorscheme and his
+  use of images and GIFs that show you what you're reading about.
+
+- [Patrick Collison](https://patrickcollison.com/) - I love the content on
+  Patrick's site (like his
+  [list of interesting questions](https://patrickcollison.com/)
+  or his
+  [list of impressively fast projects](https://patrickcollison.com/fast))
+  but I do wish it had just a bit more styling to make it nicer to navigate and
+  read on mobile.
+
+- [Nadia Eghbal](https://nadiaeghbal.com/) - I think Nadia has done some really
+  interesting work, and she also has
+  [a page with some rough/half-baked ideas](https://nadiaeghbal.com/notes/).
+
+- [Andy Matuschak](https://andymatuschak.org/) - I think that Andy's
+  [work related to learning and memory](https://numinous.productions/ttft/)
+  is fascinating, and the columned layout of his site is pretty unique.
+
+- [Drew DeVault](https://drewdevault.com/) - Drew makes some impressive
+  software (most notably for me, [sway](https://swaywm.org/)) and I like that
+  he posts monthly status updates about all of the work that he's doing.
+  (He also believes strongly enough in the importance of personal
+  blogs/websites that he'll
+  [give you $20 if you make one](https://drewdevault.com/make-a-blog)!)
+
+- [Julia Evans](https://jvns.ca/) - I like Julia's writing a lot, and she also
+  writes [zines](https://wizardzines.com/) to help people learn about systems
+  and Linux!
+
+- [Derek Sivers](https://sivers.org/) - Derek has done some amazing work,
+  written books, and has some inspiring website ideas, like
+  [now pages](https://nownownow.com/about)
+  ([his](https://sivers.org/now), [mine](/now)).
+
 # Miscellaneous Cool Websites
 
 - [Poolside FM](https://poolside.fm/)
