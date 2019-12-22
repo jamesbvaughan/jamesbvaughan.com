@@ -23,6 +23,8 @@ making music, reading, writing,
 watching movies<span id="movie"></span>,
 and [practicing new things](/skills-in-progress).
 
+[Here's what I'm working on now](/now).
+
 # follow me
 
 You can find out more about me on all the usual sites
