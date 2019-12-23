@@ -6,6 +6,15 @@ description: what I've been up to lately
 (This is a [now page](https://nownownow.com/about), and if you have your own
 site, [you should make one](https://nownownow.com/about), too.)
 
+# stripe
+
+I've been working at
+[Stripe](https://stripe.com)
+for about a year and a half now and  is ben great so far. I work on infrastructure on the _Compute_ team.
+I get to work on interesting problems with very talented people.
+(And in case you're interested,
+[we're hiring](https://stripe.com/jobs) 😉.)
+
 # making music
 
 There are [lots of things](http://localhost:1313/skills-in-progress/) that I
