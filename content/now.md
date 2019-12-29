@@ -39,3 +39,5 @@ at.
 I especially like going to parks with nice views and finding intersections at
 the top of hills where you can look down and follow a street to the edge of
 the city.
+
+If you have SF recommendations, [let me know](mailto:james@jamesbvaughan.com)!

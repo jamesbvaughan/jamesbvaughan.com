@@ -137,3 +137,6 @@ personally but admire.
 - [Astronaut](http://astronaut.io/)
 - [This page is a truly naked, brutalist html quine.](https://secretgeek.github.io/html_wysiwyg/html.html)
 - [The Deep Sea](https://neal.fun/deep-sea/)
+- [WebGL Fluid Simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
+- [Let's build houses for people, not cars.](https://noparkinghere.com/)
+- [Animagraphs](https://animagraffs.com/)
