@@ -39,6 +39,7 @@ You can find out more about me on all the usual sites
 - [last.fm](http://www.last.fm/user/magicjamesv)
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
 - [linkedin](https://linkedin.com/in/jamesbvaughan)
+- [mountain project](https://www.mountainproject.com/user/112201703/james-vaughan)
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
 
