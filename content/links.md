@@ -13,7 +13,7 @@ that I've found interesting or valuable.
 
 # Music
 
-## Listening/Following Music
+## Listening To Music
 
 - [Discogs](https://discogs.com) - This site is primarily for vinyl lovers, but
   I've found that it gives me some of the same features for music that I like
