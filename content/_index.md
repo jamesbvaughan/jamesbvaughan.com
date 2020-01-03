@@ -43,6 +43,14 @@ You can find out more about me on all the usual sites
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
 
+# newsletter
+
+I recently started an email newsletter where I will be sending updates about
+things I'm working on and links to interesting things that I read, listen to,
+or watch.
+
+You can sign up [here](/newsletter) if you'd like to join.
+
 # about this website
 
 This is mostly a place for me to share [things that I write](/blog),
