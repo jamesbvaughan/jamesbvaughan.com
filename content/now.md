@@ -10,8 +10,9 @@ site, [you should make one too](https://nownownow.com/about).)
 
 I've been working at
 [Stripe](https://stripe.com)
-for about a year and a half now and  is been great so far. I work on infrastructure on the _Compute_ team.
-I get to work on interesting problems with very talented people.
+for about a year and a half now and it's been great so far.
+I work on cloud infrastructure on the Compute team,
+where I get to work on interesting problems with some very talented people.
 (And in case you're interested,
 [we're hiring](https://stripe.com/jobs) 😉.)
 
