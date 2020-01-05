@@ -4,7 +4,7 @@ description: what I've been up to lately
 ---
 
 (This is a [now page](https://nownownow.com/about), and if you have your own
-site, [you should make one](https://nownownow.com/about), too.)
+site, [you should make one too](https://nownownow.com/about).)
 
 # stripe
 
