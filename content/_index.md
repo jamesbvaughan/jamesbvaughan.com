@@ -66,7 +66,7 @@ You can read about how I build and manage this site
     fetch(`/.netlify/functions/${item}`)
       .then(r => r.text())
       .then(r => {
-        if (r.status !== 200) throw
+        if (r.status !== 200) throw `recieved status ${r.status}`
         return r
       })
       .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
