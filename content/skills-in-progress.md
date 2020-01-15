@@ -10,9 +10,7 @@ have more success when I limit myself to just a few at a time.
 These are the things I'm currently spending a lot of my free time practicing:
 
 - Guitar and Banjo
-- Songwriting/Composing
 - Mindfulness
-- Slacklining
 - Climbing
 
 ## backlog
@@ -35,7 +33,7 @@ These are things that I have zero experience with but would love to learn about
 if I had an infinite amount of free time:
 
 - 3D Modeling and Animation
-- Trad climbing
+- Drawing
 - Live sound
 - Any brass/wind instrument
 - A new spoken language
