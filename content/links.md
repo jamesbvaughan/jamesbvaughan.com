@@ -140,3 +140,4 @@ personally but admire.
 - [WebGL Fluid Simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
 - [Let's build houses for people, not cars.](https://noparkinghere.com/)
 - [Animagraphs](https://animagraffs.com/)
+- [Responsive Pixel Art](https://essenmitsosse.de/pixel/?showcase=true&slide=4)
