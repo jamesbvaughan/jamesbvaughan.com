@@ -4,14 +4,15 @@ description: what I've been up to lately
 ---
 
 (This is a [now page](https://nownownow.com/about), and if you have your own
-site, [you should make one](https://nownownow.com/about), too.)
+site, [you should make one too](https://nownownow.com/about).)
 
 # stripe
 
 I've been working at
 [Stripe](https://stripe.com)
-for about a year and a half now and  is ben great so far. I work on infrastructure on the _Compute_ team.
-I get to work on interesting problems with very talented people.
+for about a year and a half now and it's been great so far.
+I work on cloud infrastructure on the Compute team,
+where I get to work on interesting problems with some very talented people.
 (And in case you're interested,
 [we're hiring](https://stripe.com/jobs) 😉.)
 

@@ -15,7 +15,7 @@ and pretty much everything that I'm into today.
 
 After high school, I moved to Los Angeles to go to school at UCLA.
 I graduated in 2018 and moved up to San Francisco where I now work on
-infrastructure at [Stripe](https://stripe.com).
+cloud infrastructure at [Stripe](https://stripe.com).
 
 I try to spend most of my free time slacklining, climbing,
 listening to music<span id="song"></span>,
@@ -43,6 +43,14 @@ You can find out more about me on all the usual sites
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [twitter](https://twitter.com/jamesontheline)
 
+# newsletter
+
+I recently started an email newsletter where I will be sending updates about
+things I'm working on and links to interesting things that I read, listen to,
+or watch.
+
+You can sign up [here](/newsletter) if you'd like to join.
+
 # about this website
 
 This is mostly a place for me to share [things that I write](/blog),
@@ -58,7 +66,7 @@ You can read about how I build and manage this site
     fetch(`/.netlify/functions/${item}`)
       .then(r => r.text())
       .then(r => {
-        if (r.status !== 200) throw
+        if (r.status !== 200) throw `recieved status ${r.status}`
         return r
       })
       .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`))
