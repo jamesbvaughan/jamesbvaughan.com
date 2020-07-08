@@ -142,3 +142,5 @@ personally but admire.
 - [Animagraphs](https://animagraffs.com/)
 - [Responsive Pixel Art](https://essenmitsosse.de/pixel/?showcase=true&slide=4)
 - [Every Noise at Once](http://everynoise.com/)
+- [Mukitap](https://aidn.jp/mikutap/)
+- [mapscii.me](https://mapscii.me) (try `$ telnet mapscii.me`, move with arrows, a/z to zoom)
