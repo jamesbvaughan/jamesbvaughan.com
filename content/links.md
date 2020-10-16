@@ -83,8 +83,8 @@ that I've found interesting or valuable.
 # People
 
 These are some personal websites that I think are cool or inspiring.
-Some belong to friends of mine and some belong to people that I don't know
-personally but admire.
+Some belong to friends of mine and some belong to people that I admire but
+don't know personally.
 
 - [Corbin Muraro](https://corbinmuraro.com) - I like how simple Corbin's site
   is while still having the information that most people will be looking for.
