@@ -25,10 +25,8 @@ and [practicing new things](/skills-in-progress).
 
 [Here's what I'm working on now](/now).
 
-# follow me
+# me on other websites
 
-You can find out more about me on all the usual sites
-(and some less usual ones).
 These have been my favorites lately:
 
 - [twitter](https://twitter.com/jamesontheline)
@@ -60,12 +58,11 @@ You can read about how I build and manage this site
 <script>
   ['song', 'movie'].forEach(item =>
     fetch(`/.netlify/functions/${item}`)
-    .then(r => r.text())
     .then(r => {
       if (r.status !== 200) throw `recieved status ${r.status}`
-      return r
+      return r.text()
     })
     .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`)
-    .catch(err => console.log(err))
+    .catch(console.error)
   )
 </script>
