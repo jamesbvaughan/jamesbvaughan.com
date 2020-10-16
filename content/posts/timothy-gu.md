@@ -1,6 +1,7 @@
 ---
 title: Timothy Gu
 date: 2018-05-01
+post_series: Open Source Students
 
 footer: oss-footer.html
 ---

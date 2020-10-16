@@ -1,2 +1,3 @@
-{{ if isset .Page.Params "series" }}<span class="dib">
-{{ index .Page.Params.series 0 }}:&nbsp;</span>{{ end }}<span class="dib">{{ .Title }}</span>
+{{ if isset .Page.Params "post_series" }}<span class="dib">
+  {{ .Page.Params.post_series }}:&nbsp;</span
+>{{ end }}<span class="dib">{{ .Title }}</span>
