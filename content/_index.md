@@ -49,8 +49,9 @@ More:
 
 This is mostly a place for me to share [things that I write](/blog),
 but it's also home to some little projects of mine,
-like [this page that lists my favorite albums](/albums)
-or [this list of links that I think are cool](/links).
+like [this page that lists my favorite albums](/albums),
+[this list of links that I think are cool](/links),
+or [this list of features that I wish I had in various products and services](/feature-requests).
 
 You can read about how I build and manage this site
 [here](/how-i-make-this-site).
