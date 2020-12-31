@@ -37,6 +37,11 @@ In this page, I document those features.
   - I found [this list of terms to mute](https://gist.github.com/IanColdwater/88b3341a7c4c0cf71c73ac56f9bd36ec) which can clean up the timeline, but it doesn't work across apps, and it seems like Twitter will make it stop working soon if they haven't already.
   - I know that there are third party apps that can get me the clean timeline that I want, but I actually _like_ using the official Twitter interface except for a few nits like this.
 
+## The "TV" app on Apple TV
+
+- This app aggregates movies and tv shows from various providers (Hulu, iTunes, Amazon Prime Video, HBO Max, etc.) into a clean and unified interface, but does not include content from Netflix and I wish it did.
+  - I found [a discussion on Reddit about this](https://www.reddit.com/r/appletv/comments/atpa4t/how_do_i_add_netflix_activity_to_the_tv_app/) where some other folks wrote about wanting this feature. I'm not sure if it's blocked by something on Apple's end or on Netflix's, but I hope they work it out eventually.
+
 ---
 
 If you have thoughts on any of these, [let me know](mailto:james@jamesbvaughan.com)!
