@@ -89,7 +89,7 @@ on my shopping list.
 When I got home, I plugged all the prices I had recorded in to a spreadsheet
 to compare the two grocery stores side-by-side.
 
-<img src="/grocery-prices/grocery-spreadsheet.png" class="img-fluid">
+![grocery prices spreadsheet](grocery-spreadsheet.png)
 
 The total cost at Ralphs was $16.79.
 The total cost at Whole Food was $22.09,

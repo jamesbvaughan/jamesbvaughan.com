@@ -20,8 +20,7 @@ cloud infrastructure at [Stripe](https://stripe.com).
 I try to spend my free time slacklining, climbing,
 listening to music<span id="song"></span>,
 making music, reading, writing,
-watching movies<span id="movie"></span>,
-and [practicing new things](/skills-in-progress).
+and watching movies<span id="movie"></span>.
 
 [Here's what I'm working on now](/now).
 
