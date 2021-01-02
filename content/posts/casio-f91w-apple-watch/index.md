@@ -1,5 +1,5 @@
 ---
-title: "Putting the Casio F-91W band on an Apple Watch"
+title: Putting the Casio F-91W band on an Apple Watch
 date: 2020-12-31
 ---
 
