@@ -29,4 +29,4 @@ This was a bit discouraging, but after stretching the holes a bit with a drill, 
 ![Final side view](side-view.jpg)
 
 These were the most narrow of the adapters that I could find, but as you can see they're still a few millimeters too wide.
-I may try doing something to clean that up in the future, but for now these are working great! 
+I may try doing something to clean that up in the future, but for now these are working great!
