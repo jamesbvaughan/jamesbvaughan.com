@@ -42,6 +42,11 @@ In this page, I document those features.
 - This app aggregates movies and tv shows from various providers (Hulu, iTunes, Amazon Prime Video, HBO Max, etc.) into a clean and unified interface, but does not include content from Netflix and I wish it did.
   - I found [a discussion on Reddit about this](https://www.reddit.com/r/appletv/comments/atpa4t/how_do_i_add_netflix_activity_to_the_tv_app/) where some other folks wrote about wanting this feature. I'm not sure if it's blocked by something on Apple's end or on Netflix's, but I hope they work it out eventually.
 
+## Netlify Analytics
+
+- I'd like to have access to more than 30 days of historical data. For a paid analytics solution, this limitation is particularly frustrating.
+  - There's a bit of discussion about this [on the Netlify community forum](https://community.netlify.com/t/historical-analytics-data-more-than-30-days/26466).
+
 ---
 
 If you have thoughts on any of these, [let me know](mailto:james@jamesbvaughan.com)!
