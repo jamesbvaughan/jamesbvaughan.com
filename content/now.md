@@ -6,16 +6,6 @@ description: what I've been up to lately
 (This is a [now page](https://nownownow.com/about). If you have your own
 site, [consider making one too](https://nownownow.com/about)!)
 
-# stripe
-
-I've been working at
-[Stripe](https://stripe.com)
-for two years now and it's been great so far.
-I work on cloud infrastructure on the Compute team,
-where I get to work on interesting problems with some very talented people.
-(And in case you're interested,
-[we're hiring](https://stripe.com/jobs) 😉.)
-
 # playing music
 
 I've mostly been practicing guitar, piano, and drums, but have also started
