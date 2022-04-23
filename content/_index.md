@@ -14,8 +14,9 @@ where I was introduced to many of the things that I'm into today,
 including climbing, computers, music, movies, and people.
 
 After high school, I moved to Los Angeles to go to school at UCLA.
-After graduating moved up to San Francisco where I now work on
-cloud infrastructure at [Stripe](https://stripe.com).
+After graduating moved up to San Francisco where I worked on
+cloud infrastructure and operating systems at
+[Stripe](https://stripe.com).
 
 I try to spend my free time slacklining, climbing,
 listening to music<span id="song"></span>,
