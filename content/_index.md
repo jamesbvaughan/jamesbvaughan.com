@@ -23,8 +23,6 @@ listening to music<span id="song"></span>,
 making music, reading, writing,
 and watching movies<span id="movie"></span>.
 
-[Here's what I'm working on now](/now).
-
 # me on other websites
 
 These have been my favorites lately:
