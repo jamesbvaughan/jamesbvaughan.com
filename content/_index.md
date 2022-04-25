@@ -18,6 +18,9 @@ After graduating moved up to San Francisco where I worked on
 cloud infrastructure and operating systems at
 [Stripe](https://stripe.com).
 
+Currently, I work at [Arcol](https://arcol.io) helping build the
+future of building design software.
+
 I try to spend my free time slacklining, climbing,
 listening to music<span id="song"></span>,
 making music, reading, writing,
