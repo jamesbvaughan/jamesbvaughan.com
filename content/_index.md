@@ -15,8 +15,7 @@ including climbing, computers, music, movies, and people.
 
 After high school, I moved to Los Angeles to go to school at UCLA.
 After graduating moved up to San Francisco where I worked on
-cloud infrastructure and operating systems at
-[Stripe](https://stripe.com).
+cloud infrastructure and operating systems at Stripe.
 
 Currently, I work at [Arcol](https://arcol.io) helping build the
 future of building design software.
@@ -28,20 +27,10 @@ and watching movies<span id="movie"></span>.
 
 # me on other websites
 
-These have been my favorites lately:
-
 - [twitter](https://twitter.com/jamesontheline)
 - [letterboxd](https://letterboxd.com/jamesbvaughan/)
-- [instagram (music)](https://www.instagram.com/jamesmakessounds/)
 - [last.fm](http://www.last.fm/user/magicjamesv)
-
-More:
-
-- [discogs](https://www.discogs.com/user/jamesbvaughan/collection)
-- [facebook](https://fb.com/jamesbvaughan)
 - [github](https://github.com/jamesbvaughan)
-- [goodreads](https://www.goodreads.com/jamesbvaughan)
-- [instagram](https://www.instagram.com/jamesontheline/)
 - [linkedin](https://linkedin.com/in/jamesbvaughan)
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [mountain project](https://www.mountainproject.com/user/112201703/james-vaughan)
@@ -50,9 +39,8 @@ More:
 
 This is mostly a place for me to share [things that I write](/blog),
 but it's also home to some little projects of mine,
-like [this page that lists my favorite albums](/albums),
-[this list of links that I think are cool](/links),
-or [this list of features that I wish I had in various products and services](/feature-requests).
+like [this page that lists my favorite albums](/albums) or
+[this list of links that I think are cool](/links).
 
 You can read about how I build and manage this site
 [here](/how-i-make-this-site).
