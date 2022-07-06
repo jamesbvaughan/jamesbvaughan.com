@@ -21,6 +21,6 @@
     "elm": "^0.19.1-5",
     "eslint": "^8.19.0",
     "netlify-cli": "^10.7.1",
-    "typescript": "^4.7.4",
+    "typescript": "^4.7.4"
   }
 }
