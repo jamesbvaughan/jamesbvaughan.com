@@ -1,11 +1,6 @@
 ---
-title: James Vaughan
 description: James Vaughan's personal website
 ---
-
-i'm james. thanks for coming to my website.
-
-i'm glad you found it and i hope you enjoy your time here.
 
 # about me
 
@@ -13,12 +8,10 @@ I grew up in Auburn, California
 where I was introduced to many of the things that I'm into today,
 including climbing, computers, music, movies, and people.
 
-After high school, I moved to Los Angeles to go to school at UCLA.
-After graduating moved up to San Francisco where I worked on
-cloud infrastructure and operating systems at Stripe.
+After high school, I moved to Los Angeles to go learn about computers at UCLA.
+I then came up to San Francisco where I spent a few years working on cloud infrastructure at Stripe.
 
-Currently, I work at [Arcol](https://arcol.io) helping build the
-future of building design software.
+Currently, I'm working at [Arcol](https://arcol.io) where I'm learning more about web technology and graphics, and helping build the future of building design software.
 
 I try to spend my free time slacklining, climbing,
 listening to music<span id="song"></span>,
@@ -35,6 +28,12 @@ and watching movies<span id="movie"></span>.
 - [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
 - [mountain project](https://www.mountainproject.com/user/112201703/james-vaughan)
 
+# get in touch
+
+I'm at [james@jamesbvaughan.com](mailto:james@jamesbvaughan.com) and love hearing from new people.
+
+Reach out if you'd like to chat about new ideas, work together, or get coffee.
+
 # about this website
 
 This is mostly a place for me to share [things that I write](/blog),
@@ -42,7 +41,7 @@ but it's also home to some little projects of mine,
 like [this page that lists my favorite albums](/albums) or
 [this list of links that I think are cool](/links).
 
-You can read about how I build and manage this site
+I've written about how I build and manage this site
 [here](/how-i-make-this-site).
 
 <script>
