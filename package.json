@@ -20,7 +20,7 @@
     "@typescript-eslint/parser": "^5.20.0",
     "elm": "^0.19.1-5",
     "eslint": "^8.19.0",
-    "netlify-cli": "^10.0.0",
+    "netlify-cli": "^10.7.1",
     "typescript": "^4.6.3",
     "uglify-js": "^3.4.9"
   }
