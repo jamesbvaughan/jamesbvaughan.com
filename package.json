@@ -5,14 +5,14 @@
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
     "build": "yarn run build:albums && yarn run build:site",
-    "build:albums": "cd content/albums && elm make src/Main.elm --optimize --output albums.js && uglifyjs albums.js --compress 'pure_funcs=\"F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9\",pure_getters,keep_fargs=false,unsafe_comps,unsafe' | uglifyjs --mangle --output albums.min.js",
+    "build:albums": "cd content/albums && elm make src/Main.elm --optimize --output albums.js",
     "build:site": "hugo",
     "start": "hugo server -D"
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",
-    "node-fetch": "^3.1.1",
-    "xml2js": "^0.4.19"
+    "node-fetch": "^3.2.6",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@types/xml2js": "^0.4.11",
@@ -21,7 +21,6 @@
     "elm": "^0.19.1-5",
     "eslint": "^8.19.0",
     "netlify-cli": "^10.7.1",
-    "typescript": "^4.6.3",
-    "uglify-js": "^3.4.9"
+    "typescript": "^4.7.4",
   }
 }
