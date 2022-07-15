@@ -8,5 +8,7 @@
 /functions/*.js
 /node_modules
 
+/static/styles/main.min.css
+
 .DS_Store
 .hugo_build.lock

@@ -8,21 +8,17 @@
 
 {{ define "main" }}
 <article>
-  <header class="mb3">
-    <time class="gray">
-      {{ .Date.Format "January 2, 2006" }}
-    </time>
-  </header>
-  <div class="lh-copy">
-    {{ .Content }}
-  </div>
+  <time class="text-stone-400">
+    {{ .Date.Format "January 2, 2006" }}
+  </time>
+
+  {{ .Content }}
+
   {{ if isset .Params "footer" }}
     {{ partial .Params.footer . }}
     <br />
   {{ end }}
-  {{ if default true .Params.sharing }}
-    {{ partial "share-links.html" . }}
-  {{ end }}
+
   {{ if isset .Params "discussion_links" }}
     {{ partial "discussion-links.html" . }}
   {{ end }}

@@ -1,12 +1,11 @@
-<ol class="list pl0">
+<div class="space-y-4">
   {{ range . }}
-  <li class="mb4">
-    <h2 class="mb0">
-      <a class="dark-gray underline-hover" href="{{ .RelPermalink }}">
+    <div>
+      <a class="text-2xl font-bold text-stone-700 dark:text-stone-300" href="{{ .RelPermalink }}">
         {{ .Render "title" }}
       </a>
-    </h2>
-    <time class="f6">{{ .Date.Format "Jan 2, 2006" }}</time>
-  </li>
+      <br />
+      <time class="text-stone-400 text-base">{{ .Date.Format "Jan 2, 2006" }}</time>
+    </div>
   {{ end }}
-</ol>
+</div>
