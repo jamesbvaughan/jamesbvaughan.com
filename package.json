@@ -4,7 +4,7 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "yarn run build:albums yarn run build:tailwind && yarn run build:site",
+    "build": "yarn run build:albums && yarn run build:tailwind && yarn run build:site",
     "build:albums": "cd content/albums && elm make src/Main.elm --optimize --output albums.js",
     "build:site": "hugo",
     "build:tailwind": "tailwindcss --minify -i ./static/styles/main.css -o ./static/styles/main.min.css",
