@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="author" content="James Vaughan" />
-  <meta name="description" content="{{ .Render " summary" }}" />
+  <meta name="description" content="{{ .Render "summary" }}" />
 
   <title>
-    {{ block "browser-title" . }}{{ if .Title }}{{ .Title }} - {{ end }}{{
-    .Site.Title }}{{ end }}
+    {{ block "browser-title" . }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}
   </title>
 
   {{ template "_internal/opengraph.html" . }} {{ template
