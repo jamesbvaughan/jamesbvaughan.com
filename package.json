@@ -4,12 +4,13 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "yarn run build:albums && yarn run build:tailwind && yarn run build:site",
+    "build": "yarn run build:albums && yarn run build:tailwind && yarn run build:hugo",
     "build:albums": "cd content/albums && elm make src/Main.elm --optimize --output albums.js",
-    "build:site": "hugo",
+    "build:hugo": "hugo",
     "build:tailwind": "tailwindcss --minify -i ./static/styles/main.css -o ./static/styles/main.min.css",
-    "start": "hugo server -D",
-    "start:tailwind": "tailwindcss -i ./static/styles/main.css -o ./static/styles/main.min.css --watch"
+    "start:hugo": "hugo server -D",
+    "start:tailwind": "tailwindcss -i ./static/styles/main.css -o ./static/styles/main.min.css --watch",
+    "start": "concurrently -n hugo,tailwind yarn:start:hugo yarn:start:tailwind"
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",
@@ -20,6 +21,7 @@
     "@types/xml2js": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "concurrently": "^7.3.0",
     "elm": "^0.19.1-5",
     "eslint": "^8.19.0",
     "netlify-cli": "^10.7.1",
