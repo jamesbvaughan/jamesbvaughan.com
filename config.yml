@@ -23,7 +23,7 @@ permalinks:
   posts: /:filename
 
 pygmentsCodefences: true
-pygmentsStyle: dracula
+pygmentsStyle: gruvbox
 
 enableRobotsTXT: true
 
