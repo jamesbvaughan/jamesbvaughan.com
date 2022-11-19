@@ -20,17 +20,17 @@ and watching movies<span id="movie"></span>.
 
 # me on other websites
 
-- [twitter](https://twitter.com/jamesontheline)
-- [letterboxd](https://letterboxd.com/jamesbvaughan/)
-- [last.fm](http://www.last.fm/user/magicjamesv)
-- [github](https://github.com/jamesbvaughan)
-- [linkedin](https://linkedin.com/in/jamesbvaughan)
-- [setlist.fm](https://www.setlist.fm/concerts/jamesbvaughan)
-- [mountain project](https://www.mountainproject.com/user/112201703/james-vaughan)
+- {{< link href="https://twitter.com/jamesontheline" rel="me" >}}twitter{{< /link >}}
+- {{< link href="https://letterboxd.com/jamesbvaughan/" rel="me" >}}letterboxd{{< /link >}}
+- {{< link href="http://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
+- {{< link href="https://github.com/jamesbvaughan" rel="me" >}}github{{< /link >}}
+- {{< link href="https://linkedin.com/in/jamesbvaughan" rel="me" >}}linkedin{{< /link >}}
+- {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
+- {{< link href="https://www.mountainproject.com/user/112201703/james-vaughan" rel="me" >}}mountain project{{< /link >}}
 
 # get in touch
 
-I'm at [james@jamesbvaughan.com](mailto:james@jamesbvaughan.com) and love hearing from new people.
+I'm at {{< link href="mailto:james@jamesbvaughan.com" rel="me" >}}james@jamesbvaughan.com{{< /link >}} and love hearing from new people.
 
 Reach out if you'd like to chat about new ideas, work together, or get coffee.
 
