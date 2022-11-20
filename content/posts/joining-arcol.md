@@ -2,6 +2,9 @@
 title: Joining Arcol
 date: 2022-04-25
 sharing: false
+syndication:
+  - site_name: Twitter
+    url: https://twitter.com/jamesontheline/status/1518701668015108096
 ---
 
 I’m excited to announce that I’m joining [Arcol](https://arcol.io) to work on the future of building design software! Arcol’s ambitions are at the intersection of a variety of my interests: innovative software for professional creative work, ambitious and challenging technical problems, and architecture.

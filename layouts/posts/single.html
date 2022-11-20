@@ -23,6 +23,10 @@
     <div class="p-author h-card">
       {{ partial "h-card.html" . }}
     </div>
+
+    {{ range .Params.syndication }}
+      <a class="u-syndication" href="{{ .url }}" rel="syndication">{{ .site_name }}</a>
+    {{ end }}
   </div>
 
   <time class="text-stone-400">
