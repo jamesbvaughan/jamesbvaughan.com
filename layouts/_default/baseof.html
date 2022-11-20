@@ -33,7 +33,9 @@
     </main>
   </div>
 
-  {{ partial "h-card.html" . }}
+  <div class="h-card" hidden>
+    {{ partial "h-card.html" . }}
+  </div>
 </body>
 
 </html>

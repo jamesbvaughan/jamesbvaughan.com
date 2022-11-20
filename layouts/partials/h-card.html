@@ -1,7 +1,5 @@
-<div class="h-card" hidden>
-  <span class="p-name">James Vaughan</span>
-  <span class="p-nickname">jamesbvaughan</span>
-  <a class="u-url" href="https://jamesbvaughan.com">https://jamesbvaughan.com</a>
-  <a class="u-email" href="mailto:james@jamesbvaughan.com">james@jamesbvaughan.com</a>
-  <img class="u-photo" src="/images/jamesbvaughan.jpg" alt="James Vaughan" />
-</div>
+<span class="p-name">{{ .Site.author.name }}</span>
+<span class="p-nickname">jamesbvaughan</span>
+<a class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
+<a class="u-email" href="mailto:{{ .Site.author.email }}">{{ .Site.author.email }}</a>
+<img class="u-photo" src="/images/jamesbvaughan.jpg" alt="James Vaughan" />
