@@ -20,7 +20,9 @@
       </time>
     </a>
 
-    <a class="p-author h-card" href="{{ .Site.BaseURL }}" rel="author">James Vaughan</a>
+    <div class="p-author">
+      {{ partial "h-card.html" . }}
+    </div>
   </div>
 
   <time class="text-stone-400">
