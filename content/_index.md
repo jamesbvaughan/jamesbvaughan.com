@@ -27,6 +27,7 @@ and watching movies<span id="movie"></span>.
 - {{< link href="https://linkedin.com/in/jamesbvaughan" rel="me" >}}linkedin{{< /link >}}
 - {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
 - {{< link href="https://www.mountainproject.com/user/112201703/james-vaughan" rel="me" >}}mountain project{{< /link >}}
+- {{< link href="https://indieweb.social/@jamesbvaughan" rel="me" >}}mastodon{{< /link >}}
 
 # get in touch
 
