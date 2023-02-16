@@ -24,6 +24,7 @@ I've started documenting my progress on this Felt map:
 Like I said, it's a lot smaller than Pittsburgh, but if I finish this and am feeling strong, I may bump my goal up to something more ambitious.
 
 My current method for recording and processing the data is:
+
 1. Track the run using the Apple Fitness watch app. I like tracking with the Fitness app rather than Strava because it seems to record a superset of the data that Strava records, and the auto-import into Strava has always worked perfectly for me.
 2. Export the `.gpx` file from Strava.
 3. Import that file in Felt.
