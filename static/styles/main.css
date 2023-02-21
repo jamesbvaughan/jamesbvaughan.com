@@ -34,6 +34,10 @@
   ul li {
     @apply list-disc;
   }
+
+  blockquote {
+    @apply pl-4 border-white border-l-2 italic;
+  }
 }
 
 @layer components {
