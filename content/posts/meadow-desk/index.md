@@ -57,7 +57,7 @@ The parts that I chose all work together out of the box, and the only machining 
 
 One goal with this project was to build myself a cool desk, but the more exciting goal to me was to make it possible and easy for other people to do the same.
 
-For that, I've created a website with a configuration tool where you can play with different designs for a Meadow Desk of their own, along with a table listing the parts you'll need with a view of their cost updating in real time as you modify the desk's properties.
+For that, I've created [a website](https://tweenage.engineering) with [a configuration tool](https://tweenage.engineering/meadow-desk/configure) where you can play with different designs for a Meadow Desk of their own, along with a table listing the parts you'll need with a view of their cost updating in real time as you modify the desk's properties.
 
 I have a lot of ideas for the website that I haven't had time to implement yet (a dynamically-generated build guide based on your chosen desk parameters, more complex logic for providing price estimates, a way to compare different hardware options for the fasteners and brackets, etc.), but I'm really proud of what I've done with it so far.
 I hope that it inspires someone else to use it to plan and build their own desk.
