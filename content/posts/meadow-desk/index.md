@@ -67,6 +67,7 @@ I hope that it inspires someone else to use it to plan and build their own desk.
 
 Like I just mentioned, I have some ideas for making the website more useful, but I also want to improve the desk design itself.
 This first version I've built is great for a start, but there are some specific things I'd like to make better:
+
 - I still haven't decided on a way to fasten the desktop to the t-slot that I'm really happy with. I'd like the hardware to be concealed, but not too difficult to remove. My current solution technically meets those requirements, but it's not as strong as I'd like.
 - There is some wobble at the front of the desk that I want to eliminate. The crossbars at the rear do an excellent job of stabilizing that side, but I want to keep the front open.
 - If I put a computer on the desk, I want at least some cable management features for keeping the underside looking tidy. I could do this with a pre-built cable-management tray that would mount to the bottom of the desktop, but I want to explore different solutions that would take advantage of the modular nature of the t-slot and match the aesthetic of the rest of the desk.
