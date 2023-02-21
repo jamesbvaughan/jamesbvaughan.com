@@ -53,6 +53,21 @@ The parts that I chose all work together out of the box, and the only machining 
 
 ![Crossbars](crossbars.jpeg)
 
+Overall, I'm really happy with how this first version has come out.
+
+## Cost
+
+The total cost of all the parts that went into it was $213.84 (not including shipping).
+
+![Cost breakdown](cost-spreadsheet.png)
+
+I could have gotten it down closer to $160 if I had bought the t-slot rails from 80/20 rather than McMaster-Carr.
+If I had done that, my total cost would have been closer to $160, just a tenth of the price of the Field Desk!
+
+I plan to build a follow-up to this desk, one that's (a bit) less focused on keeping the cost down, and that might require more machining.
+I expect the largest price increase on the follow-up to be in the desktop.
+I'd like to get plywood with a nicer edge and to try laminating it with Formica myself, which will significantly increase both the cost and effort required to build it.
+
 ## Website
 
 One goal with this project was to build myself a cool desk, but the more exciting goal to me was to make it possible and easy for other people to do the same.
