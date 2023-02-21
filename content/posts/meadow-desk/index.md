@@ -16,7 +16,7 @@ This post describes the inspiration for that project, the process of working on 
 As a fan of Teenage Engineering, I was excited to see an email from their mailing list a few weeks ago announcing a new product release.
 I was surprised to see that the new product was a desk, but also intrigued and curious to see what their spin on a typical work desk would be.
 
-After reading through their marketing page, I was into the design generally, but not into the $1599 price tag for a desk with no height adjustment and a 165 lb max load.
+After reading through their marketing page, I was into the design generally, but not into [the $1599 price tag](https://teenage.engineering/store/field-desk) for a desk with no height adjustment and a 165 lb max load.
 
 Commenters on Hacker News were even more put off by the price. Here's a line from [the top comment](https://news.ycombinator.com/item?id=34713115):
 
