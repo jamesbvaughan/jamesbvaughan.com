@@ -33,7 +33,7 @@ This process involved watching a lot of Fusion 360 tutorials (another exciting t
 
 Eventually, I fumbled through Fusion enough to get a decent looking design put together and rendered well enough to give me a sense of what the desk would look like:
 
-![An early Meadow Desk render](meadow-desk-render.png)
+![An early Meadow Desk render](meadow-desk-render.jpeg)
 
 ## Construction
 
@@ -59,7 +59,7 @@ Overall, I'm really happy with how this first version has come out.
 
 The total cost of all the parts that went into it was $213.84 (not including shipping).
 
-![Cost breakdown](cost-spreadsheet.png)
+![Cost breakdown](cost-spreadsheet.jpeg)
 
 I could have gotten it down closer to $160 if I had bought the t-slot rails from 80/20 rather than McMaster-Carr.
 If I had done that, my total cost would have been closer to $160, just a tenth of the price of the Field Desk!
