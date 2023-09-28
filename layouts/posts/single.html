@@ -33,7 +33,7 @@
     {{ .Date.Format "January 2, 2006" }}
   </time>
 
-  <div class="e-content">
+  <div class="e-content break-words">
     {{ .Content }}
   </div>
 
@@ -46,4 +46,9 @@
     {{ partial "discussion-links.html" . }}
   {{ end }}
 </article>
+
+{{ range .Params.scripts }}
+  <script src="{{ . }}"></script>
+{{ end }}
+
 {{ end }}
