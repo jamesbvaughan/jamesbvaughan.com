@@ -4,23 +4,23 @@ description: James Vaughan's personal website
 
 # about me
 
-I grew up in Auburn, California
-where I was introduced to many of the things that I'm into today,
-including climbing, computers, music, movies, and people.
+I grew up in Auburn, California where I was introduced to lots of things that
+I'm into today, like climbing, computers, music, movies, and people.
 
-After high school, I moved to Los Angeles to go learn about computers at UCLA.
-I then came up to San Francisco where I spent a few years working on cloud infrastructure at Stripe.
+I learned more about computers at UCLA and then moved up to San Francisco where
+I spent a few years working on cloud infrastructure at Stripe.
 
-Currently, I'm working at [Arcol](https://arcol.io) where I'm learning more about web technology and graphics, and helping build the future of building design software.
+I'm in Oakland now, working at [Arcol](https://arcol.io), building the future of
+architecture software and making the power of computer-aided design accessible
+to more people.
 
-I try to spend my free time slacklining, climbing,
-listening to music<span id="song"></span>,
-making music, reading, writing,
-and watching movies<span id="movie"></span>.
+I try to spend my free time slacklining, climbing, listening to
+music<span id="song"></span>, making music, reading, writing, and watching
+movies<span id="movie"></span>.
 
 # me on other websites
 
-- {{< link href="https://twitter.com/jamesontheline" rel="me" >}}twitter{{< /link >}}
+- ~~twitter~~ _{{< link href="https://twitter.com/jamesontheline" rel="me" >}}𝕏{{< /link >}}_
 - {{< link href="https://letterboxd.com/jamesbvaughan/" rel="me" >}}letterboxd{{< /link >}}
 - {{< link href="http://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
 - {{< link href="https://github.com/jamesbvaughan" rel="me" >}}github{{< /link >}}
