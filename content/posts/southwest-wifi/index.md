@@ -8,11 +8,11 @@ scripts:
   - "charts.js"
 ---
 
-I spent a recent flight finding out what I could do with an connection to the flight's wifi, but without access to the internet.
+I spent a recent flight finding out what I could do with a connection to the flight's wifi, but without access to the internet.
 
 ![The view from my seat on the flight](flight.jpg)
 
-I was on my way home from Strange Loop, on a flight from St. Louis to Oakland.
+I was on my way home from Strange Loop, a direct flight from St. Louis to Oakland.
 It's a long enough flight that I planned to purchase the $8 internet access and get some work done, but Southwest's wifi portal wouldn't accept any form of payment.
 The web page didn't give me any helpful error messages, so I opened up my browser's network dev tools to see if I could figure out what was going wrong.
 
