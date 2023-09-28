@@ -53,7 +53,7 @@ Since this was one of the only things I could access on this network, I decided 
 I used my browser's "Copy as cURL" feature to quickly get a command to hit the endpoint.
 As an aside, this is a really handy feature if you ever need to reply requests made by your browser and want to send all the same headers.
 
-![A screenshot showing where the "Copy as cURL" option is](copy-as-curl.png)
+![A screenshot showing where the "Copy as cURL" option is](copy-as-curl.jpg)
 
 After some experimenting, I found that none of the cookies or headers that were included in the request were strictly necessary, meaning that I could fetch the data with a simple `curl 'https://getconnected.southwestwifi.com/current.json'`.
 I set up a loop to dump the data in a log file:
