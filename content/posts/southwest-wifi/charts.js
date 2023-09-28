@@ -101,5 +101,5 @@ renderChart({
 renderChart({
   canvasId: "ground-speed-chart-canvas",
   data: groundSpeeds,
-  yAxisLabel: "Ground speed (MPH)",
+  yAxisLabel: "Ground speed (knots)",
 });

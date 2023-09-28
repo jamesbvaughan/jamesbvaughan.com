@@ -6,6 +6,9 @@ scripts:
   - "https://cdn.jsdelivr.net/npm/chart.js"
   - "flight-data.js"
   - "charts.js"
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=37691232
 ---
 
 I spent a recent flight finding out what I could do with a connection to the flight's wifi, but without access to the internet.
@@ -178,6 +181,8 @@ This was also stable, as expected.
     aria-label="Ground speed chart"
     fallback="You should see a chart visualizing the flight's ground speed over time here."
 >}}
+
+_edit: I originally labeled these speeds as MPH, but [some HN readers helpfully pointed out that these are more likely to be knots](https://news.ycombinator.com/item?id=37691582)._
 
 I wish I had started collecting the data earlier in the flight.
 I'm curious to see shape of this curve as we approached cruising speed.
