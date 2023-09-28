@@ -54,7 +54,7 @@ This appeared to be the data that drives the in-flight wifi portal's flight stat
 Since this was one of the only things I could access on this network, I decided to make the most of it.
 
 I used my browser's "Copy as cURL" feature to quickly get a command to hit the endpoint.
-As an aside, this is a really handy feature if you ever need to reply requests made by your browser and want to send all the same headers.
+As an aside, this feature is present in Firefox and all chromium-based browsers and it's really handy if you ever need to reply requests made by your browser and want to send all the same headers.
 
 ![A screenshot showing where the "Copy as cURL" option is](copy-as-curl.jpg)
 
