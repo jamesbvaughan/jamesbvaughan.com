@@ -22,9 +22,6 @@ outputFormats:
 permalinks:
   posts: /:filename
 
-pygmentsCodefences: true
-pygmentsStyle: gruvbox
-
 enableRobotsTXT: true
 
 disableKinds:
@@ -35,3 +32,5 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    style: gruvbox
