@@ -4,7 +4,7 @@ description: >
   The ever-changing workflow that I use to build and maintain this website.
 ---
 
-Maintaing and updating this website has become a hobby of mine, and I'm always
+Maintaining and updating this website has become a hobby of mine, and I'm always
 making changes to the way I manage it.
 This page is (hopefully) up-to-date documentation on the current process,
 both for myself and for anyone else who might be interested.
