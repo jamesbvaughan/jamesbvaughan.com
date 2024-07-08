@@ -4,18 +4,17 @@ languageCode: en-us
 
 title: james vaughan
 
-author:
-  name: James Vaughan
-  email: james@jamesbvaughan.com
-
 disqusShortname: jamesbvaughan
 
 params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline
+  author:
+    name: James Vaughan
+    email: james@jamesbvaughan.com
 
-outputFormats:
+outputs:
   RSS:
     baseName: feed
 
@@ -25,8 +24,7 @@ permalinks:
 enableRobotsTXT: true
 
 disableKinds:
-- taxonomy
-- taxonomyTerm
+  - taxonomy
 
 markup:
   goldmark:

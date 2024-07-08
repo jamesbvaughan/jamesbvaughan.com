@@ -1,3 +1,14 @@
 [build]
-  command = "yarn run build"
-  publish = "public"
+command = "yarn run build"
+publish = "public"
+
+[build.processing.html]
+pretty_urls = true
+
+# At some point, a change in Hugo or in my usage of it led to me mistakenly
+# generating a useless empty RSS feed at /feed.xml and linking to it from the
+# site. I've set up this redirect in case anything is still pointing to the
+# wrong feed URL.
+[[redirects]]
+from = "/feed.xml"
+to = "/blog/feed.xml"

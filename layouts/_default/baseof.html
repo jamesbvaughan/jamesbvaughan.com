@@ -14,7 +14,7 @@
   {{ template "_internal/opengraph.html" . }} {{ template "_internal/twitter_cards.html" . }} {{ template "_internal/schema.html" . }}
 
   <link rel="canonical" href="{{ .Page.Permalink }}" />
-  <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get " RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}" />
+  <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}" />
   <link rel="icon" href="/images/favicon.png" />
 
   <link rel="stylesheet" href="/styles/main.min.css" />
