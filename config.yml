@@ -14,10 +14,6 @@ params:
     name: James Vaughan
     email: james@jamesbvaughan.com
 
-outputs:
-  RSS:
-    baseName: feed
-
 permalinks:
   posts: /:filename
 

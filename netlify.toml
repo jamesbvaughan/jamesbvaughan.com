@@ -11,4 +11,10 @@ pretty_urls = true
 # wrong feed URL.
 [[redirects]]
 from = "/feed.xml"
-to = "/blog/feed.xml"
+to = "/blog/index.xml"
+[[redirects]]
+from = "/index.xml"
+to = "/blog/index.xml"
+[[redirects]]
+from = "/blog/feed.xml"
+to = "/blog/index.xml"
