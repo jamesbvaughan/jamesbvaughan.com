@@ -1,0 +1,9 @@
+hide_keymap_window: true
+proc_list_width: 17
+
+procs:
+  hugo:
+    shell: hugo server -D
+
+  tailwind:
+    shell: yarn --silent tailwindcss -i ./static/styles/main.css -o ./static/styles/main.min.css --watch
