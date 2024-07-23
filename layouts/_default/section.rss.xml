@@ -1,4 +1,4 @@
-{{- $pages := where .Site.RegularPages "Section" "posts" }}
+{{- $pages := .Pages }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>James Vaughan's blog</title>
