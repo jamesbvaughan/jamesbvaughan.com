@@ -1,8 +1,9 @@
 {{- $pages := where .Site.RegularPages "Section" "posts" }}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>James Vaughan's blog</title>
     <link>https://jamesbvaughan.com</link>
+    <webMaster>james@jamesbvaughan.com</webMaster>
     <atom:link rel="self" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}" />
     <description>James Vaughan's recent blog posts</description>
     <generator>Hugo</generator>
@@ -15,7 +16,9 @@
         <author>James Vaughan</author>
         <guid>{{ .Permalink }}</guid>
         <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006" | safeHTML }}</pubDate>
-        <description>{{ .Content | transform.XMLEscape | html }}</description>
+        <content:encoded>
+          {{ .Content | transform.XMLEscape | safeHTML }}
+        </content:encoded>
       </item>
     {{ end }}
   </channel>
