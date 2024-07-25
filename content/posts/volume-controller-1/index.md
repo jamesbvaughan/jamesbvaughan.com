@@ -1,6 +1,6 @@
 ---
 title: Reverse-engineering my speakers' API to get reasonable volume control
-date: 2024-07-21
+date: 2024-07-24
 sharing: false
 ---
 
