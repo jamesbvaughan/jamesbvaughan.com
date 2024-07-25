@@ -4,7 +4,7 @@ date: 2024-07-21
 sharing: false
 ---
 
-I got some fancy new speakers last week, but they're too loud and it's
+I got some fancy new speakers last week, but they're so loud that it's
 difficult to make small volume adjustments within the range of safe volume
 levels for my apartment.
 In this series of posts, I'll talk about building a custom volume knob for these
@@ -12,7 +12,7 @@ speakers in order to get finer control in the range I usually listen in.
 
 # Background
 
-I bought these JBLs to replace the 35 year old Kenwood speakers that I picked up
+I bought these JBLs to replace the 35-year-old Kenwood speakers that I picked up
 at a thrift store some years ago.
 
 ![The speakers](speakers.webp)
@@ -44,7 +44,7 @@ volume,
 giving me access to the full range of Spotify's volume controls.
 
 Some powered speakers solve this issue by providing control over the max volume,
-either by a physical knob or or by a software setting, but unfortunately these
+either by a physical knob or by a software setting, but unfortunately these
 JBLs do not.
 
 # My solution
@@ -60,8 +60,8 @@ Lo and behold, they do have an undocumented web interface!
 
 Sadly, the volume slider there was still not as convenient as I'd like.
 After exploring for a few minutes with my browser's network dev tools, I found
-that the the speakers expose a pretty straightforward HTTP API, including `GET
-/api/getData` and `POST /api/setData` which allow me to read and write the
+that the speakers expose a pretty straightforward HTTP API, including `GET
+/api/getData` and `POST /api/setData`, which allow me to read and write the
 current volume level, among other things.
 
 I put together a little web page with nothing but a full-width slider for
@@ -69,7 +69,7 @@ setting the volume, and I finally have a way to choose reasonable levels!
 
 ![A recording of the volume slider web page](volume-slider-recording.gif)
 
-I tried to write that as a single HTML file, but ran into CORS issues when
+I tried to do that in a single HTML file, but ran into CORS issues when
 sending requests to the speakers, so I put together a tiny server using Bun.
 With that, I was able to keep it down to a single TypeScript file with no
 dependencies other than Bun itself:
