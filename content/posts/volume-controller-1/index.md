@@ -4,57 +4,53 @@ date: 2024-07-21
 sharing: false
 ---
 
-I got some fancy new speakers last week, but they're so loud that it's
-difficult to make small volume adjustments within the range of safe volume
-levels for my apartment.
-In this series of posts, I'll talk about building a custom volume knob for these
-speakers in order to get finer control in the range I usually listen in.
+I got some fancy new speakers last week.
+
+They're powered speakers and they have streaming service integrations built in,
+unlike the 35-year-old passive speakers I'm upgrading from.
+Overall they're great!
+But they're so loud that it's difficult to make small volume adjustments within
+the range of safe volume levels for my apartment.
+
+To solve that, I'm building a custom volume knob for them them that will give me
+more precise control within the range I like to listen in.
 
 ![The speakers](speakers.webp)
 
-# Background
-
-I bought these JBLs to replace the 35-year-old Kenwood speakers that I picked up
-at a thrift store some years ago.
-
-Unlike those old Kenwoods, these are powered speakers, so they don't require an
-external amplifier.
-They also have wifi and music streaming service integrations built-in.
-This has allowed me to really simplify my setup, which used to include a big
-amplifier and a [WiiM Mini](https://wiimhome.com/wiimmini/overview) for
-streaming.
-
 # The problem
 
-The speakers sound great! But they're way louder than I need. I typically use
-less than 20% of the volume range they're capable of.
+The speakers sound great, but they're way louder than I need.
+I typically use about 10% of the volume range they're capable of.
 
-This becomes an issue when I try to change the volume from the volume buttons on
-my phone while streaming from Spotify, which is usually the most convenient way
-for me to change the volume.
-That method gives me about 15 steps, but the jump from step 3 to step 4 takes
-them from "a bit too quiet" to "definitely bothering the neighbors" levels.
+That makes it difficult to set the volume levels I prefer using the methods most
+convenient for me, which are either the regular volume controls on my phone or
+computer if I'm using AirPlay or the volume slider in Spotify if I'm using
+Spotify Connect.
+Those methods either give me a tiny slider that I can only use 10% of or about
+15 steps where the jump from step 3 to step 4 takes the speakers from
+"a bit too quiet" to "definitely bothering the neighbors" levels.
 
 The amp that I used to use was overpowered for my room too, but that wasn't an
-issue for me because the volume controls on my phone just changed the WiiM's
-output, not the amp.
+issue for me because those volume control methods attenuated the output of a
+music streamer that I had connected to the amp.
 With that system, I could set the amplifier's analog volume knob such that the
-max volume out of the WiiM corresponded to my actual maximum preferred listening
-volume,
-giving me access to the full range of Spotify's volume controls.
+max volume out of the streamer corresponded to my actual maximum preferred
+listening volume,
+giving me access to the full range of Spotify or AirPlay's volume controls.
 
 Some powered speakers solve this issue by providing control over the max volume,
 either by a physical knob or by a software setting, but unfortunately these
 JBLs do not.
 
-# My solution
+# Finding a solution
 
 While thinking about this problem, I remembered that some other
 network-connected audio devices I've encountered expose undocumented web
 interfaces.
 I was curious if these speakers did, so I found their local IP address via my
 router and navigated to that IP in my browser.
-Lo and behold, they do have an undocumented web interface!
+
+Lo and behold, they do have one!
 
 ![The speakers' web interface](web-interface.png)
 
@@ -62,10 +58,10 @@ Sadly, the volume slider there was still not as convenient as I'd like.
 
 ## Reverse-engineering the speakers' API
 
-After exploring for a few minutes with my browser's network dev tools, I found
-that the speakers expose a pretty straightforward HTTP API, including `GET
-/api/getData` and `POST /api/setData`, which allow me to read and write the
-current volume level, among other things.
+After exploring that web interface for a few minutes with my browser's network
+dev tools, I found that the speakers expose a pretty straightforward HTTP API,
+including `GET /api/getData` and `POST /api/setData`,
+which allow me to read and write the current volume level, among other things.
 
 I tried to find some documentation of this API online, but the closest I could
 find was [the source code for a Hombridge plugin for KEF
@@ -160,13 +156,17 @@ $ tree ~/Downloads/temp_data_logs
 ```
 
 That helped me track down two specific configuration paths that looked
-promising: `hostlink/maxVolume` and `player/attenuation`.
+promising: `player/attenuation` and `hostlink/maxVolume`.
 
 Sadly, neither of those turned out to be what I was looking for.
 
-`hostlink/maxVolume` doesn't seem to affect anything that I've noticed, and the
-API response implies that it has to do with [Arcam](https://www.arcam.co.uk/),
-yet another Samsung/Harman subsidiary.
+`player/attenuation` turned out to be another interface to the main volume,
+more-or-less an alias of `player:volume`.
+
+`hostlink/maxVolume` sounded like it could be exactly what I was hoping to find.
+Unfortunately, changing it doesn't seem to affect anything that I've noticed,
+and the API response implies that it has to do with
+[Arcam](https://www.arcam.co.uk/) (yet another Samsung/Harman subsidiary):
 
 ```bash
 $ curl --url 'http://192.168.1.239/api/getData?path=settings:/hostlink/maxVolume&roles=@all' | jq
@@ -186,9 +186,6 @@ $ curl --url 'http://192.168.1.239/api/getData?path=settings:/hostlink/maxVolume
   }
 }
 ```
-
-`player/attenuation` turned out to be another interface to the main volume,
-more-or-less an alias of `player:volume`.
 
 ## Building a custom volume-control webpage
 
@@ -213,6 +210,8 @@ dependencies other than Bun itself:
 const MAX_VOLUME = 25;
 const SPEAKER_URL = "http://192.168.1.239";
 const UPDATE_INTERVAL_SECONDS = 10;
+
+const getVolumeUrl = `${SPEAKER_URL}/api/getData?path=player:volume&roles=@all`;
 
 function html(strings: TemplateStringsArray, ...values: any[]) {
   return strings.reduce((result, string, i) => {
@@ -262,6 +261,8 @@ const pageHtml = html`<html>
       disabled
     />
     <script>
+      // Yes, this is JavaScript embedded in HTML embedded in TypeScript.
+
       function setBackgroundGradient() {
         const percentage = (volume.value / ${MAX_VOLUME}) * 100;
         document.body.style.setProperty("--volume", \`\${percentage}%\`);
@@ -304,8 +305,7 @@ const server = Bun.serve({
       case "/volume":
         switch (request.method) {
           case "GET": {
-            let url = `${SPEAKER_URL}/api/getData?path=player%3Avolume&roles=%40all`;
-            const response = await fetch(url);
+            const response = await fetch(getVolumeUrl);
             const body = await response.json();
             return new Response(body.value.i32_);
           }
@@ -315,6 +315,8 @@ const server = Bun.serve({
 
             console.log(`Setting volume to ${volume}.`);
 
+            // I don't want to blow out the speakers or go deaf because of a bug
+            // somewhere else in this code, so I check for high volumes here.
             if (volume > MAX_VOLUME) {
               console.error("That's too high!", volume);
               return new Response("Volume too high", { status: 500 });
@@ -357,8 +359,8 @@ This works alright for now, but what I really want is a _physical_ volume knob
 that I can place wherever it's convenient in my apartment.
 
 In the next post in this series, I'll talk about building that, probably using
-something like an ESP32 board with a rotary encoder.
-Something like this, with a nice enclosure and a nice feeling knob, maybe with
+something like an ESP32 board with a rotary encoder,
+a nice enclosure and a nice feeling knob, maybe with
 some kind of haptic feedback for the stepped volume changes?
 
 ![Some of the components I might use](parts.webp)
