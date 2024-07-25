@@ -5,7 +5,6 @@
     <link>https://jamesbvaughan.com</link>
     <webMaster>james@jamesbvaughan.com</webMaster>
     <atom:link rel="self" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}" />
-    <description>James Vaughan's recent blog posts</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006" | safeHTML }}</lastBuildDate>
