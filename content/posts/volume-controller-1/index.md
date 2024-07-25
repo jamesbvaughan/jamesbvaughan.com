@@ -2,6 +2,9 @@
 title: Reverse-engineering my speakers' API to get reasonable volume control
 date: 2024-07-24
 sharing: false
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=41069606
 ---
 
 I got some fancy new speakers last week.
