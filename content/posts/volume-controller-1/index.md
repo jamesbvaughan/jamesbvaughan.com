@@ -69,9 +69,9 @@ which allow me to read and write the current volume level, among other things.
 I tried to find some documentation of this API online, but the closest I could
 find was [the source code for a Hombridge plugin for KEF
 speakers](https://github.com/jhnvz/homebridge-kef/blob/c3aeb327a1dcc6bfa9329513820315dbc18debd1/src/kef.ts#L200).
-It seems like KEF's and JBL's network-connected speakers share some code, which
+It seems like KEF's and JBL's network-connected speakers share some code, ~~which
 isn't too surprising given that they're both owned by
-[Harman](https://en.wikipedia.org/wiki/Harman_International)
+[Harman](https://en.wikipedia.org/wiki/Harman_International)~~ [^1]
 (which is apparently [owned by Samsung as of
 2017](https://www.digitaltrends.com/business/samsung-harman-acquisition/)!)
 
@@ -370,3 +370,11 @@ some kind of haptic feedback for the stepped volume changes?
 
 I haven't actually worked with those components before, and it's been a while
 since I last worked on a hardware electronics project, but I'm excited to!
+
+[^1]:
+    Someone on Hacker News [pointed
+    out](https://news.ycombinator.com/item?id=41084153) that KEF is not owned by Harman.
+    My mistake! KEF is owned by [Gold
+    Peak](https://en.wikipedia.org/wiki/Gold_Peak).
+    I dug into the API similarities more and it seems like both JBL and KEF
+    networked speakers run [StreamSDK](https://www.streamunlimited.com/stream-sdk/).
