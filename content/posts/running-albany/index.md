@@ -19,7 +19,7 @@ I live in Albany, California, which is way smaller than Pittsburgh, but I'm way 
 
 I've started documenting my progress on this Felt map:
 
-{{< felt-map title="Albany Run Project map on Felt" src="https://felt.com/embed/map/Albany-Run-Project-1ehUhxDPTPeYE3lYCK0bpC?lat=37.889134&lon=-122.300928&zoom=13.762" >}}
+{{< felt-map title="Albany Run Project map on Felt" src="https://felt.com/embed/map/Albany-Run-Project-copy-9C7rWkQO3QQCvSMkWXCZdrD?loc=37.88782%2C-122.30317%2C13.69z&legend=0" >}}
 
 Like I said, it's a lot smaller than Pittsburgh, but if I finish this and am feeling strong, I may bump my goal up to something more ambitious.
 
