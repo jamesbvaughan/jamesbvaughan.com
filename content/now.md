@@ -6,23 +6,26 @@ description: what I've been up to lately
 (This is a [now page](https://nownownow.com/about). If you have your own
 site, [consider making one too](https://nownownow.com/about)!)
 
+Last updated on September 30, 2024.
+
+# working
+
+I recently passed 2 years at [Arcol](https://arcol.io) and I'm more excited
+about it than ever.
+I get to work on interesting and challenging problems with coworkers that I
+admire.
+(We're hiring! [Email me](mailto:james@arcol.io) if you're interested.)
+
+# climbing, slacklining, and running
+
+After a multi-year streak of struggling to maintain a regular exercise routine,
+I've finally got one to stick.
+I'm climbing twice a week, running 2-3 times a week, and getting together with
+some slackliners in Berkeley every Thursday evening.
+
 # playing music
 
-I've mostly been practicing guitar, piano, and drums, but have also started
-recording some things to push myself to work on songwriting and composing.
-
-I recently began posting some recordings
-[on Instagram](https://instagram.com/jamesmakessounds).
-I was nervous to post those publicly at first, since I want to make things
-perfect before I share them and don't feel like I have the skills to make
-things perfect yet, but it's been a good motivator for me and has pushed me to
-actually finish small pieces and start showing them to friends.
-
-# thinking about software and people
-
-I read [Andy Matuschak and Michael Nielsen's paper on tools for thought](https://numinous.productions/ttft/)
-last year and it's had a huge influence on my interests since then.
-I'm fascinated by the idea that new transformative tools for thought could
-(and hopefully will) be developed.
-I've had fun continuing to explore this topic and learn more about the
-people that are actively working on it.
+Sadly, this has taken the backseat compared to the other two items on this list
+lately.
+I'm still spending some time practicing piano and guitar, but not enough to feel
+like I'm making much progress.
