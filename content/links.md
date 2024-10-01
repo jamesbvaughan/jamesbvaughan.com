@@ -4,8 +4,8 @@ description: things on the internet that I've found valuable
 ---
 
 This page is a sort of public bookmark list for links to things on the internet
-that I've found interesting or valuable. 
-It was last updated in July 2020.
+that I've found interesting or valuable.
+It was last updated in September 2024.
 
 # Movies
 
@@ -62,21 +62,12 @@ It was last updated in July 2020.
   drum grooves of all time, curated by Jack Stratton of Vulfpeck. I've found it
   to be super helpful when looking for groove inspiration.
 
-# Programming
-
-- [Netlify](https://www.netlify.com/) - Netlify provides a set of tools that
-  make it easy to build websites with little-to-no backend code. I use it to
-  host this website (which it rebuilds automatically with every new commit to
-  master), to host a few "Serverless" functions for it, and to collect
-  server-side-only analytics so that I don't have to send you any javascript
-  tracking junk when you visit this site.
-
 # Social
 
 - [Couchsurfing](https://couchsurfing.com) - This one had been on my radar for
-  a long time but I didn't start using it until this year. Since joining, I've
-  hosted about a dozen travelers from all over the world at my place and it's
-  been a lot of fun. Some people get pretty sketched out by the concept of
+  a long time but I didn't start using it until this year (2019). Since joining,
+  I've hosted about a dozen travelers from all over the world at my place and
+  it's been a lot of fun. Some people get pretty sketched out by the concept of
   letting strangers stay in your home, but I think you can minimize the risk
   by checking up on people's social media profiles before offering to host them,
   and reading through their reviews from previous hosts.
@@ -104,9 +95,7 @@ don't know personally.
   Patrick's site (like his
   [list of interesting questions](https://patrickcollison.com/)
   or his
-  [list of impressively fast projects](https://patrickcollison.com/fast))
-  but I do wish it had just a bit more styling to make it nicer to navigate and
-  read on mobile.
+  [list of impressively fast projects](https://patrickcollison.com/fast)).
 
 - [Nadia Eghbal](https://nadiaeghbal.com/) - I think Nadia has done some really
   interesting work, and she also has
@@ -132,6 +121,13 @@ don't know personally.
   [now pages](https://nownownow.com/about)
   ([his](https://sivers.org/now), [mine](/now)).
 
+- [Robin Sloan](https://www.robinsloan.com/) - Robin has quickly become one of
+  my favorite writers on the internet. I love his newsletters, his novels, and
+  even [his olive oil](https://fat.gold/?utm_source=James_Vaughan_sent_me)!
+
+- [Anh](https://anhvn.com/) - This is a beautiful homepage that Robin Sloan
+  pointed me to in a newsletter post.
+
 # Miscellaneous Cool Websites
 
 - [Poolside FM](https://poolside.fm/)
@@ -145,3 +141,4 @@ don't know personally.
 - [Every Noise at Once](http://everynoise.com/)
 - [Mukitap](https://aidn.jp/mikutap/)
 - [mapscii.me](https://mapscii.me) (try `$ telnet mapscii.me`, move with arrows, a/z to zoom)
+- [Bop Spotter](https://walzr.com/bop-spotter)
