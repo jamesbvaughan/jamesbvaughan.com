@@ -54,13 +54,8 @@ I've written about how I build and manage this site
 [here](/how-i-make-this-site).
 
 <script>
-  ['song', 'movie'].forEach(item =>
-    fetch(`/.netlify/functions/${item}`)
-    .then(r => {
-      if (r.status !== 200) throw `recieved status ${r.status}`
-      return r.text()
-    })
-    .then(body => document.getElementById(item).innerHTML = ` (${body.trim()})`)
-    .catch(console.error)
-  )
+  [song, movie].forEach(async element => {
+    const {ok, text} = await fetch(`/.netlify/functions/${element.id}`);
+    if (ok) element.innerHTML = ` (${(await text()).trim()})`;
+  });
 </script>
