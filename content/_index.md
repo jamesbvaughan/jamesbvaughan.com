@@ -55,7 +55,7 @@ I've written about how I build and manage this site
 
 <script>
   [song, movie].forEach(async element => {
-    const {ok, body} = await fetch(`/.netlify/functions/${element.id}`);
-    if (ok) element.innerHTML = ` (${(await body.text()).trim()})`;
+    const response = await fetch(`/.netlify/functions/${element.id}`);
+    if (response.ok) element.innerHTML = ` (${(await response.text()).trim()})`;
   });
 </script>
