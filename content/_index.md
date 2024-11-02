@@ -28,6 +28,8 @@ movies<span id="movie"></span>.
 - {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
 - {{< link href="https://www.mountainproject.com/user/112201703/james-vaughan" rel="me" >}}mountain project{{< /link >}}
 - {{< link href="https://indieweb.social/@jamesbvaughan" rel="me" >}}mastodon{{< /link >}}
+- {{< link href="https://bsky.app/profile/jamesbvaughan.com" rel="me" >}}bluesky{{< /link >}}
+- {{< link href="https://concertboard.com/jamesbvaughan" rel="me" >}}concert board{{< /link >}}
 
 # selected projects
 
