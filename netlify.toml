@@ -1,5 +1,5 @@
 [build]
-command = "yarn run build"
+command = "bun run build"
 publish = "public"
 
 [build.processing.html]

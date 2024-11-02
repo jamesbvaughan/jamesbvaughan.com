@@ -4,12 +4,12 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "yarn run build:tailwind && yarn run build:hugo",
+    "build": "bun run build:tailwind && bun run build:hugo",
     "build:hugo": "hugo",
     "build:tailwind": "tailwindcss --minify -i ./static/styles/main.css -o ./static/styles/main.min.css",
     "start:hugo": "hugo server -D",
     "start:tailwind": "tailwindcss -i ./static/styles/main.css -o ./static/styles/main.min.css --watch",
-    "start": "concurrently -n hugo,tailwind yarn:start:hugo yarn:start:tailwind"
+    "start": "concurrently -n hugo,tailwind 'bun run start:hugo' 'bun run start:tailwind'"
   },
   "dependencies": {
     "@netlify/functions": "^1.3.0",
