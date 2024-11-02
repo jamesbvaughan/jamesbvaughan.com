@@ -78,7 +78,7 @@ successfully.
 (Another common response code you've probably heard of is `404`,
 which indicates that the requested object was not found on the server.)
 
-After the response headers is a blank line and then the *response body*,
+After the response headers is a blank line and then the _response body_,
 in this case a bunch of HTML that our web browsers render as a
 (hopefully) beautiful web page.
 
@@ -106,9 +106,9 @@ username=james_is_cool&password=super_secret
 ```
 
 As you can see, this request is pretty similar to a GET request,
-but it has an extra part at the bottom. 
-This is called the *body* of the request and must be separated from the
-request *headers* by a blank line.
+but it has an extra part at the bottom.
+This is called the _body_ of the request and must be separated from the
+request _headers_ by a blank line.
 The header `Content-Type: application/x-www-form-urlencoded`
 tells the server how the POST request body is encoded.
 Another common way to encode data in a POST request is JSON.
@@ -143,13 +143,13 @@ Node.js webserver that can handle a simple request using the
 [express](http://expressjs.com/) library:
 
 ```javascript
-const app = require('express')()
+const app = require("express")();
 
-app.get('/example-path', (request, response) => {
-  response.send('example response')
-})
+app.get("/example-path", (request, response) => {
+  response.send("example response");
+});
 
-app.listen(80)
+app.listen(80);
 ```
 
 As you may have guessed,
@@ -159,23 +159,23 @@ and then sends back the text `example response`.
 Handling a POST request is a bit more complex, but similar:
 
 ```javascript
-const bodyParser = require('body-parser')
+const bodyParser = require("body-parser");
 
 app.use(bodyParser.json()); // for parsing application/json
 
-app.post('/add-book', (request, response) => {
-  const title = request.body.title
-  const author = request.body.author
-  
-  // this is where you would do something interesting with the data
-  addBook(title, author)
-  
-  response.redirect('/success')
-})
+app.post("/add-book", (request, response) => {
+  const title = request.body.title;
+  const author = request.body.author;
 
-app.get('/success', (request, response) => {
-  response.send('submitted book successfully')
-})
+  // this is where you would do something interesting with the data
+  addBook(title, author);
+
+  response.redirect("/success");
+});
+
+app.get("/success", (request, response) => {
+  response.send("submitted book successfully");
+});
 ```
 
 In this example, we have to add two lines of code that tell express
@@ -200,9 +200,9 @@ app = Flask(__name__)
 def addBookHandler():
     title = request.form['title']
     author = request.form['author']
-    
+
     addBook(title, author)
-    
+
     return redirect('/success')
 
 @app.route('/success')
