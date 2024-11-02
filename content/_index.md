@@ -47,11 +47,6 @@ Reach out if you'd like to chat about new ideas, work together, or get coffee.
 
 # about this website
 
-This is mostly a place for me to share [things that I write](/blog),
-but it's also home to some little projects of mine,
-like [this page that lists my favorite albums](/albums) or
-[this list of links that I think are cool](/links).
-
 I've written about how I build and manage this site
 [here](/how-i-make-this-site).
 
