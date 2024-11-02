@@ -22,6 +22,11 @@ enableRobotsTXT: true
 disableKinds:
   - taxonomy
 
+build:
+  cachebusters:
+    - source: layouts/.*
+      target: css
+
 markup:
   goldmark:
     renderer:

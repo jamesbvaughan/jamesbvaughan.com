@@ -11,13 +11,27 @@
     {{ block "browser-title" . }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}
   </title>
 
-  {{ template "_internal/opengraph.html" . }} {{ template "_internal/twitter_cards.html" . }} {{ template "_internal/schema.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/schema.html" . }}
 
   <link rel="canonical" href="{{ .Page.Permalink }}" />
-  <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}" />
-  <link rel="icon" href="/images/favicon.png" />
 
-  <link rel="stylesheet" href="/styles/main.min.css" />
+  {{ $siteTitle := .Site.Title }}
+  {{ with .OutputFormats.Get "RSS" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $siteTitle }}" />
+  {{ end }}
+
+  {{ with resources.Get "images/favicon.png" | fingerprint }}
+    <link rel="icon" href="{{ .Permalink }}" />
+  {{ end }}
+
+  {{ with resources.Get "css/main.css" }}
+    {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
+    {{ with . | css.TailwindCSS $opts | fingerprint }}
+      <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{ end }}
+  {{ end }}
 </head>
 
 <body class="px-4 sm:px-2 py-8 bg-stone-100 text-stone-700 dark:bg-stone-900 dark:text-stone-300">

@@ -4,12 +4,8 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "bun run build:tailwind && bun run build:hugo",
-    "build:hugo": "hugo",
-    "build:tailwind": "tailwindcss --minify -i ./static/styles/main.css -o ./static/styles/main.min.css",
-    "start:hugo": "hugo server -D",
-    "start:tailwind": "tailwindcss -i ./static/styles/main.css -o ./static/styles/main.min.css --watch",
-    "start": "concurrently -n hugo,tailwind 'bun run start:hugo' 'bun run start:tailwind'"
+    "build": "hugo",
+    "dev": "hugo server --buildDrafts --port 1314"
   },
   "dependencies": {
     "@netlify/functions": "^1.3.0",
@@ -17,13 +13,16 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "next",
     "@types/xml2js": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "concurrently": "^7.5.0",
     "eslint": "^8.28.0",
     "netlify-cli": "^12.2.4",
-    "tailwindcss": "^3.2.4",
+    "prettier": "^3.3.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "tailwindcss": "next",
     "typescript": "^4.9.3"
   }
 }
