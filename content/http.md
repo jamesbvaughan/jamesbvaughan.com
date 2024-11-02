@@ -2,6 +2,9 @@
 title: HTTP
 ---
 
+_Note from 2024-11-02: I wrote this as a guide for a friend when I was in
+college in 2018._
+
 HTTP, or "Hypertext Transfer Protocol", is one of the most common protocols
 that computers use to talk to each other.
 
