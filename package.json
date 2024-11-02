@@ -4,8 +4,7 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "yarn run build:albums && yarn run build:tailwind && yarn run build:hugo",
-    "build:albums": "cd content/albums && elm make src/Main.elm --optimize --output albums.js",
+    "build": "yarn run build:tailwind && yarn run build:hugo",
     "build:hugo": "hugo",
     "build:tailwind": "tailwindcss --minify -i ./static/styles/main.css -o ./static/styles/main.min.css",
     "start:hugo": "hugo server -D",
@@ -22,7 +21,6 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "concurrently": "^7.5.0",
-    "elm": "^0.19.1-5",
     "eslint": "^8.28.0",
     "netlify-cli": "^12.2.4",
     "tailwindcss": "^3.2.4",
