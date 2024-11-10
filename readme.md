@@ -11,11 +11,6 @@ I don't make changes to my site very frequently,
 so documenting the development process a bit really helps when I can't
 remember how certain things are supposed to work.
 
-### Albums Page
-
-I made this page mostly as an excuse to write some Elm code.
-The source for it is in `content/albums`.
-
 ### Deploying Changes
 
 Just commit and push, and Netlify will handle the rest and should email you if

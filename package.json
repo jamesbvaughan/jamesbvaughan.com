@@ -4,26 +4,18 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build:functions": "bun build functions-src/*.ts --outdir functions --minify",
-    "build:hugo": "hugo --minify --printPathWarnings",
-    "build": "bun run build:hugo",
+    "build": "hugo --minify --printPathWarnings",
     "dev": "hugo server --buildDrafts --port 1314"
   },
   "dependencies": {
-    "@netlify/functions": "^1.3.0",
-    "fast-xml-parser": "^4.5.0",
-    "node-fetch": "^3.3.0",
-    "xml2js": "^0.4.23"
+    "fast-xml-parser": "^4.5.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
     "@tailwindcss/cli": "next",
-    "@types/xml2js": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
-    "concurrently": "^7.5.0",
     "eslint": "^8.28.0",
-    "netlify-cli": "^12.2.4",
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "next",
