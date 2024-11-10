@@ -6,7 +6,7 @@
   "scripts": {
     "build:functions": "bun build functions-src/*.ts --outdir functions --minify",
     "build:hugo": "hugo --minify --printPathWarnings",
-    "build": "bun run build:functions && bun run build:hugo",
+    "build": "bun run build:hugo",
     "dev": "hugo server --buildDrafts --port 1314"
   },
   "dependencies": {
