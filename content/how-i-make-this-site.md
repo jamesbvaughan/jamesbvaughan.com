@@ -22,22 +22,20 @@ into a bunch of HTML that I can serve as this website.
 
 # builds and deploys
 
-I host these static files on [Netlify](https://www.netlify.com/).
-Each time I push a new commit to the `main` branch in GitHub, Netlify kicks off
-a new build, which compiles
-[a few serverless functions](https://github.com/jamesbvaughan/jamesbvaughan.com/tree/main/functions/src)
+I host these static files on [Cloudflare Pages](https://pages.cloudflare.com/).
+Each time I push a new commit to the `main` branch in GitHub, Cloudflare kicks
+off a new build, which bundles
+[a few serverless functions](https://github.com/jamesbvaughan/jamesbvaughan.com/tree/main/functions)
 and builds the site with Hugo.
 
-If the build fails, Netlify sends me an email with a link to build logs to help
-me diagnose the failure.
 If the build succeeds, an updated version of the site is published!
 
 # javascript
 
-I think JavaScript can be really cool, but I try to keep this site free from it
-unless it's necessary for some functionality that I want to provide.
+I like JavaScript! But I try to keep this site free from it unless it's
+necessary for some functionality that I want to provide.
 
-At the time of this writing, the only uses of Javascript on the site are:
+At the time of this writing, the only uses of JavaScript on the site are:
 
 - [A few lines at the bottom of my homepage](https://raw.githubusercontent.com/jamesbvaughan/jamesbvaughan.com/main/content/_index.md)
   that fetch the most recent song I've listened to and movie I've watched.
