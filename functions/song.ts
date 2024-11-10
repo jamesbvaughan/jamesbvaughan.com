@@ -3,7 +3,7 @@ interface Env {
 }
 
 export const onRequest: PagesFunction<Env> = async (context) => {
-  const lastfmURL = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&format=json&api_key=${context.env.LAST_FM_API_KEY}`
+  const lastfmURL = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=magicjamesv&format=json&api_key=${context.env.LAST_FM_API_KEY}`;
 
   const response = await fetch(lastfmURL);
   const data = await response.json();

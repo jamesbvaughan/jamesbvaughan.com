@@ -40,10 +40,9 @@ movies<span id="movie"></span>.
 - [Inside Patterns](https://insidepatterns.com/) (2022) - My collection of interior design and decorating patterns inspired by _A Pattern Language_
 
 # get in touch
-
-I'm at {{< link href="mailto:james@jamesbvaughan.com" rel="me" >}}james@jamesbvaughan.com{{< /link >}} and love hearing from new people.
-
-Reach out if you'd like to chat about new ideas, work together, or get coffee.
+Email me at
+{{< link href="mailto:james@jamesbvaughan.com" rel="me" >}}james@jamesbvaughan.com{{< /link >}}
+if you'd like to get in contact for any reason.
 
 # about this website
 

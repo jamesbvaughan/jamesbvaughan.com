@@ -1,55 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="James Vaughan" />
+    <meta name="description" content="{{ .Render "summary" }}" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="author" content="James Vaughan" />
-  <meta name="description" content="{{ .Render "summary" }}" />
-
-  <title>
-    {{ block "browser-title" . }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}
-  </title>
-
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/schema.html" . }}
-
-  <link rel="canonical" href="{{ .Page.Permalink }}" />
-
-  {{ $siteTitle := .Site.Title }}
-  {{ with .OutputFormats.Get "RSS" }}
-    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $siteTitle }}" />
-  {{ end }}
-
-  {{ with resources.Get "images/favicon.png" | fingerprint }}
-    <link rel="icon" href="{{ .Permalink }}" />
-  {{ end }}
-
-  {{ with resources.Get "css/main.css" }}
-    {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
-    {{ with . | css.TailwindCSS $opts | fingerprint }}
-      <link rel="stylesheet" href="{{ .Permalink }}" />
-    {{ end }}
-  {{ end }}
-</head>
-
-<body class="px-4 sm:px-2 py-8 bg-stone-100 text-stone-700 dark:bg-stone-900 dark:text-stone-300">
-  <div class="max-w-[720px] mx-auto space-y-8">
-    {{ partial "nav.html" . }}
-
-    <main class="space-y-6">
-      <h1>{{ block "title" . }} {{ .Title }} {{ end }}</h1>
-
-      {{ block "main" . }}
-      <div>{{ .Content }}</div>
+    <title>
+      {{ block "browser-title" . }}
+        {{ if .Title }}{{ .Title }} -{{ end }}{{ .Site.Title }}
       {{ end }}
-    </main>
-  </div>
+    </title>
 
-  <div class="h-card" hidden>
-    {{ partial "h-card.html" . }}
-  </div>
-</body>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/schema.html" . }}
 
+
+    <link rel="canonical" href="{{ .Page.Permalink }}" />
+
+    {{ $siteTitle := .Site.Title }}
+    {{ with .OutputFormats.Get "RSS" }}
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        href="{{ .Permalink }}"
+        title="{{ $siteTitle }}"
+      />
+    {{ end }}
+
+    {{ with resources.Get "images/favicon.png" | fingerprint }}
+      <link rel="icon" href="{{ .Permalink }}" />
+    {{ end }}
+
+    {{ with resources.Get "css/main.css" }}
+      {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
+      {{ with . | css.TailwindCSS $opts | fingerprint }}
+        <link rel="stylesheet" href="{{ .Permalink }}" />
+      {{ end }}
+    {{ end }}
+  </head>
+
+  <body
+    class="bg-stone-100 px-4 py-8 text-stone-700 sm:px-2 dark:bg-stone-900 dark:text-stone-300"
+  >
+    <div class="mx-auto max-w-[720px] space-y-8">
+      {{ partial "nav.html" . }}
+
+
+      <main class="space-y-6">
+        <h1>{{ block "title" . }}{{ .Title }}{{ end }}</h1>
+
+        {{ block "main" . }}
+          <div>{{ .Content }}</div>
+        {{ end }}
+      </main>
+    </div>
+
+    <div class="h-card" hidden>
+      {{ partial "h-card.html" . }}
+    </div>
+  </body>
 </html>

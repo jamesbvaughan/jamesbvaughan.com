@@ -6,19 +6,19 @@
   }
 
   article h1 {
-    @apply text-3xl mt-8;
+    @apply mt-8 text-3xl;
   }
 
   article h2 {
-    @apply text-2xl font-bold mt-6;
+    @apply mt-6 text-2xl font-bold;
   }
 
   article h3 {
-    @apply text-xl font-bold mt-6;
+    @apply mt-6 text-xl font-bold;
   }
 
   ol {
-    @apply list-decimal ml-8;
+    @apply ml-8 list-decimal;
   }
 
   p {
@@ -38,12 +38,12 @@
   }
 
   blockquote {
-    @apply pl-4 border-white border-l-2 italic;
+    @apply border-l-2 border-white pl-4 italic;
   }
 }
 
 @layer components {
   .highlight pre {
-    @apply p-2 text-sm overflow-auto;
+    @apply overflow-auto p-2 text-sm;
   }
 }

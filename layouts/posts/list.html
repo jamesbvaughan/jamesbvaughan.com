@@ -1,23 +1,28 @@
-{{ define "main" }} {{ .Content }} {{ partial "post-list.html" .Data.Pages }}
-<div>
-  <h3>
-    <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="flex items-center">
-      {{ partial "rss-icon.html" . }}&nbsp;RSS Feed
-    </a>
-  </h3>
+{{ define "main" }}
+  {{ .Content }}
+  {{ partial "post-list.html" .Data.Pages }}
+  <div>
+    <h3>
+      <a
+        href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"
+        class="flex items-center"
+      >
+        {{ partial "rss-icon.html" . }}&nbsp;RSS Feed
+      </a>
+    </h3>
 
-  <p>
-    RSS is great. It's a protocol that lets you subscribe to sites like this
-    that publish content that can be represented as a feed. In order to use RSS,
-    you'll need an
-    <a href="https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators"
-      >RSS reader</a
-    >. I like to follow things with RSS reader because it lets me see all of the
-    feeds I subscribe to in one place, in a consistent format, with fewer
-    distractions, and without an algorithm telling me which articles and blog
-    posts I should like. RSS isn't perfect, but I think it's the best
-    widely-available solution for keeping up with work from people that I
-    admire.
-  </p>
-</div>
+    <p>
+      RSS is great. It's a protocol that lets you subscribe to sites like this
+      that publish content that can be represented as a feed. In order to use
+      RSS, you'll need an
+      <a href="https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators"
+        >RSS reader</a
+      >. I like to follow things with RSS reader because it lets me see all of
+      the feeds I subscribe to in one place, in a consistent format, with fewer
+      distractions, and without an algorithm telling me which articles and blog
+      posts I should like. RSS isn't perfect, but I think it's the best
+      widely-available solution for keeping up with work from people that I
+      admire.
+    </p>
+  </div>
 {{ end }}

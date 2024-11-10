@@ -7,10 +7,10 @@
     {{ end }}
     {{ if not .p1.IsHome }}
       {{ if not (eq .p1 .p2) }}
-      <a class="color-inherit hover-black" href="{{ .p1.Permalink }}">
-        {{ .p1.Title }}
-      </a>
-      /
+        <a class="color-inherit hover-black" href="{{ .p1.Permalink }}">
+          {{ .p1.Title }}
+        </a>
+        /
       {{ end }}
     {{ end }}
   </span>

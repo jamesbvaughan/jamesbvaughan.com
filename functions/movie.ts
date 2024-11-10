@@ -17,7 +17,7 @@ export const onRequest = async () => {
   const titleText = item.title;
   const title = titleText.match(/(.*),/)[1]; // Extracting title part before comma
 
-  return new Response(`The last movie I watched was <a href="${url}">${title}</a>`, {
-    headers: { "Content-Type": "text/html" },
-  });
+  return new Response(
+    `The last movie I watched was <a href="${url}">${title}</a>`,
+  );
 };

@@ -1,11 +1,16 @@
 <div class="space-y-4">
   {{ range . }}
     <div>
-      <a class="text-2xl font-bold text-stone-700 dark:text-stone-300" href="{{ .RelPermalink }}">
+      <a
+        class="text-2xl font-bold text-stone-700 dark:text-stone-300"
+        href="{{ .RelPermalink }}"
+      >
         {{ .Render "title" }}
       </a>
       <br />
-      <time class="text-stone-400 text-base">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <time class="text-base text-stone-400"
+        >{{ .Date.Format "Jan 2, 2006" }}</time
+      >
     </div>
   {{ end }}
 </div>

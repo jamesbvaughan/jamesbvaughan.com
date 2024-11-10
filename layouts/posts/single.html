@@ -1,5 +1,6 @@
 {{ define "browser-title" }}
-  {{ .Render "title" | htmlUnescape | plainify }} - {{ .Site.Title }}
+  {{ .Render "title" | htmlUnescape | plainify }} -
+  {{ .Site.Title }}
 {{ end }}
 
 {{ define "title" }}
@@ -7,48 +8,50 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="h-entry">
-  <div hidden>
-    <div class="p-name">
-      {{ .Render "title" }}
+  <article class="h-entry">
+    <div hidden>
+      <div class="p-name">
+        {{ .Render "title" }}
+      </div>
+
+      <a class="u-url" href="{{ .Permalink }}">
+        Published:
+        <time class="dt-published">
+          {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
+        </time>
+      </a>
+
+      <div class="p-author h-card">
+        {{ partial "h-card.html" . }}
+      </div>
+
+      {{ range .Params.syndication }}
+        <a class="u-syndication" href="{{ .url }}" rel="syndication"
+          >{{ .site_name }}</a
+        >
+      {{ end }}
     </div>
 
-    <a class="u-url" href="{{ .Permalink }}">
-      Published:
-      <time class="dt-published">
-        {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
-      </time>
-    </a>
+    <time class="text-stone-400">
+      {{ .Date.Format "January 2, 2006" }}
+    </time>
 
-    <div class="p-author h-card">
-      {{ partial "h-card.html" . }}
+    <div class="e-content break-words">
+      {{ .Content }}
     </div>
 
-    {{ range .Params.syndication }}
-      <a class="u-syndication" href="{{ .url }}" rel="syndication">{{ .site_name }}</a>
+    {{ if isset .Params "footer" }}
+      {{ partial .Params.footer . }}
+      <br />
     {{ end }}
-  </div>
 
-  <time class="text-stone-400">
-    {{ .Date.Format "January 2, 2006" }}
-  </time>
+    {{ if isset .Params "discussion_links" }}
+      {{ partial "discussion-links.html" . }}
+    {{ end }}
+  </article>
 
-  <div class="e-content break-words">
-    {{ .Content }}
-  </div>
-
-  {{ if isset .Params "footer" }}
-    {{ partial .Params.footer . }}
-    <br />
+  {{ range .Params.scripts }}
+    <script defer src="{{ . }}"></script>
   {{ end }}
-
-  {{ if isset .Params "discussion_links" }}
-    {{ partial "discussion-links.html" . }}
-  {{ end }}
-</article>
-
-{{ range .Params.scripts }}
-  <script defer src="{{ . }}"></script>
-{{ end }}
 
 {{ end }}
