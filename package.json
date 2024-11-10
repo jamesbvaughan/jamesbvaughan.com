@@ -13,6 +13,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
     "@tailwindcss/cli": "next",
     "@types/xml2js": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
@@ -23,6 +24,6 @@
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "next",
-    "typescript": "^4.9.3"
+    "typescript": "^5.6.3"
   }
 }
