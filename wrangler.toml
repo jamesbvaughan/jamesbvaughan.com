@@ -2,3 +2,6 @@ name = "jamesbvaughan-com"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "public"
+
+[vars]
+HUGO_VERSION = "0.134.3"
