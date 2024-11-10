@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const letterboxdURL = "https://letterboxd.com/jamesbvaughan/rss";
 
 export const onRequest = async () => {

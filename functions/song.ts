@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 interface Env {
   LAST_FM_API_KEY: string;
 }
