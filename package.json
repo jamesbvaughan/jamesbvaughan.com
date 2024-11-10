@@ -4,7 +4,7 @@
   "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
-    "build": "hugo",
+    "build": "hugo --minify --printPathWarnings",
     "dev": "hugo server --buildDrafts --port 1314"
   },
   "dependencies": {
