@@ -1,0 +1,42 @@
+<div class="mb-2 bg-gray-100/5 p-2">
+  <audio id="audio-{{ .Get "id" }}" preload="auto">
+    <source src="{{ .Get "src" }}" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="flex items-center space-x-4">
+    <button
+      class="cursor-pointer text-6xl hover:opacity-50 active:opacity-70 hover:active:opacity-70"
+      onclick="restartAudio('{{ .Get "id" }}')"
+    >
+      ▶️
+    </button>
+
+    <div class="grow items-center justify-between sm:flex">
+      <div>
+        <div class="text-xl">{{ .Get "name" }}</div>
+        {{ if .Get "artist" }}
+          <div class="text-sm italic opacity-75">{{ .Get "artist" }}</div>
+        {{ end }}
+      </div>
+
+      {{ if .Get "downloadable" }}
+        <a href="{{ .Get "src" }}" download>
+          download
+          {{ .Get "src" }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<script>
+  function restartAudio(id) {
+    const audio = document.getElementById("audio-" + id);
+    if (!audio.paused) {
+      audio.currentTime = 0;
+    } else {
+      audio.play();
+    }
+  }
+</script>
