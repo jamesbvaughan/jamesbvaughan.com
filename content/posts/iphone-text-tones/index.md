@@ -4,7 +4,7 @@ date: 2024-11-11
 sharing: false
 discussion_links:
   - site_name: Hacker News
-    url: https://news.ycombinator.com/item?id=42117905
+    url: https://news.ycombinator.com/item?id=42117983
 ---
 
 I made some custom text notification tones for my phone today.
