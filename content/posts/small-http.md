@@ -1,6 +1,9 @@
 ---
 title: The smallest (useful) HTTP responses possible
 date: "2024-11-02"
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=42043743
 ---
 
 I recently did a little experiment to see how small (in bytes) I could make
