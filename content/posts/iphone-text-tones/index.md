@@ -6,7 +6,7 @@ sharing: false
 
 I made some custom text notification tones for my phone today.
 
-![My synth setup](synth-setup.jpg)
+{{< img "synth-setup.jpg" "My synth setup" >}}
 
 I like the default iPhone text tone:
 
@@ -44,7 +44,7 @@ if they can't put their finger on it.
 
 After that, I made my own sounds from scratch using some synths.
 
-![A modular synth patch](synth-closeup.jpg)
+{{< img "synth-closeup.jpg" "A modular synth patch" >}}
 
 For the first of these, I tried to match the original but with my own touch:
 
@@ -101,7 +101,7 @@ These came out pretty dissonant, which is not surprising in retrospect since
 those three notes were meant to be played in sequence as a melody rather than as
 a chord.
 
-![A close-up of the modular synth](synth-closeup-2.jpg)
+{{< img "synth-closeup-2.jpg" "A close-up of the modular synth" >}}
 
 After that, I went back to working with a single note and came up with this
 sound with a slower attack than the others:

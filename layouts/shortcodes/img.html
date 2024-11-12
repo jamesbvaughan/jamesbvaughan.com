@@ -1,0 +1,13 @@
+{{ $alt := .Get 1 }}
+{{ $src := .Get 0 }}
+
+{{ with .Page.Resources.GetMatch $src }}
+  {{ with images.Filter (images.Process "resize 2000x webp") . }}
+    <img
+      src="{{ .Permalink }}"
+      alt="{{ $alt }}"
+      height="{{ .Height }}"
+      width="{{ .Width }}"
+    />
+  {{ end }}
+{{ end }}
