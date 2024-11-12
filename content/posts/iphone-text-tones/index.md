@@ -32,8 +32,8 @@ First, I took the default sound and pitched it down a half step:
 id="down"
 name="Note (pitched down)"
 artist="Apple and me"
-src="default-pitched-down.m4r"
-downloadable=true
+src="default-pitched-down.mp3"
+download="default-pitched-down.m4r"
 >}}
 
 I like that this one is subtle enough that it might go unnoticed by some, and
@@ -52,8 +52,8 @@ For the first of these, I tried to match the original but with my own touch:
 id="mine"
 name="James' Note"
 artist="me"
-src="mine.m4r"
-downloadable=true
+src="mine.mp3"
+download="mine.m4r"
 >}}
 
 I recorded this from a simple patch that I put together on my modular synth.
@@ -73,8 +73,8 @@ on the previous default text tone, the "tri-tone" a.k.a.
 id="tritone"
 name="Marimba 158"
 artist="Kelly Jackson"
-src="tritone.m4r"
-downloadable=true
+src="tritone.m4a"
+download="mine.m4r"
 >}}
 
 I misunderstood the first of these that I read, thinking that it was referring
@@ -85,16 +85,16 @@ triad rather than a single note, so I tried to re-create that triad:
 id="dissonant-chord"
 name="Dissonant Chord"
 artist="me"
-src="dissonant-chord.m4r"
-downloadable=true
+src="dissonant-chord.mp3"
+download="dissonant-chord.m4r"
 >}}
 
 {{< audio-clip
 id="noisy-dissonant-chord"
 name="Noisy Dissonant Chord"
 artist="me"
-src="noisy-dissonant-chord.m4r"
-downloadable=true
+src="noisy-dissonant-chord.mp3"
+download="noisy-dissonant-chord.m4r"
 >}}
 
 These came out pretty dissonant, which is not surprising in retrospect since
@@ -110,8 +110,8 @@ sound with a slower attack than the others:
 id="exponential-attack"
 name="Exponential Attack"
 artist="me"
-src="exponential-attack.m4r"
-downloadable=true
+src="exponential-attack.mp3"
+download="exponential-attack.m4r"
 >}}
 
 If I record more, I'll add them here.

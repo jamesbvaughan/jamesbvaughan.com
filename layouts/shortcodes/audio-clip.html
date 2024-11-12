@@ -6,10 +6,10 @@
 
   <div class="flex items-center space-x-4">
     <button
-      class="cursor-pointer text-6xl hover:opacity-50 active:opacity-70 hover:active:opacity-70"
+      class="cursor-pointer text-6xl hover:opacity-50 active:opacity-60 hover:active:opacity-60"
       onclick="restartAudio('{{ .Get "id" }}')"
     >
-      ▶️
+      ⏵
     </button>
 
     <div class="grow items-center justify-between sm:flex">
@@ -20,10 +20,11 @@
         {{ end }}
       </div>
 
-      {{ if .Get "downloadable" }}
-        <a href="{{ .Get "src" }}" download>
+      {{ $download := .Get "download" }}
+      {{ if $download }}
+        <a href="{{ $download }}" download>
           download
-          {{ .Get "src" }}
+          {{ $download }}
         </a>
       {{ end }}
     </div>
