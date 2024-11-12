@@ -5,7 +5,7 @@
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "scripts": {
     "build": "hugo --minify --printPathWarnings",
-    "build:cloudflare": "bun run build --baseURL $CF_PAGES_URL",
+    "build:cloudflare": "bun run build --baseURL https://jamesbvaughan.com",
     "dev:hugo": "hugo server --buildDrafts --printPathWarnings",
     "dev:wrangler": "bunx wrangler pages dev --live-reload",
     "dev": "bunx concurrently --names hugo,wrangler \"bun run dev:hugo --disableFastRender --disableLiveReload\" \"bun run dev:wrangler\"",
