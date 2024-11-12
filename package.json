@@ -7,7 +7,7 @@
     "build": "hugo --minify --printPathWarnings",
     "dev:hugo": "hugo server --buildDrafts --printPathWarnings",
     "dev:wrangler": "bunx wrangler pages dev --live-reload",
-    "dev": "bunx concurrently --names hugo,wrangler \"bun run dev:hugo --disableLiveReload\" \"bun run dev:wrangler\"",
+    "dev": "bunx concurrently --names hugo,wrangler \"bun run dev:hugo --disableFastRender --disableLiveReload\" \"bun run dev:wrangler\"",
     "format": "prettier --write ."
   },
   "dependencies": {
