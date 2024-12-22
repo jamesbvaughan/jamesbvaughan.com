@@ -20,24 +20,31 @@ movies<span id="movie"></span>.
 
 # me on other websites
 
+- {{< link href="https://bsky.app/profile/jamesbvaughan.com" rel="me" >}}bluesky{{< /link >}}
 - ~~twitter~~ _{{< link href="https://twitter.com/jamesontheline" rel="me" >}}𝕏{{< /link >}}_
-- {{< link href="https://letterboxd.com/jamesbvaughan/" rel="me" >}}letterboxd{{< /link >}}
-- {{< link href="http://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
 - {{< link href="https://github.com/jamesbvaughan" rel="me" >}}github{{< /link >}}
 - {{< link href="https://linkedin.com/in/jamesbvaughan" rel="me" >}}linkedin{{< /link >}}
+- {{< link href="https://letterboxd.com/jamesbvaughan/" rel="me" >}}letterboxd{{< /link >}}
+- {{< link href="http://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
 - {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
-- {{< link href="https://www.mountainproject.com/user/112201703/james-vaughan" rel="me" >}}mountain project{{< /link >}}
-- {{< link href="https://indieweb.social/@jamesbvaughan" rel="me" >}}mastodon{{< /link >}}
-- {{< link href="https://bsky.app/profile/jamesbvaughan.com" rel="me" >}}bluesky{{< /link >}}
 - {{< link href="https://concertboard.com/jamesbvaughan" rel="me" >}}concert board{{< /link >}}
 
 # selected projects
 
-- [Listening Spaces](https://listeningspaces.net) (2024-) - A directory of listening spaces around the world
-- [james.land](https://james.land) (2024-) - Misc sketches and experiments
-- [Concert Board](https://concertboard.com) (2023-) - Letterboxd/Goodreads for concerts
-- [Meadow Desk](https://tweenage.engineering/) (2023) - A configurable DIY desk
-- [Inside Patterns](https://insidepatterns.com/) (2022) - My collection of interior design and decorating patterns inspired by _A Pattern Language_
+- [Live Gizz Rankings](https://livegizzrankings.com) (2024-)
+  A site for fans of King Gizzard & the Lizard Wizard to vote on the band's best
+  live performances
+- [Listening Spaces](https://listeningspaces.net) (2024-)
+  A directory of listening spaces around the world
+- [james.land](https://james.land) (2024-)
+  Misc sketches and experiments
+- [Concert Board](https://concertboard.com) (2023-)
+  Letterboxd/Goodreads for concerts
+- [Meadow Desk](https://tweenage.engineering/) (2023)
+  A configurable DIY desk
+- [Inside Patterns](https://insidepatterns.com/) (2022)
+  My collection of interior design and decorating patterns inspired by _A
+  Pattern Language_
 
 # get in touch
 Email me at
