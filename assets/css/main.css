@@ -98,16 +98,18 @@
     @apply text-4xl font-bold;
   }
 
-  article h1 {
-    @apply mt-8 text-3xl;
-  }
+  article {
+    h1 {
+      @apply mt-8 text-3xl;
+    }
 
-  article h2 {
-    @apply mt-6 text-2xl font-bold;
-  }
+    h2 {
+      @apply mt-6 text-2xl font-bold;
+    }
 
-  article h3 {
-    @apply mt-6 text-xl font-bold;
+    h3 {
+      @apply mt-6 text-xl font-bold;
+    }
   }
 
   ol {
@@ -116,18 +118,24 @@
 
   p {
     @apply my-4;
+
+    code {
+      @apply bg-ctp-surface0 rounded px-1;
+    }
   }
 
-  main a {
-    @apply text-ctp-blue;
+  main {
+    a {
+      @apply text-ctp-blue;
+    }
   }
 
   ul {
     @apply my-4 pl-6;
-  }
 
-  ul li {
-    @apply list-disc;
+    li {
+      @apply list-disc;
+    }
   }
 
   blockquote {
