@@ -13,6 +13,8 @@ params:
     email: james@jamesbvaughan.com
   images:
     - og.png
+  social:
+    twitter: jamesontheline
 
 permalinks:
   posts: /:filename
