@@ -30,4 +30,4 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: gruvbox
+    style: catppuccin-macchiato

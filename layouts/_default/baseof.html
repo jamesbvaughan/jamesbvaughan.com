@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scheme-light dark:scheme-dark">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -8,6 +8,17 @@
     />
     <meta name="author" content="James Vaughan" />
     <meta name="description" content="{{ .Render "summary" }}" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#eff1f5"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#1e1e2e"
+    />
 
     <title>
       {{ block "browser-title" . }}
@@ -36,6 +47,17 @@
       <link rel="icon" href="{{ .Permalink }}" />
     {{ end }}
 
+    {{ with resources.Get "fonts/TX-02-Variable.woff2" | fingerprint }}
+    <style>
+        @font-face {
+            font-family: 'TX-02';
+            src: url({{ .RelPermalink }}) format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+    </style>
+    {{ end }}
+
     {{ with resources.Get "css/main.css" }}
       {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
       {{ with . | css.TailwindCSS $opts | fingerprint }}
@@ -44,9 +66,7 @@
     {{ end }}
   </head>
 
-  <body
-    class="bg-stone-100 px-4 py-8 text-stone-700 sm:px-2 dark:bg-stone-900 dark:text-stone-300"
-  >
+  <body class="bg-ctp-base text-ctp-text px-4 py-8 sm:px-2">
     <div class="mx-auto max-w-[720px] space-y-8">
       {{ partial "nav.html" . }}
 
