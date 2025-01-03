@@ -11,6 +11,8 @@ params:
   author:
     name: James Vaughan
     email: james@jamesbvaughan.com
+  images:
+    - og.png
 
 permalinks:
   posts: /:filename
