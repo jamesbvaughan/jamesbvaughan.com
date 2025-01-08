@@ -47,3 +47,11 @@ of the videos (or at least each video's metadata) on the playlist.
 
 If I end up putting a system like that in place, I'll come back here to document
 it in case anyone else is interested in using it.
+
+---
+
+_update_: r721 on Hacker News
+[pointed out](https://news.ycombinator.com/item?id=42635824) that I could use
+the Internet Archive to look up archived snapshots of these video pages
+(fortunately, YouTube leaves the original video URLs on the playlist page) and
+it seems to work well!
