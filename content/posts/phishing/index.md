@@ -2,6 +2,9 @@
 title: A surprising scam email that evaded Gmail's spam filter
 date: 2025-01-15
 sharing: false
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=42712524
 ---
 
 I received a surprising scammy email today, and I ended up learning some things
