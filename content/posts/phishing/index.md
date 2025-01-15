@@ -1,5 +1,5 @@
 ---
-title: A suprising scam email that evaded Gmail's spam filter
+title: A surprising scam email that evaded Gmail's spam filter
 date: 2025-01-15
 sharing: false
 ---
