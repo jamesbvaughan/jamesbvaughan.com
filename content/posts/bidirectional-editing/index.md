@@ -2,6 +2,9 @@
 title: Code⇄GUI bidirectional editing via LSP
 date: 2025-07-01
 sharing: false
+discussion_links:
+  - site_name: Hacker News
+    url: https://news.ycombinator.com/item?id=44435716
 ---
 
 I built a small proof-of-concept for a system that enables real-time
