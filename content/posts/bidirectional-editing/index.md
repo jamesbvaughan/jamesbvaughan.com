@@ -121,11 +121,17 @@ any that achieve more than two out of these three features:
 [Fusion 360](https://www.autodesk.com/products/fusion-360/overview#top) has
 decent bidirectional editing for parameters, but it's not fully code-based and
 it certainly doesn't let me use my own editor.
+
 [OpenSCAD](https://openscad.org/) doesn't require the use of its own text
 editor, and it's possible to trigger reloads in the GUI via file watching
 when you save source files in external editors, but it only goes one way.
+
 [Zoo](https://zoo.dev/design-studio) has some bidirectional editing, but only
 with its built-in editor.
+
+[Arcol](https://www.arcol.io/), the tool that I help build at my day job[^3], is
+innovating in CAD interface design in some exciting ways, but we're building for
+architects, not programmers.
 
 This is just a toy demo, but it's enough to excite me about the possibility of a
 system that achieves _all three_ of those points!
@@ -156,3 +162,8 @@ IDEs.
 
 [^2]: [the LSP bits](https://github.com/jamesbvaughan/dotfiles/blob/main/common/neovim/.config/nvim/lua/plugins/lspconfig.lua)
 of my config have grown and shrunk and grown again over the years.
+
+[^3]: It's an exciting time at Arcol right now! After building for a few years,
+we've finally launched the tool publicly and we're hiring programmers. If
+you're interested in working with us just learning more, reach out at
+james@arcol.io.
