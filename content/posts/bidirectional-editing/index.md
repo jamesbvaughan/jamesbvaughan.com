@@ -100,13 +100,7 @@ What you're seeing here is a text editor next to a GUI, and data live-updating
 both ways between them, made possible by a small server that uses LSP to
 communicate with the text editor and WebSockets to communicate with a web app.
 
-```
-┌───────────────┐         ┌──────────────┐           ┌───────┐
-│               │   LSP   │              │   HTTP    │       │
-│  Text Editor  │ <─────> │  LSP Server  │ <───────> │  GUI  │
-│               │         │              │ WebSocket │       │
-└───────────────┘         └──────────────┘           └───────┘
-```
+![A diagram showing the code editor, language server, and GUI](diagram.png)
 
 I've shared more technical details and the code for this demo [here on
 GitHub](https://github.com/jamesbvaughan/bidirectional-number-editor).
@@ -124,12 +118,14 @@ any that achieve more than two out of these three features:
 - Real-time-ish updates in the code from changes made in the GUI
 - Works well with my preferred code editor
 
-Fusion 360 has decent bidirectional editing for parameters, but it's not fully
-code-based and it certainly doesn't let me use my own editor.
+[Fusion 360](https://www.autodesk.com/products/fusion-360/overview#top) has
+decent bidirectional editing for parameters, but it's not fully code-based and
+it certainly doesn't let me use my own editor.
 [OpenSCAD](https://openscad.org/) doesn't require the use of its own text
 editor, and it's possible to trigger reloads in the GUI via file watching
 when you save source files in external editors, but it only goes one way.
-[Zoo] has some bidirectional editing, but only with its built-in editor.
+[Zoo](https://zoo.dev/design-studio) has some bidirectional editing, but only
+with its built-in editor.
 
 This is just a toy demo, but it's enough to excite me about the possibility of a
 system that achieves _all three_ of those points!
