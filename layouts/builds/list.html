@@ -1,0 +1,10 @@
+{{ define "browser-title" }}
+  builds -
+  {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+
+  {{ partial "build-list.html" .Data.Pages }}
+{{ end }}

@@ -2,7 +2,7 @@
   <div>
     <a class="font-bold" href="/">{{ .Site.Title }}</a>
   </div>
-  <div>
+  <div class="space-x-3">
     {{ range .Site.Menus.main }}
       <a class="" href="{{ .URL }}">
         {{ .Title | lower }}
