@@ -129,8 +129,12 @@ it certainly doesn't let me use my own editor.
 editor, and it's possible to trigger reloads in the GUI via file watching
 when you save source files in external editors, but it only goes one way.
 
-[Zoo](https://zoo.dev/design-studio) has some bidirectional editing, but only
-with its built-in editor.
+[Zoo](https://zoo.dev/design-studio) has some bidirectional editing, ~~but only
+with its built-in editor~~.
+_update: I was wrong! Zoo actually has
+[a language server for their `kcl` language](https://github.com/KittyCAD/modeling-app/tree/main/rust/kcl-language-server)
+that implements this concept, and I was able to get it up and running in
+Neovim._
 
 [Arcol](https://www.arcol.io/), the tool that I help build at my day job[^3], is
 innovating in CAD interface design in some exciting ways, but we're building for
