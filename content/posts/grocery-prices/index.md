@@ -117,7 +117,7 @@ If I did that starting now, it will have grown to about $167,000 by the time
 I'm 50 (I'm 22 now).
 That's a lot of money that could be put to much better use than a trip to
 Whole Foods (like pursuing Financial Independence and [retiring a few years
-earlier](http://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/)).
+earlier](https://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/)).
 
 ## Conclusion
 These calculations were pretty surprising for me,
@@ -136,7 +136,7 @@ Whole Foods is an undeniably great financial decision.
 
 If you'd like to read more about saving money on food from people who are way
 more insightful and experienced than I am, I'd encourage you to check out
-[this post](http://earlyretirementextreme.com/day-3-grocery-shopping.html)
+[this post](https://earlyretirementextreme.com/day-3-grocery-shopping.html)
 from Early Retirement Extreme on Grocery Shopping and
 [this podcast](https://www.choosefi.com/007-america-fat-broke/).
 

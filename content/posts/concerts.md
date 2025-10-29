@@ -42,7 +42,7 @@ Some of my favorites in SF are:
 - [The Fillmore](https://thefillmore.com/) (No email list that I've been able to find 😟)
 - [Rickshaw Stop](https://www.rickshawstop.com/)
 - [SF JAZZ](https://www.sfjazz.org/)
-- [Bottom of the Hill](http://bottomofthehill.com/calendar.html#sthash.y7NB9VyN.IBFoWHJS.dpbs)
+- [Bottom of the Hill](https://bottomofthehill.com/calendar.html#sthash.y7NB9VyN.IBFoWHJS.dpbs)
 - [The Chapel](https://www.thechapelsf.com/contact/#email-signup)
 
 I'll also occasionally "like" venues on Facebook so that I see updates about

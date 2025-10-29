@@ -78,7 +78,7 @@ At first I thought I might use
 because I was familiar with it and
 it has nice default styles,
 but ended up going with Markdown after discovering
-[pandoc](http://pandoc.org/),
+[pandoc](https://pandoc.org/),
 and learning that I could write documents in simple Markdown and
 then use it to convert them
 to LaTeX-formatted PDFs, HTML pages, and a bunch of other formats.
@@ -92,7 +92,7 @@ For example, the notes for my computer security class are in
 Within individual notes, I link to others with standard Markdown link syntax,
 and can quickly navigate to them by placing my cursor over the link I want
 to navigate to and pressing Enter, thanks to the
-[Vimwiki](http://vimwiki.github.io/) plugin.
+[Vimwiki](https://vimwiki.github.io/) plugin.
 
 ## Viewing
 

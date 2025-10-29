@@ -77,7 +77,7 @@ which crashed *a lot*.
 I was fine with pages not rendering properly and stuff like that,
 but I'm not fine with crashing.
 Because of that, I stuck with
-[Vimperator](http://vimperator.org/vimperator.html),
+[Vimperator](https://vimperator.org/vimperator.html),
 and similar extensions,
 but now qutebrowser is relatively rock-solid,
 so it's now usable as a daily-driver for me."
@@ -106,7 +106,7 @@ Also, org-mode is really great.
 
 "One downside is that it takes a lot of time to set everything up.
 If you don't have the time, I would recommend
-[Spacemacs](http://spacemacs.org/).
+[Spacemacs](https://spacemacs.org/).
 It's a pretty good distribution.
 It can be kind of intimidating, but it's great
 for people who are coming from Vim."
@@ -177,7 +177,7 @@ These recommendations may be related to open source software, to software
 engineering in general, or completely unrelated to computers._
 
 "My first link is from sircmpwn, the creator of
-[sway](http://swaywm.org/),
+[sway](https://swaywm.org/),
 and it's his blog post
 [*Hack everything without fear*](https://sircmpwn.github.io/2018/03/17/Hack-everything-without-fear.html).
 In it, he addresses the topic of being intimidated by large open source projects
@@ -188,11 +188,11 @@ so that everything is up for grabs, which I like a lot.
 "My next one is more technical, but
 it taught me a surprising amount about PyQt in a really short amount of time.
 It's about PyQt memory management and it's called
-[*PyQt. How to shoot yourself in the foot.*](http://enki-editor.org/2014/08/23/Pyqt_mem_mgmt.html)
+[*PyQt. How to shoot yourself in the foot.*](https://enki-editor.org/2014/08/23/Pyqt_mem_mgmt.html)
 I was completely new to memory management when I read it and it taught me a ton
 about it in less than a page.
 It's a little bit outdated now, unfortunately,
 but still relevant if you want to contribute to PyQt."
 
-You can find Jay at [jgkamat.github.io](http://jgkamat.github.io/)
+You can find Jay at [jgkamat.github.io](https://jgkamat.github.io/)
 and on Github [@jgkamat](https://github.com/jgkamat).

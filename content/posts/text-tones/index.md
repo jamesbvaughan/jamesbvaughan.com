@@ -70,7 +70,7 @@ I couldn't find much information on the current default, but did find
 [of](https://theweek.com/articles/461124/forgotten-origin-story-iphones-tritone-text-message-sound)
 [articles](https://www.fastcompany.com/1673245/the-surprising-story-behind-the-iphones-iconic-text-message-sound)
 on the previous default text tone, the "tri-tone" a.k.a.
-[Kelly Jackson's _Marimba 158_](http://jacklinstudios.com/docs/making-of-158-marimba.html):
+[Kelly Jackson's _Marimba 158_](https://jacklinstudios.com/docs/making-of-158-marimba.html):
 
 {{< audio-clip
 id="tritone"

@@ -58,7 +58,7 @@ It was last updated in September 2024.
   excited about new modules on it and convince yourself to spend more money
   than you should.
 
-- [Funklet](http://funklet.com/) - This is a collection of some of the funkiest
+- [Funklet](https://funklet.com/) - This is a collection of some of the funkiest
   drum grooves of all time, curated by Jack Stratton of Vulfpeck. I've found it
   to be super helpful when looking for groove inspiration.
 
@@ -85,10 +85,10 @@ don't know personally.
   posts and also the idea of publishing
   [_half-baked_](https://devonzuegel.com/tag/half-baked) ideas and posts.
 
-- [Jenn Schiffer](http://jennmoney.biz/) - I just love Jenn's style and think
+- [Jenn Schiffer](https://jennmoney.biz/) - I just love Jenn's style and think
   she works on really rad stuff (like [Glitch](https://glitch.com/)!)
 
-- [Seena Burns](http://seenaburns.com/) - I like Seena's colorscheme and his
+- [Seena Burns](https://seenaburns.com/) - I like Seena's colorscheme and his
   use of images and GIFs that show you what you're reading about.
 
 - [Patrick Collison](https://patrickcollison.com/) - I love the content on
@@ -131,14 +131,14 @@ don't know personally.
 # Miscellaneous Cool Websites
 
 - [Poolside FM](https://poolside.fm/)
-- [Astronaut](http://astronaut.io/)
+- [Astronaut](https://astronaut.io/)
 - [This page is a truly naked, brutalist html quine.](https://secretgeek.github.io/html_wysiwyg/html.html)
 - [The Deep Sea](https://neal.fun/deep-sea/)
 - [WebGL Fluid Simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
 - [Let's build houses for people, not cars.](https://noparkinghere.com/)
 - [Animagraphs](https://animagraffs.com/)
 - [Responsive Pixel Art](https://essenmitsosse.de/pixel/?showcase=true&slide=4)
-- [Every Noise at Once](http://everynoise.com/)
+- [Every Noise at Once](https://everynoise.com/)
 - [Mukitap](https://aidn.jp/mikutap/)
 - [mapscii.me](https://mapscii.me) (try `$ telnet mapscii.me`, move with arrows, a/z to zoom)
 - [Bop Spotter](https://walzr.com/bop-spotter)
