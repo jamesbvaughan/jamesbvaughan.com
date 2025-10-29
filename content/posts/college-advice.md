@@ -120,7 +120,7 @@ it provides a nice workflow for collaborating on software projects
 and you can use it as a way to back up changes you make to personal projects
 and coding homework assignments.
 
-[This guide](http://rogerdudler.github.io/git-guide/)
+[This guide](https://rogerdudler.github.io/git-guide/)
 is a good introduction to git's basic features.
 
 ##### The Unix Command Line

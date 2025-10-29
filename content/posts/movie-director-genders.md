@@ -79,7 +79,7 @@ but no info about the director, so I knew I would have to do a bit of
 scraping to find the directors and their genders.
 
 I used [http.rb](https://github.com/httprb/http) to fetch the pages I needed
-and used [nokogiri](http://www.nokogiri.org/) to parse and search them.
+and used [nokogiri](https://www.nokogiri.org/) to parse and search them.
 
 Letterboxd gets its movie data from [TMDB](https://www.themoviedb.org/),
 a community built movie database.

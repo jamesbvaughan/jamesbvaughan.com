@@ -75,7 +75,7 @@ so I don't see myself actually using Codespaces unless I have a specific need fo
 
 ## Not using React
 
-http://vanilla-js.com/
+https://vanilla-js.com/
 
 This project was small enough that it felt like using any JavaScript UI library would be overkill.
 The app only has one external dependency: [sunburst-chart](https://github.com/vasturiano/sunburst-chart), a package that provides functions for constructing a D3-based sunburst chart.

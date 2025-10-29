@@ -140,7 +140,7 @@ popular programming languages for dealing with these requests so that we don't
 
 For example, this is all the code you'd need to write to have a working
 Node.js webserver that can handle a simple request using the
-[express](http://expressjs.com/) library:
+[express](https://expressjs.com/) library:
 
 ```javascript
 const app = require("express")();
@@ -214,8 +214,8 @@ app.run()
 
 # Other helpful resources
 
-- [Flask documentation](http://flask.pocoo.org/docs/1.0/quickstart/#redirects-and-errors)
-- [How to use cURL to test APIs](http://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/): cURL is a wonderful command line tool for working with HTTP requests and it comes in very handy when testing things.
+- [Flask documentation](https://flask.pocoo.org/docs/1.0/quickstart/#redirects-and-errors)
+- [How to use cURL to test APIs](https://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/): cURL is a wonderful command line tool for working with HTTP requests and it comes in very handy when testing things.
 - [Postman](https://www.getpostman.com/): This is (in some ways) a graphical and pretty alternative to cURL for testing HTTP requests.
 - [HTTP on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 

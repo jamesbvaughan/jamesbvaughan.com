@@ -11,7 +11,7 @@ I’m excited to announce that I’m joining [Arcol](https://arcol.io) to work o
 
 The cross-pollination of architecture and computing fascinates me, starting with Christopher Alexander’s concept of pattern languages and the influence that it’s had on software engineering, and then in reverse with architects like Frank Gehry leveraging innovations in software to enable new architectural design. I’m looking forward to being a part of that shared history by pushing these two industries forward together at Arcol.
 
-I’m deeply inspired by the early pioneers of computing and creative software, folks like Doug Engelbart and J.C.R. Licklider, who pushed the boundaries of how we interact with computers. More recently, things like [Bret Victor’s work on experimental interfaces](http://worrydream.com/) and [Andy Matuschak’s writing about tools for thought](https://numinous.productions/ttft/) have ignited my own interest in working on these tools.
+I’m deeply inspired by the early pioneers of computing and creative software, folks like Doug Engelbart and J.C.R. Licklider, who pushed the boundaries of how we interact with computers. More recently, things like [Bret Victor’s work on experimental interfaces](https://worrydream.com/) and [Andy Matuschak’s writing about tools for thought](https://numinous.productions/ttft/) have ignited my own interest in working on these tools.
 
 Arcol is well-positioned to innovate in this space and to carry out the visions of some of these figures. There is so much untapped potential in software for creative work and in the ways people interact with that software, and I'm excited to tap into that potential with Arcol.
 
