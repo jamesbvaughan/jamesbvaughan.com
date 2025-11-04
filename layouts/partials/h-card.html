@@ -4,6 +4,3 @@
 <a class="u-email" href="mailto:{{ .Site.Author.email }}"
   >{{ .Site.Author.email }}</a
 >
-{{ with resources.Get "images/jamesbvaughan.jpg" | fingerprint }}
-  <img class="u-photo" src="{{ .Permalink }}" alt="James Vaughan" />
-{{ end }}
