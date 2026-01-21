@@ -106,7 +106,7 @@ the weird shipping container acoustics
 # Materials and approximate cost
 
 - ~8sqft 1/2" Baltic birch plywood - **$30**
-- 2 Dayton Audio RS100-8 drivers - **$37**
+- 2 Dayton Audio RS100-8 drivers - **$74**
 - 2 pairs of binding posts - **$22**
 - 1sqft industrial 1/4" felt - **$10**
 - 2 feet of 1/8" foam tape - **$1**
@@ -121,7 +121,7 @@ Plus small hard-to-price amounts of:
 - speaker wire
 - solder
 
-In total I'd estimate my material costs to be about $110 for the pair.
+In total I'd estimate my material costs to be about $150 for the pair.
 
 ---
 
