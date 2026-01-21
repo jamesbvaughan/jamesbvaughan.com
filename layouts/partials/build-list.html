@@ -26,10 +26,20 @@
       {{- $rightImage := $resources.GetMatch $rightImageName -}}
 
 
-      <div class="grid grid-cols-2 gap-1">
-        <img src="{{ $mainImage.Permalink }}" class="col-span-2" />
-        <img src="{{ $leftImage.Permalink }}" class="" />
-        <img src="{{ $rightImage.Permalink }}" class="" />
+      <div class="">
+        <img src="{{ $mainImage.Permalink }}" class="" />
+        <div class="mt-1 flex w-full gap-1">
+          <img
+            src="{{ $leftImage.Permalink }}"
+            style="flex: {{ div (float $leftImage.Width) (float $leftImage.Height) }} 1 0%"
+            class="min-w-0"
+          />
+          <img
+            src="{{ $rightImage.Permalink }}"
+            style="flex: {{ div (float $rightImage.Width) (float $rightImage.Height) }} 1 0%"
+            class="min-w-0"
+          />
+        </div>
       </div>
 
       <a href="{{ .RelPermalink }}">
