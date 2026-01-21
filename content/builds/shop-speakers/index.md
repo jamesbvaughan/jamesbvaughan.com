@@ -6,6 +6,9 @@ params:
     - pair.webp
     - onshape.gif
     - amp.webp
+discussion_links:
+  - site_name: Reddit
+    url: https://www.reddit.com/r/diyaudio/comments/1qj2nvx/comment/o0vz3rx/
 ---
 
 I made this pair of speakers for me and Kyle's workshop.
