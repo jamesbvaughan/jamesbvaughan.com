@@ -1,15 +1,15 @@
 {
   "name": "jamesbvaughan.com",
   "description": "james' blog",
-  "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "author": "James Vaughan <james@jamesbvaughan.com>",
+  "repository": "git@github.com:jamesbvaughan/jamesbvaughan.com.git",
   "scripts": {
     "build": "hugo --minify --printPathWarnings",
     "build:cloudflare": "bun run build --baseURL https://jamesbvaughan.com",
     "dev:hugo": "hugo server --buildDrafts --printPathWarnings",
     "dev:wrangler": "bunx wrangler pages dev --live-reload",
     "dev": "bunx concurrently --names hugo,wrangler \"bun run dev:hugo --disableFastRender --disableLiveReload\" \"bun run dev:wrangler\"",
-    "format": "prettier --write ."
+    "format": "oxfmt --write ."
   },
   "dependencies": {
     "fast-xml-parser": "^4.5.0"
@@ -20,9 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.28.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "oxfmt": "^0.35.0",
     "tailwindcss": "next",
     "typescript": "^5.6.3"
   }
