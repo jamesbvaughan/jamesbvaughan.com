@@ -9,19 +9,19 @@
     "dev:hugo": "hugo server --buildDrafts --printPathWarnings",
     "dev:wrangler": "bunx wrangler pages dev --live-reload",
     "dev": "bunx concurrently --names hugo,wrangler \"bun run dev:hugo --disableFastRender --disableLiveReload\" \"bun run dev:wrangler\"",
+    "lint": "oxlint --type-aware",
     "format": "oxfmt --write ."
   },
   "dependencies": {
-    "fast-xml-parser": "^4.5.0"
+    "fast-xml-parser": "^4.5.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
     "@tailwindcss/cli": "next",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
-    "eslint": "^8.28.0",
     "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
+    "oxlint-tsgolint": "^0.15.0",
     "tailwindcss": "next",
-    "typescript": "^5.6.3"
+    "typescript": "^5.9.3"
   }
 }
