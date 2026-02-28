@@ -1,0 +1,5 @@
+{{- with .Page.Resources.GetMatch .Destination -}}
+  <img src="{{ .Permalink }}" alt="{{ $.Text }}" />
+{{- else -}}
+  <img src="{{ .Destination | absURL }}" alt="{{ .Text }}" />
+{{- end -}}
