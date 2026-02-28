@@ -2,8 +2,6 @@ languageCode: en-us
 
 title: james vaughan
 
-disqusShortname: jamesbvaughan
-
 params:
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan

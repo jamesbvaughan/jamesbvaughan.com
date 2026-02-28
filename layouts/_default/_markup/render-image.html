@@ -1,5 +1,13 @@
 {{- with .Page.Resources.GetMatch .Destination -}}
-  <img src="{{ .Permalink }}" alt="{{ $.Text }}" />
+  {{- with images.Filter (images.Process "resize 2000x webp") . -}}
+    <img
+      src="{{ .Permalink }}"
+      alt="{{ $.Text }}"
+      width="{{ .Width }}"
+      height="{{ .Height }}"
+      loading="lazy"
+    />
+  {{- end -}}
 {{- else -}}
-  <img src="{{ .Destination | absURL }}" alt="{{ .Text }}" />
+  <img src="{{ .Destination | absURL }}" alt="{{ .Text }}" loading="lazy" />
 {{- end -}}

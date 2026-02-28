@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1"
     />
     <meta name="author" content="James Vaughan" />
     <meta name="description" content="{{ .Render "summary" }}" />
@@ -48,6 +48,7 @@
     {{ end }}
 
     {{ with resources.Get "fonts/TX-02-Variable.woff2" | fingerprint }}
+    <link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/woff2" crossorigin />
     <style>
         @font-face {
             font-family: 'TX-02';
