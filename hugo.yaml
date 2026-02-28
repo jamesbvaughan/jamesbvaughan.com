@@ -17,7 +17,7 @@ params:
     twitter: jamesontheline
 
 permalinks:
-  posts: /:filename
+  posts: /:contentbasename
 
 enableRobotsTXT: true
 
