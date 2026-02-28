@@ -17,11 +17,11 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
-    "@tailwindcss/cli": "next",
+    "@tailwindcss/cli": "^4.2.1",
     "oxfmt": "^0.35.0",
     "oxlint": "^1.50.0",
     "oxlint-tsgolint": "^0.15.0",
-    "tailwindcss": "next",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   }
 }
