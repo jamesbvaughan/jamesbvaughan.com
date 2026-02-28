@@ -28,6 +28,7 @@ movies<span id="movie"></span>.
 - {{< link href="https://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
 - {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
 - {{< link href="https://concertboard.com/jamesbvaughan" rel="me" >}}concert board{{< /link >}}
+- {{< link href="https://www.are.na/james-vaughan" rel="me" >}}are.na{{< /link >}}
 
 # selected projects
 
@@ -47,6 +48,7 @@ movies<span id="movie"></span>.
   Pattern Language_
 
 # get in touch
+
 Email me at
 {{< link href="mailto:james@jamesbvaughan.com" rel="me" >}}james@jamesbvaughan.com{{< /link >}}
 if you'd like to get in contact for any reason.
