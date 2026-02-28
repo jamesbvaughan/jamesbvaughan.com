@@ -3,6 +3,7 @@ languageCode: en-us
 title: james vaughan
 
 params:
+  description: James Vaughan's personal website
   gitRepo: https://github.com/jamesbvaughan/jamesbvaughan.com
   githubUsername: jamesbvaughan
   twitterHandle: jamesontheline
