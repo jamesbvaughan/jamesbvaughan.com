@@ -21,24 +21,45 @@
       {{- $leftImageName := index .Params.images 1 -}}
       {{- $rightImageName := index .Params.images 2 -}}
 
+      {{- $title := .Title -}}
       {{- $mainImage := $resources.GetMatch $mainImageName -}}
       {{- $leftImage := $resources.GetMatch $leftImageName -}}
       {{- $rightImage := $resources.GetMatch $rightImageName -}}
 
 
       <div class="">
-        <img src="{{ $mainImage.Permalink }}" class="" />
+        {{- with images.Filter (images.Process "resize 2000x webp") $mainImage -}}
+          <img
+            src="{{ .Permalink }}"
+            alt="{{ $title }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            loading="lazy"
+          />
+        {{- end -}}
         <div class="mt-1 flex w-full gap-1">
-          <img
-            src="{{ $leftImage.Permalink }}"
-            style="flex: {{ div (float $leftImage.Width) (float $leftImage.Height) }} 1 0%"
-            class="min-w-0"
-          />
-          <img
-            src="{{ $rightImage.Permalink }}"
-            style="flex: {{ div (float $rightImage.Width) (float $rightImage.Height) }} 1 0%"
-            class="min-w-0"
-          />
+          {{- with images.Filter (images.Process "resize 2000x webp") $leftImage -}}
+            <img
+              src="{{ .Permalink }}"
+              alt="{{ $title }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
+              loading="lazy"
+              style="flex: {{ div (float .Width) (float .Height) }} 1 0%"
+              class="min-w-0"
+            />
+          {{- end -}}
+          {{- with images.Filter (images.Process "resize 2000x webp") $rightImage -}}
+            <img
+              src="{{ .Permalink }}"
+              alt="{{ $title }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
+              loading="lazy"
+              style="flex: {{ div (float .Width) (float .Height) }} 1 0%"
+              class="min-w-0"
+            />
+          {{- end -}}
         </div>
       </div>
 
