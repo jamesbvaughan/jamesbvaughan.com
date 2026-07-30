@@ -66,6 +66,34 @@
         <link rel="stylesheet" href="{{ .Permalink }}" />
       {{ end }}
     {{ end }}
+
+    <!-- I'm trying this out to see if it makes page loads feel more snappy. -->
+    <script type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "where": {
+              "and": [
+                { "href_matches": "/*" },
+                { "not": { "selector_matches": "a[download]" } }
+              ]
+            },
+            "eagerness": "moderate"
+          }
+        ],
+        "prerender": [
+          {
+            "where": {
+              "and": [
+                { "href_matches": "/*" },
+                { "not": { "selector_matches": "a[download]" } }
+              ]
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body class="bg-ctp-base text-ctp-text px-4 py-8 sm:px-2">
