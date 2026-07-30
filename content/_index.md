@@ -10,7 +10,7 @@ I'm into today, like climbing, computers, music, movies, and people.
 I learned more about computers at UCLA and then moved up to San Francisco where
 I spent a few years working on cloud infrastructure at Stripe.
 
-I'm in Oakland now, working at [Arcol](https://www.arcol.io), building the future of
+I'm in Oakland now, working at [Arcol](https://arcol.io), building the future of
 architecture software and making the power of computer-aided design accessible
 to more people.
 
@@ -23,12 +23,12 @@ movies<span id="movie"></span>.
 - {{< link href="https://bsky.app/profile/jamesbvaughan.com" rel="me" >}}bluesky{{< /link >}}
 - ~~twitter~~ _{{< link href="https://twitter.com/jamesontheline" rel="me" >}}𝕏{{< /link >}}_
 - {{< link href="https://github.com/jamesbvaughan" rel="me" >}}github{{< /link >}}
-- {{< link href="https://linkedin.com/in/jamesbvaughan" rel="me" >}}linkedin{{< /link >}}
+- {{< link href="https://www.linkedin.com/in/jamesbvaughan" rel="me" >}}linkedin{{< /link >}}
 - {{< link href="https://letterboxd.com/jamesbvaughan/" rel="me" >}}letterboxd{{< /link >}}
 - {{< link href="https://www.last.fm/user/magicjamesv" rel="me" >}}last.fm{{< /link >}}
 - {{< link href="https://www.setlist.fm/concerts/jamesbvaughan" rel="me" >}}setlist.fm{{< /link >}}
 - {{< link href="https://concertboard.com/jamesbvaughan" rel="me" >}}concert board{{< /link >}}
-- {{< link href="https://www.are.na/james-vaughan" rel="me" >}}are.na{{< /link >}}
+- {{< link href="https://www.are.na/james-vaughan/channels" rel="me" >}}are.na{{< /link >}}
 
 # selected projects
 
