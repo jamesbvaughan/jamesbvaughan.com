@@ -48,9 +48,9 @@ perfectly snug fit for one tester could be an impossible fit for a different tes
 Steven worked with the beta testers to find solutions to these print and fit
 issues.
 One or more of us would report an issue with some part, and he (or one of the
-other testers) would tweak the design a bit, print their own parts for testing,
-and have other testers print the updated designs on their printers in order to
-validate them against a variety of printers, slicers, and filaments.
+other testers) would tweak the design a bit, print parts for testing,
+and have other testers print the updated designs to
+validate the changes against a variety of printers, slicers, and filaments.
 The results of that process are in the print files and suggested slicer settings
 in the build documentation's [printing
 guide](https://open-task-light.gitbook.io/open-task-light/printing-guide).
@@ -97,9 +97,9 @@ A close-up shot of the carriage, which joins the two rails and houses the power 
 
 ![Underside of the LED housing](otl-from-below.jpg)
 
-The main rail and LED housing from below.
-Here you can see the heat pipe that's integrated into the horizontal rail,
-which helps prevent the heat from the crazy LED from melting the plastic housing.
+The horizontal rail and LED housing from below.
+Here you can see the heat pipe that's integrated into the rail,
+which helps prevent the crazy LED's heat from melting the plastic housing.
 
 ![Our rabbit Levee inspecting the stickers](otl-stickers-levee.jpg)
 
