@@ -1,4 +1,4 @@
-languageCode: en-us
+locale: en-us
 
 title: james vaughan
 
@@ -34,3 +34,9 @@ markup:
       unsafe: true
   highlight:
     style: catppuccin-macchiato
+
+security:
+  exec:
+    allow:
+      - ^node$
+      - ^tailwindcss$
