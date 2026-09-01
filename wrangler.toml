@@ -4,4 +4,4 @@ compatibility_date = "2026-02-27"
 pages_build_output_dir = "public"
 
 [vars]
-HUGO_VERSION = "0.156.0"
+HUGO_VERSION = "0.165.0"
