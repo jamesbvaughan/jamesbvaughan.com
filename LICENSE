@@ -1,6 +1,19 @@
+This license covers the *code* in this repository: everything under
+`layouts/`, `assets/css/`, `functions/`, and the configuration files at the
+root.
+
+It does not cover the writing and photos under `content/`, which are licensed
+separately — see LICENSE-CONTENT.
+
+It also does not cover `assets/fonts/TX-02-Variable.woff2`, which is a
+commercial font by Berkeley Graphics, included here under its own license and
+not redistributable under the terms below.
+
+---
+
 The MIT License (MIT)
 
-Copyright (c) 2018 James Vaughan
+Copyright (c) 2018-present James Vaughan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
