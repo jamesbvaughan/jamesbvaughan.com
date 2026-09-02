@@ -50,5 +50,5 @@ At the time of this writing, the only uses of JavaScript on the site are:
 I don't use any client-side analytics/tracking code.
 I'm not completely opposed to websites collecting analytics - I just don't have
 a need for it here.
-I can see high-level traffic trends on Cloudflare and that's plenty for this
-site.
+I can see high-level traffic trends from the HTTP logs and that's plenty for
+this site.
