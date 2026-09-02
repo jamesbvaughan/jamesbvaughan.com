@@ -56,7 +56,8 @@ if you'd like to get in contact for any reason.
 # about this website
 
 I've written about how I build and manage this site
-[here](/how-i-make-this-site/).
+[here](/how-i-make-this-site/) and you can read about my current stance on AI
+use [here](ai).
 
 <script>
   [song, movie].forEach(async element => {
